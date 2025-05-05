@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Sans+Condensed:wght@700&display=swap');
+
+:root {
+  /* Baggrund og tekst */
+  --r-background-color: #FFFFFF;
+  --r-main-font: 'IBM Plex Sans', 'Arial', sans-serif;
+  --r-main-font-size: 30px;
+  --r-main-color: #4C374B; /* Frank - mørk sekundær farve */
+  --r-block-margin: 1.5em;
+
+  /* Overskrifter */
+  --r-heading-margin: 0 0 0.5em 0;
+  --r-heading-font: 'IBM Plex Sans Condensed', 'Arial Narrow', sans-serif;
+  --r-heading-color: #EA5045; /* KEA-rød */
+  --r-heading-line-height: 1.1;
+  --r-heading-letter-spacing: 0em;
+  --r-heading-text-transform: uppercase;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 700;
+
+  /* Heading størrelser */
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 2.5em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.2em;
+  --r-heading4-size: 1em;
+
+  /* Kode og links */
+  --r-code-font: 'Courier New', monospace;
+  --r-link-color: #0762C8; /* Signe */
+  --r-link-color-dark: #054da1;
+  --r-link-color-hover: #FF671F; /* Freja */
+
+  /* Markering */
+  --r-selection-background-color: #EA5045;
+  --r-selection-color: #ffffff;
+
+  /* Overlay */
+  --r-overlay-element-bg-color: rgba(0, 0, 0, 0.8);
+  --r-overlay-element-fg-color: #ffffff;
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Programmering</title>
+
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/white.css">
+    
+    <!--
+    <link rel="stylesheet" href="../node_modules/reveal.js/plugin/highlight/monokai.css">
+-->
+    <link rel="stylesheet" href="./custom.css">
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section
+                id="dynamic-slides"
+                data-markdown=""
+                data-separator-notes="^Note:"
+                data-charset="utf-8"
+            ></section>
+        </div>
+    </div>
+
+    <script src="../node_modules/reveal.js/dist/reveal.js"></script>
+    
+    <!-- plugins -->
+    <script src="../node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script src="../node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="../node_modules/reveal.js/plugin/math/math.js"></script>
+    <script src="../node_modules/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
+    
+    <script>
+        // Get ?slides=lecture1.md
+        function getMarkdownFilePath() {
+            const params = new URLSearchParams(window.location.search);
+            const basename = params.get('slides') || '_default'; // fallback
+            const path = `../slides/${basename}.md`
+            return path
+        }
+
+        // Set the data-markdown attribute dynamically
+        const markdownFile = getMarkdownFilePath();
+        const section = document.getElementById('dynamic-slides');
+        section.setAttribute('data-markdown', `../slides/${markdownFile}`);
+
+    
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: false,
+            center: true,
+            controls: true,
+            progress: true,
+            plugins: [
+                RevealNotes, 
+                RevealHighlight, 
+                //RevealMath,
+                //RevealMermaid,
+                RevealMarkdown
+            ] 
+        });
+    </script>
+</body>
+
+</html>

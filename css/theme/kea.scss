@@ -46,11 +46,12 @@ $linkColor: #2a76dd;
 $linkColorHover: color.scale( $linkColor, $lightness: 15% );
 $selectionBackgroundColor: color.scale( $linkColor, $lightness: 25% );
 
-$mainFontSize: 2.0em;
-$heading1Size: 2.5em;
-$heading2Size: 1.6em;
-$heading3Size: 1.3em;
-$heading4Size: 1.0em;
+$mainFontSize: 1.4em;
+$heading1Size: 2.8em;
+$heading2Size: 2.0em;
+$heading3Size: 1.8em;
+$heading4Size: 1.4em;
+$letterSpacing: 0.04em;
 
 $overlayElementBgColor: 0, 0, 0;
 $overlayElementFgColor: 240, 240, 240;
@@ -78,9 +79,54 @@ $overlayElementFgColor: 240, 240, 240;
 
 // add a logo to the bottom right corner
 .reveal-viewport {
+    
+    .kea-blue {
+        background-color: $keaBlue;
+    }
+
+    .kea-green {
+        background-color: $keaGreen;
+    }
+
+    .kea-red {
+        background-color: $keaRed;
+    }
+
+    .kea-rose {
+        background-color: $keaRose;
+    }
+
+    .kea-dark {
+        background-color: $keaDark;
+    }
+
     background-image: url(./img/kea.svg);
     background-size: 10%;
     background-repeat: no-repeat;
     background-position: 0% 100%;
     background-attachment: fixed;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    line-height: 1.1;
+}
+
+.reveal p {
+    line-height: 1.5;
+}
+.reveal ul,
+.reveal ol {
+    line-height: 1.5;
+}
+
+.reveal .progress {
+    background-color: $keaDark;
+}
+.reveal .progress span {
+    background-color: $keaRed;
 }

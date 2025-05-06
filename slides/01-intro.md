@@ -31,7 +31,7 @@
 - Programmering  
 - Java  
 - `main()`  
-- "Hello World!" med Java  
+- `"Hello World!"` med Java  
 - Terminal  
 - IntelliJ  
 
@@ -88,17 +88,16 @@
 
 ---
 
-<!-- .slide: data-auto-animate -->
 ## Write **Once**, Run **Anywhere**, Compiled til **Bytecode**  
 ![WORA](./slides/img/wora.png)
 
 ---
 
-```java
-    // Mit første Java program!
-    public class HelloWorld {
-        public static void main(String[] args) {
-            System.out.println("Hello world!");
-        }
+```java [|1,3]
+  // Mit første Java program!
+  public class HelloWorld {
+    public static void main(String[] args) {
+      System.out.println("Hello world!");
     }
+  }
 ```

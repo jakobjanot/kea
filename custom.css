@@ -27,6 +27,7 @@
 
   /* Kode og links */
   --r-code-font: 'Courier New', monospace;
+  --r-code-background-color: #F7F7F7;
   --r-link-color: #0762C8; /* Signe */
   --r-link-color-dark: #054da1;
   --r-link-color-hover: #FF671F; /* Freja */

@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/white.css">
     
-    <!--
-    <link rel="stylesheet" href="../node_modules/reveal.js/plugin/highlight/monokai.css">
--->
+    <link rel="stylesheet" href="./highlight-intellij-dark.css"/>
     <link rel="stylesheet" href="./custom.css">
 
 </head>
@@ -23,7 +21,7 @@
         <div class="slides">
             <section
                 id="dynamic-slides"
-                data-markdown=""
+                data-markdown
                 data-separator-notes="^Note:"
                 data-charset="utf-8"
             ></section>
@@ -40,7 +38,7 @@
     <script src="../node_modules/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
     
     <script>
-        // Get ?slides=lecture1.md
+        // Get ?slides=lecture1 => slides/lecture1.md
         function getMarkdownFilePath() {
             const params = new URLSearchParams(window.location.search);
             const basename = params.get('slides') || '_default'; // fallback
@@ -52,22 +50,21 @@
         const markdownFile = getMarkdownFilePath();
         const section = document.getElementById('dynamic-slides');
         section.setAttribute('data-markdown', `../slides/${markdownFile}`);
-
     
         // More info about initialization & config:
         // - https://revealjs.com/initialization/
         // - https://revealjs.com/config/
         Reveal.initialize({
             hash: false,
-            center: true,
-            controls: true,
-            progress: true,
+            center: false,
+            controls: false,
+            progress: false,
             plugins: [
                 RevealNotes, 
-                RevealHighlight, 
                 //RevealMath,
                 //RevealMermaid,
-                RevealMarkdown
+                RevealMarkdown,
+                RevealHighlight
             ] 
         });
     </script>

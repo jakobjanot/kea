@@ -9,11 +9,8 @@
 
     <link rel="stylesheet" href="../node_modules/reveal.js/dist/reset.css">
     <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/white.css">
-    
+    <link rel="stylesheet" href="./dist/theme/kea.css">
     <link rel="stylesheet" href="./highlight-intellij-dark.css"/>
-    <link rel="stylesheet" href="./custom.css">
-
 </head>
 
 <body>
@@ -49,7 +46,7 @@
         // Set the data-markdown attribute dynamically
         const markdownFile = getMarkdownFilePath();
         const section = document.getElementById('dynamic-slides');
-        section.setAttribute('data-markdown', `../slides/${markdownFile}`);
+        section.setAttribute('data-markdown', getMarkdownFilePath());
     
         // More info about initialization & config:
         // - https://revealjs.com/initialization/

@@ -1,0 +1,86 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@use "sass:color";
+@import "../../node_modules/reveal.js/css/theme/template/mixins";
+@import "../../node_modules/reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+// Colors
+$white: #fff;
+$keaDark: #233249;
+$keaRed: #ea5045;
+$keaRose: #f7d4d1;
+$keaBlue: #9accff;
+$keaGreen: #50d57c;
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: $white;
+
+$mainColor: $keaDark;
+$headingColor: $keaDark;
+
+$inlineCodeColor: $keaRed;
+$inlineCodeBgColor: $keaRose;
+
+$mainFont: 'Roboto', Arial, sans-serif;
+$codeFont: 'Roboto Mono', 'Courier New', Courier, monospace;
+$headingFont: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+
+$headingTextShadow: none;
+$headingLetterSpacing: 0.04em;
+$headingTextTransform: normal;
+$headingFontWeight: 700;
+$linkColor: #2a76dd;
+$linkColorHover: color.scale( $linkColor, $lightness: 15% );
+$selectionBackgroundColor: color.scale( $linkColor, $lightness: 25% );
+
+$mainFontSize: 2.0em;
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+$overlayElementBgColor: 0, 0, 0;
+$overlayElementFgColor: 240, 240, 240;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color($white);
+
+// Theme template ------------------------------
+@import "../../node_modules/reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+// Define additional color effects based on Dracula spec
+:root {
+	--r-inline-code-color: #{$inlineCodeColor};
+    --r-inline-code-bg-color: #{$inlineCodeBgColor};
+}
+
+.reveal {
+	p code {
+		color: var(--r-inline-code-color);
+        background-color: var(--r-inline-code-bg-color);
+	}
+
+}
+
+// add a logo to the bottom right corner
+.reveal-viewport {
+    background-image: url(./img/kea.svg);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 97% 97%;
+    background-attachment: fixed;
+}

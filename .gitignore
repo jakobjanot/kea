@@ -134,3 +134,13 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# SCSS cache
+.sass-cache/
+**/.sass-cache/
+
+# Build output
+dist/
+!dist/theme/img/
+!dist/theme/fonts/
+build/

@@ -7,3 +7,5 @@
     }
   }
 ```
+
+and `inline` too

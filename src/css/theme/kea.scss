@@ -7,8 +7,8 @@
 
 // Default mixins and settings -----------------
 @use "sass:color";
-@import "../../node_modules/reveal.js/css/theme/template/mixins";
-@import "../../node_modules/reveal.js/css/theme/template/settings";
+@import "../../../node_modules/reveal.js/css/theme/template/mixins";
+@import "../../../node_modules/reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
 
@@ -60,7 +60,7 @@ $overlayElementFgColor: 240, 240, 240;
 @include dark-bg-text-color($white);
 
 // Theme template ------------------------------
-@import "../../node_modules/reveal.js/css/theme/template/theme";
+@import "../../../node_modules/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
 // Define additional color effects based on Dracula spec

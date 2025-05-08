@@ -11,16 +11,16 @@ const fs = require('fs')
 const through2 = require('through2')
 
 gulp.task('build-themes', function () {
-	return gulp.src('css/theme/**/*.scss')
+	return gulp.src('src/css/theme/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss([autoprefixer(), cssnano()]))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('dist/theme'))
+		.pipe(gulp.dest('dist/css/theme'))
 		.pipe(connect.reload())
 })
 
-const template = fs.readFileSync('templates/reveal.html', 'utf-8');
+const template = fs.readFileSync('src/templates/reveal.html', 'utf-8');
 
 gulp.task('render-slides', function () {
 	return gulp.src('slides/**/*.md')
@@ -62,18 +62,24 @@ gulp.task('copy-assets', function () {
 })
 
 gulp.task('watch', function () {
-	gulp.watch('css/**/*.scss', gulp.series('build-themes'))
+	gulp.watch('src/css/**/*.scss', gulp.series('build-themes'))
 	gulp.watch('slides/**/*.md', gulp.series('render-slides'))
 	gulp.watch('slides/**/assets/**/*', gulp.series('copy-assets'))
-	gulp.watch('templates/*.html', gulp.series('render-slides'))
+	gulp.watch('src/templates/*.html', gulp.series('render-slides'))
 })
 
 gulp.task('connect', function () {
 	connect.server({
 		livereload: true,
 		port: 8000,
-		root: ['dist', 'node_modules']
+		root: ['dist/css', 'dist/slides', 'node_modules']
 	})
+})
+
+// Clean the dist folder
+gulp.task('clean', function () {
+	return gulp.src('dist', { read: false, allowEmpty: true })
+		.pipe(require('gulp-clean')())
 })
 
 gulp.task('build', gulp.parallel('build-themes', 'render-slides', 'copy-assets'))

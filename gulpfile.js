@@ -83,5 +83,6 @@ gulp.task('clean', function () {
 })
 
 gulp.task('build', gulp.parallel('build-themes', 'render-slides', 'copy-assets'))
-gulp.task('serve', gulp.series('build', 'connect', 'watch'))
-gulp.task('default', gulp.series('build', 'connect', 'watch'))
+gulp.task('serve', gulp.series('build', 'connect'))
+gulp.task('watch', gulp.series('build', 'connect', 'watch'))
+gulp.task('default', gulp.series('watch'))

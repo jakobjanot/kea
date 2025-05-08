@@ -72,7 +72,7 @@ gulp.task('connect', function () {
 	connect.server({
 		livereload: true,
 		port: 8000,
-		root: ['dist/css', 'dist/slides', 'node_modules']
+		root: ['dist/slides', 'dist/css', 'node_modules']
 	})
 })
 

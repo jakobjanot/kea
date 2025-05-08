@@ -7,7 +7,8 @@
   "repository": "https://github.com/jakobjanot/kea",
   "license": "GPLv3",
   "dependencies": {
-    "reveal.js": "^5.2.1"
+    "reveal.js": "^5.2.1",
+    "reveal.js-mermaid-plugin": "^11.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

@@ -143,4 +143,4 @@ dist
 dist/
 !dist/theme/img/
 !dist/theme/fonts/
-build/
+!dist/hightlight/

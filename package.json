@@ -1,26 +1,23 @@
 {
-  "name": "courses",
+  "name": "revealjs-template",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "serve": "npx serve -l 3000 -s ./",
-    "build:themes": "gulp themes",
-    "watch:themes": "gulp themes --watch"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "description": "A template for Reveal.js presentations",
+  "main": "Gulpfile.js",
+  "author": "Jakob Kofoed Janot",
+  "repository": "https://github.com/jakobjanot/kea",
+  "license": "GPLv3",
   "dependencies": {
-    "reveal.js": "^5.2.1",
-    "reveal.js-mermaid-plugin": "^11.4.1"
-  },
-  "devDependencies": {
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.6",
     "gulp": "^5.0.0",
+    "gulp-connect": "^5.7.0",
     "gulp-dart-sass": "^1.1.0",
     "gulp-postcss": "^10.0.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "path": "^0.12.7",
+    "postcss": "^8.5.3",
+    "reveal.js": "^5.2.1",
+    "through2": "^4.0.2"
   }
 }

@@ -22,8 +22,8 @@
 ---
 
 ## Inlay Hints  
-![Inlay hints](./slides/img/inlayhints.png)  
-![Inlay hints](./slides/img/inlayhints2.png)  
+![Inlay hints](./assets/images/inlayhints.png)  
+![Inlay hints](./assets/images/inlayhints2.png)  
 
 ---
 
@@ -44,7 +44,7 @@
 ---
 
 ## Programmering  
-![Toast](./slides/img/toast.png)  
+![Toast](./assets/images/toast.png)  
 
 ---
 
@@ -67,8 +67,8 @@
 ## Populær  
 **Nr. 2 mest populære sprog ved PYPL (Google søgning)**  
 **Anvendt bredt i industrien**  
-![Java i industrien](./slides/img/javasteder.png)  
-![Java Popularity](./slides/img/javaranking.png)  
+![Java i industrien](./assets/images/javasteder.png)  
+![Java Popularity](./assets/images/javaranking.png)  
 
 ---
 
@@ -79,17 +79,17 @@
 ---
 
 ## **Class-based** & **object oriented**  
-![jigglypuff](./slides/img/jigglypuff.png)  
+![jigglypuff](./assets/images/jigglypuff.png)  
 
 ---
 
 ## **General purpose** & **High Level**  
-![highlevel](./slides/img/highlevel.png)  
+![highlevel](./assets/images/highlevel.png)  
 
 ---
 
 ## Write **Once**, Run **Anywhere**, Compiled til **Bytecode**  
-![WORA](./slides/img/wora.png)
+![WORA](./assets/images/wora.png)
 
 ---
 

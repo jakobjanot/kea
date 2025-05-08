@@ -52,8 +52,8 @@ gulp.task('copy-assets', function () {
 				return;
 			}
 			const newPath = path.join('slides', path.relative('slides', file.path));
-			const newPathAbsolute = path.join('dist', newPath);
 			file.path = newPath;
+			file.contents = fs.readFileSync(file.path); // Ensure file contents are preserved
 			cb(null, file);
 		}
 		))

@@ -140,7 +140,4 @@ dist
 **/.sass-cache/
 
 # Build output
-dist/
-!dist/theme/img/
-!dist/theme/fonts/
-build/
+dist

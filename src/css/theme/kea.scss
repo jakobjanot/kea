@@ -7,8 +7,8 @@
 
 // Default mixins and settings -----------------
 @use "sass:color";
-@import "../../node_modules/reveal.js/css/theme/template/mixins";
-@import "../../node_modules/reveal.js/css/theme/template/settings";
+@import "../../../node_modules/reveal.js/css/theme/template/mixins";
+@import "../../../node_modules/reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
 
@@ -60,7 +60,7 @@ $overlayElementFgColor: 240, 240, 240;
 @include dark-bg-text-color($white);
 
 // Theme template ------------------------------
-@import "../../node_modules/reveal.js/css/theme/template/theme";
+@import "../../../node_modules/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
 // Define additional color effects based on Dracula spec
@@ -130,3 +130,78 @@ $overlayElementFgColor: 240, 240, 240;
 .reveal .progress span {
     background-color: $keaRed;
 }
+
+
+/*
+IntelliJ Dark style
+*/
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #2b2b2b; /* IntelliJ Dark background */
+    color: #a9b7c6;       /* Default foreground text */
+  }
+  
+  .hljs-tag,
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-strong,
+  .hljs-name {
+    color: #cc7832; /* Keywords, tags */
+  }
+  
+  .hljs-code {
+    color: #6897bb; /* Code (generics, etc.) */
+  }
+  
+  .hljs-class .hljs-title {
+    color: #ffc66d; /* Class names */
+  }
+  
+  .hljs-attribute,
+  .hljs-symbol,
+  .hljs-regexp,
+  .hljs-link {
+    color: #9876aa; /* Attributes, regex, symbols */
+  }
+  
+  .hljs-string,
+  .hljs-bullet,
+  .hljs-subst,
+  .hljs-title,
+  .hljs-section,
+  .hljs-emphasis,
+  .hljs-type,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-selector-attr,
+  .hljs-selector-pseudo,
+  .hljs-addition,
+  .hljs-variable,
+  .hljs-template-tag,
+  .hljs-template-variable {
+    color: #6a8759; /* Strings, built-ins, variables */
+  }
+  
+  .hljs-comment,
+  .hljs-quote,
+  .hljs-deletion,
+  .hljs-meta {
+    color: #808080; /* Comments */
+    font-style: italic;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-doctag,
+  .hljs-title,
+  .hljs-section,
+  .hljs-type,
+  .hljs-selector-id {
+    font-weight: bold;
+  }
+  

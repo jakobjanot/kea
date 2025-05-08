@@ -12,22 +12,6 @@ aucibus viverra purus. Nulla consectetur mi vestibulum, feugiat risus ac, hendre
 
 ---
 
-# Nothing to see
-
-```java [1-3]
-  public class HelloWorld {
-    public static void main(String[] args) {
-      System.out.println("Hello world!");
-    }
-  }
-```
-
-and `inline` too
-
----
-
-<!-- .slide: class="kea-red" -->
-
 # Code
 
 ```java [1-3]
@@ -42,5 +26,12 @@ and `inline` too
 
 ---
 
-# Another slide
+# Tables
 
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Row 1    | Row 1    | Row 1    |
+| Row 2    | Row 2    | Row 2    |
+| Row 3    | Row 3    | Row 3    |
+
+---

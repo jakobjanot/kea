@@ -35,3 +35,27 @@ and `inline` too
 | Row 3    | Row 3    | Row 3    |
 
 ---
+
+# Diagrams
+
+```mermaid
+graph TD;
+    A[Client] -->|HTTP Request| B[Web Server];
+    B -->|HTTP Response| A;
+    B --> C[Application Server];
+    C --> D[Database];
+    D --> C;
+```
+
+<div class="mermaid">
+<pre class="mermaid">
+graph TD;
+    A[Client] -->|HTTP Request| B[Web Server];
+    B -->|HTTP Response| A;
+    B --> C[Application Server];
+    C --> D[Database];
+    D --> C;
+  </pre>
+</div>
+
+  ---

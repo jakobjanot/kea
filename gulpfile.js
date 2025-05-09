@@ -20,6 +20,23 @@ gulp.task('build-themes', function () {
 		.pipe(connect.reload())
 })
 
+gulp.task('copy-src-assets', function () {
+	return gulp.src('src/**/assets/**/*')
+		.pipe(through2.obj(function (file, _, cb) {
+			if (file.isDirectory()) {
+				cb(null, file);
+				return;
+			}
+			const newPath = path.join('src', path.relative('css', file.path));
+			file.path = newPath;
+			file.contents = fs.readFileSync(file.path); // Ensure file contents are preserved
+			cb(null, file);
+		}
+		))
+		.pipe(gulp.dest('dist'))
+		.pipe(connect.reload())
+})
+
 const template = fs.readFileSync('src/templates/reveal.html', 'utf-8');
 
 gulp.task('render-slides', function () {
@@ -43,8 +60,7 @@ gulp.task('render-slides', function () {
 		.pipe(connect.reload())
 })
 
-// copy the assets (images etc.) to the dist folder
-gulp.task('copy-assets', function () {
+gulp.task('copy-slides-assets', function () {
 	return gulp.src('slides/**/assets/**/*')
 		.pipe(through2.obj(function (file, _, cb) {
 			if (file.isDirectory()) {
@@ -63,8 +79,9 @@ gulp.task('copy-assets', function () {
 
 gulp.task('watch', function () {
 	gulp.watch('src/css/**/*.scss', gulp.series('build-themes'))
+	gulp.watch('src/**/assets/**/*', gulp.series('copy-src-assets'))
 	gulp.watch('slides/**/*.md', gulp.series('render-slides'))
-	gulp.watch('slides/**/assets/**/*', gulp.series('copy-assets'))
+	gulp.watch('slides/**/assets/**/*', gulp.series('copy-slides-assets'))
 	gulp.watch('src/templates/*.html', gulp.series('render-slides'))
 })
 
@@ -82,7 +99,7 @@ gulp.task('clean', function () {
 		.pipe(require('gulp-clean')())
 })
 
-gulp.task('build', gulp.parallel('build-themes', 'render-slides', 'copy-assets'))
+gulp.task('build', gulp.parallel('build-themes', 'copy-src-assets', 'render-slides', 'copy-slides-assets'))
 gulp.task('serve', gulp.series('build', 'connect'))
 gulp.task('watch', gulp.series('build', 'connect', 'watch'))
 gulp.task('default', gulp.series('watch'))

@@ -1,3 +1,8 @@
+---
+title: "Introduktion til programmering"
+---
+
+
 # Java 1. Semester  
 #### Introduktion til programmering
 
@@ -22,8 +27,8 @@
 ---
 
 ## Inlay Hints  
-![Inlay hints](./assets/images/inlayhints.png)  
-![Inlay hints](./assets/images/inlayhints2.png)  
+![Inlay hints](01-intro/images/inlayhints.png)  
+![Inlay hints](01-intro/images/inlayhints2.png)  
 
 ---
 
@@ -44,7 +49,7 @@
 ---
 
 ## Programmering  
-![Toast](./assets/images/toast.png)  
+![Toast](01-intro/images/toast.png)  
 
 ---
 
@@ -67,8 +72,8 @@
 ## Populær  
 **Nr. 2 mest populære sprog ved PYPL (Google søgning)**  
 **Anvendt bredt i industrien**  
-![Java i industrien](./assets/images/javasteder.png)  
-![Java Popularity](./assets/images/javaranking.png)  
+![Java i industrien](01-intro/images/javasteder.png)  
+![Java Popularity](01-intro/images/javaranking.png)  
 
 ---
 
@@ -79,17 +84,17 @@
 ---
 
 ## **Class-based** & **object oriented**  
-![jigglypuff](./assets/images/jigglypuff.png)  
+![jigglypuff](01-intro/images/jigglypuff.png)  
 
 ---
 
 ## **General purpose** & **High Level**  
-![highlevel](./assets/images/highlevel.png)  
+![highlevel](01-intro/images/highlevel.png)  
 
 ---
 
 ## Write **Once**, Run **Anywhere**, Compiled til **Bytecode**  
-![WORA](./assets/images/wora.png)
+![WORA](01-intro/images/wora.png)
 
 ---
 

@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+
+# use markitdown to convert docx, pptx etc. to markdown and save it in the same directory
+
+import os
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+def convert_to_markdown(input_file: str) -> str:
+    """
+    Convert a file to markdown using markitdown.
+    """
+    # Create a temporary directory
+    with tempfile.TemporaryDirectory() as temp_dir:
+        # Get the input file name without extension
+        input_file_name = os.path.splitext(os.path.basename(input_file))[0]
+        # Create the output file path, put it next to the input file
+        output_file = os.path.join(os.path.dirname(input_file), f"{input_file_name}.md")
+        # Run markitdown command
+        subprocess.run(["markitdown", input_file, "-o", output_file], check=True)
+        # Extract images from the input file
+        extract_images(input_file)
+        return output_file
+    
+def extract_images(input_file: str) -> None:
+    """
+    Extract images from a docx or pptx file.
+    """
+    image_folder = os.path.join(os.path.dirname(input_file), os.path.splitext(os.path.basename(input_file))[0])
+    # Create a temporary directory
+    with tempfile.TemporaryDirectory() as temp_dir:
+        # Unzip the input file to the temporary directory
+        subprocess.run(["unzip", "-qq", input_file, "-d", temp_dir], check=True)
+        # Find all image files in the temporary directory
+        for root, dirs, files in os.walk(temp_dir):
+            for file in files:
+                if file.endswith((".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp")):
+                    # Move the image file to the same directory as the input file
+                    src = os.path.join(root, file)
+                    dst = os.path.join(image_folder, file)
+                    os.makedirs(image_folder, exist_ok=True)
+                    os.rename(src, dst)
+                    print(f"Extracted {file} to {image_folder}")
+            
+
+def main():
+   for root, dirs, files in os.walk("."):
+        for file in files:
+            # check if the file is a docx or pptx file
+            if file.endswith(".docx") or file.endswith(".pptx"):
+                input_file = os.path.join(root, file)
+                output_file = convert_to_markdown(input_file)
+                print(f"Converted {input_file} to {output_file}")
+
+if __name__ == "__main__":
+    if len(sys.argv) != 1:
+        print("Usage: python convert.py")
+        sys.exit(1)
+    main()

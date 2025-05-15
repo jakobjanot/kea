@@ -27,13 +27,28 @@ title: "01 - Introduktion til kurset"
 
 --
 
-## Programmeringssprog
+Du kan løse problemer ude i virkeligheden
 
-Computere kan løse opgaver for os
+Notes:
+- At skrive software er fedt
 
 --
 
-Vi kan skrive **programmer**, dvs. give computernen instruktioner og data
+> Hvilke problemer løser vi med software i dag, som tidligere var "bøvlet"
+
+Notes:
+- Studende: Nævn eksempler på programmer, der løser et problem, som var vanskeligt at løse uden computer
+- Eksempler:
+    - bankkonti (Du skal ikke i bank hver gang du vil se din saldo)
+    - kreditkort (Du behøver ikke at have kontanter på dig hele tiden) 
+    - Excel regneark
+    - tekstbehandling (på en skrivemaskine var det svært at rette tastefejl)
+    - billedredigering (tidligere måtte du vente på at filmen var fremkaldt)
+    - VST instrumenter (du kan ikke have et rigtigt trommesæt i din lejlighed)
+    - Reservationssystemer (SAS blev førende, da de fik et reservationssystem, fordi man kunne ringe og booke en plads på et fly næste dag)
+    - GPS og Google Maps
+    - Streaming (Du kan have alle dine film og musik på din telefon)
+    - Sociale medier (Du kan holde kontakt med venner og familie uden at skulle ringe eller skrive breve)
 
 --
 
@@ -71,10 +86,16 @@ Java kan køre på mange **forskellige platforme**
 - Linux
 - Android
 
+Notes:
+- et andet ord for platform er styresystem
+- det er det, der gør at Java er så populært
+- nogle har måske hørt om "write once, run anywhere"
+
+
 --
 
 ```mermaid
-%%{ init: { "theme": "neutral" }}%%
+%%{ init: { "theme": "base" }}%%
 flowchart TD
     A[HelloWorld.java] -->|javac| B[HelloWorld.class]
     B -->|java| C[JVM] <--> D[Windows]
@@ -82,23 +103,24 @@ flowchart TD
     B -->|java| G[JVM] <--> H[Linux]
     B -->|java| I[JVM] <--> J[Android]
 ```
----
-
-## Java kildekode
-
-er en tekstfil, der ender på `.java`
 
 Notes:
-- det er til mennesker
-- du kan åbne den i en teksteditor
-- det er nemmere at bruge IntelliJ
-- IntelliJ er en IDE (Integrated Development Environment)
-- det er et program, der hjælper os med at skrive kode
 
+- Du skal ikke skrive din kode om for at køre den på en anden platform
+- Mennesker skriver kildekode i en tekstfil med endelsen `.java`
+- Du kompilerer den til byte-code, som er en binær fil med endelsen `.class`
+- Nu kan ingen læse din kildekode
+- Et opertivsystem forstår maskinkode
+- Når du installerer Java, kører der en Java Virtuel Machine (JVM)
+- JVM forstår byte-code og omsætter det til maskinkode
+--
+
+
+<!-- .slide: class="kea-green" -->
+## Din tur
 
 --
 <!-- .slide: class="kea-green" -->
-## Din tur
 
 1. Lav en fil der hedder `HelloWorld.java`  
 2. Skriv følgende kode i filen og gem den:  
@@ -109,6 +131,19 @@ public class HelloWorld {
     }
 }
 ```
+
+--
+<!-- .slide: class="kea-green" -->
+
+3. Compile med
+```bash
+javac 
+```
+
+--
+
+
+
 
 --
 ## Kompilering til bytecode

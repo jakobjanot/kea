@@ -26,7 +26,7 @@ slides:
     # to CSS file, public url to CSS file, or one of the highlight.js built-in
     # themes such as `monokai`, `obsidian`, `tokyo-night-dark`, `vs`, ...
     # (see https://highlightjs.org/examples)
-    highlight_theme: idea
+    highlight_theme: 'atom-one-dark'
 
     # Relative path to a python script containing a function
     # Callable[[str], str] named `preprocess`. For each Markdown file, the whole

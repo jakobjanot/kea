@@ -25,7 +25,7 @@ Notes:
 
 ### Notes:
 
-# Download Java SE JDK 17
+# Download Java JDK 21
 
 Vælg din operativsystem, og Download en JDK
 

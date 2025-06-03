@@ -1,5 +1,5 @@
 ---
-title: 02-1 - Variabler og expressions
+title: 02#1 - Variabler og expressions
 ---
 <!-- .slide: class="kea-red" -->
 
@@ -82,10 +82,17 @@ I Java slutter statements med et `;`
 
 `// System.out.println("Chili tilsættes");` er en **kommentar**
 
+Notes:
+- De starter med `//` og slutter ved slutningen af linjen
+
 --
 
 En kommentar er bliver **ignoreret** af computeren
 
+
+Notes:
+
+- Kommentarer er ikke statements, de bliver ikke udført af computeren
 --
 
 Kommentarer er gode til at forklare hvad koden gør, fx
@@ -96,7 +103,7 @@ Kommentarer er gode til at forklare hvad koden gør, fx
 
 --
 
-Vi kan også bruge kommentarer til at "slå" en linje fra, så den ikke bliver udført
+Vi kan også bruge kommentarer til at **"slå" en linje fra**, så den **ikke bliver udført**
 
 ```java
 // System.out.println("Chili tilsættes");
@@ -188,9 +195,24 @@ Du kan give boksen et **navn** fx `eggs`, så du kan bruge den senere
 
 --
 
-Navngivning er vigtigt
+**Navngivning** er vigtigt
 
 --
+
+Hvad betyder `int e = 2`?
+
+--
+
+Bedre: `int numberOfEggs = 2`
+
+--
+
+Java er **case-sensitive**
+
+dvs. `numberofeggs` og `numberOfEggs` er to forsk. variable
+
+--
+
 | navn             | ok? |
 |------------------|----|
 | `eggs`           | ✅  |
@@ -358,7 +380,7 @@ int totalEggs = eggsPerPerson * persons;
 
 --
 
-## Alm. matematik
+## Matematiske operatorer
 
 | operator | betydning      |
 |----------|----------------|
@@ -367,6 +389,22 @@ int totalEggs = eggsPerPerson * persons;
 | `*`      | multiplikation |
 | `/`      | division       |
 | `%`      | modulus        |
+
+--
+
+```java
+int eggsPerPerson = 2;
+int persons = 4;
+int totalEggs = eggsPerPerson * persons;
+System.out.println("Antal æg: " + totalEggs);
+```
+
+--
+
+```java
+
+int milkPerPerson = 0.25; // liter
+int persons = 4
 
 --
 
@@ -513,8 +551,8 @@ System.out.println(eggs);
 ## Konstanter
 
 ```java
-final String name = "Nynne";
-name = "Dorte"; // Java throws an error!!         
+final int EGGS_PER_PERSON = 2;
+EGGS_PER_PERSON = 20; // Java throws an error!!         
 ```
 
 Notes:

@@ -1,5 +1,5 @@
 ---
-title: "01-2 - Installer Java"
+title: "02#2 - Installer Java"
 ---
 <!-- .slide: class="kea-red" -->
 # Installering af Java udviklingsværktøjer

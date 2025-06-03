@@ -240,7 +240,7 @@ Variablens **type** skal passe til den **værdi** du vil gemme i den, fx
 | type     | værdi            |
 |----------|------------------|
 | `int`    | 2                |
-| `float`  | 0.5              |
+| `double`  | 0.5              |
 | `bool`   | true             |
 | `char`   | 'a'              |
 | `String` | "Salt tilsættes" |
@@ -248,7 +248,7 @@ Variablens **type** skal passe til den **værdi** du vil gemme i den, fx
 
 Notes:
 - `int` for heltal
-- `float` for decimaltal
+- `double` for decimaltal
 - `char` for bogstaver
 - `bool` for sand/falsk
 - `String` for tekst
@@ -316,10 +316,10 @@ int age = 25;
 
 # Decimaltal
 
-engelsk: `float`ing points
+engelsk: `double` precision floating points
 
 ```java
-float height = 178.2;
+double height = 178.2;
 ```
 
 Notes:
@@ -358,7 +358,7 @@ String name = "Jens";
 ```
 
 Notes:
-- `int`, `float`, `char` og `String` er primitive data typer og skrives med små bogstaver
+- `int`, `double`, `char` og `String` er primitive data typer og skrives med små bogstaver
 - `String` er dermiod en klasse (også kaldet reference type) og skrives med stort S
 - Faktisk er `String` er en sekvens af bogstaver af primitivtypen `char`
 
@@ -371,12 +371,15 @@ Notes:
 ```java
 int eggsPerPerson = 2;
 int persons = 4;
+
 int totalEggs = eggsPerPerson * persons;
 ```
 
 `*` er en **operator**
 
-`eggsPerPerson * persons` er en expression
+`eggsPerPerson` og `persons` er **operander**
+
+`eggsPerPerson * persons` er en **expression**
 
 --
 
@@ -392,19 +395,58 @@ int totalEggs = eggsPerPerson * persons;
 
 --
 
+`+` bruges til at lægge tal sammen, fx
+
 ```java
-int eggsPerPerson = 2;
-int persons = 4;
-int totalEggs = eggsPerPerson * persons;
-System.out.println("Antal æg: " + totalEggs);
+int a = 5;
+int b = 3;
+int sum = a + b; // 8
+````
+
+--
+
+Men `+` bruges også til at **sammenkæde** tekst, fx
+
+```java
+String firstName = "Beate";
+System.out.println("Mit navn er " + firstName); // Mit navn er Beate
 ```
 
 --
 
-```java
+Vi kunne også skrive
 
-int milkPerPerson = 0.25; // liter
-int persons = 4
+```java
+String firstName = "Beate' alder er ";
+int age = 55;
+String fullName = firstName + age; // Beate' alder er 55
+System.out.println(fullName);
+```
+
+Det virker selvom `age` er et heltal
+
+--
+
+**operand** `+` **operand**
+
+- Hvis **den ene side er tekst** &rarr; **sammenkædning af tekst**
+- Hvis **begge sider er tal** &rarr; **addition af tal**
+
+Notes: 
+- I Java er `+`-operatoren **overloaded**
+- Den opfører sig forskelligt afhængig af typen af de værdier den arbejder med.
+
+--
+
+Er `-` også overloaded?
+
+```java
+String firstName = "Beate";
+String lastName = "Hansen";
+String fullName = firstName - lastName; // Fejl!
+```
+
+**Nej!**
 
 --
 
@@ -436,7 +478,8 @@ Notes:
 ```java
 int eggs = 2;
 int persons = 4;
-bool enoughEggs = (eggs >= persons * 2);
+int totalEggs = eggs * persons;
+bool enoughEggs = eggs >= totalEggs;
 System.out.println("Er der nok æg? " + enoughEggs);
 ```
 
@@ -483,13 +526,13 @@ Notes:
 
 ```java
 int eggs = 2;
-System.out.println(eggs);
+System.out.println(eggs); // 2
 
 eggs = 4;
-System.out.println(eggs);
+System.out.println(eggs); // 4
 
 eggs = eggs + 2;
-System.out.println(eggs);
+System.out.println(eggs); // 6
 ```
 
 ## Tildelingsoperator
@@ -506,15 +549,17 @@ System.out.println(eggs);
 
 ## Demo: Tildelingsoperator
 
+Notes:
+
 ```java
 int eggs = 2;
-System.out.println(eggs);
+System.out.println(eggs); // 2
 
 eggs += 2;
-System.out.println(eggs);
+System.out.println(eggs); // 4
 
 eggs -= 1;
-System.out.println(eggs);
+System.out.println(eggs); // 3
 ```
 
 --
@@ -539,11 +584,11 @@ Notes:
 
 ```java
 int eggs = 2;
-System.out.println(eggs);
+System.out.println(eggs); // 2
 eggs++;
-System.out.println(eggs);
+System.out.println(eggs); // 3
 eggs--;
-System.out.println(eggs);
+System.out.println(eggs); // 2
 ```
 
 --
@@ -563,7 +608,7 @@ Notes:
 
 ```java
 final int MAX_AGE = 100;
-final float PI = 3.14;
+final double PI = 3.14;
 ```
 
 --

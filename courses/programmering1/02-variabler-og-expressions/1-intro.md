@@ -10,8 +10,8 @@ title: 02#1 - Variabler og expressions
 
 # Program
 
-- 08:30 Velkomst praktisk, slides
-- 09:00 Igang med øvelser i grupper
+- 08:30 Variabler og expressions
+- 09:30 Igang med øvelser
 - 10:00 Pause
 - 10:15 Øvelser fortsat
 - 11:30 Opsamling, forberedelse til næste gang

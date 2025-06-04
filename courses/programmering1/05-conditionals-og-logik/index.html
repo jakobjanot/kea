@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Java 1. Semester</title>
+
+    <link rel="stylesheet" href="../../dist/reset.css">
+    <link rel="stylesheet" href="../../dist/reveal.css">
+    <link rel="stylesheet" href="../../dist/theme/white.css">
+
+    <link rel="stylesheet" href="../../plugin/highlight/dracula.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Conditionals & Booleans</h1>
+            </section>
+
+            <section>
+                <h2>Opsamling på metoder</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public class Metode {
+                        public static void main(String[] args) {
+                            //main er en metode, som vi nu er vant til at bruge
+                            System.out.println("Dette her er også en metode!");
+                        }
+                    }                                                                                                     
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>metoder</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public class LangtMetodenavnDetSkalVaerePascalCase {
+                        public static void main(String[] args) {
+                            // er main metoden et krav?
+                            // skal alle klasser have en main metode?
+                        }
+                        // kan man skrive kode her?
+                    }                                                                            
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Metoder</h2>
+                <ul>
+                    <li>main metoden er ikke et krav i ALLE klasser.
+                    </li>
+                    <li>Derimod er det et krav at ÉN klasse i dit program er: <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">public</b>
+                        og
+                        <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">main</b>
+                        og har returtypen <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">void</b>.
+                    </li>
+                    <li>-og accepterer et array af Strings <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">(String[]
+                            args)</b> som eneste parameter
+                    </li>
+                    <li>Det <b>ER</b> muligt at skrive al din kode inde i en main klasse.</li>
+                    <li>Men det er en dårlig praksis! Vi skal bryde koden op i metoder der hver har et job, for at koden
+                        er
+                        mere robust og DRY
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Metode Anatomi</h2>
+                <img src="img/metode-anatomi.png" alt="metode anatomi">
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">ReturType</b>
+                    int, double, boolean osv.</p>
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">MetodeNavn</b>
+                    Vi vælger selv navnet. Skal være CamelCase.</p>
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">Parameter</b>
+                    String, int osv.</p>
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">Parameter</b>
+                    Vi vælger selv navnet.</p>
+
+            </section>
+
+            <section>
+                <h2>Forskellige Typer af metoder</h2>
+                <p>Der findes forskellige typer af metoder i Java</p>
+                <pre><code class="language-java">
+                    public class MegetLangtMetodenavnDetSkalVaerePascalCase {
+                        // void metoder uden parametre
+                        System.out.println();
+                        
+                        // void metoder med parametre
+                        System.out.println(“Hello World!”);
+                        
+                        // Metoder der returnerer værdier uden parametre
+                        scanner.nextline();
+                        
+                        // Metoder der returnerer værdier med parametre
+                        sentence.replace(““, “.java”);
+                    }                                                                     
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>void metode uden parametre</h2>
+                <p>En <b>void</b> metode er en metode uden returværdi.
+                    Uden parametre betyder at vi ikke “sender” noget til metoden:</p>
+
+                <pre><code class="language-java">
+                        public class MetodeEksempelVoidIngenParametre {
+                            // Metode der printer hilsen
+                            public static void printGreeting(){
+                                System.out.println("Hej, Datamatikere!");
+                            }
+                            public static void main(String[] args) {
+                                // Nu kalder vi på metoden
+                                printGreeting();
+                            }
+                         }                                                                                              
+                    </code></pre>
+            </section>
+
+            <section>
+                <h3>void metode med parametre</h3>
+                <p>Bemærk at vores main metode giver firstName som input til greetPerson. I selve greetPerson, hedder
+                    parameteren name. Vi kan kalde parameteren inde i vores greetPerson lige hvad der passer os:
+                </p>
+
+                <pre><code class="language-java">
+                        public class MetodeEksempelVoidMedParameter {
+                            // void metode med parameter
+                            public static void greetPerson(String name){
+                                System.out.println("Hej, " + name);
+                            }
+                            public static void main(String[] args) {
+                                String firstname = "Ulla";
+                                greetPerson(firstname);
+                            }
+                         }                                                                                                                      
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>metode med returværdi uden parametre</h2>
+
+                <pre><code class="language-java">
+                        public class MetodeEksempelMedReturvaerdiUdenParametre {
+                            // metoden returnerer en int og har ingen input
+                            public static int getSomeNumber(){
+                                int someNumberFromCalculation = 12;
+                                return someNumberFromCalculation;
+                            }
+                            public static void main(String[] args) {
+                                int someNumber = getSomeNumber();
+                                System.out.println("Resultatet er: " + someNumber);
+                            }
+                         }                                                                                                                                              
+                    </code></pre>
+            </section>
+
+            <section>
+                <h2>metode med returværdi med parametre</h2>
+                <pre><code class="language-java">
+                            public class MetodeEksempelMedReturvaerdiMedParametre {
+                                // metoden returnerer en string med parametre
+                                public static String getFullName(String firstName, String lastName){
+                                    String fullName = firstName + " " + lastName;
+                                    return fullName;
+                                }
+                                public static void main(String[] args) {
+                                    String firstName = "Ada";
+                                    String lastName = "Lovelace";
+                                    String fullName = getFullName(firstName, lastName);
+                                    System.out.println("Hello " + fullName);
+                                }
+                            }                                                                                                                                              
+                    </code></pre>
+            </section>
+
+            <section>
+                <h3>static vs non-static methods</h3>
+                <pre><code class="language-java">
+                    System.out.println("Hello World!");
+                    Scanner scanner = new Scanner(System.in)
+                    scanner.nextLine();          
+                </code></pre>
+                <h4>static vs non-static</h4>
+                <p><b>static</b> metoder kaldes direkte uden at oprette et objekt (de tilhører klassen) - eksempel Hello
+                    World.</p>
+                <p><b>non-static</b> metoder kræver et objekt for at blive kaldt (de tilhører et specifikt objekt) -
+                    eksempel Scanner.</p>
+            </section>
+
+            <section>
+                <h2>static vs non-static methods</h2>
+                <pre><code class="language-java">
+                    System.out.println("Hello World!");
+                    Scanner scanner = new Scanner(System.in)
+                    scanner.nextLine();           
+                </code></pre>
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">println()</b>
+                    er en statisk metode fra <b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">System.out</b>,
+                    så vi kan kalde den uden at oprette et objekt (dvs. bruge <b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">new</b>)
+                </p>
+                <p><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">nextLine()</b>
+                    er en non-static metode fra Scanner klassen, så vi er nødt til at oprette et objekt (scanner) for at
+                    bruge den.</p>
+            </section>
+
+            <section>
+                <h3>static vs non-static methods</h3>
+                <h5><b style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">static</b>
+                    Metoder</h5>
+                <ul>
+                    <li> Tilhører selve klassen, ikke et objekt.</li>
+                    <li>Kaldes direkte via klassen (vi skal ikke bruge <b
+                            style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">new</b>
+                        keyword)</li>
+                </ul>
+
+                <h5><b
+                        style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">non-static</b>
+                    Metoder</h5>
+
+                    <ul>
+                        <li>Tilhører et objekt og kræver at vi skal bruge <b
+                                style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">new</b>
+                            keyword for at oprette et objek.</li>
+                        <li> Bruges typisk til at arbejde med objektets data (<i style="font-family: monospace; color: #310af5; background-color: rgb(246, 249, 113);">kommer vi til om et par uger!</i>)
+                        </li>
+                    </ul>
+            </section>
+
+            <section>
+                <h2>Logik / Relational Operators</h2>
+            </section>
+
+            <section>
+                <h2>Relational Operators</h2>
+                <img src="img/relational.png" alt="relational operators">
+            </section>
+
+            <section>
+                <h2>Boolske Operatorer</h2>
+                <img src="img/boolsk-table.png" alt="Boolske Operatorer">
+            </section>
+
+            <section>
+                <h2>final keyword</h2>
+                <ul>
+                    <li><b style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">final</b> keyword er en <i>non-access modifier</i> der kan bruges til classes, metioder og variabler</li>
+                    <li> Det gør en værdi <b>umulig at ændre</b></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Evaluating Expressions</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                public static void main(String[] args) {
+                    int heightFromUser; // input fra brugeren
+                    final int HEIGHT_LIMIT = 160; // hard limit på højde
+                        if(HEIGHT_LIMIT > heightFromUser){
+                            System.out.println("Du er ikke høj nok!");
+                        }
+                }                                                              
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>else</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public static void main(String[] args) {
+                        int heightFromUser; // input fra brugeren
+                        final int HEIGHT_LIMIT = 160; // hard limit på højde
+                        if(HEIGHT_LIMIT > heightFromUser){
+                            System.out.println("Du er ikke høj nok!");
+                        }
+                        else{
+                            System.out.println("Du må gerne komme ind");
+                        }
+                        System.out.println("Nu er det slut");
+                    }                                                                                     
+                </code></pre>
+            </section>
+
+            <section>
+            <h2>else if</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public static void main(String[] args) {
+                        if(x){
+                            System.out.println("x!");
+                        }
+                        else if (y){
+                            System.out.println("Y!");
+                        } else {
+                            System.out.println("Z!");
+                        }
+                    }                                                                                                     
+                </code></pre>
+                <p>Husk sekvensen altid slutter med <b style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">else</b></p>
+            </section>
+
+            <section>
+                <h2>nested if Statement</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public static void whatArticleToDisplay() {
+                        if (xloggedIn == true) {
+                            if (isPremiumUser == true) {
+                                displayArticleWithPremiumContent:
+                     
+                            } else {
+                                displayArticle();
+                            }
+                        }
+                        displayPayWall();
+                     }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>logik klan drille!</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public class Clubhouse {
+                        public boolean isOlEnoughToEnter(int age){
+                            //man skal være fyldt 18 for at komme ind
+                            if(18 >= age){
+                                System.out.println("Velkommen i klubhuset!");
+                                return true;
+                            } else{
+                                System.out.println("Ud!");
+                                return false;
+                            }
+                        }
+                     }                     
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Logic Error / Bugs</h2>
+                <ul>
+                    <li>Giver andet resultat end forventet</li>
+                    <li>Bliver <b>ikke</b> fanget af compiler</li>
+                    <li>Fanges med tests</li>
+                    <li>CodingBat/Codewars sørger for at teste for dig</li>
+                    <li>Syntax er korrekt - logikken er forkert</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>switch</h2>
+                <p>En <b style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">switch</b> metode giver det samme som if else blokke: evaluering med udfald for hvert enkelt tilfælde
+                </p>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public class Switch {
+                        public boolean switchExample(){
+                          switch(/*expression*/)
+                            case /*tilfælde 1*/:
+                                /* Hvad der skal ske*/
+                            case /*tilfælde 2*/:
+                                /* Hvad der skal ske*/
+                            case /*tilfælde 3*/:
+                                /* Hvad der skal ske*/
+                        }
+                     }                                         
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Switch</h2>
+                <ul>
+                    <li>Flere forskellige udfald med den samme expression</li>
+                    <li>gør det samme som <b style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249);">if/else</b></li>
+                    <li>Switch kan være lettere at læse / mere kompakt</li>
+            </ul>
+            </section>
+
+            <section>
+                <h2>switch</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    String dayOfTheWeek;
+                    switch(getNumberOfTheWeek()){
+                      case 0:
+                          dayOfTheWeek = "Monday";
+                          break;
+                      case 1:
+                          dayOfTheWeek = "Tuesday";
+                          break;
+                      case 2:
+                          dayOfTheWeek = "Wednesday";
+                          break;
+                      case 3:
+                          dayOfTheWeek = "Thursday";
+                          break;
+                      case 4:
+                          dayOfTheWeek = "Friday";
+                          break;
+                      case 5:
+                          dayOfTheWeek = "Saturday";
+                          break;
+                      case 6:
+                          dayOfTheWeek = "Sunday";
+                          break;
+                    }                                       
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Switch flere cases</h2>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public class Switch {
+                        String season;
+                     
+                          switch(getMonthInNumber()){
+                            case 11:
+                            case 0:
+                            case 1:
+                                season = "Winter is coming";
+                                break;
+                            case 2:
+                            case 3:
+                            case 4:
+                                season = "Spring";
+                                break;
+                            case 5:
+                            case 6:
+                            case 7:
+                                season = "Summer";
+                                break;
+                            case 8:
+                            case 9:
+                            case 10:
+                                season = "Fall";
+                                break;
+                          }
+                     }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Ternary</h2>
+                <p style="font-family: monospace; color: #b40249; background-color: rgb(253, 223, 249); font-size:60%;">variable = Expression1 ? Expression2: Expression3
+                </p>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public static void main(String[] args) {
+                        String fruit = "jordbær";
+                 
+                        String result = fruit.equals("Jordbær") ? "Det et jordbær!" :
+                                fruit.equals("æble") ? "Det er et æble!" :
+                                        fruit.equals("banan") ? "Det er en banan!" :
+                                                "ukendt frugt";
+                 
+                        System.out.println(result);
+                    }  
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Ternary kan blive utrolig kompakt</h2>
+                <p>Husk på at det vigtigste er at koden er let at forstå. Kompaktere er ikke altid bedre!</p>
+                <pre><code class="language-java" data-trim data-line-numbers>
+                    public class TernaryOddEven {
+                        public static void main(String[] args) {
+                            int num = 10;
+                            String result = (num % 2 == 0) ? "Even" : "Odd";
+                            System.out.println(result);
+                        }
+                     }                                         
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>codingbat</h2>
+                <img src="img/codingbat.png" alt="codingbat">
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../../dist/reveal.js"></script>
+    <script src="../../plugin/notes/notes.js"></script>
+    <script src="../../plugin/markdown/markdown.js"></script>
+    <script src="../../plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

@@ -20,6 +20,8 @@ title: 03#1 - Metoder
 
 # Metoder
 
+![citronmåne](img/citronmaane.png)
+
 --
 
 ```java
@@ -35,6 +37,7 @@ public class CakeRecipe {
         System.out.println("Put det i skålen");
         System.out.println("Put dejen i en bageform");
         System.out.println("Bag i ovnen i 30 minutter");
+    }
 }
 ```
 Notes:
@@ -68,6 +71,8 @@ public class CakeRecipe {
         addToBowl();
         System.out.println("Put dejen i en bageform");
         System.out.println("Bag i ovnen i 30 minutter");
+        System.out.println("Afmål 100 g flormelis");
+        System.out.println("Put glassur på kagen");
     }
 
     public static void addToBowl() {
@@ -150,7 +155,7 @@ public static void measureIngredient() {
 
 Notes:
 - Vi kan lave en metode `measureIngredient`, men den har brug for viden om ingrediensen og mængden i gram af den.
-- Derfor skal `measureIngredient` metoden tage to parametre: `amount` og `ingredient`.
+- Derfor skal vi når vi kalder `measureIngredient` give den to argumenter: ingrediensen og mængden.
 
 --
 
@@ -183,9 +188,11 @@ public class CakeRecipe {
         measureIngredient("mel", 100);
         addToBowl();
     }
+
     public static void addToBowl() {
         System.out.println("Put det i skålen");
     }
+    
     public static void measureIngredient(String ingredient, int amount) {
         System.out.println("Afmål " + amount + " g " + ingredient);
     }
@@ -198,3 +205,147 @@ Notes:
 - Nu har vi et program, der er mere overskueligt og nemmere at vedligeholde.
 - Vi har lavet to metoder: `addToBowl` og `measureIngredient`.
 - `measureIngredient` tager to parametre: `ingredient` og `amount`, som vi kan bruge til at udskrive den rigtige tekst.
+
+---
+
+# Parametre og argumenter
+
+--
+
+### Parameter
+
+En **variabel** til den værdi som metoden **modtager**, når den kaldes.
+
+```java
+public static void measureIngredient(String ingredient, int amount)
+```
+
+`meassureIngredient` har to parametre: `ingredient` og `amount`.
+
+--
+
+### Argument
+
+Den værdi, der **gives til** metoden, når den kaldes.
+
+```java
+measureIngredient("smør", 300);
+```
+
+`measureIngredient` kaldes med to argumenter: `"smør"` og `300`.
+
+---
+
+# Metode **hoved** og **krop**:
+
+```java [|1|2]
+public static void measureIngredient(String ingredient, int amount) { // Metodehoved
+    System.out.println("Afmål " + amount + " g " + ingredient); // Metodekrop
+}
+```
+
+Notes:
+- Hoved af metoden er den første linje, der indeholder metodenavnet og parametrene.
+- Krop af metoden er det, der er imellem `{` og `}`.
+- Kroppen er det, der udføres, når metoden med det navn kaldes
+
+--
+
+Vi kalder også hovedet i metoden for **metodesignatur**.
+
+De to metoder herunder er forskellige, selvom de har samme navn:
+
+```java
+public static void measureIngredient(String ingredient, int amount) {
+    System.out.println("Afmål " + amount + " g " + ingredient);
+}
+```
+
+```java
+public static void measureIngredient(String ingredient) {
+    System.out.println("Afmål " + ingredient);
+}
+```
+
+Hvilken metode rammer vi med `measureIngredient("smør")`?
+
+Notes:
+- Det er den sidste metode, fordi den kun har een parameter, og derfor passer argumentet `"smør"` til den.
+
+---
+<!-- .slide: class="kea-green" -->
+# Demo: Tommer til centimeter
+
+![tommestok](img/tommestok.png)
+
+Notes:
+Vi skal nu prøve at lave en metode
+
+Hjælp mig her:
+- hvad hedder tommer på engelsk?
+- hvad skal vi kalde klassen?
+- hvordan laver jeg main metoden?
+- hvad skal vi lave i main? - kalde en metode, der konverterer tommer til centimeter, udskriver resultatet
+- hvad skal vi kalde metoden? - `convertInchesToCm`
+- hvad skal den returnere? cm
+- hvad type har det den returnerer? - `double`
+- hvilke parametre skal metoden have?
+- hvilken type har de parametre? - `double`
+- hvordan kalder jeg metoden i main?
+- nogen der ved hvor mange cm en tomme er? - 2.54 cm
+
+Løsning:
+```java
+public class InchToCmConverter {
+    public static void main(String[] args) {
+        double inch = 10.0;
+        double cm = convertInchesToCm(inch);
+        System.out.printf("%.2f tommer er %.2f cm%n", inch, cm);
+    }
+    public static double convertInchesToCm(double inch) {
+        double cm = inch * 2.54;
+        return cm;
+    }
+}
+```
+
+Vi kan refaktorisere koden, så vi kan konvertere flere tommer til centimeter:
+
+```java
+public static double convertInchesToCm(double inch) {
+    return inch * 2.54;
+}
+```
+
+---
+
+# Klassen `java.lang.Math`
+
+![Lommeregner](img/lommeregner.png)
+
+Notes:
+- er der nogen, der har haft sådan en lommeregner?
+- Det har i hvert fald fået nu med Java's standardbibliotek, som indeholder en klasse `java.lang.Math`, der har en masse nyttige metoder til matematiske beregninger.
+
+--
+
+Java's standardbibliotek indeholder en masse nyttige metoder, bl.a. `java.lang.Math`, fx
+
+```java
+// Afrunding:
+Math.floor(3.7); // 3.0
+Math.ceil(3.7);  // 4.0
+Math.round(3.7); // 4
+```
+
+```java
+// Max og min:
+Math.max(5, 10); // 10
+Math.min(5, 10); // 5
+```
+
+```java
+// Potens regning og kvadratrod:
+Math.pow(3, 2); // 9.0
+Math.sqrt(16); // 4.0
+```

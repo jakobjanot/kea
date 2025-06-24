@@ -36,30 +36,68 @@ Notes:
 - vejrtrækningsøvelsesprogram: 10 repetitioner
 - vis eksempel på at det er kedeligt at skrive det 10 gange
 - vis først uden sleep, så det ikke giver den rigtige effekt
-```java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("1. Træk vejret langsomt ind");
-        sleep(4000);
-        System.out.println("2. Hold vejret");
-        sleep(4000);
-        System.out.println("3. Pust langsomt ud");
-        sleep(4000);
-        System.out.println("4. Hold vejret");
-        sleep(4000);
-        System.out.println("1. Træk vejret langsomt ind");
-        sleep(4000);
-        System.out.println("2. Hold vejret");
-        sleep(4000);
-        System.out.println("3. Pust langsomt ud");
-        sleep(4000);
-        System.out.println("4. Hold vejret");
-        sleep(4000);
-        System.out.println("5. Træk vejret langsomt ind");
-        // ...
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("1. Træk vejret langsomt ind");
+            sleep(4000);
+            System.out.println("2. Hold vejret");
+            sleep(4000);
+            System.out.println("3. Pust langsomt ud");
+            sleep(4000);
+            System.out.println("4. Hold vejret");
+            sleep(4000);
+            System.out.println("1. Træk vejret langsomt ind");
+            sleep(4000);
+            System.out.println("2. Hold vejret");
+            sleep(4000);
+            System.out.println("3. Pust langsomt ud");
+            sleep(4000);
+            System.out.println("4. Hold vejret");
+            sleep(4000);
+            System.out.println("5. Træk vejret langsomt ind");
+            // ...
+        }
     }
-}
+    ```
+- vi har lært at lave metoder, som vi bruger for at undgå gentagelse af kode
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            breathCycle();
+            breathCycle();
+            // ...
+        }
+        public static void breathCycle() {
+            System.out.println("1. Træk vejret langsomt ind");
+            sleep(4000);
+            System.out.println("2. Hold vejret");
+            sleep(4000);
+            System.out.println("3. Pust langsomt ud");
+            sleep(4000);
+            System.out.println("4. Hold vejret");
+            sleep(4000);
+        }
+    }
+    ```
+- men hvordan gør vi vores program dynamisk, så vi kan ændre antallet af gentagelser?
+
+--
+
+## Iteration over et array
+
+- Vi har et array med 10 elementer, og vi vil gerne printe hvert element ud.
+```java
+String[] names = {"Alice", "Børge", "Cecilie", "David", "Eva", "Frederik", "Gitte", "Hans", "Ida", "Jens"};
+System.out.println(names[0]);
+System.out.println(names[1]);
+System.out.println(names[2]);
+System.out.println(names[3]);
+// ...
 ```
+
+Gør det samme for en liste med 1000 elementer.
+    
 
 --
 

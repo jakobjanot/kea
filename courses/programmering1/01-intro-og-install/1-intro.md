@@ -89,7 +89,7 @@ Notes:
 --
 
 
-![Hej på forsk. talte sprog](images/hello-in-spoken-langs.png)
+![Hej på forsk. talte sprog](img/hello-in-spoken-langs.png)
 
 Notes:
 
@@ -98,7 +98,7 @@ Ligesom vi har mange forskellige sprog til at kommunikere med hinanden, har vi o
 
 -- 
 
-![Det samme program i 30 forsk. programmeringssprog](images/hello-world-30-lang.png)
+![Det samme program i 30 forsk. programmeringssprog](img/hello-world-30-lang.png)
 
 Notes:
 - 'Hello, World' programmet i 30 forskellige programmeringssprog
@@ -111,7 +111,7 @@ Notes:
 
 --
 
-![TIOBE indekset over populære programmeringssprog](images/tiobe.png)
+![TIOBE indekset over populære programmeringssprog](img/tiobe.png)
 
 Notes:
 - TIOBE indekset viser de mest populære programmeringssprog
@@ -134,7 +134,7 @@ Notes:
 
 --
 
-<!-- .slide: data-background-image="images/minecraft.png" -->
+<!-- .slide: data-background-image="img/minecraft.png" -->
 
 Notes:
 - Minecraft er lavet i Java

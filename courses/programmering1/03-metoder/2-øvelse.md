@@ -25,6 +25,68 @@ Vi skal lave et program, der konverterer en afstand i sømil (nautiske mil) til 
 
 ---
 
+# Øvelse - hvilken type returnerer metoden?
+
+1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `return-type`.
+2. Lav en Java-klasse `ReturnType`, der ser sådan ud:
+    ```java
+    public class ReturnType {
+        public static void main(String[] args) {
+            ??? result = add(5, 10);
+            System.out.println("Resultatet er: " + result);
+
+        }
+
+        public static ??? add(int a, int b) {
+            return a + b;
+        }
+    }
+    ```
+3. Udfyld `???` med den rigtige type, så programmet kan kompileres og køre.
+
+--
+
+4. På samme måde som før, prøv om du kan få programmet til at køre ved at
+    - kalde metoden
+    - udfylde `???` i de følgende metoder:
+
+5. 
+    ```java
+        public static ??? isEven(int number) {
+            return number % 2 == 0;
+        }
+    ```
+
+6. 
+    ```java
+        public static ??? fullName(String firstName, String lastName) {
+            return firstName + " " + lastName;
+        }
+    ```
+
+7. 
+    ```java
+        public static ??? getLength(String text) {
+            return text.length();
+        }
+    ```
+
+8. 
+    ```java
+        public static ??? greet(String name) {
+            System.out.println("Hello, " + name + "!");
+        }
+    ```
+
+9. 
+    ```java
+        public static ??? getFirstCharacter(String text) {
+            return text.charAt(0);
+        }
+    ```
+
+---
+
 # Øvelse - Beregn BMI
 
 Vi skal lave et program, der beregner Body Mass Index (BMI) baseret på vægt og højde.
@@ -63,7 +125,7 @@ System.out.println("BMI: " + bmi);
     ```
 3. Tilføj metoderne `isUnderNormalWeight`, `isNormalWeight` og `isOverweight`, eksempel:
     ```java
-    public static bool isNormalWeight(double bmi) {
+    public static boolean isNormalWeight(double bmi) {
         return bmi >= 18.5 && bmi < 25;
     }
     ```
@@ -109,7 +171,7 @@ Lad os prøve at lave BMI-programmet en gang til, men anvende **extract method**
 --
 
 7. Gør det samme for hver af de tre `boolean`s nedeunder (`isUnderNormalWeight`, `isNormalWeight`, `isOverweight`). 
-8. Nu hvor du har **gode navne** på metoderne, kan behøver du ikke længere de variablerne `bool isUnderNormalWeight`, `bool isNormalWeight` og `bool isOverweight` i `main` metoden. Du kan i stedet kalde metoderne direkte i `System.out.println`, dvs.
+8. Nu hvor du har **gode navne** på metoderne, kan behøver du ikke længere de variablerne `boolean isUnderNormalWeight`, `boolean isNormalWeight` og `boolean isOverweight` i `main` metoden. Du kan i stedet kalde metoderne direkte i `System.out.println`, dvs.
     ```java
     System.out.println("Under normalvægt: " + isUnderNormalWeight(bmi));
     System.out.println("Normalvægt: " + isNormalWeight(bmi));
@@ -119,30 +181,32 @@ Lad os prøve at lave BMI-programmet en gang til, men anvende **extract method**
 
 ---
 
-# Øvelse - *Tag det med et gran salt*
+# Øvelse - `Math`-klassen
+Vi skal lave et program, der bruger `Math`-klassen til at udføre nogle matematiske beregninger.
+1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `math-exercises`.
+2. Lav en Java-klasse `MathExercises` med en `main` metode.
+3. I `main` metoden, tilføj følgende kode:
+    ```java
+    System.out.println("Den største værdi af 10 og 20 er: " + Math.???(10, 20));
 
-**Historie**
+    System.out.println("2.45 afrundet til nærmeste heltal er: " + Math.???(2.45));
 
-Før man fik køleskabe, brugte man salt til at konservere kød, så det kunne holde længere.
-Man brugte ved tørsaltning et gram salt per lod kød eller 1 gram salt per centiliter til hvis man skulle konservere i saltlage. Bruger man for lidt salt, rådner kødet. 
+    System.out.println("2.3 rundet op til nærmeste heltal er: " + Math.???(2.9));
+    
+    System.out.println("Kvadratroden af 16 er: " + Math.???(16));
 
-Uheldigvis er der også en anden dansk måleenhed, der hedder **gran**. Men hvis man "tog det med et gran salt", så betød det at kødet ikke var konserveret ordentligt og usundt at spise.
+    double pi = Math.???;
+    System.out.println("Arealet af en cirkel med radius 5 er: " + pi * Math.???(5, 2));
+    ```
+4. Udfyld `???` med de rigtige metoder fra `Math`-klassen, så programmet kan kompileres og køre.
 
-Lad os finde ud af hvad et **gran** salt er, og lave et program, der konverterer det til **gram**.
+---
 
---
+# Øvelse - C02 udledning
 
-**gran** er en gammel måleenhed ligesom **pund**, **tommer** og **alen**, som vi ikke bruger mere.
+En gennemsnitlig dansker udleder 6,7 ton CO2 om året.
+Et ton C02 har et rumfang på 1,96 kubikmeter.
 
-Et **gran** er en **1/5760 af et pund**
+1. Lav et program, der beregner, hvor stor siden er på den kasse (kube) vi skal bruge for at rumme den mængde CO2 vi udleder på et år.
 
-Et **pund** er **500 gram**
-
---
-
-1. Lav en Java-klasse `GranConverter` med en `main` metode
-2. Tilføj en metode `granToPund` der konverterer gran til pund
-3. Tilføj en metode `gramToGran` der konverterer gram til gran - kan du bruge `granToPund`?
-4. I `main` metoden, konverter 1 gran til gram og udskriv resultatet
-5. Hvor meget er 1 gran i gram?
-6. Hvor mange gran salt skal vi have for at få 1 gram?
+Hint: Kig på `Math`-klassens `cbrt` (cube root).

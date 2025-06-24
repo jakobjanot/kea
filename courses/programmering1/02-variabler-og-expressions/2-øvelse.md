@@ -164,35 +164,6 @@ public class BirthYear {
 
 ---
 
-# Øvelse - Grupper i klassen (fortsat)
-- Hvis der er 43 studerende (`int totalStudents = 43`) er der ikke nogen gruppestørrelse, hvor alle har en gruppe - vi må gøre noget andet
-- Vi synes ikke at nogen skal være alene i en gruppe, dvs. `remainingStudents` skal være over 1.
-- Sæt en `boolean` variabel `acceptableGroupSize = remainingStudents > 1;`
-- Udskriv `acceptableGroupSize` til skærmen
-- Prøv at ændre `groupSize` og se hvordan det påvirker resultatet
-- Kan du finde en gruppe størrelse, hvor `acceptableGroupSize` er `true`?
-
----
-
-# Øvelse - Hos lægen
-
-- Lav et nyt Java-projekt `doctor` med klassen `Doctor` og en `main` metode
-- Lad os lave et program der vurderer om din øjenbetændelse kræver antibiotika
-- Lav `boolean` variabler for
-
-    - `hasPus` - Gul sekret i øjet
-    - `hasRedness` - Rødme i øjet
-    - `isOneEyeOnly` - Ensidighed. Starter i et øje, evt. spreder sig
-
-- Lav en `boolean` variabel
-`needsAntibiotics` og sæt den til at være lig med `hasPus && (hasRedness || isOneEyeOnly)`
-- Prøv at ændre værdierne af `hasPus`, `hasRedness` og `hasPain` og se hvordan det påvirker resultatet
-- Kan du finde en kombination af værdier, hvor `needsAntibiotics` er `true`?
-- Kan du finde en kombination, hvor det er `false`?
-- Prøv at lave din egen regel for hvornår antibiotika er nødvendigt
-
----
-
 # Øvelse - Æbler og pærer
 - Lav et nyt Java-projekt `apples-and-pears` med klassen `ApplesAndPears` og en `main` metode
 - Jeg har 20 kasser med 3 æbler og 2 pærer i hver
@@ -208,4 +179,6 @@ public class BirthYear {
     ```
 - Kør programmet - hvad sker der?
 - Det burde være 150 styk frugt i alt
-- Hint: Tænk på operatorerne `+` og `*` - hvilken rækkefølge udføres de i?
+- Hint: Tænk på operatorerne `+` og `*` 
+    - hvilken rækkefølge udføres de i 
+    - kan du ændre rækkefølgen af beregningerne ved at bruge paranteser?

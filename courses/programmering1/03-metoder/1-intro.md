@@ -82,9 +82,13 @@ public class CakeRecipe {
 ```
 
 Notes:
-- Nu har jeg lavet en metode `addToBowl`, der udfører `System.out.println("Put det i skålen");` statementet.
-- I kan se at jeg kalder metoden i `main` metoden, hvor jeg tidligere havde gentaget mig selv.
-- Det gør koden mere overskuelig, og hvis jeg skal ændre "Put det i skålen", kan jeg gøre det ét sted.
+- En metode er en blok af kode
+    - som du giver et navn
+    - som kan udføre en bestemt opgave
+    - og som kan genbruges flere steder i dit program
+- I dette eksempel har jeg lavet en metode `addToBowl`, der udfører den opgave, som tidligere var gentaget.
+- I kan se at jeg kalder metoden i `main` metoden, hvor jeg tidligere havde gentaget mig selv, altså kaldt `System.out.println("Put det i skålen");`
+- Det gør koden mere overskuelig, og hvis jeg skal ændre teksten "Put det i skålen", kan jeg gøre det ét sted.
 
 --
 
@@ -155,7 +159,6 @@ public static void measureIngredient() {
 
 Notes:
 - Vi kan lave en metode `measureIngredient`, men den har brug for viden om ingrediensen og mængden i gram af den.
-- Derfor skal vi når vi kalder `measureIngredient` give den to argumenter: ingrediensen og mængden.
 
 --
 
@@ -205,6 +208,34 @@ Notes:
 - Nu har vi et program, der er mere overskueligt og nemmere at vedligeholde.
 - Vi har lavet to metoder: `addToBowl` og `measureIngredient`.
 - `measureIngredient` tager to parametre: `ingredient` og `amount`, som vi kan bruge til at udskrive den rigtige tekst.
+
+---
+
+# Variabler har et **scope**
+
+--
+
+Kunne vi gøre sådan istedet?
+
+```java [|3,4,10]
+public class CakeRecipe {
+    public static void main(String[] args) {
+        var ingredient = "smør";
+        var amount = 300;
+        measureIngredient();
+        // osv.
+    }
+    
+    public static void measureIngredient() {
+        System.out.println("Afmål " + amount + " g " + ingredient); // FEJL: Hvorfor?
+    }
+}
+```
+
+Notes:
+- Spørg klassen: Hvad sker der, hvis vi prøver at gøre sådan?
+- Hvis vi prøver at bruge `ingredient` og `amount` i `measureIngredient`, vil det ikke virke, fordi de er defineret i `main` metoden, og derfor er de kun tilgængelige der.
+- Det kalder vi **scope**. Variabler har et scope, der bestemmer, hvor de kan bruges.
 
 ---
 
@@ -273,6 +304,29 @@ Notes:
 - Det er den sidste metode, fordi den kun har een parameter, og derfor passer argumentet `"smør"` til den.
 
 ---
+
+# `return` statement
+
+```java [3]
+public static int kgToGram(int kilogram) {
+    int gram = kilogram * 1000;
+    return gram;
+}
+```
+
+```java
+int grams = kgToGram(5) // 5000
+```
+
+
+Notes:
+- Når en metode har en returtype, altså ikke `void`, skal den returnere en værdi af den type.
+- Det gør vi med `return` statementet. 
+- I dette eksempel returnerer metoden `kgToGram` en værdi af typen `int`, som er resultatet af at gange `gram` med 1000.
+- Når vi kalder metoden, kan vi gemme resultatet i en variabel:
+
+
+---
 <!-- .slide: class="kea-green" -->
 # Demo: Tommer til centimeter
 
@@ -308,6 +362,8 @@ public class InchToCmConverter {
     }
 }
 ```
+
+--
 
 Vi kan refaktorisere koden, så vi kan konvertere flere tommer til centimeter:
 

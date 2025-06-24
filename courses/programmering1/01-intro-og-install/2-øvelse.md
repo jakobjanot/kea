@@ -84,7 +84,10 @@ Når installationen er færdig, skal vi sikre os, at Java er korrekt installeret
 
 # Øvelse: Installering af IntelliJ IDEA
 
-Fordi du har en **@stud.kea.dk** mailadresse, kan du få en **gratis licens** til IntelliJ IDEA **Ultimate**.
+--
+
+- Installering af IntelliJ IDEA **Ultilmate**
+- Aktivér din licens vha. din **@stud.kea.dk** mailadresse
 
 --
 
@@ -99,7 +102,7 @@ Fordi du har en **@stud.kea.dk** mailadresse, kan du få en **gratis licens** ti
 
 - Åbn den downloadede fil for at starte installationen
 - Sæt flueben, som herunder (hvis du er på Windows)
-    ![IntelliJ install](img/intellij-install.png.png)
+    ![IntelliJ install](img/intellij-install.png)
 
 --
 
@@ -108,3 +111,11 @@ Fordi du har en **@stud.kea.dk** mailadresse, kan du få en **gratis licens** ti
 - Vælg "Activate" i velkomstvinduet
 ![intellij-activate](img/intellij-activate.png)
 - Vælg "
+
+---
+
+![alt text](image.png)
+
+Notes:
+- Tra la la
+- Mere tekst

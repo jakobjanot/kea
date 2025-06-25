@@ -104,6 +104,14 @@ public class CakeRecipe {
         System.out.println("Put det i skålen");
     }
 }
+```
+
+Notes:
+- Lad os starte med at lægge mærke til indrykningen. 
+- Indrykning gør kodem mere læsbar.
+- Metoden `addToBowl` er indrykket et niveau i forhold til klassen `CakeRecipe`
+- Det gør det nemmer at læse koden, fordi det viser, at `addToBowl` metoden er en del af `CakeRecipe` klassen.
+- Ser vi på metoden `addToBowl`, så er den på samme niveau som `main` metoden, hvilket betyder, at de er på samme niveau i klassen.
 
 --
 
@@ -117,6 +125,7 @@ Notes:
 - Lad os kigge nærmere på `addToBowl` metoden.
 - Først linje er `public static void addToBowl() {` som er hovedet på metoden.
 - Imellem `{` og `}` er selve kroppen af metoden, som indeholder de statements, der skal udføres, når metoden kaldes. I dette tilfælde er det `System.out.println("Put det i skålen");`.
+- Bemærk igen, at metodens krop er indrykket for at gøre det mere læsbart.
 - `public` og `static` putter vi foran metoden på samme måde som vi gjorde med `main` metoden. Vi kommer tilbage til hvad de betyder senere.
 - I Java er en metode ligesom en funktion i matematik, der tager nogle input og giver et output. Og det er der gjort plads til i metodesignaturen.
 - I kan se de tomme parenteser `()`, der er en del af metodesignaturen. De bruges til at angive, om metoden tager nogle inputparametre. Det har vi ikke brug for i dette tilfælde, så de er tomme.

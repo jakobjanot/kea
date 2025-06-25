@@ -11,24 +11,18 @@ title: 03#1 - Løkker og strenge
 ## Program
 
 - 08:30 Praktisk information  
-- 09:00 Installering af Java og IntelliJ  
+- 09:00 Løkker
 - 10:00 Pause  
 - 10:15 Første program  
 - 11:30 Opsamling  
 
 ---
-# For Loops & While Loops
 
---
-
-## Hvad vi skal gennemgå i dag
-- Hvad er loops
-- For loop
-- While loop
+# Løkker
 
 ---
 
-# Demo: Hvorfor skal vi bruge loops?
+# Demo: Hvornår skal i bruge løkker
 
 Notes:
 
@@ -96,96 +90,230 @@ System.out.println(names[3]);
 // ...
 ```
 
-Gør det samme for en liste med 1000 elementer.
+--
+
+Har du lyst til at gøre det samme for en liste med 1000 elementer?
+
+---
+
+# Java har to typer af løkker
+
+- `for`: Gentag et antal gange
+- `while`: Gentag så længe en betingelse er sand
+
+--
+
+## `for` løkker
+
+--
+
+Lad os køre 10 vejrtrækningscykler.
+
+```java
+for (int i = 0; i < 10; i = i + 1) {
+    breathCycle();
+}
+```
+
+Notes:
+- `for` løkker bruges, når du ved, hvor mange gange du vil gentage noget
+- `i` er en tæller, en `int` variabel, der starter med at blive sat til 0
+- `i < 10` er betingelsen, der skal være sand for at løkken fortsætter
+- `i = i + 1` betyder, at tælleren øges med 1 for hver iteration
+- Hver gang løkken kører, kaldes det der står i body'en, i dette tilfælde `breathCycle()`
+- Hvorfor kalder vi det `i`, når jeg plejer at sige at vi skal bruge meningsfulde navne?
+    - `i` er en konvention i programmering, der står for "index" eller "iterator"
+    - Det er en kort og simpel måde at referere til tælleren i løkken
+    - Det er ikke nødvendigt at bruge et meningsfuldt navn, da det kun bruges internt i løkken
+    - Så lige her gør vi en undtagelse fra reglen om meningsfulde navne
+- Hvorfor starter vi ikke på 1?
+    - Det er en konvention i programmering at tælle fra 0, da det ofte er nemmere at arbejde med index i arrays, hvor første element har index 0
+
+--
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i = i + 1) {
+            breathCycle();
+        }
+    }
+    public static void breathCycle() {
+        System.out.println("1. Træk vejret langsomt ind");
+        sleep(4000);
+        System.out.println("2. Hold vejret");
+        sleep(4000);
+        System.out.println("3. Pust langsomt ud");
+        sleep(4000);
+        System.out.println("4. Hold vejret");
+        sleep(4000);
+    }
+}
+```
+
+--
+
+`for` løkker bruges ofte til at tælle op eller ned
+
+--
+
+Vi **tæller op** fra 0 til 9
+
+```java
+for (int i = 0; i < 10; i = i + 1) {
+    System.out.println("Iteration: " + i);
+}
+```
+
+--
+<!-- .slide: data-background-image="img/rocket-launch.png" -->
+
+--
+
+
+Eller vi kan **tælle ned** fra 10 til 1 (`i--`)
+
+```java
+for (int i = 10; i > 0; i = i - 1) {
+    System.out.println(i + " sekunder tilbage");
+}
+System.out.println("Liftoff!");
+```
+
+--
+
+Eller kortere (`i =- 1`)
+
+```java
+for (int i = 10; i > 0; i =- 1) {
+    System.out.println(i + " sekunder tilbage");
+}
+System.out.println("Liftoff!");
+```
+
+---
+
+## Demo: 4-tabellen
+
+Notes:
+
+- Er i gode til tabeller? Lad os tage 4-tabellen.
+- dvs. alle tal der er delelige med 4 op til 40
+- ```java
+    for (int i = 4; i < 40; i = i + 4) {
+        System.out.println(i);
+    }
+  ```
+- `i` starter på 4
+- Vi vil gerne stopper når `i` er større end 40
+- Hvad går der galt her? Sidste iteration vil være 36, og så vil `i` blive 40, hvorfor vi ikke printer 40
+- Vi kan ændre betingelsen til `i < 41`, så vi også printer 40
+```java
+for (int i = 4; i < 41; i = i + 4) {
+    System.out.println(i);
+}
+```
+- `i <= 40` vil også virke
+```java
+for (int i = 4; i <= 40; i = i + 4) {
+    System.out.println(i);
+}
+```
+- Men `i != 40` er lidt farlig, fx hvis vi ikke rammer 40
+```java
+for (int i = 4; i != 41; i = i + 4) {
+    System.out.println(i);
+}
+```
+
+--
+
+En anden almindelig brug af `for` løkker er at iterere over et array
+
+```java
+String[] emails = {"alice@gmail.com", "billal@hotmail.com", "valdemar@outlook.com"}
+for (int i = 0; i < emails.length; i++) {
+    sendInvitation(emails[i]);
+}
+```
+
+---
+
+## `while` løkker
+
+Notes:
+- `for` løkker bruges, når du ved, hvor mange gange du vil gentage noget
+- `while` løkker bruges, når du ikke ved, hvor mange gange du vil gentage noget
+- `while` løkker kører så længe en betingelse er sand
+- Har I gode eksempler på, hvornår vi kan bruge `while` løkker?
+- Et eksempel kunne være at vi vil vente på at brugeren indtaster et gyldigt input
+
+--
+
+## Demo: Velkommen til baren
+
+Notes:
+- Lad os lave et program, der spørger brugeren om deres alder, og hvis de er under 18, skal de ikke komme ind i baren
+- Vi kan bruge en `while` løkke til at gentage spørgsmålet, indtil brugeren er gammel nok
+    ```java
+    int age = 0;
     
-
---
-
-## Hvad er loops?
-
---
-
-> **Programmet** skal gøre **[noget]** **[x]** antal gange
-
---
-
-## for loop
-
-```java
-for (int i = 0; i < 10; i++ ) {
-    System.out.println("Hello World!");
-}
-```
-
---
-
-## For Loop “signatur”
-- For loops bruges **når du ved** hvor mange iterationer skal bruges
-    Incremental counter / iteration
-- Kan også være decremental
-- Counter variable kan bruges inde i scope of the loop
-
-```java
-for (int i = 0; i < 10; i++)
-```
-
---
-
-For-loops bruges til at køre et stykke kode et **bestemt antal gange**.
-
-Man plejer at lave en variablen, der hedder `i`, der fungerer som en tæller.
-
-Derudover har man en betingelse. Så længe betingelsen er sand, kører koden.
-
---
-
-## `i++` er det samme som at skrive `i = i + 1;`
-
---
-
-![loop visualisering](./img/loop-visualisering.png)
-
---
-
-## for loop
-
-```java
-for (int i = 0; i < 10; i++){
-    System.out.println("printing for the " + i + "th time!");
-}
-```
-
---
-
-## While Loop
-
---
-
-## While Loop “signatur”
-While loops sætter en **betingelse** og udfører det kode der er defineert inde i dets scope, indtil betingelsen er **false**.
-
-```java
-while (condition){
-    // code block to be executed
-}
-```
-
---
-
-**While-loops** bruges til at køre et stykke kode flere gange.
-
-Man plejer at lave en variablen, der hedder `i`, der fungerer som en tæller.
-
-Derudover har man en betingelse.
-
-Så længe betingelsen er sand, kører koden.
-
+    while (age < 18) {
+        System.out.println("Ud! Du er kun " + age + " år gammel.");
+        age++;
+    }
+    System.out.println("Velkommen til baren! Du er " + age + " år gammel.");
+    ```
 ---
-<!-- .slide: class="kea-purple" -->
-# QUIZ!
 
-[https://not-yet/](https://not-yet/)
+# Demo: Uendelig løkke
 
----
+Notes:
+- Lad os fjerne `age++` fra koden, så vi aldrig bliver ældre.
+    ```java
+    int age = 0;
+    while (age < 18) {
+        System.out.println("Ud! Du er kun " + age + " år gammel.");
+    }
+    ```
+- Hvad sker der her?
+- Vi har lavet en uendelig løkke, fordi `age` aldrig bliver større end 18
+- Det betyder at løkken aldrig stopper, og programmet kører i en uendelig løkke
+- Det er en fejl, der kan være svær at finde, da programmet ikke giver nogen fejlmeddelelse
+- Vi kan stoppe programmet ved at trykke på "Stop" knappen i IDE'en eller trykke på Ctrl+C i terminalen
+- En alternativ måde at "bryde" løkken på er at bruge `break` statementet, som vi kan bruge til at afslutte løkken, når vi har fået et gyldigt input
+
+```java
+int age = 0;
+while (true) {
+    if (age >= 18) {
+        break; // Afslut løkken, hvis brugeren er gammel nok
+    }
+    System.out.println("Ud! Du er kun " + age + " år gammel.");
+    age++;
+}
+System.out.println("Velkommen til baren! Du er " + age + " år gammel.");
+```
+
+--
+# Demo: En typisk anvendelse af `while` løkker
+
+```java
+Scanner scanner = new Scanner(System.in);
+int age = 0;
+while (true) {
+    System.out.println("Indtast din alder:");
+
+    age = scanner.nextInt();
+
+    if (age > 17)
+        break;
+
+    System.out.println("Ud! Du er kun " + age + " år gammel.");
+}
+System.out.println("Velkommen til baren! Du er " + age + " år gammel.");
+```
+
+--
 <!-- .slide: class="kea-dark" -->
 Tre ting du tager med fra fra i dag?

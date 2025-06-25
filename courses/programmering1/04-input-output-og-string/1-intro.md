@@ -18,6 +18,111 @@ title: 03#1 - Input og Output
 
 ---
 
+# Konvertering af værdier (eng.: Casting)
+
+--
+
+## Implicit konvertering
+
+```java
+double y;
+y = 4; // går godt
+```
+
+## Eksplicit konvertering
+
+```java
+int x;
+x = 2.7; // fejl 
+```
+
+--
+
+```java
+int x;
+x = (int) 2.7; // går godt, x er nu 2
+```
+
+--
+
+```java
+int c;
+c = (int) 'A'; // går godt, c er nu 65
+```
+
+--
+
+```java
+char c;
+c = 65; // går godt, c er nu 'A'
+c++;    // c er nu 'B'
+c--;    // c er nu 'A' igen
+```
+
+--
+
+
+---
+
+
+Hvad med en `String`?
+
+```java
+int x;
+x = "4"; // fejl
+```
+
+Notes:
+- Fejl. Selvom "4" er et tal står tallet i en tekststreng, og Java kan ikke implicit konvertere en tekststreng til et tal.
+--
+
+```java
+int x;
+x = (int) "4"; // også fejl
+```
+
+Notes:
+- Også fejl. Vi kan heller ikke eksplicit konvertere en tekststreng til et tal på denne måde.
+
+--
+
+# Konvertering af tekst til tal
+
+--
+
+```java
+double y;
+y = Double.parseDouble("2.7"); // går godt, y er nu 2.7
+```
+
+--
+
+```java
+int x;
+x = Integer.parseInt("4");
+```
+
+går godt, `x` er nu **4**
+
+--
+
+Men også 
+```java
+int x;
+x = Integer.parseInt("0004"); // går godt, x er nu 4
+```
+går også godt, `x` er nu **4**.
+
+--
+
+Derimod kan vi ikke
+```java
+int x;
+x = Integer.parseInt("4.0"); // fejl
+```
+
+---
+
 # Klassen `System` 
 
 - Vi har brugt `System.out.println` til at udskrive tekst til skærmen en del gange.
@@ -148,58 +253,50 @@ input.nextInt();
 input.nextDouble();
 ```
 
---
+---
 
-## Comments
+# Karaktersæt - ASCII og Unicode
+
+Nogle bud på hvad der bliver udskrevet:
 
 ```java
-public class Example {
-    public static void main(String[] args) {
-        // Her er en linje kode kommentar
-
-        /*
-        Her er der
-        flere linjer
-        med kode kommentarer!
-        */
-        int myNumber = 1;
-        // String myString = "hej!";
-    }
-}
+char c1 = 74;
+char c2 = 65;
+char c3 = 86;
+System.out.println("Jeg elsker " + c1 + c2 + c3 + c2);
 ```
 
 --
 
-## If else struktur:
-
-Betinget udførelse med to muligheder:
+Derfor kan vi også printe fra `'A'` til `'Z'`:
 
 ```java
-if(color.equals("rød")){
-    System.out.println("Rødt lys");
-}
-else{
-    System.out.println("Grønt lys");
+for (char c = 'A'; c <= 'Z'; c++) {
+    System.out.print(c);
 }
 ```
 
-![Lys](images/to-lys.png)
+giver 
+
+"**A**BCDEFGHIJKLMNOPQRSTUVXYABCDEFGHIJKLMNOPQRSTUVWXY**Z**"
 
 --
 
-## If – else if – chaining
-
-Betinget udførelse med flere muligheder:
+... og fra `'A'` til `'Å'`, men:
 
 ```java
-if(color.equals("rød")){
-    System.out.println("Rødt lys");
-}
-else if (color.equals("gul")){
-    System.out.println("Gult lys");
-} else {
-    System.out.println("Grønt lys");
+for (char c = 'A'; c <= 'Å'; c++) {
+    System.out.print(c);
 }
 ```
 
-![Lys](images/tre-lys.png)
+giver derimod
+
+"**A**BCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄ**Å**"
+
+# 🤔
+
+--
+
+## I gamle dage
+

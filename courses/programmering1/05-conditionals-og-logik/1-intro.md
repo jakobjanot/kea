@@ -1,16 +1,16 @@
 ---
-title: 04#1 - Conditionals og logik
+title: 04#1 - Betingelser og logik
 ---
 <!-- .slide: class="kea-red" -->
 
-# Conditionals og logik
+# Betingelser og logik
 
 ---
 <!-- .slide: class="kea-dark" -->
 
 # Program
 
-- 08:30 Conditionals og logik
+- 08:30 Betingelser og logik
 - 09:30 Igang med øvelser
 - 10:00 Pause
 - 10:15 Øvelser fortsat
@@ -70,6 +70,10 @@ Notes:
 
         public static void goToBed() {
             System.out.println("Jeg går i seng.");
+        }
+
+        public static void commute() {
+            System.out.println("Jeg pendler.");
         }
     }
     ```
@@ -418,11 +422,148 @@ public static boolean isWeekend(dayOfWeek) {
         case "Sunday":
             isWeekend = true;
             break;
-        default:
-            System.out.println("Ugyldig ugedag: " + dayOfWeek);
-            isWeekend = false; // Antager at det ikke er weekend for ugyldige dages
+    }
+    return isWeekend;
+}
+```
+
+Notes:
+- En anden måde at håndtere flere betingelser på er at bruge en `switch`
+- En `switch` er en god måde at håndtere flere betingelser på, når vi har mange forskellige muligheder, der skal håndteres.
+- Her tjekker vi hvilken ugedag det er, og sætter `isWeekend` til `true` eller `false` afhængigt af hvilken dag det er.
+- `switch`-sætningen tjekker værdien af `dayOfWeek` og udfører den kode, der passer til den værdi.
+- Hver `case` repræsenterer en mulig værdi for `dayOfWeek`.
+- Hvis `dayOfWeek` er "Monday", "Tuesday", "Wednesday", "Thursday", eller "Friday", så sættes `isWeekend` til `false`.
+- Hvis `dayOfWeek` er "Saturday" eller "Sunday", så sættes `isWeekend` til `true`.
+- Læg mærke til, at vi bruger `break` for at stoppe udførelsen af `switch`-sætningen, når vi har fundet den rigtige `case`.
+- Hvis ikke vi bruger `break`, vil programmet fortsætte med at udføre de efterfølgende `case`-blokke, hvilket kan føre til uventet adfærd.
+--
+
+flere case'er kan samles
+
+```java
+public static boolean isWeekend(dayOfWeek) {
+    boolean isWeekend;
+
+    switch (dayOfWeek) {
+        case "Monday":
+        case "Tuesday":
+        case "Wednesday":
+        case "Thursday":
+        case "Friday":
+            isWeekend = false;
+            break;
+        case "Saturday":
+        case "Sunday":
+            isWeekend = true;
             break;
     }
     return isWeekend;
 }
 ```
+
+Notes:
+- Vi kan samle flere `case`-blokke, hvis de har samme handling.
+- her udnytter vi faktisk at der ikke er nogen `break`-sætninger mellem de første fem `case`-blokke, så de alle sætter `isWeekend` til `false`.
+
+--
+
+`default` case
+
+```java
+public static boolean isWeekend(dayOfWeek) {
+    boolean isWeekend;
+
+    switch (dayOfWeek) {
+        case "Monday":
+        case "Tuesday":
+        case "Wednesday":
+        case "Thursday":
+        case "Friday":
+            isWeekend = false;
+            break;
+        case "Saturday":
+        case "Sunday":
+            isWeekend = true;
+            break;
+        default:
+            System.out.println("Ugyldig ugedag: " + dayOfWeek);
+            isWeekend = false; // eller throw exception
+            break;
+    }
+    return isWeekend;
+```
+
+--
+
+Ligesom i `if`-sætninger kan vi i en metode returnere en værdi direkte
+
+```java
+public static boolean isWeekend(String dayOfWeek) {
+    switch (dayOfWeek) {
+        case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday":
+            return false;
+        case "Saturday", "Sunday":
+            return true;
+        default:
+            return false;
+    }
+}
+```
+
+--
+
+I nyere versioner af Java kan vi også bruge `switch`-udtryk
+
+```java
+public static boolean isWeekend(String dayOfWeek) {
+    return switch (dayOfWeek) {
+        case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" -> false;
+        case "Saturday", "Sunday" -> true;
+        default -> false;
+    };
+}
+```
+
+Notes:
+- I nyere versioner af Java kan vi bruge `switch`-udtryk, som er en mere kompakt måde at skrive `switch`-sætninger på.
+- Her tillader vi flere `case`-blokke at returnere samme værdi ved at bruge kommaer.
+- Bemærk at switch-udtryk bruger `->` i stedet for `{}` og `break`.
+- Læg også mærke til at vi kan returnere værdien direkte fra `switch`-udtrykket, hvilket gør koden mere kompakt og læsbar.
+
+---
+
+# Ternary operator
+
+
+```java
+boolean beachWeather = temp > 30 && !isRaining ? true : false;
+```
+
+Notes:
+
+Det vi har på højresiden er en **ternary operator**, som er en kortere måde at skrive en betingelse på.
+
+--
+
+`temp > 30 && !isRaining ? true : false`, dvs.
+
+**betingelse** ? **værdi hvis sand** : **værdi hvis falsk**
+
+Notes:
+- En anden måde at skrive betingelser på er at bruge den såkaldte **ternary operator**.
+- Den ternære operator er en kortere måde at skrive en `if`-sætning på, der returnerer en værdi baseret på en betingelse
+- Den har tre dele: betingelsen, værdien hvis betingelsen er sand, og værdien hvis betingelsen er falsk.
+- Her tjekker vi om det er strandvejr, og sætter `beachWeather` til `true` eller `false`
+
+--
+
+```java
+boolean goToBeach = isWeekend ? isBeachWeather(temp, isRaining) : false;
+```
+
+- Det er en kompakt måde at skrive betingelser på, men det kan gøre koden mindre læsbar, hvis den bliver for kompleks.
+
+---
+<!-- .slide: class="kea-dark" -->
+Tre ting du tager med fra fra i dag?

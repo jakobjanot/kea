@@ -1,59 +1,141 @@
 ---
-title: "02#2 - Installer Java"
+title: "07#2 - Løkker - Øvelser"
 ---
 <!-- .slide: class="kea-red" -->
-# Installering af Java udviklingsværktøjer
+# Løkker - Øvelser
 
---
+---
 
-## JDK - Java Development Kit
+# Øvelse: 7-tabellen
 
-For at udvikle og køre Java-programmer, skal vi have installeret nogle værktøjer på vores computer.
+- Skriv et program, der printer 7-tabellen fra 7 til 70, så det ser sådan ud:
+```
+7
+14
+21
+// osv.
+```
 
---
+---
 
-## Download og installer Java
-Gå til [https://adoptium.net/](https://adoptium.net/) og download **Latest LTS Release**.
+# Øvelse: 7-tabellen med for-løkke
+- Skriv nu et program, der printer 7-tabellen fra 7 til 70, så det ser sådan ud i stedet:
+```
+1 * 7 = 7
+2 * 7 = 14
+3 * 7 = 21
+// osv.
+```
+Notes:
+- Brug en for-løkke til at løse opgaven
+- Iterationerne skal være fra 1 til 10
+- Gang med 7 i hver iteration i forbindelse med printning
 
-![Download JDK](<images/download-jdk-lts.png>)
+---
+
+# Øvelse: En hvilken somhelst tabel
+
+- Skriv et program, der printer en hvilken som helst tabel, som du giver den i input.
+```
+Indtast et tal: 3
+1 * 3 = 3
+2 * 3 = 6
+3 * 3 = 9
+// osv.
+```
+
+---
+
+# Øvelse: Alle tabeller
+
+- Kan du rette programmet herover så det printer alle tabeller fra 1 til 10?
+```
+1 2 3 4 5 6 7 8 9 10
+2 4 6 8 10 12 14 16 18 20
+3 6 9 12 15 18 21 24 27 30
+// osv.
+```
+
+---
+
+# Øvelse: Gæt et tal
+- Skriv et program, der lader brugeren gætte et tal mellem 1 og 10.
+- Hvis brugeren gætter rigtigt, skal programmet sige "Du gættede rigtigt!" og afslutte.
+- Hvis brugeren gætter forkert, skal programmet sige "Forkert gæt, prøv igen!" og lade brugeren gætte igen.
 
 Notes:
-- LTS står for Long Term Support, og det er den version vi anbefaler at bruge.
-- LTS er i øjeblikket Java version 21.
+```java
+import java.util.Scanner;
 
---
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int secretNumber = 7;
+        int guess = 0;
+        
+        while (guess != secretNumber) {
+            System.out.println("Gæt et tal mellem 1 og 10");
+            guess = scanner.nextInt();
+        }
 
-### Notes:
+        System.out.println("Tillykke! Du gættede rigtigt: " + secretNumber);
+    }
+}
+```
 
-# Download Java JDK 21
+---
 
-Vælg din operativsystem, og Download en JDK
+# Øvelse: Gæt et tal med hjælp
+- Skriv et program, der lader brugeren gætte et tal mellem 1 og 100
+- Hvis brugeren gætter rigtigt, skal programmet sige "Du gættede rigtigt!" og afslutte.
+- Skriv "For højt" eller "For lavt" hvis brugeren gætter forkert, og lad brugeren gætte igen.
 
-SE står for Standard Edition
-JDK står for Java Development Kit, altså alt det vi skal bruge som udviklere
-Vælg først dit operativsystem
+Notes:
+```java
+import java.util.Scanner;
 
-![](Billede4.jpg)
-Vælg en “Installer” udgave
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int secretNumber = 42; // Hemmeligt tal
+        int guess = 0;
 
-### Notes:
+        while (guess != secretNumber) {
+            System.out.println("Gæt et tal mellem 1 og 100");
+            guess = scanner.nextInt();
 
-# Kør installeren - det skulle gerne være ret ligefrem
-Den stiller ingen vigtige spørgsmål, så bare Next, Next …
+            if (guess < secretNumber) {
+                System.out.println("For lavt, prøv igen!");
+            } else if (guess > secretNumber) {
+                System.out.println("For højt, prøv igen!");
+            }
+        }
 
-![](Billede4.jpg)
+        System.out.println("Tillykke! Du gættede rigtigt: " + secretNumber);
+    }
+}
+```
 
-### Notes:
+---
 
-# Kør installeren - det skulle gerne være ret ligefrem
-Efter installation, tryk ‘close’.
+# A-B-C sangen
 
-![Et billede, der indeholder tekst, elektronik, skærmbillede, software Automatisk genereret beskrivelse](Billede2.jpg)
+- Uden at bruge lister, implementer A-B-C sangen i Java, så computeren printer ABC sangen ud.
 
-### Notes:
+> A - B - C - D - E - F - G - H - I - J - K - L - M - N - O - P - Q - R - S - T - U - V - W - X - Y - Z - Now I know my ABCs, next time won't you sing with me?
 
-# Åbn din kommandoprompt/terminal og tjek installationen
-Mac-brugere skal vælge søgefunktionen øverst på skærmen (forstørrelsesglasset) og søge på ”terminal”
-Windows-brugere skal gå ned i venstre hjørne af skærmen og søge på ”PowerShell”
-Tjek at Java er installeret korrekt ved at skrive ”java –version” (dvs ordet ”java”, så et mellemrum, så en bindestreg og lige derefter ordet ”version”), og tryk så på Enter-knappen.
-Så skulle der gerne komme til at stå noget med java version 17 på øverste linje, plus nogle flere linjer som vi ikke behøver at interessere os for lige nu.
+Notes:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        for (char c = 'A'; c <= 'Z'; c++) {
+            System.out.print(c + " - ");
+        }
+        System.out.println("Now I know my ABCs, next time won't you sing with me?");
+    }
+}
+```
+
+---
+

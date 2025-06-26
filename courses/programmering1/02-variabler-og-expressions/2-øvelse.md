@@ -2,12 +2,35 @@
 title: 02#2 - Variabler og expressions - Øvelser
 ---
 
+# Øvelse - ASCII art
+
+1. Lav et nyt Java-projekt du kalder `asciiart` med en klasse kaldet `AsciiArt` med en `main` metode.
+2. Prøv vha. `System.out.println` at få konsollen til at printe en kat:
+    ```txt
+    
+    \    /\
+     )  ( ')
+    (  /  )
+     \(__)|
+    ```
+3. Prøv at bruge teknikken herunder til at printe katten med eet `System.out.println` statement
+    ```java
+    String lines = "Første linje" +
+                   "Anden linje" +
+                   "Tredje linje";
+    System.out.println(lines);
+4. Find selv noget fed **ASCII art** på nettet
+    - eller lav dit eget på [https://www.asciiart.eu/ascii-draw-studio/app](https://www.asciiart.eu/ascii-draw-studio/app)
+5. Print det til **konsollen**
+
+---
+
 # Øvelse - Værdier
 
-- Lav et nyt Java-projekt i IntelliJ, som du navngiver `about-me`
-- Under `Project` i venstre sidepanel, højreklik på `src` og vælg `New` -> `Java Class`
-- Giv din klasse navnet `AboutMe`.
-- Tilføj en `main` metode, så det ligner dette:
+1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `about-me`
+2. Under `Project` i venstre sidepanel, højreklik på `src` og vælg `New` -> `Java Class`
+3. Giv din klasse navnet `AboutMe`.
+4. Tilføj en `main` metode, så det ligner dette:
     ```java
     public class AboutMe {` {
         public static void main(String[] args) {
@@ -21,20 +44,20 @@ title: 02#2 - Variabler og expressions - Øvelser
         }
     }
     ```
-- Erstat `???` med værdier, der passer til **dig**, variablene er:
+5. Erstat `???` med værdier, der passer til **dig**, variablene er:
     - `familyName` (efternavn)
     - `givenNameInitial` (første bogstav i dit fornavn)
     - `isCoffeeDrinker`/`isTeaDrinker` (drikker du kaffe/te?)
-- Tilføj et eller flere statements, der udskriver `familyName` og `givenNameInitial` til konsollen vha. `System.out.println`
+6. Tilføj et eller flere statements, der udskriver `familyName` og `givenNameInitial` til konsollen vha. `System.out.println`
 
 ---
 
 # Øvelse - Typer
 
-- Lav et nyt Java-projekt i IntelliJ, som du navngiver `types`
-- Under `Project` i venstre sidepanel, højreklik på `src` og vælg `New` -> `Java Class`
-- Giv din klasse navnet `Types`.
-- Ret koden, så den ligner dette:
+1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `types`
+2. Under `Project` i venstre sidepanel, højreklik på `src` og vælg `New` -> `Java Class`
+3. Giv din klasse navnet `Types`.
+4. Ret koden, så den ligner dette:
     ```java
     public class Types {
         public static void main(String[] args) {
@@ -51,10 +74,10 @@ title: 02#2 - Variabler og expressions - Øvelser
         }
     }
     ```
-- Erstat `???` med de rigtige datatyper for hver variabel
-- Kør programmet og se outputtet
-- Prøv at ændre værdierne så de passer til dig selv
-- Kør programmet igen og se hvordan outputtet ændrer sig
+5. Erstat `???` med de rigtige datatyper for hver variabel
+6. Kør programmet og se outputtet
+7. Prøv at ændre værdierne så de passer til dig selv
+8. Kør programmet igen og se hvordan outputtet ændrer sig
 
 ---
 
@@ -62,14 +85,14 @@ title: 02#2 - Variabler og expressions - Øvelser
 
 Brug din alder til at udregne dit fødselsår
 
-- Lav et nyt Java-projekt i IntelliJ, som du 
+1. Lav et nyt Java-projekt i IntelliJ, som du 
     -   navngiver `birthyear`
     -   som Buildsystem vælger du `IntelliJ`
     -   som JDK vælger du `21`
 
-- Under `Project` i venstre sidepanel, højreklik på `src` og vælg `New` -> `Java Class`
-- Giv din klasse navnet `BirthYear`.
-- Tilføj en `main` metode, så det ligner dette:
+2. Under `Project` i venstre sidepanel, højreklik på `src` og vælg `New` -> `Java Class`
+3. Giv din klasse navnet `BirthYear`.
+4. Tilføj en `main` metode, så det ligner dette:
     ```java
     public class BirthYear {
         public static void main(String[] args) {
@@ -79,10 +102,10 @@ Brug din alder til at udregne dit fødselsår
     ```
 --
 
-- Indtast variablen `year` af typen `int` og giv den en værdi `2025` (i år)
-- Indtast variablen `age` af typen `int` og giv den din alder
-- Lav en variabel `birthYear` af typen `int` og sæt den til at være lig med `year - age`
-- Brug `System.out.println("Du er født i " + birthYear);` til at udskrive dit fødselsår til skærmen
+5. Indtast variablen `year` af typen `int` og giv den en værdi `2025` (i år)
+6. Indtast variablen `age` af typen `int` og giv den din alder
+7. Lav en variabel `birthYear` af typen `int` og sæt den til at være lig med `year - age`
+8. Brug `System.out.println("Du er født i " + birthYear);` til at udskrive dit fødselsår til skærmen
 
 Notes:
 # Løsning:
@@ -102,21 +125,21 @@ public class BirthYear {
 
 # Øvelse - Hvor meget mel til cookies?
 
-- Lav et nyt Java-projekt med en klasse med et navn du vælger og en `main` metode
-- Lav en variabel `cookies` af typen `int` og giv den en værdi på 24
-- Lav en variabel `flourPerCookie` af typen `double` og giv den en værdi på 0.045 (dvs. 0.045 kg, som er 45 gram mel per cookie)
-- Lav en `double` variabel `totalFlour` og sæt den til at være lig med `cookies * flourPerCookie`
-- Udskriv `totalFlour` til skærmen med System.out.println
-- Prøv at ændre værdien af `cookies` og se hvordan det påvirker resultatet
-- Ved at ændre på værdien af `cookies` - undersøg hvor mange cookies du lave med 2 kg mel?
-- Kender du en måde at udregne hvor mange cookies du kan lave med 2 kg mel?
+1. Lav et nyt Java-projekt med en klasse med et navn du vælger og en `main` metode
+2. Lav en variabel `cookies` af typen `int` og giv den en værdi på 24
+3. Lav en variabel `flourPerCookie` af typen `double` og giv den en værdi på 0.045 (dvs. 0.045 kg, som er 45 gram mel per cookie)
+4. Lav en `double` variabel `totalFlour` og sæt den til at være lig med `cookies * flourPerCookie`
+5. Udskriv `totalFlour` til skærmen med System.out.println
+6. Prøv at ændre værdien af `cookies` og se hvordan det påvirker resultatet
+7. Ved at ændre på værdien af `cookies` - undersøg hvor mange cookies du lave med 2 kg mel?
+8. Kender du en måde at udregne hvor mange cookies du kan lave med 2 kg mel?
 
 --
 
-- Vores vægt måler ikke mere præcist end 0.001 kg (1 gram), så det er lidt fjollet at vise resultet med 6 decimaler
-- Prøv at ændre `System.out.println(totalFlour);` til `System.out.printf("%.3f kg mel", totalFlour);`
-- Hvad sker der nu?
-- Prøv at ændre `%.3f` til `%.2f` og se hvad der sker
+9. Vores vægt måler ikke mere præcist end 0.001 kg (1 gram), så det er lidt fjollet at vise resultet med 6 decimaler
+10. Prøv at ændre `System.out.println(totalFlour);` til `System.out.printf("%.3f kg mel", totalFlour);`
+11. Hvad sker der nu?
+12. Prøv at ændre `%.3f` til `%.2f` og se hvad der sker
 
 ---
 
@@ -157,3 +180,4 @@ public class BirthYear {
 - Hint: Tænk på operatorerne `+` og `*` 
     - hvilken rækkefølge udføres de i 
     - kan du ændre rækkefølgen af beregningerne ved at bruge paranteser?
+

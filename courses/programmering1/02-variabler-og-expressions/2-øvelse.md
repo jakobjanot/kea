@@ -2,14 +2,41 @@
 title: 02#2 - Variabler og expressions - Øvelser
 ---
 
+# Øvelse - Værdier
+
+- Lav et nyt Java-projekt i IntelliJ, som du navngiver `about-me`
+- Under `Project` i venstre sidepanel, højreklik på `src` og vælg `New` -> `Java Class`
+- Giv din klasse navnet `AboutMe`.
+- Tilføj en `main` metode, så det ligner dette:
+    ```java
+    public class AboutMe {` {
+        public static void main(String[] args) {
+            String familyName = ???;
+            char givenNameInitial = ???;
+            boolean isCoffeeDrinker = ???;
+            boolean isTeaDrinker = ???;
+
+            System.out.println("Kaffedrikker: " + isCoffeeDrinker);
+            System.out.println("Tedrikker: " + isTeaDrinker);
+        }
+    }
+    ```
+- Erstat `???` med værdier, der passer til **dig**, variablene er:
+    - `familyName` (efternavn)
+    - `givenNameInitial` (første bogstav i dit fornavn)
+    - `isCoffeeDrinker`/`isTeaDrinker` (drikker du kaffe/te?)
+- Tilføj et eller flere statements, der udskriver `familyName` og `givenNameInitial` til konsollen vha. `System.out.println`
+
+---
+
 # Øvelse - Typer
 
-- Lav et nyt Java-projekt i IntelliJ, som du navngiver `variables`
+- Lav et nyt Java-projekt i IntelliJ, som du navngiver `types`
 - Under `Project` i venstre sidepanel, højreklik på `src` og vælg `New` -> `Java Class`
-- Giv din klasse navnet `Variables`.
+- Giv din klasse navnet `Types`.
 - Ret koden, så den ligner dette:
     ```java
-    public class Variables {
+    public class Types {
         public static void main(String[] args) {
             ??? height = 169.5;
             ??? givenName = "Aisha";

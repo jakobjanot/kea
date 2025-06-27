@@ -358,11 +358,5 @@ Notes:
 - Indrykning gør det lettere at læse koden
 
 ---
-<!-- .slide: class="kea-purple" -->
-# QUIZ!
-
-[https://not-yet/](https://not-yet/)
-
----
 <!-- .slide: class="kea-dark" -->
 Tre ting du tager med fra fra i dag?

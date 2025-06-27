@@ -98,6 +98,7 @@ public class CakeRecipe {
         System.out.println("Afmål 300 g smør");
         addToBowl();
         System.out.println("Afmål 200 g sukker");
+        addToBowl();
         // ...
     }
     public static void addToBowl() {
@@ -217,6 +218,27 @@ Notes:
 - Nu har vi et program, der er mere overskueligt og nemmere at vedligeholde.
 - Vi har lavet to metoder: `addToBowl` og `measureIngredient`.
 - `measureIngredient` tager to parametre: `ingredient` og `amount`, som vi kan bruge til at udskrive den rigtige tekst.
+
+---
+
+# Refactoring
+
+Notes:
+- Det at ændre koden, så den bliver mere overskuelig og nemmere at vedligeholde, uden at ændre dens funktionalitet, kalder vi **refactoring**.
+- Når du har fået din kode til at virke - er du kun halvt færdig.
+- Nu skal du sikre dig, at den er læsbar og nem at vedligeholde.
+- Kan din kollega forstå din kode?
+- Kan du selv forstå din kode om et halvt år?
+
+---
+
+> **Don't Repeat Yourself - DRY**
+
+Notes:
+- Kode der gentager sig selv, er et oplagt sted at refaktorisere.
+- Er der dele af koden, der gentages, og som kan flyttes til en metode?
+- Koder der gentager sig selv, er sværere at vedligeholde.
+- Der er flere steder som du skal vedligeholde, hvis du skal ændre noget og det kan føre til fejl, hvis du glemmer at ændre et sted.
 
 ---
 

@@ -295,25 +295,56 @@ while (true) {
 System.out.println("Velkommen til baren! Du er " + age + " år gammel.");
 ```
 
+---
+
+# Iteration over lister
+
+En typisk anvendelse af løkker er, at iterere hen over lister. 
+
 --
-# Demo: En typisk anvendelse af `while` løkker
+
+Eks: Find den ældste i blandt en liste af aldre på nogle personer (18 år, 3 år, etc.)
 
 ```java
-Scanner scanner = new Scanner(System.in);
-int age = 0;
-while (true) {
-    System.out.println("Indtast din alder:");
 
-    age = scanner.nextInt();
+int[] ages = {17, 5, 19, 3, 92, 18, 66, 78};
 
-    if (age > 17)
-        break;
+int ageOldest = 0;
 
-    System.out.println("Ud! Du er kun " + age + " år gammel.");
+for (int i = 0; i < ages.length(); i++) {
+    if (ageOldest < ages[i]) {
+        ageOldest = ages[i];
+    }
 }
-System.out.println("Velkommen til baren! Du er " + age + " år gammel.");
+
+System.out.println("Den ældste er " + ageOldest);
 ```
 
+Notes:
+- Vi har en liste med aldre.
+- Vi itererer fra første element (i=0) til sidste ages.length() - 1
+- Hver gang tager vi navn ud af listen og sammenligner med ageOldest
+- Hvis det "nuværende" age er større end ageOldest, da sæt ageOldest til age.
+- Til slut printer vi ageOldest
+- I denne algoritme er det nødvendigt at nå igennem hele listen
+- I andre tilfælde kan vi stoppe tidligt og behøver ikke at iterere igennem alle elementer
+
 --
+
+Eks: Find en voksen
+
+```java
+int[] ages = {17, 5, 19, 3, 92, 18, 66, 78};
+int ageAdult = 0;
+
+for (int i = 0; i < ages.length(); i++) {
+    if (ages[i] >= 18) {
+        ageAdult = ages[i];
+        return;
+    }
+}
+
+System.out.println("Den ældste er " + ageOldest);
+---
 <!-- .slide: class="kea-dark" -->
 Tre ting du tager med fra fra i dag?

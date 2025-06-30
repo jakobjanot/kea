@@ -58,6 +58,13 @@ Indtast et tal: 3
 
 ---
 
+# Øvelse: Karaktergennemsnit
+
+- En elev har fået karaktererne 7, 10, 2, 4, 10. Hvad er gennemsnit?
+- 
+
+---
+
 # Øvelse: Gæt et tal
 - Skriv et program, der lader brugeren gætte et tal mellem 1 og 10.
 - Hvis brugeren gætter rigtigt, skal programmet sige "Du gættede rigtigt!" og afslutte.
@@ -139,3 +146,35 @@ public class Main {
 
 ---
 
+# A-B-C sangen med rekursion
+
+- En anden måde at løbe gennem ABC sangen på er at bruge rekursion. I rekursion kalder en metode sig selv. I dette tilfælde giver vi metoden det næste bogstav i alfabetet.
+- Brug koden herunder som udgangspunkt, dog mangler vi at kalde singABC med det næste bogstav.
+- Hint: Du kan bruge casting til at konvertere en int til en char, fx `(char) (letter + 1)` for at få det næste bogstav.
+```java
+public class AbcSong {
+    public static void main(String[] args) {
+        singABC('A', 'Z');
+        System.out.println("Now I know my ABCs, next time won't you sing with me?");
+    }
+
+    public static void singABC(char letter, char lastLetter) {
+        if (letter > lastLetter) return;
+        System.out.print(letter + " - ");
+        // Her mangler vi at kalde singABC med det næste bogstav
+    }
+}
+```
+
+---
+
+# Øvelse - Primtal
+- Et primtal er et tal, som kun er delbart med 1 og tallet selv. Et eksempel på et primtal er 7, der kun kan deles med 1 og 7. Derimod er 8 _ikke_ et primtal, idet det kan deles med 1, 2, 4 og 8. 
+- En anden måde at sige, at et tal er delbart er, at modulus, dvs. resten efter division er lig 0.
+- Vi vil bruge en while løkke og `%` (modulus), til at undersøge 
+
+```java
+int number = 8;
+for(int i = 2; i < number; i++) {
+    if (number % i == 0) return
+}

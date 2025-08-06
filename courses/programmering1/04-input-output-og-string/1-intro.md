@@ -298,5 +298,9 @@ giver derimod
 
 --
 
-## I gamle dage
+## I gamle dage 
 
+
+
+Notes:
+I gamle var det ikke helt ualmindeligt at få en mail der 

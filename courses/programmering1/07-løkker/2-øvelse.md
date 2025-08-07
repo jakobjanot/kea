@@ -1,7 +1,7 @@
 ---
 title: "07#2 - Løkker - Øvelser"
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 # Løkker - Øvelser
 
 ---
@@ -178,3 +178,6 @@ int number = 8;
 for(int i = 2; i < number; i++) {
     if (number % i == 0) return
 }
+
+---
+

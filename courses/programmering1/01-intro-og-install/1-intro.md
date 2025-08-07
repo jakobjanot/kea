@@ -1,12 +1,12 @@
 ---
 title: "01#1 - Introduktion til kurset"
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 
 # Introduktion til kurset
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 
 ## Program
 
@@ -17,7 +17,7 @@ title: "01#1 - Introduktion til kurset"
 - 11:30 Opsamling  
 
 ---
-<!-- .slide: class="kea-purple" -->
+<!-- .slide: class="k-bluey" -->
 
 # Praktisk information
 
@@ -64,7 +64,7 @@ Notes:
 --
 
 ### 5 min med sidemand
-<!-- .slide: class="kea-green" -->
+<!-- .slide: class="ek-campus-green" -->
 
 >  Hvilke problemer løser vi med software i dag, som tidligere var bøvlet
 
@@ -255,11 +255,11 @@ Notes:
 
 ---
 
-<!-- .slide: class="kea-green" -->
+<!-- .slide: class="ek-campus-green" -->
 ## Første program
 
 --
-<!-- .slide: class="kea-green" -->
+<!-- .slide: class="ek-campus-green" -->
 
 1. Lav en fil, der hedder `HelloWorld.java`  
 2. Skriv følgende kode i filen og gem den:  
@@ -272,7 +272,7 @@ public class HelloWorld {
 ```
 
 --
-<!-- .slide: class="kea-green" -->
+<!-- .slide: class="ek-campus-green" -->
 
 3. Compile med
 ```bash
@@ -358,5 +358,5 @@ Notes:
 - Indrykning gør det lettere at læse koden
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 Tre ting du tager med fra fra i dag?

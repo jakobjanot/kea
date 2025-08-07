@@ -1,11 +1,11 @@
 ---
 title: "01#2 - Intro og installation af Java - Øvelser"
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 # Installering af udviklingsværktøjer
 
 --
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 
 ## Opgaver
 
@@ -166,7 +166,7 @@ Yay! Nu er IntelliJ IDEA klar til brug!
 
 ---
 
-<!-- .slide: class="kea-rose" -->
+<!-- .slide: class="k-daylight" -->
 # Øvelser i IntelliJ
 
 ---

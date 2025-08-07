@@ -1,12 +1,12 @@
 ---
 title: 03#1 - Input og Output
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 
 # Input og Output
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 
 ## Program
 

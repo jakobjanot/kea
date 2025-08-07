@@ -1,12 +1,12 @@
 ---
 title: 02#1 - Variabler og expressions
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 
 # Variabler og expressions
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 
 # Program
 
@@ -37,7 +37,7 @@ Notes:
 - Computeren læser opskriften og udfører den trin for trin
 
 --
-<!-- .slide: class="kea-rose" -->
+<!-- .slide: class="k-daylight" -->
 ## Demo - Omelet opskrift
 
 Notes:
@@ -132,7 +132,7 @@ public class Main {
 # Variabler og expressions
 
 --
-<!-- .slide: class="kea-rose" -->
+<!-- .slide: class="k-daylight" -->
 ## Demo - Omelet til et antal personer
 
 Notes:
@@ -470,7 +470,7 @@ Notes:
 - `>` bruges til at tjekke om værdien til venstre er større end værdien til højre (osv.)
 
 --
-<!-- .slide: class="kea-rose" -->
+<!-- .slide: class="k-daylight" -->
 ## Demo -  Sammenligningsoperatorer
 
 Notes:
@@ -504,7 +504,7 @@ Notes:
 - `!` bruges til at tjekke om betingelsen er falsk
 
 --
-<!-- .slide: class="kea-rose" -->
+<!-- .slide: class="k-daylight" -->
 ## Demo - Matematik med sand/falsk-værdier
 
 Notes:
@@ -517,7 +517,7 @@ System.out.println("Skal jeg købe ind? " + shopEggs);
 ```
 
 --
-<!-- .slide: class="kea-rose" -->
+<!-- .slide: class="k-daylight" -->
 ## Demo: Variablen kan ændres
 
 Notes: 
@@ -650,7 +650,7 @@ Notes:
 **sout** giver System.out.println();
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 # Opsamling
 
 - Nævn tre ting du tager med fra i dag

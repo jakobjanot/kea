@@ -1,12 +1,12 @@
 ---
 title: 03#1 - Metoder
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 
 # Metoder
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 
 ## Program
 
@@ -337,7 +337,7 @@ Notes:
 
 
 ---
-<!-- .slide: class="kea-green" -->
+<!-- .slide: class="ek-campus-green" -->
 # Demo: Tommer til centimeter
 
 ![tommestok](img/tommestok.png)

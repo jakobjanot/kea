@@ -1,7 +1,7 @@
 ---
 title: 04#2 - Conditionals og logik - Øvelser
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 # Conditionals og logik
 ---
 # Opgave: BMI Classifier - if/else if/else

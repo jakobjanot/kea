@@ -1,7 +1,7 @@
 ---
 title: "04#2 - Input og output - Øvelser"
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 # Input og output
 
 --

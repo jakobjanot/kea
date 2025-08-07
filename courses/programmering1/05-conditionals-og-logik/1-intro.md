@@ -1,12 +1,12 @@
 ---
 title: 04#1 - Betingelser og logik
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 
 # Betingelser og logik
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 
 # Program
 
@@ -565,5 +565,5 @@ boolean goToBeach = isWeekend ? isBeachWeather(temp, isRaining) : false;
 - Det er en kompakt måde at skrive betingelser på, men det kan gøre koden mindre læsbar, hvis den bliver for kompleks.
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 Tre ting du tager med fra fra i dag?

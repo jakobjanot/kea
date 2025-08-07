@@ -1,12 +1,12 @@
 ---
 title: 03#1 - Løkker og strenge
 ---
-<!-- .slide: class="kea-red" -->
+<!-- .slide: class="ek-academic-fire" -->
 
 # Løkker og strenge
 
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 
 ## Program
 
@@ -346,5 +346,5 @@ for (int i = 0; i < ages.length(); i++) {
 
 System.out.println("Den ældste er " + ageOldest);
 ---
-<!-- .slide: class="kea-dark" -->
+<!-- .slide: class="k-sunlit-energy" -->
 Tre ting du tager med fra fra i dag?

@@ -221,27 +221,6 @@ Notes:
 
 ---
 
-# Refactoring
-
-Notes:
-- Det at ændre koden, så den bliver mere overskuelig og nemmere at vedligeholde, uden at ændre dens funktionalitet, kalder vi **refactoring**.
-- Når du har fået din kode til at virke - er du kun halvt færdig.
-- Nu skal du sikre dig, at den er læsbar og nem at vedligeholde.
-- Kan din kollega forstå din kode?
-- Kan du selv forstå din kode om et halvt år?
-
----
-
-> **Don't Repeat Yourself - DRY**
-
-Notes:
-- Kode der gentager sig selv, er et oplagt sted at refaktorisere.
-- Er der dele af koden, der gentages, og som kan flyttes til en metode?
-- Koder der gentager sig selv, er sværere at vedligeholde.
-- Der er flere steder som du skal vedligeholde, hvis du skal ændre noget og det kan føre til fejl, hvis du glemmer at ændre et sted.
-
----
-
 # Variabler har et **scope**
 
 --
@@ -364,45 +343,109 @@ Notes:
 ![tommestok](img/tommestok.png)
 
 Notes:
-Vi skal nu prøve at lave en metode
 
 Hjælp mig her:
 - hvad hedder tommer på engelsk?
 - hvad skal vi kalde klassen?
 - hvordan laver jeg main metoden?
-- hvad skal vi lave i main? - kalde en metode, der konverterer tommer til centimeter, udskriver resultatet
+- nogen der ved hvor mange cm en tomme er?
+- hvad skal vi lave i main? - noget med at gange tommer med 2.54
+```java
+public class InchToCmConverter {
+    public static void main(String[] args) {
+        double inch = 10.0;
+        double cm = 2.54 * inch;
+        System.out.println(inch + " tommer er " + cm + " cm");
+
+        double inch2 = 20.0;
+        double cm2 = 2.54 * inch2;
+        System.out.println(inch2 + " tommer er " + cm2 + " cm"2);
+        
+        double inch3 = 100.0;
+        double cm3 = 2.54 * inch3;
+        System.out.println(inch3 + " tommer er " + cm3 + " cm"3);
+    }
+}
+```
+
+---
+
+**Slamkode**
+
+Notes:
+- Når man koder, handler det ofte om at komme hurtigt ud af startblokken og få noget kode til at virke.
+- Det handler nemlig ofte om at få testet nogle ideer eller hypoteser af.
+- Måske viser det sig, at ideen ikke virker som forventet, og så er det ærgeligt at have brugt for lang tid på at gøre koden pæn.
+- I værste fald, har vi svært ved at skille os af med en dårlig løsning, fordi vi har brugt så lang tid på at gøre den pæn.
+- I har sikkert hørt om "kill your darlings" - det gælder også for kode.
+
+--
+
+Don't Repeat Yourself - **DRY**
+
+Notes:
+- Men når koden virker og løser problemet - skal man minde sig selv om, at man kun er halvt færdig
+- Nu er opgaven, at rydde op og gøre koden mere læsbar
+- En af de mest basale måder at rydde op i sin kode er, at 
+- Don't Repeat Yourself - DRY er en af de fundamentale principper i programmering
+- Kode der gentager sig selv, er et oplagt sted at forbedre koden.
+- Er der dele af koden, der gentages, og som kan flyttes til en metode?
+- Koder der gentager sig selv, er sværere at vedligeholde.
+- Der er flere steder som du skal vedligeholde, hvis du skal ændre noget og det kan føre til fejl, hvis du glemmer at ændre et sted.
+
+--
+
+# Demo: Tommer til centimeter - take 2!
+
+Notes:
+- Lad os flytte beregningen til en metode
 - hvad skal vi kalde metoden? - `convertInchesToCm`
 - hvad skal den returnere? cm
 - hvad type har det den returnerer? - `double`
 - hvilke parametre skal metoden have?
 - hvilken type har de parametre? - `double`
 - hvordan kalder jeg metoden i main?
-- nogen der ved hvor mange cm en tomme er? - 2.54 cm
+- Første løsning:
+    ```java
+    public class InchToCmConverter {
+        public static void main(String[] args) {
+            double inch = 10.0;
+            double cm = convertInchesToCm(inch);
+            System.out.println(inch + " tommer er " + cm + " cm");
 
-Løsning:
-```java
-public class InchToCmConverter {
-    public static void main(String[] args) {
-        double inch = 10.0;
-        double cm = convertInchesToCm(inch);
-        System.out.printf("%.2f tommer er %.2f cm%n", inch, cm);
+            double inch2 = 20.0;
+            double cm2 = convertInchesToCm(inch2);
+            System.out.println(inch2 + " tommer er " + cm2 + " cm");
+            //osv...
+        }
+        public static double convertInchesToCm(double inch) {
+            double cm = inch * 2.54;
+            return cm;
+        }
     }
+    ```
+- Vi kan refaktorisere koden, så vi kan konvertere flere tommer til centimeter:
+    ```java
     public static double convertInchesToCm(double inch) {
-        double cm = inch * 2.54;
-        return cm;
+        return inch * 2.54;
     }
-}
-```
+    ```
+- Vi genbruger ikke vores variable
+    ```java
+    public class InchToCmConverter {
+        public static void main(String[] args) {
+            double inch = 10.0;
+            System.out.println(inch + " tommer er " + convertInchesToCm(inch) + " cm");
 
---
-
-Vi kan refaktorisere koden, så vi kan konvertere flere tommer til centimeter:
-
-```java
-public static double convertInchesToCm(double inch) {
-    return inch * 2.54;
-}
-```
+            double inch2 = 20.0;
+            System.out.println(inch2 + " tommer er " + convertInchesToCm(inch2); + " cm");
+            //osv...
+        }
+        public static double convertInchesToCm(double inch) {
+            return inch * 2.54;
+        }
+    }
+    ```
 
 ---
 

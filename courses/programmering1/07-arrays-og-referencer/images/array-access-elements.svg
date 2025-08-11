@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.9a -->
+<!-- CreationDate: 2025-08-08 11:43:13 -->
+<!-- Magnification: 3 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="578pt" height="100pt"
+	viewBox="631 2313 3206 552">
+<g fill="none">
+<!-- Line -->
+<rect x="2925" y="2325" width="450" height="300" fill="#e5e5e5"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<rect x="3375" y="2325" width="450" height="300" fill="#e5e5e5"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<rect x="2025" y="2325" width="450" height="300" fill="#e5e5e5"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<rect x="2475" y="2325" width="450" height="300" fill="#e5e5e5"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Text -->
+<text xml:space="preserve" x="3750" y="2550" fill="#000000" font-family="monospace" font-style="normal" font-weight="bold" font-size="200" text-anchor="end">0 </text>
+<!-- Text -->
+<text xml:space="preserve" x="2850" y="2550" fill="#000000" font-family="monospace" font-style="normal" font-weight="bold" font-size="200" text-anchor="end">0 </text>
+<!-- Text -->
+<text xml:space="preserve" x="3300" y="2550" fill="#000000" font-family="monospace" font-style="normal" font-weight="bold" font-size="200" text-anchor="end">0 </text>
+<!-- Text -->
+<text xml:space="preserve" x="2325" y="2850" fill="#000000" font-family="monospace" font-style="normal" font-weight="normal" font-size="183" text-anchor="end">0</text>
+<!-- Text -->
+<text xml:space="preserve" x="2775" y="2850" fill="#000000" font-family="monospace" font-style="normal" font-weight="normal" font-size="183" text-anchor="end">1</text>
+<!-- Text -->
+<text xml:space="preserve" x="3225" y="2850" fill="#000000" font-family="monospace" font-style="normal" font-weight="normal" font-size="183" text-anchor="end">2</text>
+<!-- Text -->
+<text xml:space="preserve" x="3675" y="2850" fill="#000000" font-family="monospace" font-style="normal" font-weight="normal" font-size="183" text-anchor="end">3</text>
+<!-- Text -->
+<text xml:space="preserve" x="1200" y="2550" fill="#000000" font-family="monospace" font-style="normal" font-weight="normal" font-size="200" text-anchor="end">temps</text>
+<!-- Text -->
+<text xml:space="preserve" x="2400" y="2550" fill="#000000" font-family="monospace" font-style="normal" font-weight="bold" font-size="200" text-anchor="end">0 </text>
+<!-- Line -->
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M 631,2313 H 3837 V 2865 H 631 z
+		M 1888,2445 2008,2475 1888,2505 2032,2482 2032,2468z"/>
+</clipPath>
+</defs>
+<polyline points=" 1350,2475 2025,2475" clip-path="url(#cp0)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 2025,2475 -->
+<polyline points=" 1888,2445 2008,2475 1888,2505"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Line -->
+<rect x="1275" y="2400" width="150" height="150" fill="#e5e5e5"
+	stroke="#000000" stroke-width="8px"/>
+</g>
+</svg>

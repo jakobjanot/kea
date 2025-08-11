@@ -1,5 +1,5 @@
 ---
-title: 02#1 - Variabler og expressions
+title: 02 - Variabler og expressions
 ---
 <!-- .slide: class="ek-academic-fire" -->
 

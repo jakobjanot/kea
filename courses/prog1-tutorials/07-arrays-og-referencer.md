@@ -1,5 +1,5 @@
 ---
-title: "07#2 - Arrays og references - Øvelser"
+title: "07 - Arrays og references - Øvelser"
 ---
 <!-- .slide: class="ek-academic-fire" -->
 # Arrays

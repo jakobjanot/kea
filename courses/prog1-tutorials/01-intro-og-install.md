@@ -1,5 +1,5 @@
 ---
-title: "01#2 - Intro og installation af Java - Øvelser"
+title: "01 - Intro og installation af Java - Øvelser"
 ---
 <!-- .slide: class="ek-academic-fire" -->
 # Installering af udviklingsværktøjer

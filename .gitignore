@@ -4,3 +4,7 @@ site
 nynne
 nynne2
 nynne3
+
+# Ignore Python virtual environments
+.venv/
+uv.lock

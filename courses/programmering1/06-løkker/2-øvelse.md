@@ -1,5 +1,5 @@
 ---
-title: "07#2 - Løkker - Øvelser"
+title: "06#2 - Løkker - Øvelser"
 ---
 <!-- .slide: class="ek-academic-fire" -->
 # Løkker - Øvelser

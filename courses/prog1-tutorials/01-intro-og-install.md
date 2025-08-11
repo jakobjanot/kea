@@ -1,37 +1,17 @@
 ---
 title: "01 - Intro og installation af Java - Øvelser"
 ---
-<!-- .slide: class="ek-academic-fire" -->
-# Installering af udviklingsværktøjer
-
---
-<!-- .slide: class="k-sunlit-energy" -->
-
-## Opgaver
-
-- Installér Java Development Kit (JDK)
-- Installer IntelliJ IDEA editoren
-- Bliv fortrolig med IntelliJ og Java-kode
-
----
 
 ## Øvelse: Installation af Java Development Kit
 
 For at udvikle og køre Java-programmer, skal vi have installeret nogle værktøjer på vores computer.
 
---
-
-- Gå til [https://adoptium.net/](https://adoptium.net/) og download **Java JDK 21**
-- Klik på "Other Downloads"
-
-![Adoptium](<img/adoptium-other-downloads.png>)
-
--- 
-# Download Java JDK 21
-
-1. Klik på fanen **JDK 21**
-2. Vælg den version der passer til dit operativsystem (Windows, macOS, Linux)
-3. Åbn den downloadede fil for at starte installationen
+1. Gå til [https://adoptium.net/](https://adoptium.net/) og download **Java JDK 21**
+2. Klik på "Other Downloads"
+    ![Adoptium](<img/adoptium-other-downloads.png>)
+3. Klik på fanen **JDK 21**
+4. Vælg den version der passer til dit operativsystem (Windows, macOS, Linux)
+5. Åbn den downloadede fil for at starte installationen
 
 Notes:
 - JDK står for Java Development Kit, altså alt det vi skal bruge som Java-udviklere
@@ -42,38 +22,25 @@ Notes:
 
 --
 
-# Kør installeren
+## Kør installeren
 Den stiller ingen vigtige spørgsmål, så bare Continue, Next, Agree osv.
 
 ![Install](img/install.png)
 
----
-
-# Tjek installationen
+## Tjek installationen
 Når installationen er færdig, skal vi sikre os, at Java er korrekt installeret. Det gør vi ved at åbne en **konsolapplikation** og køre en kommando.
 
 - macOS-brugere skal åbne **Terminal** (se næste side)
 - Windows-brugere skal åbne **PowerShell** (se to sider frem)
 
---
+---
 
-# macOS: find Terminal i Spotlight
+### macOS: find Terminal i Spotlight
 
 - Klik på **forstørrelsesglasset** øverst til højre på skærmen
     ![Mac Spotlight button](img/mac-spotlight-button.png)
 - Skriv "Terminal" i søgefeltet og tryk **Enter**
     ![Mac Sporlight search](img/mac-spotlight-search.png)
-
---
-
-# Windows: find PowerShell i Start-menuen
-
-- Klik på **Start-menuen** i nederste venstre hjørne af skærmen
-- Skriv "PowerShell" i søgefeltet og tryk **Enter**
-    ![Windows PowerShell search](img/windows-search-powershell.png)
-
---
-
 - Skriv `java -version` og tryk **Enter**.
 - Tjek at du får en besked, der ligner denne:
     ![write-java-version](img/write-java-version.png)
@@ -83,11 +50,23 @@ Når installationen er færdig, skal vi sikre os, at Java er korrekt installeret
 
 ---
 
-# Øvelse: Installering af IntelliJ IDEA
+### Windows: find PowerShell i Start-menuen
+
+- Klik på **Start-menuen** i nederste venstre hjørne af skærmen
+- Skriv "PowerShell" i søgefeltet og tryk **Enter**
+    ![Windows PowerShell search](img/windows-search-powershell.png)
+- Skriv `java -version` og tryk **Enter**.
+- Tjek at du får en besked, der ligner denne:
+    ![write-java-version](img/write-java-version.png)
+- Tjek at der står **version 21**, hvilket betyder at du har installeret Java JDK 21.
+- Hvis du får en fejl, så prøv at genstarte din computer og kør kommandoen igen.
+- Stadig har problemer? Spørg dine klassekammerater eller underviseren om hjælp.
 
 --
 
-## Download
+# Øvelse: Installering af IntelliJ IDEA
+
+For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmiljø, der hedder **IntelliJ IDEA**. Det er et program, der hjælper os med at skrive, organisere og køre vores Java-kode.
 
 - Gå til [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/)
 - Download **ikke** IntelliJ IDEA **Ultimate**
@@ -95,14 +74,10 @@ Når installationen er færdig, skal vi sikre os, at Java er korrekt installeret
     ![Download IntelliJ](img/download-intellij.png)
 - Klik "Download"
 
---
-
 ## Installér
 
 - Åbn den downloadede fil for at starte installationen
-- Følg installationsvejledningen og klik "Next" eller "Continue" indtil installationen er færdig
-
---
+- Følg installationsvejledningen og klik "Next", "Continue", o.lign. indtil installationen er færdig
 
 ## Start IntelliJ IDEA
 
@@ -116,13 +91,11 @@ Når installationen er færdig, skal vi sikre os, at Java er korrekt installeret
 
 - Vi skal konfigurere IntelliJ IDEA, så den passer til vores behov
 
---
-
 - Al konfiguration foregår i **Settings** vinduet
 - I vinduet finde og klikke på **Settings** i menuen
 - I Windows er det under **File** → **Settings**
 - I macOS er det i topmenuen under **IntelliJ IDEA** → **Preferences**
-- ![Intellij Settings Mac](img/intellij-settings-mac.png)
+    ![Intellij Settings Mac](img/intellij-settings-mac.png)
 
 --
 
@@ -159,17 +132,10 @@ Når installationen er færdig, skal vi sikre os, at Java er korrekt installeret
 - Klik på **Ok** for at gemme ændringerne, hvis et ser ud som billedet herunder
 ![Commit settings](img/intellij-versioncontrol.png)
 
---
-
 ## 🎉
 Yay! Nu er IntelliJ IDEA klar til brug!
 
----
-
-<!-- .slide: class="k-daylight" -->
-# Øvelser i IntelliJ
-
----
+--
 
 # Øvelse - Nyt projekt i IntelliJ
 
@@ -241,9 +207,7 @@ Yay! Nu er IntelliJ IDEA klar til brug!
 
 # Øvelse - Syntax highlighting
 
-- Måske har du lagt mærke til at IntelliJ farver din kode, så den er lettere at læse - det kaldes **syntax highlighting**. Ligesom indrykning, så forbedrer syntax highlighting læsbarheden af din kode - vi kan bedre se hvilke ord der har en særlig betydning i Java.
-
-***
+Måske har du lagt mærke til at IntelliJ farver din kode, så den er lettere at læse - det kaldes **syntax highlighting**. Ligesom indrykning, så forbedrer syntax highlighting læsbarheden af din kode - vi kan bedre se hvilke ord der har en særlig betydning i Java.
 
 1. Fortsæt med at arbejde i dit `helloworld` projekt
 2. Prøv at **copy-paste** hele `helloworld` koden du har skrevet før til et alm. tekstbehandlingsprogram (fx Notepad i Windows - eller Notes på Mac)
@@ -306,8 +270,6 @@ Yay! Nu er IntelliJ IDEA klar til brug!
 - Indrykning hjælper os med at se hvilke linjer der hører sammen
 - Er Java ligeglad med indrykning? - lad os undersøge det!
 
-***
-
 1. Fortsæt med at arbejde i dit `helloagainworld` projekt
 2. Prøv at fjerne indrykningen i din kode, så den ligner dette:
     ```java
@@ -337,24 +299,19 @@ Yay! Nu er IntelliJ IDEA klar til brug!
 - Vi har set at indrykning ikke er vigtigt for at Java kan forstå vores kode
 - Hvad med andre mellemrum (whitespaces) - er de vigtige? - lad os undersøge det!
 
-***
-
 1. Fortsæt med at arbejde i dit `helloagainworld` projekt
 2. Prøv nu at eksperimentere fjerne andre mellemrum, fx alle mellemrum omkring `{` og `}` og efter `;`, så det ligner dette:
     ```java
     public class HelloAgainWorld{public static void main(String[] args){System.out.println("Hello Again, World!");...}}
     ```
-4. Ok, så Java er tilsyneladede også ligeglad med de mellemrum og linjeskift vi lige har fjernet.
-3. Hvorfor synes du ikke vi skal have hele vores kode på en linje?
-4. Sæt din **markør** (cursor) på linjen og tryk på 
+3. Ok, så Java er tilsyneladede også ligeglad med de mellemrum og linjeskift vi lige har fjernet.
+4. Hvorfor synes du ikke vi skal have hele vores kode på en linje?
+5. Sæt din **markør** (cursor) på linjen og tryk på 
     - **Ctrl + Alt + L** hvis du er på **Windows** (først Ctrl, så Alt, så L)
     - **Cmd + Option + L** hvis du er på **Mac** for at formattere koden (først Cmd, så Option, så L)
-5. Snedigt ikke? - IntelliJ formatterer din kode automatisk, så den bliver mere læsbar
-6. Kør programmet igen - alt ok?
-
---
-
-7. Prøv at fjerne **alle** mellemrum i din kode, så den ligner dette:
+6. Snedigt ikke? - IntelliJ formatterer din kode automatisk, så den bliver mere læsbar
+7. Kør programmet igen - alt ok?
+8. Prøv at fjerne **alle** mellemrum i din kode, så den ligner dette:
     ```java
     publicclassHelloAgainWorld{publicstaticvoidmain(String[]args){System.out.println("HelloAgain,World!");System.out.println("IamlearningJava!");}}
     ```
@@ -381,8 +338,6 @@ Yay! Nu er IntelliJ IDEA klar til brug!
 3. Kør programmet - hvilken fejl får du fra compileren i IntelliJ?
 4. Hvad betyder fejlen?
 5. Ret fejlen (tilføj `;` igen) og tjek at programmet kører igen
-
---
 
 På samme måde som før, prøv at 
 

@@ -52,7 +52,7 @@ slides:
     # Theme of the slides: file path to CSS file, public url to CSS file, or one
     # of the reveal.js themes such as `black`, `white`, `league`, `solarized`,
     # `dracula`, ... (see https://revealjs.com/themes/)
-    theme: file:///Users/janot/Code/revealjs-themes/dist/theme/ek-tutorial.css
+    theme: http://localhost:9000/theme/ek.css
 
     #scripts:
     #    - https://jakob.janot.dk/revealjs-themes...

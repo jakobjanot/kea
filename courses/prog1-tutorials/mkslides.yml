@@ -52,7 +52,7 @@ slides:
     # Theme of the slides: file path to CSS file, public url to CSS file, or one
     # of the reveal.js themes such as `black`, `white`, `league`, `solarized`,
     # `dracula`, ... (see https://revealjs.com/themes/)
-    theme: http://localhost:9000/theme/ek.css
+    theme: https://jakob.janot.dk/revealjs-themes/theme/ek-tutorials.css
 
     #scripts:
     #    - https://jakob.janot.dk/revealjs-themes...
@@ -65,17 +65,17 @@ revealjs:
     # resolutions. Can be specified using percentage units.
     #width: 960
     #height: 700
-
+    
     # Factor of the display size that should remain empty around
     # the content
-    margin: 0.01
+    margin: 0.1
 
     # Bounds for smallest/largest possible scale to apply to content
     minScale: 0.2
     maxScale: 2.0
 
     # Display presentation control arrows
-    #controls: true
+    controls: true
 
     # Help the user learn the controls by providing hints, for example by
     # bouncing the down arrow when they first encounter a vertical slide
@@ -105,7 +105,7 @@ revealjs:
     # number for the current slide. The function should take in a slide
     # object and return an array with one string [slideNumber] or
     # three strings [n1,delimiter,n2]. See #formatSlideNumber().
-    #slideNumber: false
+    slideNumber: true
 
     # Can be used to limit the contexts in which the slide number appears
     # - "all":      Always show the slide number
@@ -141,13 +141,13 @@ revealjs:
 
     # Disables the default reveal.js slide layout (scaling and centering)
     # so that you can use custom CSS layout
-    #disableLayout: false
+    disableLayout: true
 
     # Enable the slide overview mode
     overview: true
 
     # Vertical centering of slides
-    center: true
+    center: false
 
     # Enables touch navigation on devices with touch input
     #touch: true
@@ -288,10 +288,10 @@ revealjs:
     #focusBodyOnPageVisibilityChange: true
 
     # Transition style
-    transition: 'slide' # none/fade/slide/convex/concave/zoom
+    transition: 'none' # none/fade/slide/convex/concave/zoom
 
     # Transition speed
-    transitionSpeed: 'fast' # default/fast/slow
+    #transitionSpeed: 'fast' # default/fast/slow
 
     # Transition style for full page slide backgrounds
     #backgroundTransition: 'fade' # none/fade/slide/convex/concave/zoom

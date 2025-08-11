@@ -1,5 +1,5 @@
 ---
-title: "01#1 - Introduktion til kurset"
+title: "01 - Introduktion til kurset"
 ---
 <!-- .slide: class="ek-academic-fire" -->
 

@@ -23,8 +23,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - run: pip install mkslides
-      - run: for course in $(ls -d courses/*); do mkslides build $course --site-dir ./site/$course; done
+      - run: pip install uv
+      - run: for course in $(ls -d courses/*); do uvx mkslides build $course --config-file $course/mkslides.yml --site-dir ./site/$course; done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./site

@@ -1,5 +1,5 @@
 ---
-title: "01#1 - Introduktion til kurset"
+title: "00 - Introduktion til EK"
 ---
 
 Fact:

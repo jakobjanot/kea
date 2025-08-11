@@ -1,5 +1,5 @@
 ---
-title: 07#1 - Array og referencer
+title: 07 - Array og referencer
 ---
 <!-- .slide: class="ek-academic-fire" -->
 

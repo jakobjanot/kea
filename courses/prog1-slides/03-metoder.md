@@ -1,5 +1,5 @@
 ---
-title: 03#1 - Metoder
+title: 03 - Metoder
 ---
 <!-- .slide: class="ek-academic-fire" -->
 

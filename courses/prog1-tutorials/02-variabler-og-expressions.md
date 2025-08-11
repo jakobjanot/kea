@@ -1,5 +1,5 @@
 ---
-title: 02#2 - Variabler og expressions - Øvelser
+title: 02 - Variabler og expressions - Øvelser
 ---
 
 # Øvelse - ASCII art
@@ -106,7 +106,7 @@ Brug din alder til at udregne dit fødselsår
         }
     }
     ```
---
+---
 
 5. Indtast variablen `year` af typen `int` og giv den en værdi `2025` (i år)
 6. Indtast variablen `age` af typen `int` og giv den din alder
@@ -140,7 +140,7 @@ public class BirthYear {
 7. Ved at ændre på værdien af `cookies` - undersøg hvor mange cookies du lave med 2 kg mel?
 8. Kender du en måde at udregne hvor mange cookies du kan lave med 2 kg mel?
 
---
+---
 
 9. Vores vægt måler ikke mere præcist end 0.001 kg (1 gram), så det er lidt fjollet at vise resultet med 6 decimaler
 10. Prøv at ændre `System.out.println(totalFlour);` til `System.out.printf("%.3f kg mel", totalFlour);`

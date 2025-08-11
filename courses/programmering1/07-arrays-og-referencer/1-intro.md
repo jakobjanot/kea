@@ -45,7 +45,7 @@ Notes:
 
 --
 
-![Fire skattekister](images/four-chests.jpg)
+![Fire skattekister](img/four-chests.jpg)
 
 ```java
 int[4] chests;
@@ -57,7 +57,7 @@ int[4] chests;
 int[4] chests;
 ```
 
-![Tomme kister](images/chests-empty.svg)
+![Tomme kister](img/chests-empty.svg)
 
 Notes:
 - Her har vi en array, der repræsenterer fire kister, hvori vi kan gemme guldmønter.
@@ -79,7 +79,7 @@ Notes:
 
 --
 
-![Mønter i første kiste](images/chests-1.svg)
+![Mønter i første kiste](img/chests-1.svg)
 
 ```java
 int[] chests = new int[4];
@@ -99,7 +99,7 @@ Notes:
 
 --
 
-![Mønter i første og sidste kiste](images/chests-1-4.svg)
+![Mønter i første og sidste kiste](img/chests-1-4.svg)
 
 ```java
 int[] chests = new int[4];

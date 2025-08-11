@@ -68,7 +68,7 @@ Den danske landsholdstræner skal sætte et hold til den næste landskamp. Han h
 3. Se billedet herunder, hvordan målmanden er spiller 1, forsvarsspillere er 2-5, midtbanespillere er 6-8 og angribere er 9-11. Kender du spillerne, så vælg en position, der passer til spilleren.
 4. Udskriv startopstillingen, så det ser sådan ud:
 
-[Opstilling](images/football-position-chart.png)
+[Opstilling](img/football-position-chart.png)
 
 | Trøje nr. | Spiller                  | Klub                   |
 |---------------|--------------------------|------------------------|

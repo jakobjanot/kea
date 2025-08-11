@@ -639,13 +639,13 @@ Notes:
 
 --
 
-![IntelliJ Shortcuts](images/shortcut1.png)
+![IntelliJ Shortcuts](img/shortcut1.png)
 
 **main** giver public static void main()
 
 --
 
-![IntelliJ Shortcuts](images/shortcut2.png)
+![IntelliJ Shortcuts](img/shortcut2.png)
 
 **sout** giver System.out.println();
 

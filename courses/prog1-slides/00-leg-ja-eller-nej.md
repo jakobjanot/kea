@@ -1,7 +1,7 @@
 ---
 title: "00 - Ja eller nej?"
 ---
-<!-- .slide: class="ek-bluey" -->
+<!-- .slide: class="k-bluey" -->
 #### Jeg drikker kaffe
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
@@ -19,7 +19,7 @@ title: "00 - Ja eller nej?"
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
 
 ---
-<!-- .slide: class="ek-academic-fire" -->
+<!-- .slide: class="k-academic-fire" -->
 #### Jeg "fixer" mine forældres computer
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
@@ -39,48 +39,64 @@ title: "00 - Ja eller nej?"
 ---
 
 <!-- .slide: class="k-focus-blue" -->
-#### Undgår at træde på rillerne på fortovet
+#### Jeg undgår at træde på rillerne mellem fliserne på fortovet
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
 
 ---
 <!-- .slide: class="k-poolside-study" -->
-#### Har et tastatur med farvet lys
-
-# 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
-
----
-<!-- .slide: class="k-bluey" -->
 #### Jeg kan tale tre sprog
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
 
 ---
+<!-- .slide: class="k-bluey" -->
+#### Jeg skriver dagbog
+
+# 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
+
+---
+
 <!-- .slide: class="ek-patrick-star" -->
 #### Jeg gamer hver dag
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
 
 ---
-<!-- .slide: class="ek-academic-fire" -->
-#### Jeg bor på kollegium
+<!-- .slide: class="k-academic-fire" -->
+#### Jeg har været til en demonstration indenfor det sidste år
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
 
 ---
+<!-- .slide: class="ek-poolside-study" -->
+#### Jeg spiller rollespil
+
+# 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
+---
+<!-- .slide: class="k-pencil-grey" -->
+#### Min telefon siger, at min skærmtid er over 5 timer om dagen
+
+# 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
+---
+
 <!-- .slide: class="ek-spongebob" -->
 #### Jeg er vegetar
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
 
 ---
-<!-- .slide: class="ek-focus-blue" -->
+<!-- .slide: class="k-focus-blue" -->
 #### Jeg har sprunget i faldskærm
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎
 
 ---
-<!-- .slide: class="ek-poolside-study" -->
-#### Jeg skriver dagbog
+<!-- .slide: class="ek-patrick-star" -->
+#### Jeg er *Swiftie*
+
+---
+<!-- .slide: class="k-daylight" -->
+#### Jeg var spændt på at skulle starte på mit nye studie
 
 # 👍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;👎

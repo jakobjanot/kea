@@ -1,109 +1,106 @@
 ---
 title: "00 - Hilse på leg"
 ---
-Hvem vil du helst drikke en kop kaffe med - og hvorfor?
+# Blandt alle mennesker i verden, hvem vil du helst drikke en kop kaffe med?
 
 ---
-Har du en hobby?
+# Har du en hobby?
 
 ---
-Hvad er din bedste ferieoplevelse?
+# Hvad er din bedste ferieoplevelse?
 
 ---
-Hvilken film har du set for nylig, som du kan anbefale?
+# Hvilken film har du set for nylig, som du kan anbefale?
 
 ---
-Hvorfor valgte du at studere til datamatiker?
+# Hvorfor valgte du at studere til datamatiker?
 
 ---
-Hvilke apps bruger du mest på din telefon?
+# Hvilke apps bruger du mest på din telefon?
 
 ---
-Hvor sidder du helst og arbejder?
+# Hvor sidder du helst og arbejder?
 
 ---
-Hvis du skulle være en kendt person i en uge, hvem ville du så være?
+# Hvis du skulle være en kendt person i en uge, hvem ville du så være?
 
 ---
-Hvilket spil spiller du for tiden?
+# Hvilket spil spiller du for tiden?
 
 ---
-Hvad er den sidste bog, du har læst?
+# Hvad er den sidste bog, du har læst?
 
 ---
-Hvor vil du helst rejse hen i verden, hvis du kunne vælge?
+# Hvor vil du helst rejse hen i verden, hvis du kunne vælge?
 
 ---
-Har du vundet en konkurrence eller præmie, som du er stolt af?
+# Har du vundet en konkurrence eller præmie, som du er stolt af?
 
 ---
-Hvilket musiknummer kan du ikke lade være med at synge med på?
+# Hvilket musiknummer kan du ikke lade være med at synge med på?
 
 ---
-Hvilken madret kunne du spise hver dag uden at blive træt af den?
+# Hvilken madret kunne du spise hver dag uden at blive træt af den?
 
 ---
-Hvilket dyr ville du helst have som kæledyr, hvis der ikke var nogen begrænsninger?
+# Hvilket dyr ville du helst have som kæledyr, hvis der ikke var nogen begrænsninger?
 
 ---
-Hvad er dit ynglingssted i København?
+# Hvad er dit yndlingssted i København?
 
 ---
-Hvilke influencer følger du på sociale medier?
+# Nævn en influencer, du følger på sociale medier?
 
 ---
-Hvad er din favorit måde at slappe af på efter en lang dag?
+# Hvad er din favorit måde at slappe af på efter en lang dag?
 
 ---
-Hvad er din yndlingsfastfood?
+# Hvad er din yndlingsfastfood?
 
 ---
-Hvilken computer har du?
+# Hvilken computer har du?
 
 ---
-Hvad skal du lave i weekenden?
+# Hvad skal du lave i weekenden?
 
 ---
-Hvor mange sprog taler du?
+# Hvor mange timer har du sovet i nat?
 
 ---
-Hvor mange timer sover du om natten?
+# Hvad er det længste du har været væk hjemmefra?
 
 ---
-Hvad er det længste du har været væk hjemmefra?
+# I hvilken by er du født?
 
 ---
-I hvilken by er du født?
+# Tror du der findes UFO'er? - hvorfor/hvorfor ikke?
 
 ---
-Tror du der findes UFO'er? - hvorfor/hvorfor ikke?
+# Har du nogensinde
 
 ---
-Hvad skal du lave i aften?
+# Er du et rodehoved?
 
 ---
-Hvad bliver du glad af?
+# Samler du på noget?
 
 ---
-Hvad gør dig vred?
+# Hvis du skulle få en tatovering, hvordan skulle den så se ud?
 
 ---
-Hvis du skulle få en tatovering, hvordan skulle den så se ud?
+# Hvis du skulle lave en podcast, hvad skulle den så handle om?
 
 ---
-Hvis du skulle lave en podcast, hvad skulle den så handle om?
+# Hvilken superkraft ville du helst have?
 
 ---
-Hvilken superkraft ville du helst have?
+# Hvis du kunne ændre én ting i verden, hvad skulle det så være?
 
 ---
-Hvis du kunne ændre én ting i verden, hvad skulle det så være?
+# Hvad ville du gøre, hvis du vandt 1 million kroner?
 
 ---
-Hvad ville du gøre, hvis du vandt 1 million kroner?
+# Foretrækker du at lytte eller at tale?
 
 ---
-Er du en lytter eller en taler?
-
----
-Hvem ser du op til?
+# Hvem ser du op til?

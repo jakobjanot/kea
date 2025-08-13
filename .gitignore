@@ -1,9 +1,7 @@
 .DS_Store
 
 site
-nynne
-nynne2
-nynne3
+_*/
 
 # Ignore Python virtual environments
 .venv/

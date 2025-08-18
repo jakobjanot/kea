@@ -4,12 +4,13 @@
 
 ### Prerequisites
 - Python 3.8 or later
-- Markdown
-- pip
+- uv (Python package manager)
+- just (command runner)
 
 ```bash
-pip install mkslides
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
+
 
 ## Create html slides from Markdown files inside a folder
 

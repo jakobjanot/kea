@@ -1,7 +1,7 @@
 ---
 title: 05 - Betingelser og logik
 ---
-<!-- .slide: class="ek-academic-fire" -->
+<!-- .slide: class="cover-2" -->
 
 # Betingelser og logik
 

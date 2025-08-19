@@ -667,7 +667,7 @@ Notes:
 - ![studievejledning@ek.dk](mailto:studievejledning@ek.dk)
 - ![36 15 45 15](tel:36154515)
 
---
+---
 <!-- .slide: class="cover-10" -->
 # Studiehåndbogen
 
@@ -726,9 +726,90 @@ Notes:
 - Nogle lektioner foregår i Teams
 - Lad os teste at alle kan logge ind i Teams
 
+---
+<!-- .slide: class="cover-13" -->
+# ChatGPT og videoer
+
 --
 
-# AI
+#### Hvordan ChatGPT virker 
+
+Tokenisering og sandsynlighed for næste ord.
+
+“Trænet på internettets tekst” + finjustering.
+
+Styrker: fleksibilitet, sproglig flyd, bred viden.
+
+Svagheder: hallucinationer, manglende forståelse, bias.
+
+Vigtigt: Ikke en vidensdatabase
+
+--
+
+Diskussion: Kan noget “der bare gætter næste ord” virkelig kaldes intelligent?
+
+--
+
+#### Hvordan anvender vi bedst ChatGPT?
+
+Kodning (hjælp til syntax, debugging, dokumentation).
+
+Idé-generering og brainstorming.
+
+Opsummering af dokumenter, e-mails, rapporter.
+
+--
+1. Overfladisk læring
+
+Hvis man altid får svaret serveret, risikerer man at springe over den dybe forståelse.
+
+Man kan “løse opgaven” uden at kunne forklare løsningen bagefter.
+
+Eksempel: En SQL-forespørgsel genereret af ChatGPT virker – men den studerende kan ikke selv tilpasse den, når kravene ændrer sig.
+
+🚩 2. Manglende fejlforståelse
+
+At lave fejl og debugge selv er en vigtig del af at blive god til programmering.
+
+Hvis ChatGPT retter det hele med det samme, mister man muligheden for at lære af egne fejl.
+
+🚩 3. Afhængighed
+
+Risiko for at man altid tyr til ChatGPT i stedet for at tænke selv.
+
+Kan sammenlignes med at bruge lommeregner uden nogensinde at lære hovedregning → man kan komme til at mangle fundamentale færdigheder.
+
+🚩 4. Falsk sikkerhed
+
+ChatGPT kan “hallucinere” og give et overbevisende men forkert svar.
+
+Hvis studerende ikke lærer at være kritiske, kan de tage forkerte ting for gode varer.
+
+🚩 5. Mindre kreativitet og problemløsning
+
+En stor del af at lære softwareudvikling er at finde løsninger på uklare problemer.
+
+Hvis man altid starter med at spørge AI, kan man blive mindre trænet i selv at bryde problemer ned.
+
+🚩 6. Plagiat og etik
+
+Risiko for at aflevere AI-genereret tekst/kode uden at angive kilde.
+
+Kan give både faglige og juridiske konsekvenser.
+
+👉 Diskussionsspørgsmål til klassen:
+
+Hvornår er det “okay” at bruge ChatGPT i læring, og hvornår er det snyd?
+
+Hvordan kan man bruge AI som støtte uden at snyde sig selv for læringen?
+
+Skal undervisere tilpasse eksamensformer, fordi AI findes?
+--
+
+Diskussion: Ville I stole på ChatGPT til at skrive dele af jeres kode? Hvor går grænsen?
+
+--
+
 I må rigtigt gerne bruge AI til at:
 - Hjælp til at forstå koncepterne bedre
 - Få feedback til den kode man har skrevet eller ens forståelse af et emne
@@ -755,70 +836,3 @@ Som udgangspunkt må du bruge værktøjer med kunstig intelligens (AI), herunde
 Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil KEA betragte det som eksamenssnyd, da det vil være i strid med eksamensbekendtgørelsen, hvis du afleverer en besvarelse eller dele af en besvarelse, som fx er udarbejdet af en AI/chatbot, som om det var din egen.
 
 Dette følger af eksamensbekendtgørelsen i § 34, stk. 2, pkt. 3, at ”eksamenssnyd foreligger bl.a., når den studerende […] fortier eller vildleder om egen indsats eller resultater”.
-
---
-
-![Et billede, der indeholder ur, Vægur, cirkel, Font/skrifttype AI-genereret indhold kan være ukorrekt.](Billede3.jpg)
-KONTAKT
-Service Desk Email: servicedesk@kea.dk  Telefon: +45 4646 0046
-Spørgsmål vedr. eksamen Email: eksamen@kea.dk
-Studieadministration  Email: studie@kea.dk
-Studievejleder - Düncap Ünkap Andersen  Email: duun@kea.dk
-studievejledningen@kea.dk
-ÅBNINGSTIDER
-GULDBERGSGADE 29N
-Hverdage: Kl. 07:00 – 22:00
-Weekender: Kl. 10:00 – 22:00
-Reception: man - fre: 08:00 - 15:00
-Husk Studiekort!
-
---
-
-![](Picture8.jpg)
-Trådløst netværk
-
-Kantine – Bygning A
-
-Studenterbar – Bygning B - Studieliv
-
-![](Picture10.jpg)
-
-![](Picture12.jpg)
-
---
-Kommunikation
-Fronter - https://ek.itslearning.com
-Semesterplan, bogliste, materialer, opgaver
-
-E-mail
-Al e-mail kommunikation er via din EK mail
-Du kan opsætte mail forwarding fra din EK mail til privat email
-
-SMS - Tilføj mobilnummer til ums.kea.dk
-
-Skema
-http://skema.kea.dk
-Kan også ses i http://ums.kea.dk og i din KEA-mail-kalender
-
-Studiestartsinfo på http://it.kea.dk
-
---
-
-
---
-Videoer:
-Studie & Karrierevejledning:  https://youtu.be/fRYoFGXqCzQ
-
-IT-intro: https://www.youtube.com/watch?v=inLf-ATmlAQ
-
-Links:
-Bibliotek: https://bibliotek.kea.dk/da/
-
-Studiehåndbog: https://mit.kea.dk/studieh%C3%A5ndbog
-
-Studiekort: https://keastudiekort.dk/
-
---
-
-![](Picture3.jpg)
-Spørgsmål?

@@ -4,14 +4,25 @@ title: "Introdage"
 <!-- .slide: class="cover-2" -->
 # Introdage
 
+> Mens vi venter...
+>
+> lav et navneskilt
+>
+
+Notes:
+- Husk A4 papir og tuscher
+- Bed de studerende om at lave et navneskilt når de ankommer
+
 ---
 <!-- .slide: class="o-academic-fire" -->
 # Program
 - Os og jer
-- EK/KEA og studiet
-- Forventningsafstemning af første semester
-- Studiegrupper
-- Fronter
+- Studiet
+- Find vej på EK
+- Hvad laver en datamatiker?
+- Rollen som studerende
+- Hack dit studieliv
+- Studiehåndbogen
 - ChatGPT og videoer
 
 ---
@@ -20,7 +31,6 @@ title: "Introdage"
 # Os og jer
 
 --
-
 
 Underviser i *Systemudvikling*
 
@@ -52,6 +62,7 @@ Underviser i *Programmering*
 ## Jer
 
 --
+<!-- .slide: class="k-patrick-star" -->
 
 - Tag 5 samtale-kort fra bunken heroppe
 - Gå rundt i blandt hinanden
@@ -78,14 +89,14 @@ Leder på EK Digital (og min chefs chef)
 
 ...og rektor på EK
 
-<iframe width="750" height="422" src="https://www.youtube.com/embed/kuQQk02CYWY?rel=0&showinfo=0&controls=0&privacy_mode=1" title="Velkommen til EK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="750" height="422" src="https://www.youtube.com/embed/S11quPmFWkk?rel=0&showinfo=0&controls=0&privacy_mode=1" title="Velkommen til EK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Notes:
 - Rektor vil gerne byde jer velkommen til EK
 
 ---
-
-# Uddannelsen
+<!-- .slide: class="cover-8" -->
+# Studiet
 
 --
 
@@ -185,7 +196,7 @@ table.education .dark-red {
 	- Praktik - *Skriftlig eksamen* (15 ECTS)
 	- Afsluttende projekt - *Projekt og mundtlig eksamen* (15 ECTS)
 --
-# 1. semester
+#### 1. semester
 
 --
 
@@ -235,7 +246,7 @@ Se skemaet på [https://ums.ek.dk/
 
 
 ---
-
+<!-- .slide: class="cover-1" -->
 # Find vej på EK
 
 --
@@ -277,6 +288,31 @@ Har I fået lavet studiekort?
 
 --
 
+### Rygepolitik
+
+![no-smoking](img/no-smoking.png)
+
+Notes:
+- Rygning er ikke tilladt på hele campus
+
+--
+
+#### Hjertestarter
+
+**2 stk.**
+
+- En i bygning A (ved receptionen)
+- En i bygning E (ved lokale E.136)
+
+--
+
+#### Beredskabsplan
+
+[https://mit.kea.dk/images/studiehaandbog/Beredskabsplaner/Beredskabsplan-maj-2022-studerende.pdf](https://mit.kea.dk/images/studiehaandbog/Beredskabsplaner/Beredskabsplan-maj-2022-studerende.pdf)
+
+--
+
+<!-- .slide: class="k-patrick-star" -->
 #### Foto orienteringsløb på campus
 
 - 30 min.
@@ -285,11 +321,12 @@ Har I fået lavet studiekort?
 - Find det foto der passer til stedet
 
 ---
+<!-- .slide: class="cover-5" -->
+# Hvad kan en datamatiker?
 
-# En fremtid som datamatiker
-
-
-
+--
+<!-- .slide: background-image="img/bedstemor-and.png" -->
+> ...hvad du kan sige, når bedstemor spørger hvad du studerer?
 --
 
 #### Da jeg var barn...
@@ -335,7 +372,7 @@ Det danske samfund er i front når det kommer til digitalisering
  \- mennesker kan løse opgaver med mening i
 
 --
-
+<!-- .slide: class="k-patrick-star" -->
 Brug 5 min til at tænke over:  
 \- Hvilke digitale produkter bruger du i din hverdag?  
 \- Hvilke problemer løser de for dig?
@@ -343,11 +380,11 @@ Brug 5 min til at tænke over:
 Notes:
 - De der har forslag må gerne sige dem højt
 ---
-
+<!-- .slide: class="cover-6" -->
 # Rollen som studerende
 
 --
-# Nye ord
+#### Nye ord
 
 - <strike>skole</strike>&nbsp;&nbsp;*uddannelse*
 - <strike>elev</strike>&nbsp;&nbsp;*studerende*
@@ -466,6 +503,8 @@ Notes:
 
 --
 
+Det handler om den der
+
 ![hjernen](img/hjernen.png)
 
 --
@@ -479,16 +518,6 @@ Notes:
 
 --
 
-### The *spacing effect*
-
-![Klaver](img/piano.png)
-
-Det er bedre at øve klaver  
-**10 minutter hver dag**  
-end 1 time én gang om ugen
-
---
-
 Undervisningen kommer omkring emnerne flere gange
 - Forberedelse
 - Undervisning
@@ -498,20 +527,38 @@ Undervisningen kommer omkring emnerne flere gange
 
 --
 
-### Nytårsfortsæt
+### The *spacing effect*
 
---
-Fortæl de andre om et **nytårsfortsæt** - hvor lang tid holdt det?
+![Klaver](img/piano.png)
+
+Det er bedre at øve klaver  
+**10 minutter hver dag**  
+end 1 time én gang om ugen
 
 Notes:
-- Lad de studerende fortælle om deres nytårsfortsæt
-- Spørg ind til hvad der gjorde at de ikke holdt det
+- Min søn startede til klaver i efteråret
+- Hans klaverlærer sagde at det er bedre at øve 10 minutter hver dag end 1 time én gang om ugen
+- Jeg husker at jeg selv gik til guitar som barn. Jeg øvede mig en time hver dag før jeg skulle til guitar.
+- Min søn er vildt meget bedre til klaver end jeg var til guitar
+- Samme arbejdsbyrde - men mere effektivt
+
+--
+
+### Nytårsforsæt
+
+--
+<!-- .slide: class="k-patrick-star" -->
+Ræk hånden op, hvis du har haft et **nytårsforsæt**?
+
+--
+<!-- .slide: class="k-patrick-star" -->
+Hold hånden oppe, hvis du har **holdt** dit nytårsforsæt?
 
 --
 
 Har du haft tanken:
 
-> ### Hvad er der galt med mig, når jeg ikke kan holde mine nytårsfortsætter?
+> ### Hvad er der galt med mig, når jeg ikke kan holde mine nytårsforsætter?
 
 --
 
@@ -573,63 +620,17 @@ Eksempel:
 
 --
 
-# Der er altid et element af praksis involveret
-Fordi:
-Du skal ikke bare vide. Du skal kunne.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xT_YaduPYlk?si=tWHai8SxVnuK0tDi?rel=0&showinfo=0&controls=0&privacy_mode=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
---
-# Så derfor
-Når vi giver jer (hjemme)opgaver
-Er det for at opleve “things that make you go hmm” og tvinge jer til at reflektere og eksperimentere.
-Når vi stiller spørgsmål
-Er det for at få jer til at reflektere – eller finde viden frem, for at hjælpe jer til at huske.
-Når vi giver jer øvelser
-Er det for at lade jer opleve ting selv, fremfor bare at se på os.
+Notes:
+- Jeg så den her talk på en udviklerkonference engang
+- Den var virkelig inspirerende, fordi han deler sin rejse med at etablere nye vaner
+- Og samtidig kommer han ind på forskning om vaner og motivation
+- Hvis I mangler noget at lave i aften, så kan I overveje at se den
 
 --
 
-![](object3.jpg)
-Husk!
-Det handler aldrig om løsningen!
-Men hvordan kommer du frem til den rigtige kvalitetsløsning på den mest optimale måde!
-
---
-# Arbejd!, arbejd!, arbejd!
-
-![](object2.jpg)
-Det handler ikke om at aflevere – ligesom det ikke handler om løsningen.
-Det handler om arbejdet – det er arbejdet der gør at I lærer – og I er her for at lære – ikke for at vise os at I kan aflevere opgaver.
-Vi holder ikke kontrol med jer – vi tilbyder undervisning og opgaver for at I kan træne jer selv – ikke for at vi kan holde øje med jer.
-Så uanset hvad der sker – så bare svøm arbejd videre!
-
---
-
-![Et billede, der indeholder tekst, Font/skrifttype, skærmbillede, hvid Automatisk genereret beskrivelse](Billede2.jpg)
-
---
-# Der er en grund til at I er her som et hold
-
---
-# Husk: I er ikke alene!
-
-![](Billede2.jpg)
-Studiegrupper
-En af de bedste måder at lære på, er ved at man sammen finder ud af ting.
-
-![](Picture5.jpg)
-Derfor vil vi kraftigt opfordre til at i danner studiegrupper
-
---
-Det er godt at have nogle at studere med
-
-![](object3.jpg)
-Det er godt at have nogle at fejre succeserne med
-
-![](object3.jpg)
-
-![](object3.jpg)
-og nogle at dele nederlagene med
-
+#### Der er hjælp og vejledning
 
 --
 
@@ -637,11 +638,7 @@ og nogle at dele nederlagene med
 
 --
 
-# Få vejledning og støtte
-
---
-
-# Code Lab
+#### Code Lab
 - Åbent mandag-fredag kl. 8.30-11.45 og 12.30-15.45 (bemandet)
 - Dygtige studerende på senere semestre
 - Du kan få hjælp til at:
@@ -651,13 +648,17 @@ og nogle at dele nederlagene med
 
 --
 
-# Studievejledning
+#### Studievejledningen
 
 - *"Jeg er i tvivl om jeg har valgt det rigtige studie"*
 - *"De andre i studiegruppen irriterer mig og vi kan ikke arbejde sammen"*
 - *"Jeg er dumpet en eksamen - hvad gør jeg?"*
 - *"Jeg er stresset - hvad skal jeg gøre?"*
 - *"Jeg bliver mega nervøs til eksamen - hvad kan jeg gøre?"*
+- (og mange andre ting)
+--
+
+<iframe width="750" height="422" src="https://www.youtube.com/embed/fRYoFGXqCzQ?rel=0&showinfo=0&controls=0&privacy_mode=1" title="Studievejledningen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 --
 
@@ -666,9 +667,68 @@ og nogle at dele nederlagene med
 - ![studievejledning@ek.dk](mailto:studievejledning@ek.dk)
 - ![36 15 45 15](tel:36154515)
 
+--
+<!-- .slide: class="cover-10" -->
+# Studiehåndbogen
+
+- vi bruger studiehåndbogen til at finde information om studiet
+- [https://mit.kea.dk/studiehaandbog](https://mit.kea.dk/studiehaandbog)
 
 --
-# Hvad så med AI?
+
+#### Wifi
+
+- Søg på studiehåndbogen efter "wifi"
+- Følg instruktionerne for at få adgang til wifi
+
+--
+
+#### Studiemail og login
+
+- Søg på studiehåndbogen 
+	- "KEA login"
+	- "KEA mail"
+- Følg instruktionerne
+
+--
+
+#### ItsLearning
+- også kendt som *Fronter*
+- Søg på studiehåndbogen efter "ItsLearning"
+- Log ind med dit KEA login
+- Find dit klasse*rum* og undervisningsplaner
+
+--
+
+#### Servicedesk og Serviceportalen
+- Søg på studiehåndbogen efter "Servicedesk"
+- [servicedesk@ek.dk](mailto:servicedesk@ek.dk)
+- Frontdesk i bygning A ved receptionen
+
+--
+
+#### UMS
+- Søg på studiehåndbogen efter "UMS"
+- Log ind med dit KEA login
+- Se dit skema for semesteret
+
+--
+
+#### Office 365
+- Søg på studiehåndbogen efter "Office 365"
+- Log ind med dit KEA login
+- Find Office 365 apps som Word, Excel, PowerPoint, OneDrive og Teams
+
+--
+
+#### Teams
+
+- Nogle lektioner foregår i Teams
+- Lad os teste at alle kan logge ind i Teams
+
+--
+
+# AI
 I må rigtigt gerne bruge AI til at:
 - Hjælp til at forstå koncepterne bedre
 - Få feedback til den kode man har skrevet eller ens forståelse af et emne
@@ -743,21 +803,7 @@ Kan også ses i http://ums.kea.dk og i din KEA-mail-kalender
 Studiestartsinfo på http://it.kea.dk
 
 --
-Rygepolitik og nødplan
 
-![](Picture11.jpg)
-Rygning er ikke tilladt på KEA.
-
-Hjertestarter
-
-I nødstilfælde, brug brandtrappen og nødudgange.
-Gå til samlingssted (er oplyst på brandinstruktionen i alle lokaler).
-Emergency plan: https://mit.kea.dk/studiehandbog/brand-og-beredskab
-Guldbergsgade 29N, 2200 København N:
-	Placeret ved trapperne ved receptionen
-
-Håndværkergården, Meinungsgade 8, 2200 København N
-	Placeret ved trapperne i stueetagen
 
 --
 Videoer:

@@ -3,6 +3,8 @@
 site
 _*/
 
+*.pdf
+
 # Ignore Python virtual environments
 .venv/
 uv.lock

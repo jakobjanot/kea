@@ -183,7 +183,7 @@ table.education .dark-red {
 1. semester
 	- Programmering 1 - *Mundtlig eksamen* (15 ECTS)  
 2. semester
-	- Programmering 1/Systemudvikling 1/IT- og forretn. 1 og Teknologi 1 - *Projekt og mundtlig eksamen* (15 ECTS)
+	- Programmering 1/Systemudvikling 1/IT- og forretn. 1 og Teknologi 1 - *Projekt og mundtlig eksamen* (45 ECTS)
 3. semester
 	- Programmering 2 - *Mundtlig eksamen* (10 ECTS)
 	- Systemudvikling 2 - *Mundtlig eksamen* (10 ECTS)
@@ -201,7 +201,7 @@ table.education .dark-red {
 --
 
 #### Programmering
-"Hvordan man i praksis konstruerer programmer  
+"Hvordan man bygger software      
 \- ved brug af værktøjer og metoder brugt i branchen"
 
 --
@@ -213,7 +213,7 @@ table.education .dark-red {
 --
 
 #### IT- og forretningsudvikling
-"Dem der aftager programmerne,  
+"Forstå dem der aftager softwaren,  
 og betaler os for at lave dem"
 
 --
@@ -326,7 +326,7 @@ Notes:
 
 --
 <!-- .slide: background-image="img/bedstemor-and.png" -->
-> ...hvad du kan sige, når bedstemor spørger hvad du studerer?
+> ...hvad du kan sige, når bedstemor spørger, hvad du studerer?
 --
 
 #### Da jeg var barn...
@@ -367,13 +367,13 @@ Digitale produkter løser problemer for mennesker
 
 --
 
-Det danske samfund er i front når det kommer til digitalisering   
+Det danske samfund er i front, når det kommer til digitalisering   
  \- det er en kæmpe effektivitetsgevinst  
- \- mennesker kan løse opgaver med mening i
+ \- mennesker kan brug deres tid på opgaver med mening i
 
 --
 <!-- .slide: class="k-patrick-star" -->
-Brug 5 min til at tænke over:  
+Brug 7 min til at tænke over:  
 \- Hvilke digitale produkter bruger du i din hverdag?  
 \- Hvilke problemer løser de for dig?
 
@@ -494,7 +494,8 @@ Notes:
 	- At kunne lytte og forstå andres behov og perspektiver
 --
 
-#### ... så *mød op!*
+Det øver vi også her på studiet  
+#### ... så *mød op*
 
 ---
 <!-- .slide: class="cover-11" -->
@@ -579,11 +580,13 @@ Notes:
 
 --
 
+#### Det snedige trick
+
 Du har 14 dage til at etablere et nyt system, der er pærelet at følge
 
 --
 
-Eksempel:
+Eksempel
 > Jeg vil gerne komme i bedre løbeform
 
 --
@@ -608,18 +611,11 @@ Godt system
 
 --
 
-Eksempel:
-> Jeg vil gerne komme i bedre løbeform
-- Jeg sætter min alarm til kl. 22:00
-- Jeg lægger mit løbetøj frem
-- Jeg står op og tager løbetøjet på
-
---
-
 ![run forest](img/run-forest.gif)
 
 --
 
+#### Se den her
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xT_YaduPYlk?si=tWHai8SxVnuK0tDi?rel=0&showinfo=0&controls=0&privacy_mode=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Notes:
@@ -627,6 +623,19 @@ Notes:
 - Den var virkelig inspirerende, fordi han deler sin rejse med at etablere nye vaner
 - Og samtidig kommer han ind på forskning om vaner og motivation
 - Hvis I mangler noget at lave i aften, så kan I overveje at se den
+
+--
+<!-- .slide: class="o-patrick-star" -->
+- 5 min til at tænke over
+	- Overvej hvad der vil blive svært for dig i dit studieliv
+	- Hvad kan du gøre for at etablere et godt system?
+- 10 min hvor du fortæller din sidemakker om dit nye system (5 min hver)
+
+Notes:
+- Få sovet nok
+- Få læst nok
+- Komme til undervisning
+- Få lavet øvelserne
 
 --
 

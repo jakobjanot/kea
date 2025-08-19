@@ -82,14 +82,14 @@ revealjs:
     #controlsTutorial: true
 
     # Determines where controls appear, "edges" or "bottom-right"
-    controlsLayout: 'edges'
+    controlsLayout: 'bottom-right'
 
     # Visibility rule for backwards navigation arrows; "faded", "hidden"
     # or "visible"
-    #controlsBackArrows: 'faded'
+    controlsBackArrows: 'hidden'
 
     # Display a presentation progress bar
-    #progress: true
+    progress: false
 
     # Display the page number of the current slide
     # - true:    Show slide number

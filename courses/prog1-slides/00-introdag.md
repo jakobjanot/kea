@@ -664,8 +664,8 @@ Notes:
 
 # Studievejledning
 
-- ![studievejledning@ek.dk](mailto:studievejledning@ek.dk)
-- ![36 15 45 15](tel:36154515)
+- studievejledning@ek.dk
+- 36 15 45 15
 
 ---
 <!-- .slide: class="cover-10" -->
@@ -675,14 +675,14 @@ Notes:
 - [https://mit.kea.dk/studiehaandbog](https://mit.kea.dk/studiehaandbog)
 
 --
-
+<!-- .slide: class="squidward" -->
 #### Wifi
 
 - Søg på studiehåndbogen efter "wifi"
 - Følg instruktionerne for at få adgang til wifi
 
 --
-
+<!-- .slide: class="spongebob" -->
 #### Studiemail og login
 
 - Søg på studiehåndbogen 
@@ -691,7 +691,7 @@ Notes:
 - Følg instruktionerne
 
 --
-
+<!-- .slide: class="focus-blue" -->
 #### ItsLearning
 - også kendt som *Fronter*
 - Søg på studiehåndbogen efter "ItsLearning"
@@ -699,21 +699,21 @@ Notes:
 - Find dit klasse*rum* og undervisningsplaner
 
 --
-
+<!-- .slide: class="bluey" -->
 #### Servicedesk og Serviceportalen
 - Søg på studiehåndbogen efter "Servicedesk"
 - [servicedesk@ek.dk](mailto:servicedesk@ek.dk)
 - Frontdesk i bygning A ved receptionen
 
 --
-
+<!-- .slide: class="daylight" -->
 #### UMS
 - Søg på studiehåndbogen efter "UMS"
 - Log ind med dit KEA login
 - Se dit skema for semesteret
 
 --
-
+<!-- .slide: class="pencil-grey" -->
 #### Office 365
 - Søg på studiehåndbogen efter "Office 365"
 - Log ind med dit KEA login
@@ -721,6 +721,7 @@ Notes:
 
 --
 
+<!-- .slide: class="tinky-winky" -->
 #### Teams
 
 - Nogle lektioner foregår i Teams

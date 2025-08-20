@@ -22,8 +22,8 @@ Notes:
 - Hvad laver en datamatiker?
 - Rollen som studerende
 - Hack dit studieliv
-- Studiehåndbogen
-- ChatGPT og videoer
+- Rundt i Studiehåndbogen
+
 
 ---
 
@@ -624,6 +624,21 @@ Godt system
 
 --
 
+Et andet godt system
+- Jeg skal løbe til/fra arbejde
+- Jeg tager mit løbetøj på når jeg står op
+- Jeg har håndklæde og sæbe på arbejde
+- Jeg løber til arbejde og tager bad der
+
+--
+
+Et tredje godt system (aftaler er godt!)
+- Jeg har en aftale med min kollega om at løbe efter arbejde hver onsdag og fredeag
+- Jeg har løbetøj hængende på mit arbejde
+- Jeg tager bad på arbejde
+
+--
+
 ![run forest](img/run-forest.gif)
 
 --
@@ -643,13 +658,7 @@ Notes:
 	- Overvej hvad der vil blive svært for dig i dit studieliv
 	- Hvad kan du gøre for at etablere et godt system?
 - 10 min hvor du fortæller din sidemakker om dit nye system (5 min hver)
-
-Notes:
-- Få sovet nok
-- Få læst nok
-- Komme til undervisning
-- Få lavet øvelserne
-
+- (Måske kan I lave en aftale med hinanden?) 
 --
 
 #### Der er hjælp og vejledning
@@ -684,17 +693,108 @@ Notes:
 
 --
 
-# Studievejledning
+#### Studievejledning
 
 - studievejledning@ek.dk
 - 36 15 45 15
 
+--
+
+# AI og læring
+
+--
+
+Vi ser, at
+- AI *kan* være et nyttigt værktøj i læringsprocessen,  
+
+men vi ser også at 
+- studerende får dårligere færdigheder og 
+- har sværere ved at få udbytte og gennemføre studiet
+
+--
+
+#### Risici ved AI
+
+1. Overfladisk læring
+2. Afhængighed
+3. Mindre kreativitet og problemløsning
+4. Misser at "fejl" er en vigtig del af læringsprocessen
+5. Falsk sikkerhed
+6. Plagiat og etik
+
+Notes:
+- Overfladisk læring
+	- Hvis man altid får svaret serveret, risikerer man at springe over den dybe forståelse.
+	- Man kan “løse opgaven” uden at kunne forklare løsningen bagefter.
+	-  Eksempel: En SQL-forespørgsel genereret af ChatGPT virker – men man kan ikke selv tilpasse den, når kravene ændrer sig.
+- Afhængighed
+	- Risiko for at man altid tyr til ChatGPT i stedet for at tænke selv.
+	- Kan sammenlignes med at bruge lommeregner uden nogensinde at lære hovedregning → man kan komme til at mangle fundamentale færdigheder.
+- Mindre kreativitet og problemløsning
+	- En stor del af at lære softwareudvikling er at finde løsninger på uklare problemer.
+	- Hvis man altid starter med at spørge AI, kan man blive mindre trænet i selv at bryde problemer ned.
+- "Fejl" er en vigtig del af læringsprocessen
+	- At lave fejl og debugge selv er en vigtig del af at blive god til programmering.
+	- Hvis ChatGPT retter det hele med det samme, mister man muligheden for at lære af egne fejl.
+- Falsk sikkerhed
+	- ChatGPT kan “hallucinere” og give et overbevisende men forkert svar.
+	- Hvis studerende ikke lærer at være kritiske, kan de tage forkerte ting for gode varer.
+- Plagiat og etik
+	- Risiko for at aflevere AI-genereret tekst/kode uden at angive kilde.
+	- Kan have konsekvenser
+--
+
+#### Fra studieordningen
+Som udgangspunkt må du bruge værktøjer med kunstig intelligens (...), i forbindelse med eksamensopgaver (...), medmindre andet fremgår eksplicit af studieordningen eller opgavebeskrivelsen.
+
+Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil EK betragte det som eksamenssnyd, da det vil være i strid med eksamensbekendtgørelsen, hvis du afleverer en besvarelse eller dele af en besvarelse, som fx er udarbejdet af en AI/chatbot, som om det var din egen.
+
+--
+
+#### Do's and Don'ts
+
+- ✅ Brug AI til at få hjælp til at forstå koncepter
+- ✅ Brug AI til at forstå fejl du får
+- ❌ Brug *ikke* AI auto-completion når du koder
+- ❌ Brug *ikke* AI til at løse opgaver for dig
+- ❌ Tro ikke at du har forstået opgaven, bare fordi du har læst AI' svar
+
+--
+
+#### ❌ Don't - eksempel
+
+> Løs opgaven herunder i Java:    
+> Skriv en metode der tager et array   
+> af int` som parameter og returnerer   
+> summen af alle elementerne i arrayet.
+
+--
+
+#### ✅ Do - eksempel
+
+> Jeg er ny i Java. Forklar mig hvad en static variabel betyder.
+
+--
+
+#### ✅ Do - eksempel
+
+> Jeg er ny til Java. Jeg har skrevet dette program,   
+> men jeg får en fejl: error: ';' expected. Hvad     
+> betyder det, og hvordan retter jeg det?     
+> public class Main {   
+>    public static void main(String[] args) {   
+>        System.out.println("Hej verden")    
+> ...
+
 ---
 <!-- .slide: class="cover-10" -->
-# Studiehåndbogen
+# Rundt i Studiehåndbogen
 
-- vi bruger studiehåndbogen til at finde information om studiet
-- [https://mit.kea.dk/studiehaandbog](https://mit.kea.dk/studiehaandbog)
+--
+
+- Vi skal have adgang til mail, wifi, ItsLearning, etc.
+- Vi bruger Studiehåndbogen til at finde informationer og guides
+- På din computer: [https://mit.kea.dk/studiehaandbog](https://mit.kea.dk/studiehaandbog)
 
 --
 <!-- .slide: class="squidward" -->
@@ -721,7 +821,7 @@ Notes:
 - Find dit klasse*rum* og undervisningsplaner
 
 --
-<!-- .slide: class="bluey" -->
+<!-- .slide: class="poolside-study" -->
 #### Servicedesk og Serviceportalen
 - Søg på studiehåndbogen efter "Servicedesk"
 - [servicedesk@ek.dk](mailto:servicedesk@ek.dk)
@@ -749,113 +849,11 @@ Notes:
 - Nogle lektioner foregår i Teams
 - Lad os teste at alle kan logge ind i Teams
 
----
-<!-- .slide: class="cover-13" -->
-# ChatGPT og videoer
-
 --
+<!-- .slide: class="bluey" -->
+#### LinkedIn Learning
 
-#### Hvordan ChatGPT virker 
-
-Tokenisering og sandsynlighed for næste ord.
-
-“Trænet på internettets tekst” + finjustering.
-
-Styrker: fleksibilitet, sproglig flyd, bred viden.
-
-Svagheder: hallucinationer, manglende forståelse, bias.
-
-Vigtigt: Ikke en vidensdatabase
-
---
-
-Diskussion: Kan noget “der bare gætter næste ord” virkelig kaldes intelligent?
-
---
-
-#### Hvordan anvender vi bedst ChatGPT?
-
-Kodning (hjælp til syntax, debugging, dokumentation).
-
-Idé-generering og brainstorming.
-
-Opsummering af dokumenter, e-mails, rapporter.
-
---
-1. Overfladisk læring
-
-Hvis man altid får svaret serveret, risikerer man at springe over den dybe forståelse.
-
-Man kan “løse opgaven” uden at kunne forklare løsningen bagefter.
-
-Eksempel: En SQL-forespørgsel genereret af ChatGPT virker – men den studerende kan ikke selv tilpasse den, når kravene ændrer sig.
-
-🚩 2. Manglende fejlforståelse
-
-At lave fejl og debugge selv er en vigtig del af at blive god til programmering.
-
-Hvis ChatGPT retter det hele med det samme, mister man muligheden for at lære af egne fejl.
-
-🚩 3. Afhængighed
-
-Risiko for at man altid tyr til ChatGPT i stedet for at tænke selv.
-
-Kan sammenlignes med at bruge lommeregner uden nogensinde at lære hovedregning → man kan komme til at mangle fundamentale færdigheder.
-
-🚩 4. Falsk sikkerhed
-
-ChatGPT kan “hallucinere” og give et overbevisende men forkert svar.
-
-Hvis studerende ikke lærer at være kritiske, kan de tage forkerte ting for gode varer.
-
-🚩 5. Mindre kreativitet og problemløsning
-
-En stor del af at lære softwareudvikling er at finde løsninger på uklare problemer.
-
-Hvis man altid starter med at spørge AI, kan man blive mindre trænet i selv at bryde problemer ned.
-
-🚩 6. Plagiat og etik
-
-Risiko for at aflevere AI-genereret tekst/kode uden at angive kilde.
-
-Kan give både faglige og juridiske konsekvenser.
-
-👉 Diskussionsspørgsmål til klassen:
-
-Hvornår er det “okay” at bruge ChatGPT i læring, og hvornår er det snyd?
-
-Hvordan kan man bruge AI som støtte uden at snyde sig selv for læringen?
-
-Skal undervisere tilpasse eksamensformer, fordi AI findes?
---
-
-Diskussion: Ville I stole på ChatGPT til at skrive dele af jeres kode? Hvor går grænsen?
-
---
-
-I må rigtigt gerne bruge AI til at:
-- Hjælp til at forstå koncepterne bedre
-- Få feedback til den kode man har skrevet eller ens forståelse af et emne
-- Bruge AI til at forklare programmeringskoncepter på en simpel måde
-- Bruge AI som opslagsværk til fx at se hvordan man itererer en liste i Java
-- Få hjælp til at finde læringshuller
-- Bruge AI til at øve jeres tekniske vokabularium. Iterere et array, kalde en funktion, variablen er immutable, etc.
-- Bruge AI til at teste jeres viden
-
---
-# Hvad så med AI?
-I må ikke bruge AI til at:
-- At lave koden for jer
-- Løse opgaver for jer
-- Få AI til at generere løsningen på en opgave for derefter læse opgaven igennem og tro at man forstår
-Det kode som er i jeres projekter, skal i kunne stå på mål for og forklare!
-
---
-# Fra studieordningen
-Brug af kunstig intelligens (AI), herunder ChatGPT eller lignende programmer
-
-Som udgangspunkt må du bruge værktøjer med kunstig intelligens (AI), herunder ChatGPT eller lignende chatbots og programmer, i forbindelse med eksamensopgaver (mundtlige og skriftlige), medmindre andet fremgår eksplicit af studieordningen eller opgavebeskrivelsen.
-
-Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil KEA betragte det som eksamenssnyd, da det vil være i strid med eksamensbekendtgørelsen, hvis du afleverer en besvarelse eller dele af en besvarelse, som fx er udarbejdet af en AI/chatbot, som om det var din egen.
-
-Dette følger af eksamensbekendtgørelsen i § 34, stk. 2, pkt. 3, at ”eksamenssnyd foreligger bl.a., når den studerende […] fortier eller vildleder om egen indsats eller resultater”.
+- LinkedIn Learning kan bruges som forberedelse til undervisningen
+- Opret en konto i LinkedIn, hvis du ikke har en
+- Tilknyt din KEA-mail til LinkedIn Learning
+- Find kurset **Learning Java 17** af **Kathryn Hodge**

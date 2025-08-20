@@ -126,14 +126,11 @@ table.education th, table.education td {
 	color: white;
 }
 table.education th {
-	background-color: #1a2b47; /* Dark navy */
+	background-color: #333;
 	height: 50px;
 }
-table.education .light-red {
-	background-color: #f08080; /* Light red */
-}
-table.education .dark-red {
-	background-color: #e74c3c; /* Dark red */
+table.education td {
+	background-color: #fe4c61;
 }
 </style>
 <table class="education">
@@ -145,32 +142,32 @@ table.education .dark-red {
 	<th>5. SEMESTER</th>
 </tr>
 <tr>
-	<td class="light-red" rowspan="3">PROGRAMMERING 1<br>(15 ECTS)</td>
-	<td class="light-red" rowspan="3">PROGRAMMERING 1<br>(15 ECTS)</td>
-	<td class="light-red" rowspan="2">PROGRAMMERING 2<br>(10 ECTS)</td>
-	<td class="light-red" rowspan="2">VALGFAG 1<br>(10 ECTS)</td>
-	<td class="dark-red" rowspan="3">PRAKTIK<br>(15 ECTS)</td>
+	<td rowspan="3">PROGRAMMERING 1<br>(15 ECTS)</td>
+	<td rowspan="3">PROGRAMMERING 1<br>(15 ECTS)</td>
+	<td rowspan="2">PROGRAMMERING 2<br>(10 ECTS)</td>
+	<td rowspan="2">VALGFAG 1<br>(10 ECTS)</td>
+	<td style="background-color: red;" rowspan="3">PRAKTIK<br>(15 ECTS)</td>
 </tr>
 <tr>
 </tr>
 <tr>
-	<td class="light-red" rowspan="2">SYSTEMUDVIKLING<br>(10 ECTS)</td>
-	<td class="light-red" rowspan="2">VALGFAG 2<br>(10 ECTS)</td>
+	<td rowspan="2">SYSTEMUDVIKLING<br>(10 ECTS)</td>
+	<td rowspan="2">VALGFAG 2<br>(10 ECTS)</td>
 
 </tr>
 <tr>
-	<td class="light-red" rowspan="2">SYSTEMUDVIKLING<br>(10 ECTS)</td>
-	<td class="light-red">SYSTEMUDVIKLING<br>(5 ECTS)</td>
-	<td class="dark-red" rowspan="3">AFGANGSPROJEKT<br>(15 ECTS)</td>
+	<td rowspan="2">SYSTEMUDVIKLING<br>(10 ECTS)</td>
+	<td>SYSTEMUDVIKLING<br>(5 ECTS)</td>
+	<td rowspan="3" style="background-color: red;">AFGANGSPROJEKT<br>(15 ECTS)</td>
 </tr>
 <tr>
-	<td class="light-red">TEKNOLOGI 1<br>(5 ECTS)</td>
-	<td class="light-red" rowspan="2">TEKNOLOGI 2<br>(10 ECTS)</td>
-	<td class="light-red" rowspan="2">VALGFAG 3<br>(10 ECTS)</td>
+	<td>TEKNOLOGI 1<br>(5 ECTS)</td>
+	<td rowspan="2">TEKNOLOGI 2<br>(10 ECTS)</td>
+	<td rowspan="2">VALGFAG 3<br>(10 ECTS)</td>
 </tr>
 <tr>
-	<td class="light-red">IT- OG FORRETNINGS-<br>UDVIKLING (5 ECTS)</td>
-	<td class="light-red">IT- OG FORRETNINGS-<br>UDVIKLING (5 ECTS)</td>
+	<td>IT- OG FORRETNINGS-<br>UDVIKLING (5 ECTS)</td>
+	<td>IT- OG FORRETNINGS-<br>UDVIKLING (5 ECTS)</td>
 </tr>
 </table>
 
@@ -233,11 +230,58 @@ og betaler os for at lave dem"
 #### Eksempeluge 1. semester
 
 --
-
-|               | Mandag               | Tirsdag                | Onsdag               | Torsdag              | Fredag                           |
-|---------------|----------------------|------------------------|----------------------|----------------------|----------------------------------|
-| 8:30 - 11:45  | Program-<br>mering 1 |                        | Program-<br>mering 1 |                      | IT- og forret-<br>ningsudvikling |
-| 12:30 - 14:00 |                      | System-<br>udvikling 1 |                      | Program-<br>mering 1 |                                  |
+<style>
+table.education {
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+}
+table.education tr {
+	height: 50px;
+}
+table.education th, table.education td {
+	font-size: 14px;
+	border: 2px solid white;
+	text-align: center;
+	vertical-align: middle;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	color: white;
+}
+table.education th {
+	background-color: #333;
+	height: 50px;
+}
+table.education td  {
+	background-color: #fe4c61;
+}
+</style>
+<table class="education">
+	<tr>
+		<th></th>
+		<th>MANDAG</th>
+		<th>TIRSDAG</th>
+		<th>ONSDAG</th>
+		<th>TORSDAG</th>
+		<th>FREDAG</th>
+	</tr>
+	<tr>
+		<td>8:30 - 11:45</td>
+		<td>PROGRAMMERING</td>
+		<td></td>
+		<td>PROGRAMMERING</td>
+		<td></td>
+		<td>IT- og FORRET-NINGSUDVIKLING</td>
+	</tr>
+	<tr>
+		<td>12:30 - 14:00</td>
+		<td></td>
+		<td>SYSTEMUDVIKLING</td>
+		<td></td>
+		<td>PROGRAMMERING</td>
+		<td></td>
+	</tr>
+</table>
 
 --
 ... MEN skemaet kan ændre sig fra uge til uge
@@ -383,6 +427,11 @@ Digitale produkter løser problemer for mennesker
 Det danske samfund er i front, når det kommer til digitalisering   
  \- det er en kæmpe effektivitetsgevinst  
  \- mennesker kan brug deres tid på opgaver med mening i
+ 
+--
+
+... alt det kræver **digitale håndværkere**    
+\- og det er os
 
 --
 <!-- .slide: class="k-patrick-star" -->
@@ -797,14 +846,14 @@ Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil E
 - På din computer: [https://mit.kea.dk/studiehaandbog](https://mit.kea.dk/studiehaandbog)
 
 --
-<!-- .slide: class="squidward" -->
+<!-- .slide: class="o-squidward" -->
 #### Wifi
 
 - Søg på studiehåndbogen efter "wifi"
 - Følg instruktionerne for at få adgang til wifi
 
 --
-<!-- .slide: class="spongebob" -->
+<!-- .slide: class="o-spongebob" -->
 #### Studiemail og login
 
 - Søg på studiehåndbogen 
@@ -813,7 +862,7 @@ Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil E
 - Følg instruktionerne
 
 --
-<!-- .slide: class="focus-blue" -->
+<!-- .slide: class="o-focus-blue" -->
 #### ItsLearning
 - også kendt som *Fronter*
 - Søg på studiehåndbogen efter "ItsLearning"
@@ -821,21 +870,21 @@ Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil E
 - Find dit klasse*rum* og undervisningsplaner
 
 --
-<!-- .slide: class="poolside-study" -->
+<!-- .slide: class="o-daylight" -->
 #### Servicedesk og Serviceportalen
 - Søg på studiehåndbogen efter "Servicedesk"
 - [servicedesk@ek.dk](mailto:servicedesk@ek.dk)
 - Frontdesk i bygning A ved receptionen
 
 --
-<!-- .slide: class="daylight" -->
+<!-- .slide: class="o-poolside-study" -->
 #### UMS
 - Søg på studiehåndbogen efter "UMS"
 - Log ind med dit KEA login
 - Se dit skema for semesteret
 
 --
-<!-- .slide: class="pencil-grey" -->
+<!-- .slide: class="o-pencil-grey" -->
 #### Office 365
 - Søg på studiehåndbogen efter "Office 365"
 - Log ind med dit KEA login
@@ -843,14 +892,14 @@ Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil E
 
 --
 
-<!-- .slide: class="tinky-winky" -->
+<!-- .slide: class="o-tinky-winky" -->
 #### Teams
 
 - Nogle lektioner foregår i Teams
 - Lad os teste at alle kan logge ind i Teams
 
 --
-<!-- .slide: class="bluey" -->
+<!-- .slide: class="o-bluey" -->
 #### LinkedIn Learning
 
 - LinkedIn Learning kan bruges som forberedelse til undervisningen

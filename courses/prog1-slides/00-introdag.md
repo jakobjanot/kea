@@ -1,5 +1,5 @@
 ---
-title: "Introdage"
+title: "00 - Introdage"
 ---
 <!-- .slide: class="cover-2" -->
 # Introdage
@@ -244,6 +244,21 @@ og betaler os for at lave dem"
 
 Se skemaet på [https://ums.ek.dk/
 
+--
+
+### Undervisningsmateriale
+
+--
+
+![java-bog](img/java-bog.png)
+
+2\. udgave - gratis online: [https://greenteapress.com/wp/think-java-2e/](https://greenteapress.com/wp/think-java-2e/)
+
+--
+
+![LinkedIn Learning](img/linkedin-learning.png)
+
+Gratis [LinkedIn Learning](https://www.linkedin.com/learning/) adgang med EK login
 
 ---
 <!-- .slide: class="cover-1" -->
@@ -265,10 +280,9 @@ Notes:
 - Ingen bilparkering
 
 --
+<!-- .slide: data-background-image="img/meinungsgade.jpg" -->
 
-![Meinungsgade](img/meinungsgade.jpg)
-
-Indgang fra Meinungsgade 8
+> Indgang fra Meinungsgade 8
 
 --
 
@@ -287,7 +301,6 @@ Har I fået lavet studiekort?
 - Lokale 236
 
 --
-
 ### Rygepolitik
 
 ![no-smoking](img/no-smoking.png)
@@ -325,7 +338,7 @@ Notes:
 # Hvad kan en datamatiker?
 
 --
-<!-- .slide: background-image="img/bedstemor-and.png" -->
+<!-- .slide: data-background-image="img/bedstemor-and.png" -->
 > ...hvad du kan sige, når bedstemor spørger, hvad du studerer?
 --
 

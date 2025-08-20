@@ -430,8 +430,7 @@ Det danske samfund er i front, når det kommer til digitalisering
  
 --
 
-... alt det kræver **digitale håndværkere**    
-\- og det er os
+... alt det kræver **digitale håndværkere** - som jer
 
 --
 <!-- .slide: class="k-patrick-star" -->
@@ -757,8 +756,8 @@ Vi ser, at
 - AI *kan* være et nyttigt værktøj i læringsprocessen,  
 
 men vi ser også at 
-- studerende får dårligere færdigheder og 
-- har sværere ved at få udbytte og gennemføre studiet
+- studerende får **dårligere færdigheder** og 
+- har sværere ved at få udbytte af studiet - og gennemføre det
 
 --
 
@@ -814,14 +813,14 @@ Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil E
 
 > Løs opgaven herunder i Java:    
 > Skriv en metode der tager et array   
-> af int` som parameter og returnerer   
+> af int som parameter og returnerer   
 > summen af alle elementerne i arrayet.
 
 --
 
 #### ✅ Do - eksempel
 
-> Jeg er ny i Java. Forklar mig hvad en static variabel betyder.
+> Jeg er ny i Java. Forklar mig hvad en static variabel er.
 
 --
 

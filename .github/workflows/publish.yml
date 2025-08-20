@@ -25,6 +25,7 @@ jobs:
           python-version: '3.13'
       - run: pip install uv
       - run: for course in $(ls -d courses/*); do uvx mkslides build $course --config-file $course/mkslides.yml --site-dir ./site/$course; done
+      - run: for course in $(ls -d courses/*); do echo "<a href=\"$course/index.html\">$course</a><br>" >> ./site/index.html; done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./site

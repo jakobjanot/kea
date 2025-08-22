@@ -821,29 +821,35 @@ Men du skal være meget opmærksom på at lave korrekte referencer. Ellers vil E
 --
 
 #### ❌ Don't - eksempel
+```txt
+Løs opgaven herunder i Java:    
+Skriv en metode der tager et array   
+af int som parameter og returnerer   
+summen af alle elementerne i arrayet.
+```
 
-> Løs opgaven herunder i Java:    
-> Skriv en metode der tager et array   
-> af int som parameter og returnerer   
-> summen af alle elementerne i arrayet.
+--
+
+#### ✅ Do - eksempel
+```txt
+Jeg er ny i Java. Forklar mig hvad en static variabel er.
+```
 
 --
 
 #### ✅ Do - eksempel
 
-> Jeg er ny i Java. Forklar mig hvad en static variabel er.
-
---
-
-#### ✅ Do - eksempel
-
-> Jeg er ny til Java. Jeg har skrevet dette program,   
-> men jeg får en fejl: error: ';' expected. Hvad     
-> betyder det, og hvordan retter jeg det?     
-> public class Main {   
->    public static void main(String[] args) {   
->        System.out.println("Hej verden")    
-> ...
+```txt
+Jeg er ny til Java. Jeg har skrevet dette program,   
+men jeg får en fejl: error: ';' expected. Hvad     
+betyder det, og hvordan retter jeg det?    
+ 
+public class Main {   
+   public static void main(String[] args) {   
+       System.out.println("Hej verden")    
+   }
+}
+```
 
 ---
 <!-- .slide: class="cover-10" -->

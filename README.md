@@ -1,4 +1,4 @@
-# KEA courses
+# KEA coursess
 
 ## Installation
 
@@ -7,34 +7,40 @@
 - uv (Python package manager)
 - just (command runner)
 
+#### macOS
+```bash
+brew install just python3
+```
+
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
+## Usage with `just`
 
-## Create html slides from Markdown files inside a folder
+### Build HTML slides from Markdown
 
-E.g. when your Markdown files are located in the `slides/` folder:
-
-```bash
-mkslides build slides/
-```
-
-E.g. when you have a single Markdown file called `lecture1.md`:
+To build slides in a folder (e.g. `courses/prog1-slides`):
 
 ```bash
-mkslides build lecture1.md
+just build courses/prog1-slides
 ```
 
-## Live preview
+### Live preview
 
-```bash
-mkslides serve slides/
-```
+To serve slides in a folder:
 
 ```bash
-mkslides serve lecture1.md
+just serve courses/prog1-slides
 ```
+
+will serve the slides on [http://localhost:8000](http://localhost:8000)
+
+## Make your own slides
+- Fork this project
+- Copy `courses/prog1-slides` to `courses/<your-slides-folder>`
+- Modify `courses/<your-slides-folder>` to include your own content
+- (Optional) Publish your slides on Github Pages - see '.github/workflows/publish.yml'
 
 ## Help
 

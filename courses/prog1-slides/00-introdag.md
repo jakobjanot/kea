@@ -761,7 +761,18 @@ men vi ser også at
 
 --
 
-#### Risici ved AI
+![Waterfall vs Agile vs Ai](img/waterfall-agile-ai.jpg)
+
+Notes:
+- Her en lidt sjov tegning hvordan man kan udvikle en bil (set fra en software udviklers synspunkt)
+- Der er to traditioner indenfor software udvikling, vandfaldsmetoden og den agile metode
+- I vandfaldsmetoden planlægger vi hele forløbet og går frem efter planen. Således lægger vi hjul ud, forbinder dem med aksler osv.
+- Den agile metode opnår det samme men i en iterativ metode, hvor man gradvist øger omfanget, men har et fungerende produkt i alle stadier. Dvs. først et skateboard, så et løbehjul etc, til sidst en bil
+- I AI er det ret nemt at generere en fuld applikation. Det vi ofte ser her, er at udvikleren ender med at sidde og fjerne kode fra en fuld applikation indtil den gør det den skal. Det er en svær måde at lære på, da du som udvikler ikke er med i opbygningen og derfor har svært ved at redegøre for hvad du har lavet. Det er især et problem hvis du prøver at lære noget.
+
+--
+
+#### Faldgrupper ved AI
 
 1. Overfladisk læring
 2. Afhængighed

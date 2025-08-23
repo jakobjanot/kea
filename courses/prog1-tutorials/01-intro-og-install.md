@@ -20,7 +20,7 @@ Notes:
 - Winget: `winget install EclipseAdoptium.TemurinJDK.21`
 - apt-get: `sudo apt-get install openjdk-21-jdk`
 
---
+---
 
 ## Kør installeren
 Den stiller ingen vigtige spørgsmål, så bare Continue, Next, Agree osv.

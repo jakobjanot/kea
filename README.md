@@ -40,7 +40,7 @@ will serve the slides on [http://localhost:8000](http://localhost:8000)
 - Fork this project
 - Copy `courses/prog1-slides` to `courses/<your-slides-folder>`
 - Modify `courses/<your-slides-folder>` to include your own content
-- (Optional) Publish your slides on Github Pages - see '.github/workflows/publish.yml'
+- (Optional) Publish your slides on Github Pages - see `.github/workflows/publish.yml`
 
 ## Help
 

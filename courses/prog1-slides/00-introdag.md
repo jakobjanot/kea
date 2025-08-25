@@ -850,6 +850,11 @@ public class Main {
    }
 }
 ```
+--
+<!-- .slide: class="k-patrick-star" -->
+## Leg
+
+[Ja eller nej](00-leg-ja-eller-nej.html#/)
 
 ---
 <!-- .slide: class="cover-10" -->

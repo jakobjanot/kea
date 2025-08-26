@@ -1,27 +1,23 @@
 ---
-title: "01 - Introduktion til kurset"
+title: "01 - Java fra scratch"
 ---
-<!-- .slide: class="ek-academic-fire" -->
+<!-- .slide: class="cover-4" -->
 
-# Introduktion til kurset
+# Java fra scratch
 
 ---
 <!-- .slide: class="k-sunlit-energy" -->
 
 ## Program
 
-- 08:30 Praktisk information  
+- 08:30 Hvad er Java  
 - 09:00 Installering af Java og IntelliJ  
 - 10:00 Pause  
 - 10:15 Første program  
-- 11:30 Opsamling  
+- 11:15 Opsamling  
 
 ---
-<!-- .slide: class="k-bluey" -->
-
-# Praktisk information
-
----
+<!-- .slide: class="cover-4" -->    
 
 # Hardware og software
 
@@ -34,7 +30,7 @@ Notes:
 
 --
 
-**Hardware**
+#### Hardware
 - **CPUen** **beregner** og udfører instrukser
 - **RAM** er **midlertidig** arbejdshukommelse
 - **Harddisk** er **permanent** hukommelse - filer
@@ -48,7 +44,7 @@ Notes:
 
 --
 
-**Software**
+#### Software
 - **Operativsystem** styrer computeren
     - fx Windows, MacOS, Android, iOS
 - **Drivere** får computeren til at kommunikere med hardware
@@ -61,28 +57,8 @@ Notes:
 - powerfuldt, fordi du kan løse mange forskellige problemer
 - kreativt, fordi du skal forstå problemet og finde en løsning
 
---
-
-### 5 min med sidemand
-<!-- .slide: class="ek-campus-green" -->
-
->  Hvilke problemer løser vi med software i dag, som tidligere var bøvlet
-
-Notes:
-- Studende: Nævn eksempler på programmer, der løser et problem, som var vanskeligt at løse uden computer
-- Eksempler:
-    - bankkonti (Du skal ikke i bank hver gang du vil se din saldo)
-    - kreditkort (Du behøver ikke at have kontanter på dig hele tiden) 
-    - Excel regneark
-    - tekstbehandling (på en skrivemaskine var det svært at rette tastefejl)
-    - billedredigering (tidligere måtte du vente på at filmen var fremkaldt)
-    - VST instrumenter (du kan ikke have et rigtigt trommesæt i din lejlighed)
-    - Reservationssystemer (SAS blev førende, da de fik et reservationssystem, fordi man kunne ringe og booke en plads på et fly næste dag)
-    - GPS og Google Maps
-    - Streaming (Du kan have alle dine film og musik på din telefon)
-    - Sociale medier (Du kan holde kontakt med venner og familie uden at skulle ringe eller skrive breve)
-
 ---
+<!-- .slide: class="cover-12" -->
 
 # Programmeringssprog
 
@@ -141,7 +117,7 @@ Notes:
 
 
 ---
-
+<!-- .slide: class="cover-9" -->
 # Syntaks
 
 --
@@ -255,11 +231,10 @@ Notes:
 
 ---
 
-<!-- .slide: class="ek-campus-green" -->
+<!-- .slide: class="cover-14" -->
 ## Første program
 
 --
-<!-- .slide: class="ek-campus-green" -->
 
 1. Lav en fil, der hedder `HelloWorld.java`  
 2. Skriv følgende kode i filen og gem den:  
@@ -272,7 +247,6 @@ public class HelloWorld {
 ```
 
 --
-<!-- .slide: class="ek-campus-green" -->
 
 3. Compile med
 ```bash
@@ -286,9 +260,9 @@ java HelloWorld
 
 5. Hvad sker der?
 
----
+--
 
-## Kompilering
+#### Kompilering
 
 --
 
@@ -300,8 +274,9 @@ javac HelloWorld.java
 Notes:
 - javac er Java compiler
 
+--
 
-## Java bytecode
+#### Java bytecode
 
 er en binær fil, der ender på `.class`
 
@@ -312,9 +287,9 @@ Notes:
 - det er det, der bliver kørt af Java Virtual Machine (JVM)
 - det er det, der gør at Java kan køre på mange forskellige platforme
 
----
+--
 
-## Whitespace
+#### Whitespace
 
 - mellemrum, tabulatorer og linjeskift
 - **ikke** vigtigt for computeren

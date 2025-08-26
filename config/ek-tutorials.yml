@@ -53,12 +53,11 @@ slides:
     # of the reveal.js themes such as `black`, `white`, `league`, `solarized`,
     # `dracula`, ... (see https://revealjs.com/themes/)
     theme: https://jakob.janot.dk/revealjs-themes/theme/ek-tutorials.css
-    #theme: http://localhost:9000/theme/ek-tutorials.css
 
     #scripts:
     #    - https://jakob.janot.dk/revealjs-themes...
 
-# Options to be passed to reveal.js: options in yaml format, they will bed
+# Options to be passed to reveal.js: options in yaml format, they will be
 # translated to JSON automatically (see https://revealjs.com/config/)
 revealjs:
     # The "normal" size of the presentation, aspect ratio will
@@ -123,7 +122,7 @@ revealjs:
 
     # Add the current slide number to the URL hash so that reloading the
     # page/copying the URL will return you to the same slide
-    hash: false
+    #hash: false
 
     # Flags if we should monitor the hash and change slides accordingly
     #respondToHashChanges: true
@@ -154,10 +153,10 @@ revealjs:
     center: false
 
     # Enables touch navigation on devices with touch input
-    touch: false
+    #touch: false
 
     # Loop the presentation
-    loop: false
+    #loop: false
 
     # Change the presentation direction to be RTL
     #rtl: false
@@ -280,7 +279,7 @@ revealjs:
     # Opens links in an iframe preview overlay
     # Add `data-preview-link` and `data-preview-link="false"` to customise each link
     # individually
-    previewLinks: true
+    #previewLinks: true
 
     # Exposes the reveal.js API through window.postMessage
     #postMessage: true
@@ -295,7 +294,7 @@ revealjs:
     transition: 'none' # none/fade/slide/convex/concave/zoom
 
     # Transition speed
-    #transitionSpeed: 'fast' # default/fast/slow
+    transitionSpeed: 'fast' # default/fast/slow
 
     # Transition style for full page slide backgrounds
     #backgroundTransition: 'fade' # none/fade/slide/convex/concave/zoom
@@ -323,6 +322,7 @@ revealjs:
     #mobileViewDistance: 2
 
     # The display mode that will be used to show slides
+    #display: 'block'
 
     # Hide cursor if inactive
     #hideInactiveCursor: true

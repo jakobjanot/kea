@@ -300,7 +300,7 @@ javac HelloWorld.java
 Notes:
 - javac er Java compiler
 
-
+---
 ## Java bytecode
 
 er en binær fil, der ender på `.class`

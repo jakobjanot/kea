@@ -1,5 +1,5 @@
 ---
-title: "01 - Installation af IntelliJ IDEA"
+title: "01b - Installation af IntelliJ IDEA"
 ---
 
 # Installation af IntelliJ IDEA

@@ -1,5 +1,5 @@
 ---
-title: 05 - Conditionals og logik - Øvelser
+title: 05 - Conditionals og logik
 ---
 <!-- .slide: class="ek-academic-fire" -->
 # Conditionals og logik

@@ -1,5 +1,5 @@
 ---
-title: 03 - Metoder - Øvelser
+title: 03 - Metoder
 ---
 
 # Øvelse - Brød-opskrift

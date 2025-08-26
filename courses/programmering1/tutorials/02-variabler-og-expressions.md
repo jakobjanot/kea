@@ -1,5 +1,5 @@
 ---
-title: 02 - Variabler og expressions - Øvelser
+title: 02 - Variabler og expressions
 ---
 
 # Øvelse - ASCII art

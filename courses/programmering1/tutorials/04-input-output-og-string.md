@@ -1,5 +1,5 @@
 ---
-title: "04 - Input og output - Øvelser"
+title: "04 - Input og output"
 ---
 <!-- .slide: class="ek-academic-fire" -->
 # Input og output

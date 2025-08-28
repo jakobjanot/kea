@@ -19,6 +19,4 @@
                    "Tredje linje";
     System.out.println(lines);
 5. Prøv at kopiere katten til Word og ændre fonten til Times New Roman.
-4. Find selv noget fed **ASCII art** på nettet
-    - eller lav dit eget på [https://www.asciiart.eu/ascii-draw-studio/app](https://www.asciiart.eu/ascii-draw-studio/app)
-5. Print det til **konsollen**
+6. Hvad sker der med vores kat, når du ændrer fonten?

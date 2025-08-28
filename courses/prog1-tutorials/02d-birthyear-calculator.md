@@ -17,8 +17,6 @@ Brug din alder til at udregne dit fødselsår
         }
     }
     ```
----
-
 5. Indtast variablen `year` af typen `int` og giv den en værdi `2025` (i år)
 6. Indtast variablen `age` af typen `int` og giv den din alder
 7. Lav en variabel `birthYear` af typen `int` og sæt den til at være lig med `year - age`

@@ -21,6 +21,7 @@ x+=2;
 x*=2;
 System.out.println("x er nu: " + x);
 ```
+
 3.
 ```java
 double x, y;
@@ -30,6 +31,7 @@ x = y / 3;
 System.out.println("x er nu: " + x);
 ```
 
+---
 4.
 ```java
 int x, y = 2;
@@ -59,6 +61,7 @@ int x = 2 * (y + 3);
 System.out.println("x er nu: " + x);
 ```
 
+---
 8.
 ```java
 boolean isBroken = true;

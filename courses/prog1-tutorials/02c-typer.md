@@ -13,7 +13,8 @@
             ??? age = 30;
             ??? isStudent = true;
 
-            System.out.println("Navn: " + givenName + " " + familyName);
+            System.out.println("Navn: " + givenName + 
+                               " " + familyName);
             System.out.println("Højde: " + height + " cm");
             System.out.println("Alder: " + age + " år");
             System.out.println("Er studerende: " + isStudent);

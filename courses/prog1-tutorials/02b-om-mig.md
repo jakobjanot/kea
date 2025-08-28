@@ -12,9 +12,10 @@
             boolean isCoffeeDrinker = ???;
             boolean isTeaDrinker = ???;
 
-            System.out.println("Navn: " + givenNameInitial + ". " + familyName);
-            System.out.println("Kaffedrikker: " + isCoffeeDrinker);
-            System.out.println("Tedrikker: " + isTeaDrinker);
+            System.out.println("Navn: " + givenNameInitial + 
+                               ". " + familyName);
+            System.out.println("Kaffe? " + isCoffeeDrinker);
+            System.out.println("Te? " +  isTeaDrinker);
         }
     }
     ```

@@ -43,6 +43,7 @@ title: 02 - Variabler og expressions - Øvelser
             boolean isCoffeeDrinker = ???;
             boolean isTeaDrinker = ???;
 
+            System.out.println("Navn: " + givenNameInitial + ". " + familyName);
             System.out.println("Kaffedrikker: " + isCoffeeDrinker);
             System.out.println("Tedrikker: " + isTeaDrinker);
         }

@@ -1,7 +1,3 @@
----
-title: 02a - ASCII art
----
-
 # ASCII art
 - De programmer vi laver, som skriver til konsollen, kalder vi **konsol-applikationer**. 
 - Konsol-applikationer består udelukkende af tekst.

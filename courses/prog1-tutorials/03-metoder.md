@@ -1,7 +1,3 @@
----
-title: 03 - Metoder - Øvelser
----
-
 # Øvelse - Brød-opskrift
 
 Vi skal lave et program, der udskriver en bread-opskrift.

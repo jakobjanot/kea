@@ -1,7 +1,3 @@
----
-title: "01g - Indrykning"
----
-
 # Indrykning og mellemrum (whitespaces)
 - Når vi programmerer bruger vi indrykning for at gøre vores kode mere læsbar
 - Indrykning hjælper os med at se hvilke linjer der hører sammen

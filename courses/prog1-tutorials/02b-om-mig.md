@@ -1,7 +1,3 @@
----
-title: 02b - Om mig
----
-
 # Om mig
 
 1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `about-me`

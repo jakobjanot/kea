@@ -1,7 +1,3 @@
----
-title: "07 - Arrays og references - Øvelser"
----
-<!-- .slide: class="ek-academic-fire" -->
 # Arrays
 
 ---

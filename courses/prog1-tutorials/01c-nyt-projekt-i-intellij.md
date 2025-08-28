@@ -1,7 +1,3 @@
----
-title: "01c - Nyt projekt i IntelliJ"
----
-
 # Nyt projekt i IntelliJ
 
 1. Når du starter på en øvelse skal du oprette et **nyt projekt** i Intellij. _Projektet_ er en **mappe** IntelliJ gemmer på din computer, hvori IntelliJ vil lægge alle de Java-kode filer som hører til projektet. 

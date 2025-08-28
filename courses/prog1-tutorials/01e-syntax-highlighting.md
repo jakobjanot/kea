@@ -1,7 +1,3 @@
----
-title: "01e - Syntax highlighting"
----
-
 # Syntax highlighting
 
 Måske har du lagt mærke til at IntelliJ farver din kode, så den er lettere at læse - det kaldes **syntax highlighting**. Ligesom indrykning, så forbedrer syntax highlighting læsbarheden af din kode - vi kan bedre se hvilke ord der har en særlig betydning i Java.

@@ -1,7 +1,3 @@
----
-title: "01i - Fuld af fejl"
----
-
 # Fuld af fejl
 
 1. Fortsæt med at arbejde i dit `MyFirstProgram` projekt

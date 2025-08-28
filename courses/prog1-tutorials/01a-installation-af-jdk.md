@@ -1,7 +1,3 @@
----
-title: "01a - Installation af Java Development Kit"
----
-
 ## Installation af Java Development Kit
 
 For at udvikle og køre Java-programmer, skal vi have installeret nogle værktøjer på vores computer.

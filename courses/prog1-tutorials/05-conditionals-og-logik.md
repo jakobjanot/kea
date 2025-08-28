@@ -1,7 +1,3 @@
----
-title: 05 - Conditionals og logik - Øvelser
----
-<!-- .slide: class="ek-academic-fire" -->
 # Conditionals og logik
 ---
 # Opgave: BMI Classifier - if/else if/else

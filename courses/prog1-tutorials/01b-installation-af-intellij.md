@@ -1,7 +1,3 @@
----
-title: "01 - Installation af IntelliJ IDEA"
----
-
 # Installation af IntelliJ IDEA
 
 For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmiljø, der hedder **IntelliJ IDEA**. Det er et program, der hjælper os med at skrive, organisere og køre vores Java-kode.

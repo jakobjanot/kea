@@ -1,7 +1,3 @@
----
-title: "01h - Fjern alle mellemrum"
----
-
 # Mere om mellemrum (whitespaces)
 - Vi har set at indrykning ikke er vigtigt for at Java kan forstå vores kode
 - Hvad med andre mellemrum (whitespaces) - er de vigtige? - lad os undersøge det!

@@ -1,7 +1,3 @@
----
-title: "01f - Udskriv din egen besked"
----
-
 # Udskriv din egen besked
 
 1. Lav et nyt Java-projekt i IntelliJ, som du 

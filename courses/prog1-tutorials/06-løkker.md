@@ -1,7 +1,3 @@
----
-title: "06 - Løkker - Øvelser"
----
-<!-- .slide: class="ek-academic-fire" -->
 # Løkker - Øvelser
 
 ---

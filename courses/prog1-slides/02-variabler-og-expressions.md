@@ -1,29 +1,28 @@
 ---
-title: 02 - Variabler og expressions
+title: 02 - Variable og expressions
 ---
-<!-- .slide: class="ek-academic-fire" -->
+<!-- .slide: class="cover-15" -->
 
-# Variabler og expressions
+# Variable og expressions
 
 ---
 <!-- .slide: class="k-sunlit-energy" -->
 
 # Program
 
-- 08:30 Variabler og expressions
+- 08:30 Variable og expressions
 - 09:30 Igang med øvelser
 - 10:00 Pause
 - 10:15 Øvelser fortsat
-- 11:30 Opsamling, forberedelse til næste gang
-
+- 11:15 Opsamling
 
 ---
 
-# Et program er en **opskrift**
+Et program er en **opskrift**
 
 --
 
-## Omelet
+#### Omelet
 
 1. 2 æg slås ud i en skål
 2. 2 æg piskes sammen
@@ -67,8 +66,11 @@ public class Main {
 ## Statements og kommentarer
 
 --
-
-Linjen `System.out.println("Steg på en pande");` er et **statement**
+<!-- .slide: class="x-large" -->
+Et **statement**
+```java
+System.out.println("Steg på en pande");
+```
 
 --
 
@@ -79,8 +81,12 @@ Et statement er en **instruktion** som computeren skal udføre
 I Java slutter statements med et `;`
 
 --
+<!-- .slide: class="x-large" -->
 
-`// System.out.println("Chili tilsættes");` er en **kommentar**
+En **kommentar**:
+```java
+// System.out.println("Chili tilsættes");
+```
 
 Notes:
 - De starter med `//` og slutter ved slutningen af linjen
@@ -95,6 +101,7 @@ Notes:
 - Kommentarer er ikke statements, de bliver ikke udført af computeren
 --
 
+<!-- .slide: class="x-large" -->
 Kommentarer er gode til at forklare hvad koden gør, fx
 
 ```java
@@ -103,6 +110,7 @@ Kommentarer er gode til at forklare hvad koden gør, fx
 
 --
 
+<!-- .slide: class="x-large" -->
 Vi kan også bruge kommentarer til at **"slå" en linje fra**, så den **ikke bliver udført**
 
 ```java
@@ -198,12 +206,19 @@ Du kan give boksen et **navn** fx `eggs`, så du kan bruge den senere
 **Navngivning** er vigtigt
 
 --
+<!-- .slide: class="x-large" -->
 
-Hvad betyder `int e = 2`?
+Hvad betyder
+```java
+int e = 2;
+```
 
 --
-
-Bedre: `int numberOfEggs = 2`
+<!-- .slide: class="x-large" -->
+Bedre: 
+```java
+int numberOfEggs = 2;
+```
 
 --
 
@@ -241,7 +256,7 @@ Variablens **type** skal passe til den **værdi** du vil gemme i den, fx
 |----------|------------------|
 | `int`    | 2                |
 | `double`  | 0.5              |
-| `bool`   | true             |
+| `boolean`   | true             |
 | `char`   | 'a'              |
 | `String` | "Salt tilsættes" |
 
@@ -250,34 +265,49 @@ Notes:
 - `int` for heltal
 - `double` for decimaltal
 - `char` for bogstaver
-- `bool` for sand/falsk
+- `boolean` for sand/falsk
 - `String` for tekst
 
 --
+<!-- .slide: class="x-large" -->
 
-### Deklarering af variabel
-
-`int eggs;` kalder vi, at **deklarere** en variabel `eggs` af typen `int`
+```java
+int eggs;
+```
+kalder vi, at **deklarere** en variabel `eggs` af typen `int`
 
 Notes:
 
 - Læg mærke til at vi ikke har givet den en værdi endnu
 
 --
+<!-- .slide: class="x-large" -->
 
-### Tildeling af værdi
-
-`eggs = 2;` kalder vi, at **tildele** værdien `2` til variablen `eggs`
+```java
+eggs = 2;
+```
+kalder vi, at **tildele** værdien `2` til variablen `eggs`
 
 Notes:
 - eggs er nu en boks i hukommelsen, der indeholder værdien 2
 
 
 --
+<!-- .slide: class="x-large" -->
 
-### Deklarering og tildeling
+Vi kan også gøre det under et 
+```java
+int eggs = 2;
+```
 
-Vi kan også gøre det under et `int eggs = 2;`
+--
+<!-- .slide: class="x-large" -->
+
+Vi kan bruge variablen igen og igen i vores program
+```java
+System.out.println(eggs + " æg slås ud i en skål");
+System.out.println(eggs + " æg piskes sammen");
+```
 
 --
 
@@ -303,8 +333,8 @@ public class Main {
 ```
 
 --
-
-# Heltal
+<!-- .slide: class="x-large" -->
+## Heltal
 
 engelsk: `int`eger
 
@@ -313,8 +343,8 @@ int age = 25;
 ```
 
 --
-
-# Decimaltal
+<!-- .slide: class="x-large" -->
+## Decimaltal
 
 engelsk: `double` precision floating points
 
@@ -326,21 +356,21 @@ Notes:
 Bemærk engelsk decimal er '.' og ikke ',' som på dansk.
 
 --
+<!-- .slide: class="x-large" -->
+## Sand/falsk
 
-# Sand/falsk
-
-engelsk: `bool`ean
+engelsk: `boolean`
 
 ```java
-bool hasBirthdayToday = false;
+boolean hasBirthdayToday = false;
 ```
 
 Notes:
 - Opkaldt efter engelsk matematiker George Boole
 
 --
-
-# Bogstav
+<!-- .slide: class="x-large" -->
+## Bogstav
 
 engelsk: `char`acter
 
@@ -349,8 +379,8 @@ char initial = 'J';
 ```
 
 --
-
-# Tekst
+<!-- .slide: class="x-large" -->
+## Tekst
 engelsk: `string`
 
 ```java
@@ -367,6 +397,7 @@ Notes:
 # Operators og expressions
 
 --
+<!-- .slide: class="x-large" -->
 
 ```java
 int eggsPerPerson = 2;
@@ -394,7 +425,7 @@ int totalEggs = eggsPerPerson * persons;
 | `%`      | modulus        |
 
 --
-
+<!-- .slide: class="x-large" -->
 `+` bruges til at lægge tal sammen, fx
 
 ```java
@@ -417,10 +448,10 @@ System.out.println("Mit navn er " + firstName); // Mit navn er Beate
 Vi kunne også skrive
 
 ```java
-String firstName = "Beate' alder er ";
+String firstName = "Beate's alder er ";
 int age = 55;
-String fullName = firstName + age; // Beate' alder er 55
-System.out.println(fullName);
+String text = firstName + age;
+System.out.println(text); // Beate's alder er 55
 ```
 
 Det virker selvom `age` er et heltal
@@ -470,16 +501,13 @@ Notes:
 - `>` bruges til at tjekke om værdien til venstre er større end værdien til højre (osv.)
 
 --
-<!-- .slide: class="k-daylight" -->
-## Demo -  Sammenligningsoperatorer
-
-Notes:
 
 ```java
-int eggs = 2;
+int eggsInFridge = 6;
+int eggsPerPerson = 2;
 int persons = 4;
-int totalEggs = eggs * persons;
-bool enoughEggs = eggs >= totalEggs;
+int totalEggs = eggsPerPerson * persons;
+boolean enoughEggs = eggsInFridge >= totalEggs;
 System.out.println("Er der nok æg? " + enoughEggs);
 ```
 
@@ -504,15 +532,10 @@ Notes:
 - `!` bruges til at tjekke om betingelsen er falsk
 
 --
-<!-- .slide: class="k-daylight" -->
-## Demo - Matematik med sand/falsk-værdier
-
-Notes:
-
 ```java
 ...
-bool groceryStoreOpen = true;
-bool shopEggs = groceryStoreOpen && !enoughEggs;
+boolean groceryStoreOpen = true;
+boolean shopEggs = groceryStoreOpen && !enoughEggs;
 System.out.println("Skal jeg købe ind? " + shopEggs);
 ```
 
@@ -523,17 +546,37 @@ System.out.println("Skal jeg købe ind? " + shopEggs);
 Notes: 
 - Du kan ændre værdien af en variabel når som helst i programmet
 - Du kan også ændre værdien af en variabel flere gange
+- Vis med print statements og breakpoints
 
 ```java
 int eggs = 2;
 System.out.println(eggs); // 2
-
 eggs = 4;
 System.out.println(eggs); // 4
-
 eggs = eggs + 2;
 System.out.println(eggs); // 6
 ```
+
+```java
+// tildelingsoperatorer
+int eggs = 2;
+System.out.println(eggs); // 2
+eggs += 2;
+System.out.println(eggs); // 4
+eggs -= 1;
+System.out.println(eggs); // 3
+```
+
+```java
+// unære operatorer
+int eggs = 2;
+System.out.println(eggs); // 2
+eggs++;
+System.out.println(eggs); // 3
+eggs--;
+System.out.println(eggs); // 2
+```
+--
 
 ## Tildelingsoperator
 
@@ -547,29 +590,13 @@ System.out.println(eggs); // 6
 
 --
 
-## Demo: Tildelingsoperator
-
-Notes:
-
-```java
-int eggs = 2;
-System.out.println(eggs); // 2
-
-eggs += 2;
-System.out.println(eggs); // 4
-
-eggs -= 1;
-System.out.println(eggs); // 3
-```
-
---
-
 ## Unære operatorer
 
-| operator | betydning         |
-|----------|-------------------|
-| `++`     | `eggs = eggs + 1` |
-| `--`     | `eggs = eggs - 1` |
+| operator | betydning                                |
+|----------|------------------------------------------|
+| `++`     | `eggs = eggs + 1`                        |
+| `--`     | `eggs = eggs - 1`                        |
+| `!`      | `groceryStoreClosed = !groceryStoreOpen` |
 
 Notes:
 
@@ -577,27 +604,14 @@ Notes:
 - det er praktisk når vi skal tælle op eller ned, fx i en løkke (næste gang)
 
 --
-
-## Demo - Unære operatorer
-
-Notes:
-
-```java
-int eggs = 2;
-System.out.println(eggs); // 2
-eggs++;
-System.out.println(eggs); // 3
-eggs--;
-System.out.println(eggs); // 2
-```
-
---
-
+<!-- .slide: class="large" -->
 ## Konstanter
+
+`final` betyder at en variabel ikke kan ændres
 
 ```java
 final int EGGS_PER_PERSON = 2;
-EGGS_PER_PERSON = 20; // Java throws an error!!         
+EGGS_PER_PERSON = 20; // Fejl!
 ```
 
 Notes:
@@ -612,16 +626,20 @@ final double PI = 3.14;
 ```
 
 --
-
-## Mere komplekse expressions
+<!-- .slide: class="x-large" -->
+## Rækkefølge på operationer
 
 ```java
-result = 3 * 5 / 5 + 1 
-// will this java code run??                    
+double result1 = 3 + 4 / 2 + 5;
+double result2 = (3 + 4) / (2 + 5);
 ```
+
+Notes:
+Nogen der ved hvad resultatet er på `result` og `result2`?
+Svar: `result` er 10.0 og `result2` er 1.0
 --
 
-## Rækkefølge på operations
+## Rækkefølge på operationer
 
 - **parenteser** (), {}, []
 - **eksponenter** x², x³ og **kvadratrødder** √x 
@@ -632,22 +650,6 @@ Notes:
 - Rækkefølgen er den samme som i matematik
 - Parentheser har højeste prioritet
 - Multiplikation og division har højere prioritet end addition og subtraktion
-
----
-
-# Shortcuts i IntelliJ
-
---
-
-![IntelliJ Shortcuts](img/shortcut1.png)
-
-**main** giver public static void main()
-
---
-
-![IntelliJ Shortcuts](img/shortcut2.png)
-
-**sout** giver System.out.println();
 
 ---
 <!-- .slide: class="k-sunlit-energy" -->

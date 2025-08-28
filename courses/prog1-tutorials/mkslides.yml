@@ -323,6 +323,7 @@ revealjs:
     #mobileViewDistance: 2
 
     # The display mode that will be used to show slides
+    #display: 'block'
 
     # Hide cursor if inactive
     #hideInactiveCursor: true

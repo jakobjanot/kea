@@ -10,11 +10,12 @@ title: 02 - Variable og expressions
 
 # Program
 
-- 08:30 Variable og expressions
-- 09:30 Igang med øvelser
-- 10:00 Pause
-- 10:15 Øvelser fortsat
-- 11:15 Opsamling
+- Variable og expressions
+- Igang med øvelser
+- Pause
+- Øvelser fortsat
+- Besøg af studieliv
+- Opsamling
 
 ---
 

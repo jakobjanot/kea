@@ -5,7 +5,7 @@
 3. Giv din klasse navnet `AboutMe`.
 4. Tilføj en `main` metode, så det ligner dette:
     ```java
-    public class AboutMe {` {
+    public class AboutMe {
         public static void main(String[] args) {
             String familyName = ???;
             char givenNameInitial = ???;
@@ -23,4 +23,3 @@
     - `familyName` (efternavn)
     - `givenNameInitial` (første bogstav i dit fornavn)
     - `isCoffeeDrinker`/`isTeaDrinker` (drikker du kaffe/te?)
-6. Tilføj et eller flere statements, der udskriver `familyName` og `givenNameInitial` til konsollen vha. `System.out.println`

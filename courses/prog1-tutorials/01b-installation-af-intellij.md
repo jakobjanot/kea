@@ -34,12 +34,13 @@ For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmilj�
 --
 
 - I venstre sidepanel, klik på **Plugins**
-- Scroll ned til du finder **Local AI/ML Tools**
+- Til højre vælg fanen **Installed**
+- Scroll ned til du finder bjælken **Local AI/ML Tools**
 - Klik på **Disable all**
+- Tjek at alt under **Local AI/ML Tools** er deaktiveret, som her:
+![Disable IntelliJ AI plugins](img/intellij-ai.png)
 - Klik på **Ok** for at gemme ændringerne
 - Måske skal du genstarte IntelliJ IDEA for at ændringerne træder i kraft
-- Gå tilbage til **Plugins** og scroll ned for at sikre dig at **Local AI/ML Tools** er deaktiveret, som her:
-![Disable IntelliJ AI plugins](img/intellij-ai.png)
 
 --
 

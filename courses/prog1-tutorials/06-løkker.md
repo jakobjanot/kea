@@ -2,62 +2,110 @@
 
 ---
 
-# Øvelse: 7-tabellen
+# 7-tabellen
 
-- Skriv et program, der printer 7-tabellen fra 7 til 70, så det ser sådan ud:
-```
-7
-14
-21
-// osv.
-```
-
+1. Skriv et program, der printer 7-tabellen fra 7 til 70, så det ser sådan ud:
+    ```java
+    7
+    14
+    21
+    28
+    35
+    42
+    49
+    56
+    63
+    70
+    ```
+2. Tilret koden, så outputtet nu ser sådan ud:
+    ```
+    1 * 7 = 7
+    2 * 7 = 14
+    3 * 7 = 21
+    4 * 7 = 28
+    5 * 7 = 35
+    6 * 7 = 42
+    7 * 7 = 49
+    8 * 7 = 56
+    9 * 7 = 63
+    10 * 7 = 70
+    ```
+3. Prøv at bruge `System.out.printf` til at formatere outputtet. Vi ønsker at bruge **leading spaces** for at justere tallene, så fx `*` og `=` står i samme kolonne. Det kan gøres med `"%2d"` for at reservere 2 pladser til et heltal. Resultatet skal se sådan ud:
+    ```
+     1 * 7 =  7
+     2 * 7 = 14
+     3 * 7 = 21
+     4 * 7 = 28
+     5 * 7 = 35
+     6 * 7 = 42
+     7 * 7 = 49
+     8 * 7 = 56
+     9 * 7 = 63
+    10 * 7 = 70
+    ```
+4. Kan du genbruge koden til at printe alle tabeller fra 1 til 10?
+    ```
+      1   2   3   4   5   6   7   8   9  10
+      2   4   6   8  10  12  14  16  18  20
+      3   6   9  12  15  18  21  24  27  30
+      4   8  12  16  20  24  28  32  36  40
+      5  10  15  20  25  30  35  40  45  50
+      6  12  18  24  30  36  42  48  54  60
+      7  14  21  28  35  42  49  56  63  70
+      8  16  24  32  40  48  56  64  72  80
+      9  18  27  36  45  54  63  72  81  90
+      10 20  30  40  50  60  70  80  90 100
+    ```
 ---
 
-# Øvelse: 7-tabellen med for-løkke
-- Skriv nu et program, der printer 7-tabellen fra 7 til 70, så det ser sådan ud i stedet:
-```
-1 * 7 = 7
-2 * 7 = 14
-3 * 7 = 21
-// osv.
-```
-Notes:
-- Brug en for-løkke til at løse opgaven
-- Iterationerne skal være fra 1 til 10
-- Gang med 7 i hver iteration i forbindelse med printning
+# Øvelse: Sum-sum
 
+- En sum af et array af tal, kan beregnes således:
+```java
+double[] tal = {1.0, 2.0, 3.0, 4.0, 5.0};
+double sum = 0;
+for (int i = 0; i < tal.length; i++) {
+    sum += tal[i];
+}
+System.out.println("Summen er: " + sum);
+```
+- Når den studerende får sit uddannelsesbevis, skal han/hun have et gennemsnit på mindst 2.0.
+- Et gennemsnit af en række tal er summen af tallene divideret med antallet af tal, fx er gennemsnittet af 1, 5, 2, 6 lig med (1 + 5 + 2 + 6) / 4 = 3.5
+1. Med inspiration fra kode-eksemplet ovenfor, lav et program, der udskriver følgende:
+```
+Diplom
+Gennemsnit: 3.5
+Bestået:    Ja
+```
+2. En studerende har igennem sit studie fået karaktererne 7, 00, 02, 4, 00, -3, 02, -3, 7. Udskriv diplomet.
+3. Prøv at ændre karaktererne og se hvordan det påvirker gennemsnittet og om den studerende består eller ej.
 ---
 
-# Øvelse: En hvilken somhelst tabel
+# Øvelse: Beregning af vægtet gennemsnit
 
-- Skriv et program, der printer en hvilken som helst tabel, som du giver den i input.
-```
-Indtast et tal: 3
-1 * 3 = 3
-2 * 3 = 6
-3 * 3 = 9
-// osv.
-```
-
----
-
-# Øvelse: Alle tabeller
-
-- Kan du rette programmet herover så det printer alle tabeller fra 1 til 10?
-```
-1 2 3 4 5 6 7 8 9 10
-2 4 6 8 10 12 14 16 18 20
-3 6 9 12 15 18 21 24 27 30
-// osv.
-```
-
----
-
-# Øvelse: Karaktergennemsnit
-
-- En elev har fået karaktererne 7, 10, 2, 4, 10. Hvad er gennemsnit?
-- 
+- På et studie er nogle fag større end andre, fx er der flere timer og således ECTS-point i *Programmering 1* end i *IT- og forretningsudvikling*. For at tage højde for dette, kan man beregne et vægtet gennemsnit, hvor man vægter karaktererne efter antal timer.
+- En datamatikers 9 eksamener (I alt 150 ECTS)
+    - Programmering 1 (15 ECTS)
+    - Programmering 1/Systemudv. 1/IT- og forretn./Teknologi 1 (45 ECTS)
+    - Systemudvikling 2 (10 ECTS)
+    - Teknologi 2 (10 ECTS)
+    - Programmering 2 (10 ECTS)
+    - Valgfag 1 (10 ECTS)
+    - Valgfag 2 (10 ECTS)
+    - Valgfag 3 (10 ECTS)
+    - Praktik (15 ECTS)
+    - Hovedprojekt (15 ECTS)
+- Derfor er fx. vægten af karakteren fra eksamen i *Programmering 1* `15/150`. Og tilsvarende, vægten *Systemudvikling 2* er `10/150`, osv.
+1. Udskrift diplomet for en datamatiker, der har fået følgende karakterer:
+   - Programmering 1: 4
+   - Programmering 1/Systemudv. 1/IT- og forretn./Teknologi 1: 10
+   - Systemudvikling 2: 7
+   - Teknologi 2: 4
+   - Programmering 2: -3
+   - Valgfag 1:7
+   - Valgfag 2: 7
+   - Valgfag 3: 02
+   - Praktik: 12
 
 ---
 
@@ -139,41 +187,6 @@ public class Main {
     }
 }
 ```
-
----
-
-# A-B-C sangen med rekursion
-
-- En anden måde at løbe gennem ABC sangen på er at bruge rekursion. I rekursion kalder en metode sig selv. I dette tilfælde giver vi metoden det næste bogstav i alfabetet.
-- Brug koden herunder som udgangspunkt, dog mangler vi at kalde singABC med det næste bogstav.
-- Hint: Du kan bruge casting til at konvertere en int til en char, fx `(char) (letter + 1)` for at få det næste bogstav.
-```java
-public class AbcSong {
-    public static void main(String[] args) {
-        singABC('A', 'Z');
-        System.out.println("Now I know my ABCs, next time won't you sing with me?");
-    }
-
-    public static void singABC(char letter, char lastLetter) {
-        if (letter > lastLetter) return;
-        System.out.print(letter + " - ");
-        // Her mangler vi at kalde singABC med det næste bogstav
-    }
-}
-```
-
----
-
-# Øvelse - Primtal
-- Et primtal er et tal, som kun er delbart med 1 og tallet selv. Et eksempel på et primtal er 7, der kun kan deles med 1 og 7. Derimod er 8 _ikke_ et primtal, idet det kan deles med 1, 2, 4 og 8. 
-- En anden måde at sige, at et tal er delbart er, at modulus, dvs. resten efter division er lig 0.
-- Vi vil bruge en while løkke og `%` (modulus), til at undersøge 
-
-```java
-int number = 8;
-for(int i = 2; i < number; i++) {
-    if (number % i == 0) return
-}
 
 ---
 

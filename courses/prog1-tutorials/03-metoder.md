@@ -1,6 +1,6 @@
 # Øvelse - Brød-opskrift
 
-Vi skal lave et program, der udskriver en bread-opskrift.
+Vi skal lave et program, der udskriver en brød-opskrift.
 
 1. Lav et nyt Java-projekt i IntelliJ, som 
     - du navngiver `bread-recipe`

@@ -1,6 +1,6 @@
-@import "../../node-modules/reveal.js/css/theme/template/mixins.scss";
+/*@import "../../node-modules/reveal.js/css/theme/template/mixins.scss";
 @import "../../node-modules/reveal.js/css/theme/template/settings.scss";
-
+*/
 /* IntelliJ */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
@@ -11,7 +11,7 @@
 @import url('https://fonts.cdnfonts.com/css/aneliza');
 
 /* highlightjs */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/atom-one-dark.min.css');
 
 
 :root {

@@ -18,3 +18,9 @@ slides-pdf dir:
     for slide in site/*.html; do \
         [ ! -f "site/$(basename "$slide" .html).pdf" ] && decktape reveal "$slide" "site/$(basename "$slide" .html).pdf" & \
     done
+
+tutorials-html dir:
+    uv run python render-html.py {{dir}}
+
+tutorials-pdf dir:
+    uv run python render-pdf.py {{dir}}

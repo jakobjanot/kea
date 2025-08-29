@@ -5,6 +5,6 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "mkdocs-material>=9.6.16",
     "mkslides>=1.0.10",
+    "playwright>=1.55.0",
 ]

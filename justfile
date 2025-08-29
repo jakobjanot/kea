@@ -1,18 +1,17 @@
+set positional-arguments
+
 default:
-    @echo "Available recipes: serve-slides, serve-tutorials"
+    @echo "Available recipes: serve, clean, build, pdf"
+
+install:
+    uv run playwright install chromium
 
 serve dir:
-    uvx mkslides serve {{dir}} --config-file {{dir}}/mkslides.yml
+    uv --offline run mkslides serve {{dir}} --config-file config/slides.yml
 
 clean:
     rm -rf site
 
 build dir:
-    rm -rf site
-    uvx mkslides build {{dir}} --config-file {{dir}}/mkslides.yml
-
-pdf dir:
-    mkdir -p pdf/{{dir}}
-    just build {{dir}} && rm -f "site/index.html" ; for file in site/*.html; do \
-       [ ! -f "pdf/{{dir}}/${file%.html}.pdf" ] && decktape reveal "$file" "pdf/{{dir}}/${file%.html}.pdf" & \
-    done
+    uv --offline run mkslides build {{dir}} --config-file config/tutorials.yml
+    uv --offline run python pdf.py site

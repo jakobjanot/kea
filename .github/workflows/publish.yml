@@ -28,6 +28,8 @@ jobs:
         uses: astral-sh/setup-uv@v6
       - name: Install the project
         run: uv sync --locked
+      - name: Install Playwright browsers
+        run: uv run playwright install chromium
       - name: Build slides
         run: for slide in $(ls -d slides/*); do uv run mkslides build $slide --config-file $slide/mkslides.yml --site-dir ./site/slides/$slide; done
       - name: Build tutorials

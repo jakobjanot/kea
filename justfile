@@ -20,7 +20,7 @@ slides-pdf dir:
     done
 
 tutorials-html dir:
-    uv run python render-html.py {{dir}}
+    uv run python render.py html {{dir}}
 
 tutorials-pdf dir:
-    uv run python render-pdf.py {{dir}}
+    uv run python render.py pdf {{dir}}

@@ -1,0 +1,144 @@
+/*@import "../../node-modules/reveal.js/css/theme/template/mixins.scss";
+@import "../../node-modules/reveal.js/css/theme/template/settings.scss";
+*/
+/* IntelliJ */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+/* EK font oso-serif alternative */
+@import url('https://fonts.cdnfonts.com/css/avrile-serif');
+
+/* EK font oso-sans alternative */
+@import url('https://fonts.cdnfonts.com/css/aneliza');
+
+/* highlightjs */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/atom-one-dark.min.css');
+
+
+:root {
+    /* From EK design guide */
+    --color-business-blue: #0038A8;
+    --color-focus-blue: #0C53ED;
+    --color-campus-green: #ACB504;
+    --color-sunlit-energy: #E8D285;
+    --color-daylight: #F8EDCA;
+    --color-academic-fire: #FE4C61;
+    --color-students-blush: #FCA28A;
+    --color-poolside-study: #33ABB5;
+    --color-pencil-grey: #333333;
+    --color-grey: #666666;
+    --color-black: #000000;
+    --color-light: #ffffff;
+    --color-dark: #333333;
+    
+    --background-color: var(--color-light);
+    --main-color: var(--color-dark);
+    --heading-color: var(--color-dark);
+
+    --inline-code-color: var(--color-light);
+    --inline-code-bg-color: var(--color-academic-fire);
+
+    --strong-color: var(--color-light);
+    --strong-bg-color: var(--color-academic-fire);
+
+    --main-font: 'Aneliza', Montserrat, Arial, sans-serif;
+    --code-font: 'JetBrains Mono', 'Courier New', Courier, monospace;
+    --heading-font: 'Avrile Serif',  'Times New Roman', Times, serif;
+
+    --block-margin: 1em;
+
+    --main-font-size: 14pt;
+    --heading-1-size: 24pt;
+    --heading-2-size: 20pt;
+    --heading-3-size: 16pt;
+    --heading-4-size: 14pt;
+    --pre-font-size: 11pt;
+    --letter-spacing: 0.0em;
+    --heading-letter-spacing: 0.05em;
+    --heading-font-weight: 400;
+    --heading-margin: var(--block-margin) 0 var(--block-margin) 0;
+
+    --link-color: var(--color-academic-fire);
+    --link-color-hover: var(--color-students-blush);
+    --selection-background-color: var(--color-academic-fire);
+}
+
+body {
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
+    line-height: 1.5;
+    color: var(--main-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font-weight);
+    line-height: 1.5;
+    color: var(--heading-color);
+    margin: var(--heading-margin);
+}
+
+ul, ol, p, table, h1, h2, h3, h4, pre, img, blockquote {
+    margin: var(--block-margin) 0;
+}
+
+h1 {
+    font-size: var(--heading-1-size);
+}
+
+h2 {
+    font-size: var(--heading-2-size);
+}
+
+h3 {
+    font-size: var(--heading-3-size);
+}
+
+h4 {
+    font-size: var(--heading-4-size);
+}
+
+pre {
+    font-size: var(--pre-font-size);
+}
+
+strong, b {
+    color: var(--strong-color);
+    background-color: var(--strong-bg-color);
+    padding: 0.1em 0.2em;
+    border-radius: var(--border-radius);
+    
+}
+
+code:not(pre code) {
+    font-family: var(--code-font);
+    background-color: var(--inline-code-bg-color);
+    color: var(--inline-code-color);
+    padding: 0.05em 0.1em;
+    border-radius: var(--border-radius);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+@media print {
+ @page {
+    size: A5;
+    margin: 2mm;
+  }
+}
+
+@media print {
+  h1 {
+    page-break-before: always; /* older property */
+    break-before: page;        /* modern property */
+  }
+
+  /* optional: allow the very first H1 at the top of the document */
+  h1:first-of-type {
+    page-break-before: auto;
+    break-before: auto;
+  }
+}

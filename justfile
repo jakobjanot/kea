@@ -5,13 +5,22 @@ default:
 
 install:
     uv run playwright install chromium
+    npm install -g decktape
 
-serve dir:
-    uv --offline run mkslides serve {{dir}} --config-file config/slides.yml
+slides-serve dir:
+    uv --offline run mkslides serve {{dir}} --config-file {{dir}}/mkslides.yml
 
-clean:
-    rm -rf site
+slides-html dir:
+    uv --offline run mkslides build {{dir}} --config-file {{dir}}/mkslides.yml
 
-build dir:
-    uv --offline run mkslides build {{dir}} --config-file config/tutorials.yml
-    uv --offline run python pdf.py site
+slides-pdf dir:
+    just html {{dir}} && \
+    for slide in site/*.html; do \
+        [ ! -f "site/$(basename "$slide" .html).pdf" ] && decktape reveal "$slide" "site/$(basename "$slide" .html).pdf" & \
+    done
+
+tutorials-html dir:
+    uv run python render.py html {{dir}}
+
+tutorials-pdf dir:
+    uv run python render.py pdf {{dir}}

@@ -35,7 +35,7 @@ jobs:
       - name: Build tutorials
         run: for tutorial in $(ls -d tutorials/*); do uv run python render.py pdf $tutorial; done
       - name: Generate index
-        run: for thing in $(ls -d */*); do echo "<a href=\"$thing/index.html\">$thing</a><br>" >> ./site/index.html; done
+        run: cd site && for thing in $(ls -d */*); do echo "<a href=\"$thing/index.html\">$thing</a><br>" >> ./index.html; done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./site

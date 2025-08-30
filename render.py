@@ -5,8 +5,10 @@ import os, sys
 
 md = MarkdownIt()
 
+root_dir = os.path.dirname(__file__)
+
 def render_html(md_dir: str):
-    html_dir = os.path.join(md_dir, "..", "site", os.path.relpath(md_dir, start=os.path.dirname(__file__))) 
+    html_dir = os.path.join(root_dir, "site", os.path.relpath(md_dir, start=root_dir))
     
     os.makedirs(html_dir, exist_ok=True)
     os.system(f"cp -r {md_dir}/* {html_dir}/")
@@ -31,27 +33,22 @@ def render_html(md_dir: str):
                          .replace("{{ title }}", title)
         with open(outputfile, "w", encoding="utf-8") as f:
             f.write(output)
-    
+
     os.system(f"rm {os.path.join(html_dir, '*.md')}")
     return html_dir
 
-def render_pdfs(html_dir: str):
-    pdf_dir = os.path.join(html_dir, "..", "pdf", os.path.relpath(html_dir, start=os.path.dirname(__file__)))
-
-    os.makedirs(pdf_dir, exist_ok=True)
-    os.system(f"cp -r {html_dir}/* {pdf_dir}/")
-
+def render_pdf(html_dir: str):
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
 
-        files = [f for f in os.listdir(html_dir) if f.endswith(".html")]
-        for file in files:
-            filepath = f"file://{os.path.abspath(os.path.join(html_dir, file))}"
+        html_files = [f for f in os.listdir(html_dir) if f.endswith(".html")]
+        for html_file in html_files:
+            filepath = f"file://{os.path.abspath(os.path.join(html_dir, html_file))}"
             page.goto(filepath, wait_until="networkidle")
 
-            print(f"Rendering {pdf_path}...")
-            pdf_path = os.path.join(html_dir, file.replace(".html", ".pdf"))
+            pdf_path = os.path.join(html_dir, html_file.replace(".html", ".pdf"))
+            print(f"Rendering {os.path.basename(pdf_path)}...")
 
             page.pdf(
                 path=pdf_path,
@@ -61,6 +58,7 @@ def render_pdfs(html_dir: str):
             )
 
         browser.close()
+    
     return html_dir
 
 if __name__ == "__main__":
@@ -73,8 +71,6 @@ if __name__ == "__main__":
 
     if render_to == "html":
         html_dir = render_html(md_dir)
-        print(f"✔ Rendered HTML to {html_dir}")
     elif render_to == "pdf":
-        html_dir = render_pdfs(md_dir)
-        pdf_dir = render_pdfs(html_dir)
-        print(f"✔ Rendered PDFs to {pdf_dir}")
+        html_dir = render_html(md_dir)
+        render_pdf(html_dir)

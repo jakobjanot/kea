@@ -9,7 +9,8 @@ public class PhoneHome {
     public static void main(String[] args) {
         String num = "004512345678";
 
-        System.out.println("Er telefonnummeret et gyldigt dansk telefonnummer? " + check(num));
+        System.out.println("Gyldigt dansk telefonnummer? " +
+                           check(num));
     }
 
     public static boolean check(String x) {

@@ -18,7 +18,7 @@
 3. Udfyld `???` med den rigtige type, så programmet kan kompileres og køre.
 4. Prøv nu med eksemplerne herunder, først gæt og derefter tjek.
 - ```java
-  public static ??? add(int a, int b) {
+  public static ??? add(double a, double b) {
       return a + b;
   }
   ```
@@ -33,7 +33,8 @@
   }
   ```
 - ```java
-  public static ??? fullName(String firstName, String lastName) {
+  public static ??? fullName(String firstName,
+                             String lastName) {
       return firstName + " " + lastName;
   }
   ```
@@ -58,12 +59,8 @@
   }
   ```
 - ```java
-  public static ??? substring(String text, int start, int end) {
+  public static ??? substring(String text, 
+                              int start, int end) {
       return text.substring(start, end);
-  }
-  ```
-- ```java
-  public static ??? add(double a, double b) {
-      return a + b;
   }
   ```

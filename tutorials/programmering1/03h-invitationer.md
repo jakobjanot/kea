@@ -5,12 +5,18 @@
 ```java
 public class Invitations {
     public static void main(String[] args) {
-        System.out.println("Hej Ahmed, du er inviteret til house warming på fredag kl. 19.");
-        System.out.println("Hej Bent, du er inviteret til fødselsdagsfest på lørdag kl. 15.");
-        System.out.println("Hej Charlotte, du er inviteret til fødselsdagsfest på lørdag kl. 15.");
-        System.out.println("Hej David, du er inviteret til fødselsdagsfest på lørdag kl. 15.");
-        System.out.println("Hej Ektarina, du er inviteret til house warming på fredag kl. 19.");
-        System.out.println("Hej Frank, du er inviteret til house warming på fredag kl. 19.");
+        System.out.println("Hej Ahmed, du er "+
+                           "inviteret til house "+
+                           "warming på fredag kl. 19.");
+        System.out.println("Hej Bent, du er " +
+                           "inviteret til fødsels"+
+                           "dagsfest på lørdag kl. 15.");
+        System.out.println("Hej Charlotte, du er " +
+                           "inviteret til fødsels" +
+                           "dagsfest på lørdag kl. 15.");
+        System.out.println("Hej David, du er " +
+                           "inviteret til house" +
+                           "warming på fredag kl. 19.");
     }
 }
 ```

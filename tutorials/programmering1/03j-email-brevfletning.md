@@ -5,9 +5,8 @@
     - Email-addresse på modtager
     - Navn på afsender
     - Email-adresse på afsender
-    - Tidspunkt for afsendelse
+    - Emne på email
     - Besked
-    - Du skal tjekke at email-adresserne ender på `.dk`
     - Programmet skal udskrive emails som eksempelvis:
         ```txt
         From: Flemming <flemse@hotmail.com>

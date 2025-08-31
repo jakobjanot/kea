@@ -1,6 +1,6 @@
 # Beregn BMI
 
-Vi skal lave et program, der beregner Body Mass Index (BMI) baseret på vægt og højde.
+Vi skal lave et program, der beregner Body Mass Index (BMI) baseret på vægt og højde. BMI beregnes som `vægt / (højde * højde)`
 
 1. Lav en Java-klasse `BMICalculator` med en `main` metode.
 2. Tilføj en metode `calculateBMI` der tager vægt (i kg) og højde (i meter) som parametre og returnerer BMI.

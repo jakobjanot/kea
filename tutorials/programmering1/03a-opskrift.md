@@ -36,6 +36,5 @@ Vi skal lave et program, der udskriver en brød-opskrift.
     ```
 7. Kør programmet og se resultatet i konsollen.
 8. Prøv nu at ændre æltetiden til 7 minutter og hævetiden til 1,5 time. Kør programmet igen.
-9. Er der nogle dele af opskriften, der gentager sig selv?
-   - Hvis ja, så overvej at lave en metode, for hver del af opskriften, der gentager sig selv.
+9. Er der nogle dele af opskriften, der gentager sig selv? Hvis ja, så overvej at lave en metode, for hver del af opskriften, der gentager sig selv.
 10. Virker det stadig? Så prøv at ændre æltetiden til 8 minutter og hævetiden til 2 timer. Var det lettere at ændre opskriften nu?

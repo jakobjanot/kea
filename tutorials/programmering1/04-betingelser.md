@@ -1,4 +1,4 @@
-# Conditionals og logik
+# Betingelser
 ---
 # Opgave: BMI Classifier - if/else if/else
 
@@ -11,7 +11,7 @@ Klassificeringen skal være baseret på følgende grænser:
 
 --
 
-1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `bmi-classifier-switch`.
+1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `bmi-classifier-if-else`.
 2. Lav en Java-klasse `BMIClassifier` med en `main` metode.
 3. Tag udgangspunkt i følgende kode:
     ```java

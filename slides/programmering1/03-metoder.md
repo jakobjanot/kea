@@ -1,7 +1,7 @@
 ---
 title: 03 - Metoder
 ---
-<!-- .slide: class="ek-academic-fire" -->
+<!-- .slide: class="cover-13" -->
 
 # Metoder
 
@@ -317,7 +317,7 @@ Notes:
 
 # `return` statement
 
-```java [3]
+```java [3,1]
 public static int kgToGram(int kilogram) {
     int gram = kilogram * 1000;
     return gram;
@@ -325,7 +325,7 @@ public static int kgToGram(int kilogram) {
 ```
 
 ```java
-int grams = kgToGram(5) // 5000
+int weightInGrams = kgToGram(5) // 5000
 ```
 
 

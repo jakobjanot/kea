@@ -1,6 +1,6 @@
 # Invitationer
 
-**Refaktorering** er når vi ændrer på vores kode for at gøre den bedre, uden at ændre på dens funktionalitet. En god måde at refaktorere på er at **extract**e en del af koden til en metode, så den kan genbruges og så den får et sigende navn. Lav et nyt Java-projekt i IntelliJ, som du navngiver `invitations` og tilføj koden herunder. Refaktorer den, så den bliver mere læselig.
+Refaktorering er når vi ændrer på vores kode for at gøre den bedre, uden at ændre på dens funktionalitet. En god måde at refaktorere på er at extract'e en del af koden til en metode, så den kan genbruges og så den får et sigende navn. Lav et nyt Java-projekt i IntelliJ, som du navngiver `invitations` og tilføj koden herunder. Refaktorer den, så den bliver mere læselig.
 
 ```java
 public class Invitations {

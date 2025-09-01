@@ -249,7 +249,7 @@ Notes:
 
 ---
 
-# Parametre og argumenter
+# Metoder: Nye ord
 
 --
 
@@ -275,9 +275,9 @@ measureIngredient("smør", 300);
 
 `measureIngredient` kaldes med to argumenter: `"smør"` og `300`.
 
----
+--
 
-# Metode **hoved** og **krop**:
+### Metodens **hoved** og **krop**:
 
 ```java [|1|2]
 public static void measureIngredient(String ingredient, int amount) { // Metodehoved
@@ -315,6 +315,10 @@ Notes:
 
 ---
 
+# Metoder, der returnerer værdier
+
+--
+
 # `return` statement
 
 ```java [3,1]
@@ -323,6 +327,9 @@ public static int kgToGram(int kilogram) {
     return gram;
 }
 ```
+
+- Metodens hoved definerer at den returnerer en værdi af typen `int`  
+- Metodens `return` statementet må returnere en `int` værdi
 
 ```java
 int weightInGrams = kgToGram(5) // 5000
@@ -350,6 +357,7 @@ Hjælp mig her:
 - hvordan laver jeg main metoden?
 - nogen der ved hvor mange cm en tomme er?
 - hvad skal vi lave i main? - noget med at gange tommer med 2.54
+- hvad skal vi kalde en metode
 ```java
 public class InchToCmConverter {
     public static void main(String[] args) {
@@ -368,36 +376,6 @@ public class InchToCmConverter {
 }
 ```
 
----
-
-**Slamkode**
-
-Notes:
-- Når man koder, handler det ofte om at komme hurtigt ud af startblokken og få noget kode til at virke.
-- Det handler nemlig ofte om at få testet nogle ideer eller hypoteser af.
-- Måske viser det sig, at ideen ikke virker som forventet, og så er det ærgeligt at have brugt for lang tid på at gøre koden pæn.
-- I værste fald, har vi svært ved at skille os af med en dårlig løsning, fordi vi har brugt så lang tid på at gøre den pæn.
-- I har sikkert hørt om "kill your darlings" - det gælder også for kode.
-
---
-
-Don't Repeat Yourself - **DRY**
-
-Notes:
-- Men når koden virker og løser problemet - skal man minde sig selv om, at man kun er halvt færdig
-- Nu er opgaven, at rydde op og gøre koden mere læsbar
-- En af de mest basale måder at rydde op i sin kode er, at 
-- Don't Repeat Yourself - DRY er en af de fundamentale principper i programmering
-- Kode der gentager sig selv, er et oplagt sted at forbedre koden.
-- Er der dele af koden, der gentages, og som kan flyttes til en metode?
-- Koder der gentager sig selv, er sværere at vedligeholde.
-- Der er flere steder som du skal vedligeholde, hvis du skal ændre noget og det kan føre til fejl, hvis du glemmer at ændre et sted.
-
---
-
-# Demo: Tommer til centimeter - take 2!
-
-Notes:
 - Lad os flytte beregningen til en metode
 - hvad skal vi kalde metoden? - `convertInchesToCm`
 - hvad skal den returnere? cm
@@ -446,6 +424,37 @@ Notes:
         }
     }
     ```
+---
+
+# De to faser i kodning
+
+1. **Løs problemet** - få noget kode til at virke - **slamkode**
+2. **Ryd op** - gør den mere læsbar og vedligeholdelsesvenlig - **refaktorisering**
+
+--
+
+**Slamkode**
+
+Notes:
+- Når man koder, handler det ofte om at komme hurtigt ud af startblokken og få noget kode til at virke.
+- Det handler nemlig ofte om at få testet nogle ideer eller hypoteser af.
+- Måske viser det sig, at ideen ikke virker som forventet, og så er det ærgeligt at have brugt for lang tid på at gøre koden pæn.
+- I værste fald, har vi svært ved at skille os af med en dårlig løsning, fordi vi har brugt så lang tid på at gøre den pæn.
+- I har sikkert hørt om "kill your darlings" - det gælder også for kode.
+
+--
+
+Refaktorisering - **Don't Repeat Yourself - DRY**
+
+Notes:
+- Men når koden virker og løser problemet - skal man minde sig selv om, at man kun er halvt færdig
+- Nu er opgaven, at rydde op og gøre koden mere læsbar
+- En af de mest basale måder at rydde op i sin kode er, at 
+- Don't Repeat Yourself - DRY er en af de fundamentale principper i programmering
+- Kode der gentager sig selv, er et oplagt sted at forbedre koden.
+- Er der dele af koden, der gentages, og som kan flyttes til en metode?
+- Koder der gentager sig selv, er sværere at vedligeholde.
+- Der er flere steder som du skal vedligeholde, hvis du skal ændre noget og det kan føre til fejl, hvis du glemmer at ændre et sted.
 
 ---
 

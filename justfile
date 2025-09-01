@@ -14,7 +14,7 @@ slides-html dir:
     uv --offline run mkslides build {{dir}} --config-file {{dir}}/mkslides.yml
 
 slides-pdf dir:
-    just html {{dir}} && \
+    just slides-html {{dir}} && \
     for slide in site/*.html; do \
         [ ! -f "site/$(basename "$slide" .html).pdf" ] && decktape reveal "$slide" "site/$(basename "$slide" .html).pdf" & \
     done

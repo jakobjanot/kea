@@ -1,8 +1,8 @@
 # Refaktorering: Extract method i IntelliJ
 
-- En af de vigtigste ting, når vi skriver kode, er at gøre den **læsbar** og nem at **vedligeholde**. 
-- En måde at gøre det på er at **extract**e linjer af kode, der udfører en bestemt opgave, til en ny **metode** - som vi kan **give et sigende navn** og **genbruge** andres steder i koden.
-- Lad os prøve at lave BMI-programmet en gang til, men anvende **extract method** i IntelliJ.
+- En af de vigtigste ting, når vi skriver kode, er at gøre den læsbar og nem at vedligeholde. 
+- En måde at gøre det på er at extracte linjer af kode, der udfører en bestemt opgave, til en ny metode - som vi kan give et sigende navn og genbruge andres steder i koden.
+- Lad os prøve at lave BMI-programmet en gang til, men anvende extract method i IntelliJ.
 
 1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `bmi-refactor`.
 2. Lav en Java-klasse `BMIRefactor`, som ser sådan ud:

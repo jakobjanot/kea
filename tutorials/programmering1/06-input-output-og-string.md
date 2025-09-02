@@ -2,7 +2,7 @@
 
 ---
 
-# Øvelse - Cookie opskrift
+# Cookie opskrift
 
 Lav et Java program der kan beregne den mængde mel der skal bruges i en cookie opskrift, afhængigt af hvor mange cookies der skal laves. Du kan tage udgangspunkt i flg. kode:
 

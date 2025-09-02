@@ -28,7 +28,7 @@ numbers[numbers[7]] = 11;
 ```
 ---
 
-# Øvelse: Parkeringshus
+# Parkeringshus
 
 1. Lav et array, der indeholder 10 pladser i et parkeringshus.
 2. På hver plads er der en sensor, der kan registrere om en bil holder på pladsen eller ej. Brug `boolean` til at repræsentere om en plads er optaget (`true`) eller ledig (`false`).
@@ -47,7 +47,7 @@ Plads 10: Optaget
 
 ---
 
-# Øvelse: Parkeringhus (fortsat)
+# Parkeringhus (fortsat)
 
 Parkeringshuset tilbyder 2 timers parkering. Derefter kan man få en bøde. P-vagten ønsker en liste over de pladser, der har været optaget i mere end 2 timer.
 1. Lav et array, der indeholder tidspunkter for hvornår hver plads blev optaget. Brug `long` til at repræsentere tidspunkter i millisekunder siden 1. januar 1970 ([Unix-tid](https://da.wikipedia.org/wiki/Unix-tid)). Brug [https://www.epochconverter.com/](https://www.epochconverter.com/) til at finde tidspunkter i millisekunder.
@@ -56,7 +56,7 @@ Parkeringshuset tilbyder 2 timers parkering. Derefter kan man få en bøde. P-va
 
 ---
 
-# Øvelse: Oh-lay, oh-lay, oh-lay, oh-lay...
+# Oh-lay, oh-lay, oh-lay, oh-lay...
 
 Den danske landsholdstræner skal sætte et hold til den næste landskamp. Han har 23 spillere i sin bruttotrup, men kun 11 udvælges til startopstillingen.
 1. Lav et array, der indeholder bruttotrupens spillere - blot deres navn.
@@ -94,7 +94,7 @@ Den danske landsholdstræner skal sætte et hold til den næste landskamp. Han h
 
 ---
 
-# Øvelse: Oh-lay, oh-lay, oh-lay, oh-lay... (fortsat)
+# Oh-lay, oh-lay, oh-lay, oh-lay... (fortsat)
 1. 
 
 ---

@@ -58,7 +58,7 @@
     ```
 ---
 
-# Øvelse: Sum-sum
+# Sum-sum
 
 - En sum af et array af tal, kan beregnes således:
 ```java
@@ -81,7 +81,7 @@ Bestået:    Ja
 3. Prøv at ændre karaktererne og se hvordan det påvirker gennemsnittet og om den studerende består eller ej.
 ---
 
-# Øvelse: Beregning af vægtet gennemsnit
+# Beregning af vægtet gennemsnit
 
 - På et studie er nogle fag større end andre, fx er der flere timer og således ECTS-point i *Programmering 1* end i *IT- og forretningsudvikling*. For at tage højde for dette, kan man beregne et vægtet gennemsnit, hvor man vægter karaktererne efter antal timer.
 - En datamatikers 9 eksamener (I alt 150 ECTS)
@@ -109,7 +109,7 @@ Bestået:    Ja
 
 ---
 
-# Øvelse: Gæt et tal
+# Gæt et tal
 - Skriv et program, der lader brugeren gætte et tal mellem 1 og 10.
 - Hvis brugeren gætter rigtigt, skal programmet sige "Du gættede rigtigt!" og afslutte.
 - Hvis brugeren gætter forkert, skal programmet sige "Forkert gæt, prøv igen!" og lade brugeren gætte igen.
@@ -136,7 +136,7 @@ public class Main {
 
 ---
 
-# Øvelse: Gæt et tal med hjælp
+# Gæt et tal med hjælp
 - Skriv et program, der lader brugeren gætte et tal mellem 1 og 100
 - Hvis brugeren gætter rigtigt, skal programmet sige "Du gættede rigtigt!" og afslutte.
 - Skriv "For højt" eller "For lavt" hvis brugeren gætter forkert, og lad brugeren gætte igen.

@@ -1,4 +1,4 @@
-# Øvelse - Stopur
+# Stopur
 Det modsatte af en timer er vel et **stopur**. Det tæller op fra 0 til vi stopper det. Her vælger vi dog at stoppe det når vi når 10.
 
 1. Lav et nyt projekt med navnet `stopwatch`.

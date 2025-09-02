@@ -1,4 +1,4 @@
-# Øvelse - Brød-opskrift
+# Brød-opskrift
 
 Vi skal lave et program, der udskriver en brød-opskrift.
 

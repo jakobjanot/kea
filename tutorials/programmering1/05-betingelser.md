@@ -36,7 +36,7 @@ Klassificeringen skal være baseret på følgende grænser:
 
 ---
 
-# Øvelse - Grupper i klassen (fortsat)
+# Grupper i klassen (fortsat)
 - Hvis der er 43 studerende (`int totalStudents = 43`) er der ikke nogen gruppestørrelse, hvor alle har en gruppe - vi må gøre noget andet
 - Vi synes ikke at nogen skal være alene i en gruppe, dvs. `remainingStudents` skal være over 1.
 - Sæt en `boolean` variabel `acceptableGroupSize = remainingStudents > 1;`
@@ -46,7 +46,7 @@ Klassificeringen skal være baseret på følgende grænser:
 
 ---
 
-# Øvelse - Hos lægen
+# Hos lægen
 
 - Lav et nyt Java-projekt `doctor` med klassen `Doctor` og en `main` metode
 - Lad os lave et program der vurderer om din øjenbetændelse kræver antibiotika

@@ -23,7 +23,6 @@
     #  #  # #    # #   #  #      #    #
     ## ##   ####  #    # ###### #####
     ```
----
 3. Prøv at bruge teknikken herunder til at printe dit art med eet `System.out.println` statement
     ```java
     String lines = "Første linje" +

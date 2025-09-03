@@ -19,9 +19,7 @@ For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmilj�
 - Find den i Start-menuen (Windows) eller i Spotlight (macOS)
 - Hvis du bliver spurgt om at importere indstillinger, så vælg **Do not import settings**
 
----
-
-## Opsætning af IntelliJ IDEA
+# Opsætning af IntelliJ IDEA
 
 - Vi skal konfigurere IntelliJ IDEA, så den passer til vores behov
 
@@ -31,7 +29,7 @@ For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmilj�
 - I macOS er det i topmenuen under **IntelliJ IDEA** → **Preferences**
     ![Intellij Settings Mac](img/intellij-settings-mac.png)
 
---
+# Deaktiver AI/ML værktøjer
 
 - I venstre sidepanel, klik på **Plugins**
 - Til højre vælg fanen **Installed**
@@ -42,7 +40,7 @@ For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmilj�
 - Klik på **Ok** for at gemme ændringerne
 - Måske skal du genstarte IntelliJ IDEA for at ændringerne træder i kraft
 
---
+# Deaktiver kode sammenfoldning
 
 - I venstre sidepanel, klik på **Editor** → **General** → **Code Folding**
 - Scroll ned til du finder **Java**
@@ -51,7 +49,7 @@ For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmilj�
 - Klik på **Ok** for at gemme ændringerne
 ![Disable code folding](img/intellij-codefold.png)
 
---
+# Deaktiver kode inlay hints
 
 - I venstre sidepanel, klik på **Editor** → **Inlay Hints**
 - Fjern fluebenet ved **Code Vision** og **Parameter hints**, så det ligner billedet herunder
@@ -60,6 +58,8 @@ For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmilj�
 ![Disable inlay hints](img/intellij-inlays.png)
 
 --
+
+# Deaktiver unødvendige funktioner
 
 - I venstre sidepanel, klik på **Version Control** → **Commit**
 - **Sæt flueben** ved **Clear initial commit message**

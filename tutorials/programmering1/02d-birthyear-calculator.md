@@ -21,17 +21,3 @@ Brug din alder til at udregne dit fødselsår
 6. Indtast variablen `age` af typen `int` og giv den din alder
 7. Lav en variabel `birthYear` af typen `int` og sæt den til at være lig med `year - age`
 8. Brug `System.out.println("Du er født i " + birthYear);` til at udskrive dit fødselsår til skærmen
-
-Notes:
-# Løsning:
-```java
-public class BirthYear {
-    public static void main(String[] args) {
-        int year = 2025; // nuværende år
-        int age = 20; // din alder
-        int birthYear = year - age; // udregner fødselsåret
-
-        System.out.println("Du er født i " + birthYear);
-    }
-}
-```

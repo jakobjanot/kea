@@ -51,7 +51,7 @@
     --heading-2-size: 20pt;
     --heading-3-size: 16pt;
     --heading-4-size: 14pt;
-    --pre-font-size: 11pt;
+    --pre-font-size: 10pt;
     --letter-spacing: 0.0em;
     --heading-letter-spacing: 0.05em;
     --heading-font-weight: 400;
@@ -121,6 +121,23 @@ code:not(pre code) {
 a {
     color: var(--link-color);
     text-decoration: none;
+}
+
+img {
+  max-width: 80%;
+  height: auto;
+  display: block; /* optional, prevents inline spacing issues */
+}
+
+@media print {
+  img {
+    max-width: 80%;     /* never exceed page width */
+    max-height: 50%;    /* never exceed page height */
+    height: auto;
+    width: auto;
+    display: block;
+    object-fit: contain; /* ensures full image fits inside box */
+  }
 }
 
 @media print {

@@ -5,7 +5,12 @@
 - Det betyder også, at hvis du har brug for at inkludere et backslash (`\`) i en tekststreng, skal du bruge to backslashes (`\\`).
 - Vha. escape-tegn, prøv at skrive flg. til konsollen
 1. ```txt
-   Han sagde: "Hvad er escape-tegn?"
+   Romeo: "Men, soft! Hvad lys igennem vinduet bryder?"
+   Juliet: "Det er øst, og Julia er solen."
+   Romeo: "O, Julia! Du er så lysende som solen."
+   Juliet: "Jeg er ikke lysende, jeg er kun en skygge."
+   Romeo: "Men skygger kan også være smukke."
+   Juliet: "Måske, men de er stadig kun skygger."
    ```
 2. ```txt
    Kl.    Program
@@ -24,7 +29,4 @@
    ////////
    || EK ||
    \\\\\\\\
-   ```
-5. ```txt
-   Citat: "Jeg elsker Java!"
    ```

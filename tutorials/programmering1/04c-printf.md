@@ -7,23 +7,23 @@ Indtil nu har vi næsten kun brugt `System.out.println` til at udskrive tekst. N
     System.out.printf("Hej, verden!%n");
     ```
     giver
-    ```
+    ```txt
     Hej, verden!
     ```
-
 - Udskrivning af variabler
     ```java
     String name = "Benny";
     int age = 25;
     double height = 1.75455;
-    System.out.printf("%s på %d år er %.2f m høj%n", name, age, height);
+    System.out.printf("%s på %d år er %.2f m høj%n", 
+                      name, age, height);
     ```
     giver
-    ```
+    ```txt
     Benny på 25 år er 1.75 m høj
     ```
 
-- Udfyldning med nuller, whitespace-padding
+- Formatering af kolonner, kaldet whitespace-padding, (`%10.2f` er 10 tegn bredt med 2 decimaler)
     ```java
     double bikePrice = 12000.0;
     double bikeHelmet = 442.25;
@@ -33,7 +33,7 @@ Indtil nu har vi næsten kun brugt `System.out.println` til at udskrive tekst. N
     System.out.printf("Lygter:\t%10.2f kr%n", bikeLights);
     ```
     giver
-    ``` 
+    ``` txt
     Cykel:      12000,00 kr
     Cykelhjelm:   442,25 kr
     Lygter:        29,50 kr
@@ -45,14 +45,11 @@ Indtil nu har vi næsten kun brugt `System.out.println` til at udskrive tekst. N
    Pizza Portobello:  69,50 kr
    ```
 2. ```txt
-   Romeo: "Men, soft! Hvad lys igennem vinduet bryder?"
-   Juliet: "Det er øst, og Julia er solen."
-   Romeo: "O, Julia! Du er så lysende som solen."
-   Juliet: "Jeg er ikke lysende, jeg er kun en skygge af mig selv."
-   Romeo: "Men skygger kan også være smukke."
-   Juliet: "Måske, men de er stadig kun skygger."
+   Varenr Vare
+   000001 Gaffelnøglesæt
+   000002 Torxnøglesæt
+   000212 Unbrakonøglesæt
+   030200 Lappegrej
+   030302 Drikkedunk
+   145012 Skiftegreb
    ```
-3. ```txt
-   /\/\/\/\
-   |  EK  |
-   \/\/\/\/

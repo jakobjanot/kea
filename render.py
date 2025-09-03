@@ -16,6 +16,8 @@ def render_html(md_dir: str):
     files = [f for f in os.listdir(html_dir) if f.endswith(".md")]
     for file in files:
         outputfile = f"{os.path.abspath(os.path.join(html_dir, file.replace('.md', '.html')))}"
+        if os.path.exists(outputfile):
+            continue
         print(f"Rendering {file}...")
         title = os.path.splitext(file)[0]
         
@@ -45,9 +47,13 @@ def render_pdf(html_dir: str):
         html_files = [f for f in os.listdir(html_dir) if f.endswith(".html")]
         for html_file in html_files:
             filepath = f"file://{os.path.abspath(os.path.join(html_dir, html_file))}"
-            page.goto(filepath, wait_until="networkidle")
 
             pdf_path = os.path.join(html_dir, html_file.replace(".html", ".pdf"))
+            if os.path.exists(pdf_path):
+                continue
+        
+            page.goto(filepath, wait_until="networkidle")
+
             print(f"Rendering {os.path.basename(pdf_path)}...")
 
             page.pdf(

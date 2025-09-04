@@ -138,11 +138,7 @@ public class Scanner {
 
 ---
 <!-- .slide: class="cover-3" -->
-# Input og output strømme
-
---
-
-# Klassen `System`
+# System.out og System.in
 
 - Vi har brugt `System.out.println` til at udskrive tekst til skærmen en del gange.
 
@@ -181,6 +177,12 @@ public class PrintStream {
     public void println(String s) {
         // ...
     }
+
+    public void print(String s) {
+        // ...
+    }
+
+    // ...
 }
 ```
 

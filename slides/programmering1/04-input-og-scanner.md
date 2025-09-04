@@ -1,20 +1,18 @@
 ---
-title: 04 - Input og Output
+title: 04 - Input og Scanner
 ---
-<!-- .slide: class="ek-academic-fire" -->
+<!-- .slide: class="cover-10" -->
 
-# Input og Output
+# Input og Scanner
 
 ---
 <!-- .slide: class="k-sunlit-energy" -->
 
 ## Program
 
-- 08:30 Input og Output 
-- 09:00 Øvelser  
-- 10:00 Pause  
-- 10:15 Vi fortsætter med øvelser  
-- 11:30 Opsamling  
+- Metoder
+- Øvelser
+- Opsamling  
 
 ---
 
@@ -22,26 +20,30 @@ title: 04 - Input og Output
 
 --
 
-## Implicit konvertering
-
 ```java
-double y;
-y = 4; // går godt
-```
-
-## Eksplicit konvertering
-
-```java
-int x;
-x = 2.7; // fejl 
+int x = 4;
+double y = x; // går godt, y er nu 4.0
 ```
 
 --
 
+... men ikke den modsatte vej
+
+```java
+double x = 2.7;
+int x = x; // fejl
+```
+
+--
+
+... vi kan dog _eksplicit_ konvertere
+
 ```java
 int x;
-x = (int) 2.7; // går godt, x er nu 2
+x = (int) 2.7; // går godt, - men...
 ```
+
+Spørgsmål: Hvad er x?
 
 --
 
@@ -59,71 +61,88 @@ c++;    // c er nu 'B'
 c--;    // c er nu 'A' igen
 ```
 
---
-
-
 ---
-
 
 Hvad med en `String`?
 
 ```java
+String s = "4";
 int x;
-x = "4"; // fejl
+x = s; // fejl
 ```
 
 Notes:
 - Fejl. Selvom "4" er et tal står tallet i en tekststreng, og Java kan ikke implicit konvertere en tekststreng til et tal.
+
+--
+
+Parsing: at fortolke en tekststreng (eller data)
+
 --
 
 ```java
+String s = "4";
 int x;
-x = (int) "4"; // også fejl
+x = Integer.parseInt(s); // går godt, x er nu 4
+
+--
+
+
+```java
+int x     = Integer.parseInt("4");
+double y  = Double.parseDouble("2.7");
+boolean z = Boolean.parseBoolean("true");
 ```
 
+--
+
+```java
+int x = Integer.parseInt("4 121 33 14"); // fejl
+```
 Notes:
-- Også fejl. Vi kan heller ikke eksplicit konvertere en tekststreng til et tal på denne måde.
-
---
-
-# Konvertering af tekst til tal
-
---
+- Når vi forsøger at parse en streng med flere tal adskilt af mellemrum, vil det fejle, fordi `Integer.parseInt` kun kan håndtere én enkelt værdi ad gangen.
+- Vi kan dog bruge `Scanner` klassen til at læse flere værdier fra en streng.
 
 ```java
-double y;
-y = Double.parseDouble("2.7"); // går godt, y er nu 2.7
+String s = "4 121 33 14";
+
+Scanner scanner = new Scanner(s);
+
+int x = scanner.nextInt(); // læser 4
+int y = scanner.nextInt(); // læser 121
+int z = scanner.nextInt(); // læser 33
+int w = scanner.nextInt(); // læser 14
 ```
 
 --
 
+## Klassen `Scanner`
+
+`Scanner.java`:
 ```java
-int x;
-x = Integer.parseInt("4");
-```
+import java.util.Scanner;
+public class Scanner {
+    public String nextLine() {
+        // ...
+    }
 
-går godt, `x` er nu **4**
+    public int nextInt() {
+        // ...
+    }
 
---
-
-Men også 
-```java
-int x;
-x = Integer.parseInt("0004"); // går godt, x er nu 4
-```
-går også godt, `x` er nu **4**.
-
---
-
-Derimod kan vi ikke
-```java
-int x;
-x = Integer.parseInt("4.0"); // fejl
+    public double nextDouble() {
+        // ...
+    }
+}
 ```
 
 ---
+<!-- .slide: class="cover-3" -->
+# Input og output strømme
 
-# Klassen `System` 
+--
+
+# Klassen `System`
 
 - Vi har brugt `System.out.println` til at udskrive tekst til skærmen en del gange.
 
@@ -210,48 +229,6 @@ Notes:
 - InputStream's `read` returnerer `int`, dvs. tal?
 - Det er ikke så nemt at arbejde med. Vi har brug for en klasse, der giver os nogle datatyper vi kan bruge direkte, som `String`, `int`, `double` osv.
 
---
-
-## Klassen `Scanner`
-
-`Scanner.java`:
-```java
-import java.util.Scanner;
-public class Scanner {
-    public String nextLine() {
-        // ...
-    }
-
-    public int nextInt() {
-        // ...
-    }
-
-    public double nextDouble() {
-        // ...
-    }
-}
-```
-
-
---
-
-## Scanner Class
-
-Du kan tilgå brugerens input med metoden **nextLine** og gemme input i et variabelnavn:
-
-```java
-myVariableName = input.nextLine();
-```
-
---
-
-## Scanner Types
-
-```java
-String myVariableName = input.nextLine();
-input.nextInt();
-input.nextDouble();
-```
 
 ---
 

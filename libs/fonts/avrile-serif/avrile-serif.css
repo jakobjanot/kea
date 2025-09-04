@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-Thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 100;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-ThinItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-ExtraLight.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 200;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-ExtraLightItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-LightItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 500;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-MediumItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-SemiBoldItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-BoldItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-ExtraBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 800;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-ExtraBoldItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-Black.woff') format('woff');
+}
+@font-face {
+    font-family: 'Avrile Serif';
+    font-style: italic;
+    font-weight: 900;
+    src: local('Avrile Serif'), url('https://fonts.cdnfonts.com/s/19282/AvrileSerif-BlackItalic.woff') format('woff');
+}
+
+

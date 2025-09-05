@@ -3,7 +3,7 @@
 - Prinsessen skal giftes og der skal vælges en prins
 - Prinsessen har følgende betingelser for at vælge en prins, som hun stiller til rådighed for os i en metode:
   ```java
-  public boolean canMarry(int age, 
+  public static boolean canMarry(int age, 
                           boolean isHandsome, 
                           boolean isBrave, 
                           boolean isRich) {

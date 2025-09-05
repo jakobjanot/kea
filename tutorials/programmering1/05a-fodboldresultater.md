@@ -12,18 +12,8 @@
     int c = sc.nextInt(); // c er 3
    ```
    (Du undrer dig måske over `new`. `new` bruges til at oprette en ny instans af en klasse, i dette tilfælde `Scanner` klassen. Det behøver du ikke at forstå lige nu.)
-4. I `Scanner` kan du bruge andre adskillelsestegn (eng: delimiters) end mellemrum, her `" og "`:
-    ```java
-    String text = "1 og 2 og 3";
-    Scanner sc = new Scanner(text);
-    sc.useDelimiter(" og ");
-    int a = sc.nextInt(); // a er 1
-    int b = sc.nextInt(); // b er 2
-    int c = sc.nextInt(); // c er 3
-    ```
-5. Med det du lige har lært, prøv at scanne resultatet resultatet af en kamp, der endte "3-1" og skriv til konsollen:
+4. Med det du lige har lært, prøv at scanne resultatet resultatet af en kamp, der endte "3 1" og skriv til konsollen:
     ```txt
-    Resultat: 3-1
     Hjemmehold: 3 mål
     Udehold: 1 mål
     ```

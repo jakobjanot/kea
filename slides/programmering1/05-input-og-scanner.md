@@ -15,8 +15,8 @@ title: 04 - Input og Scanner
 - Opsamling  
 
 ---
-
-# Konvertering af værdier (eng.: Casting)
+<!-- .slide: class="cover-11" -->
+# Casting
 
 --
 
@@ -31,7 +31,7 @@ double y = x; // går godt, y er nu 4.0
 
 ```java
 double x = 2.7;
-int x = x; // fejl
+int y = x; // fejl
 ```
 
 --
@@ -39,8 +39,8 @@ int x = x; // fejl
 ... vi kan dog _eksplicit_ konvertere
 
 ```java
-int x;
-x = (int) 2.7; // går godt, - men...
+double x = 2.7;
+int y = (int) x; // går godt, - men...
 ```
 
 Spørgsmål: Hvad er x?
@@ -48,27 +48,17 @@ Spørgsmål: Hvad er x?
 --
 
 ```java
-int c;
-c = (int) 'A'; // går godt, c er nu 65
+char x = 'A'
+int y = (int) x; // går godt, c er nu 65
 ```
 
 --
 
-```java
-char c;
-c = 65; // går godt, c er nu 'A'
-c++;    // c er nu 'B'
-c--;    // c er nu 'A' igen
-```
-
----
-
-Hvad med en `String`?
+Hvad med `String`s?
 
 ```java
-String s = "4";
-int x;
-x = s; // fejl
+String x = "4";
+int y = s; // fejl
 ```
 
 Notes:
@@ -76,14 +66,14 @@ Notes:
 
 --
 
-Parsing: at fortolke en tekststreng (eller data)
+Nyt ord: **Parsing**.  
+at fortolke en tekststreng (eller data)
 
 --
 
 ```java
-String s = "4";
-int x;
-x = Integer.parseInt(s); // går godt, x er nu 4
+String x = "4";
+int y = Integer.parseInt(s); // går godt, x er nu 4
 
 --
 
@@ -115,8 +105,14 @@ int w = scanner.nextInt(); // læser 14
 ```
 
 --
+<!-- .slide: class="o-sunlit-energy" -->
 
-## Klassen `Scanner`
+# Demo: Klassen `Scanner`
+
+Notes:
+- Vis hvordan next, nextLine, nextInt, nextDouble osv. fungerer.
+
+--
 
 `Scanner.java`:
 ```java
@@ -140,13 +136,14 @@ public class Scanner {
 <!-- .slide: class="cover-3" -->
 # System.out og System.in
 
+--
+
+# System.out
+
+--
 - Vi har brugt `System.out.println` til at udskrive tekst til skærmen en del gange.
 
 - Hvad er `System.out`?
-
-Notes:
-
-- DEMO 
 
 ```java
 System.out.println(System.out); // java.io.PrintStream@15db9742
@@ -196,6 +193,8 @@ Notes:
 
 # System.in
 
+--
+
 `System.java`:
 ```java
 public class System {
@@ -215,11 +214,12 @@ public class InputStream {
 
 En `int`? GYS!
 
-Notes:
+--
+<!-- .slide: class="o-sunlit-energy" -->
+# Demo af `System.in`s `read` metode
 
-- DEMO:
-    `HelloWorld.java`:
-    ```java
+Notes:
+- ```java
     public class HelloWorld {
         public static void main(String[] args) {
             InputStream input = System.in;
@@ -231,55 +231,37 @@ Notes:
 - InputStream's `read` returnerer `int`, dvs. tal?
 - Det er ikke så nemt at arbejde med. Vi har brug for en klasse, der giver os nogle datatyper vi kan bruge direkte, som `String`, `int`, `double` osv.
 
+--
+
+`Scanner`-klassen **to the rescue!**
+
+--
+<!-- .slide: class="o-sunlit-energy" -->
+# Demo af `Scanner` og `System.in`
 
 ---
-
-# Karaktersæt - ASCII og Unicode
-
-Nogle bud på hvad der bliver udskrevet:
-
-```java
-char c1 = 74;
-char c2 = 65;
-char c3 = 86;
-System.out.println("Jeg elsker " + c1 + c2 + c3 + c2);
-```
+<!-- .slide: class="cover-2" -->
+# Sneak-peak: `if` og `else`
+Notes:
+- Næste gang skal vi se på betingelser i Java
 
 --
-
-Derfor kan vi også printe fra `'A'` til `'Z'`:
-
-```java
-for (char c = 'A'; c <= 'Z'; c++) {
-    System.out.print(c);
-}
-```
-
-giver 
-
-"**A**BCDEFGHIJKLMNOPQRSTUVXYABCDEFGHIJKLMNOPQRSTUVWXY**Z**"
-
---
-
-... og fra `'A'` til `'Å'`, men:
-
-```java
-for (char c = 'A'; c <= 'Å'; c++) {
-    System.out.print(c);
-}
-```
-
-giver derimod
-
-"**A**BCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄ**Å**"
-
-# 🤔
-
---
-
-## I gamle dage 
-
-
+![Blue pill or red pill](img/blue-pill-red-pill.png)
 
 Notes:
-I gamle var det ikke helt ualmindeligt at få en mail der 
+- I filmen "The Matrix" præsenteres hovedpersonen, Neo, for et valg mellem to piller: den blå og den røde.
+- Vælger han den blå pille, forbliver han i sin trygge, men falske virkelighed. Vælger han den røde pille, konfronteres han med sandheden om sin verden.
+
+--
+
+```java
+String pill = "blue";
+
+if (pill.equals("blue")) {
+    System.out.println("Stay in the Matrix");
+} else if (pill.equals("red")) {
+    System.out.println("Confront the truth");
+} else {
+    System.out.println("Come on, Neo, choose a pill!");
+}
+```

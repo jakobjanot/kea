@@ -13,6 +13,6 @@
    System.out.print("Indtast resultatet af kampen: ");
    ```
 - Når du starter programmet, vil du se, at programmet venter på din indtastning
-- Indtast fx **3-1** og tryk **Enter**. Programmet vil nu fortsætte og printe resultatet
+- Indtast fx **3 1** og tryk **Enter**. Programmet vil nu fortsætte og printe resultatet
 - Virker det som forventet?
 - Kan du få programmet til at fejle ved at indtaste noget uventet?

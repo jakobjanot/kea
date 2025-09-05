@@ -21,4 +21,5 @@
   - Prins Bieber (alder: 19, flot: ja, modig: nej, rig: ja)
   - Prins Blop (alder: 5, flot: ja, modig: ja, rig: ja)
 - Hvem vælger prinsessen? Prøv at gætte først. Dernæst kod det og tjek resultatet.
-- Ekstra: Tilføj gerne flere krav og/eller kandidater
+- Valgfrit: Tilføj gerne flere krav og/eller kandidater
+- Valgfrit: Du må gerne forsøge at simplificere metoden

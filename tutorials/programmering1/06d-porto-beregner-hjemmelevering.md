@@ -9,13 +9,13 @@
     - Op til 20 kg: 175 kr
 6. Udvid `calculateShippingCost` metoden med en ekstra parameter `boolean isHomeDelivery`, der angiver om det er hjemmelevering eller levering til pakkeshop og udvid metoden til at tage højde for dette. Hint:
     ```java
-    if (weight <= 1) {
+    if (weight <= 1.0) {
         if (isHomeDelivery) {
             return 75;
         } else {
             return 60;
         }
-    } else if (weight <= 2) {
+    } else if (weight <= 2.0) {
         if (isHomeDelivery) {
             return 80;
         } else {
@@ -27,15 +27,15 @@
 8. Prøv nu at vende logikken om:
     ```java
     if (isHomeDelivery) {
-        if (weight <= 1) {
+        if (weight <= 1.0) {
             return 75;
-        } else if (weight <= 2) {
+        } else if (weight <= 2.0) {
             return 80;
         } // etc.
     } else {
-        if (weight <= 1) {
+        if (weight <= 1.0) {
             return 60;
-        } else if (weight <= 2) {
+        } else if (weight <= 2.0) {
             return 65;
         } // etc.
     }

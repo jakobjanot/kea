@@ -11,8 +11,8 @@
     int b = sc.nextInt(); // b er 2
     int c = sc.nextInt(); // c er 3
    ```
-   (Du undrer dig måske over `new`. `new` bruges til at oprette en ny instans af en klasse, i dette tilfælde `Scanner` klassen. Det behøver du ikke at forstå lige nu, da vi kommer tilbage til det senere i semesteret.)
-4. `Scanner` giver mulighed for at bruge andre adskillelsestegn (eng: delimiters) end mellemrum, dvs.
+   (Du undrer dig måske over `new`. `new` bruges til at oprette en ny instans af en klasse, i dette tilfælde `Scanner` klassen. Det behøver du ikke at forstå lige nu.)
+4. I `Scanner` kan du bruge andre adskillelsestegn (eng: delimiters) end mellemrum, her `" og "`:
     ```java
     String text = "1 og 2 og 3";
     Scanner sc = new Scanner(text);

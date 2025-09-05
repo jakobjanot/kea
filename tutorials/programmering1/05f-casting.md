@@ -65,8 +65,8 @@
    ```
 
 10. ```java
-   String a = "10";
-   int b = Integer.parseInt(a);
-   System.out.println(b);
-   ```
+    String a = "10";
+    int b = Integer.parseInt(a);
+    System.out.println(b);
+    ```
 

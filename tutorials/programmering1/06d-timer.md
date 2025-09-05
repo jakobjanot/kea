@@ -8,7 +8,7 @@
     int startNumber = 10; // Startnummer for nedtælling
     countdown(startNumber);
     ```
-4. Tilføj en metode `countdown` der tager et heltal som parameter og udskriver tallet og kalder sig selv med tallet minus 1, indtil tallet når 0. (`if` kommer vi til senere på semesteret, så det er ok at du ikke forstår det)
+4. Tilføj en metode `countdown` der tager et heltal som parameter og udskriver tallet og kalder sig selv med tallet minus 1, indtil tallet når 0.
 ```java
 public static void countdown(int number) {
     System.out.println(number);

@@ -3,30 +3,24 @@
 1. Lad os genbesøge opgaverne i `either-or` projektet og implementere dem med enten en `switch` eller en **ternary operator** (`? :`).
 - Eksempel på brug af ternary operator:
    ```java
-   public static boolean isAdult(int age) {
-       return (age >= 18) ? true : false;
+   public static double applyDiscount(double price, boolean isMember) {
+       return isMember ? price * 0.8 : price; // 20% discount for members
    }
    ```
 - Eksempel på brug af switch:
    ```java
-   public static String getDayOfWeek(int dayNumber) {
-       switch (dayNumber) {
-           case 1:
-               return "Mandag";
-           case 2:
-               return "Tirsdag";
-           case 3:
-               return "Onsdag";
-           case 4:
-               return "Torsdag";
-           case 5:
-               return "Fredag";
-           case 6:
-               return "Lørdag";
-           case 7:
-               return "Søndag";
+   public static String seasonForMonth(int month) {
+       switch (month) {
+           case 12, 1, 2:
+               return "Winter";
+           case 3, 4, 5:
+               return "Spring";
+           case 6, 7, 8:
+               return "Summer";
+           case 9, 10, 11:
+               return "Autumn";
            default:
-               return "Ugyldigt dagnummer";
+               return "Invalid month";
        }
    }
    ```

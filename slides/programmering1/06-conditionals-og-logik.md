@@ -10,11 +10,9 @@ title: 05 - Betingelser og logik
 
 # Program
 
-- 08:30 Betingelser og logik
-- 09:30 Igang med øvelser
-- 10:00 Pause
-- 10:15 Øvelser fortsat
-- 11:30 Opsamling, forberedelse til næste gang
+- Betingelser og logik
+- Øvelser
+- Opsamling
 
 ---
 
@@ -22,10 +20,21 @@ title: 05 - Betingelser og logik
 
 --
 
+![Work work work](img/work.gif)
+
+--
+
+<!-- .slide: class="large" -->
+En normal (kedelig) hverdag
+
 ```java
-wakeUp();
-work();
-goToBed();
+public class MyRoutine {
+    public static void main(String[] args) {
+        wakeUp();
+        work();
+        goToBed();
+    }
+}
 ```
 
 Notes:
@@ -35,6 +44,19 @@ Notes:
 
 --
 
+<!-- .slide: class="large" -->
+```java
+wakeUp();
+work();
+goToBed();
+```
+
+--
+
+![Watch TV](img/watch-tv.gif)
+
+--
+<!-- .slide: class="o-sunlit-energy" -->
 ## Demo - weekend
 
 Notes:
@@ -87,22 +109,29 @@ Notes:
 
 # Flere betingelser - `else if`
 
+--
+
+![Beach day](img/beach-day.gif)
+
+--
+
+<!-- .slide: class="large" -->
 I gamle dage (før aircondition) kunne man få varmefri...
 
 ```java
-    boolean isWeekend = true; // Er det weekend?
-    int temp = 31; // Temperaturen udenfor
+boolean isWeekend = true; // Er det weekend?
+int temp = 31; // Temperaturen udenfor
 
-    wakeUp();
-    if (temp > 40) {
-        goToBeach();
-    } else if (isWeekend) {
-        watchNetflix();
-    } else {
-        commute();
-        work();
-        commute();
-    }
+wakeUp();
+if (temp > 40) {
+    goToBeach();
+} else if (isWeekend) {
+    watchNetflix();
+} else {
+    commute();
+    work();
+    commute();
+}
 ```
 
 Notes:
@@ -115,27 +144,32 @@ Notes:
 - Hvis det er weekend, så ser vi Netflix, altså `watchNetflix()`.
 - Hvis det hverken er varmt eller weekend, så er det almindelig hverdag, og vi pendler til arbejde, arbejder og pendler hjem igen.
 
+--
+
 # Indlejrede betingelser
 
+--
+
+<!-- .slide: class="large" -->
 I dag kan vi ikke få varmefri, så...
 
 ```java
-    boolean isWeekend = true; // Er det weekend?
-    int temp = 31; // Temperaturen udenfor
+boolean isWeekend = true; // Er det weekend?
+int temp = 31; // Temperaturen udenfor
 
-    wakeUp();
-    if (isWeekend) {
-        if (temp > 30) {
-            goToBeach();
-        } else {
-            watchNetflix();
-        }
+wakeUp();
+if (isWeekend) {
+    if (temp > 30) {
+        goToBeach();
     } else {
-        commute();
-        work();
-        commute();
+        watchNetflix();
     }
-    goToBed();
+} else {
+    commute();
+    work();
+    commute();
+}
+goToBed();
 ```
 
 Notes:
@@ -146,47 +180,48 @@ Notes:
 - Er det ikke weekend, så er det almindelig hverdag, og vi pendler til arbejde, arbejder og pendler hjem igen.
 
 --
+<!-- .slide: class="small" -->
+... med mindre det regner - eller jeg er syg ... argh!
 
-... med mindre det regner - eller jeg er syg
 
 ```java
-    boolean isWeekend = true; // Er det weekend?
-    int temp = 31; // Temperaturen udenfor
-    boolean isRaining = true; // Regner det?
-    boolean isSick = false; // Er jeg syg?
+boolean isWeekend = true; // Er det weekend?
+int temp = 31; // Temperaturen udenfor
+boolean isRaining = true; // Regner det?
+boolean isSick = false; // Er jeg syg?
 
-    wakeUp();
-    if (isWeekend) {
-        if (temp > 30) {
-            if (isRaining) {
+wakeUp();
+if (isWeekend) {
+    if (temp > 30) {
+        if (isRaining) {
+            watchNetflix();
+        } else {
+            if (isSick) {
                 watchNetflix();
             } else {
-                if (isSick) {
-                    watchNetflix();
-                } else {
-                    goToBeach();
-                }
+                goToBeach();
             }
-        } else {
-            watchNetflix();
         }
     } else {
-        commute();
-        work();
-        commute();
+        watchNetflix();
     }
-    goToBed();
+} else {
+    commute();
+    work();
+    commute();
+}
+goToBed();
 ```
-... argh!
-
 Notes:
 - Nåh ja, hvis det regner, bliver vi alligevel hjemme og ser Netflix.
 - Hjælp, det bliver hurtigt meget indviklet og svært at læse.
 
 --
 
-> Efterlader denne <strike>verden</strike> koden bedre end jeg fandt den
-> - Lord Baden-Powell (grundlægger af spejderbevægelsen)
+![Lord Baden-Powell](img/baden-powell.jpg)
+
+Efterlad denne <strike>verden</strike> kode bedre end du fandt den   
+\- Baden-Powell
 
 Notes:
 - Ulæselig kode er en kilde til fejl
@@ -196,8 +231,11 @@ Notes:
 
 Eller...
 
-> Skriv altid din kode, som om ham, der ender med at vedligeholde den, er en voldelig psykopat, der ved, hvor du bor.
-> - Martin Golding
+--
+
+Always code as if the guy who ends up maintaining your code will be a
+violent psychopath who knows where you live. Code for readability.  
+\- Martin Golding
 
 ---
 
@@ -215,20 +253,25 @@ Kan I huske, at vi talte om **operatorer** i Java?
   - fx. `x += 3;`
 - Logiske operatorer: `&&`, `||`, `!`
   - fx. `raining || bringingUmbrella;`
+
 --
 
 Logiske operatorer arbejder med værdier, der er enten `true` eller `false`
 
 --
 
-Vi kan kombinere betingelser med logiske operatorer:
+Vi kan kombinere betingelser med logiske operatorer
 
-Kriterierne for at **se Netflix** er:
-- Det er **weekend** 
+--
+
+**Se Netflix** er:
+- Det er *weekend* 
 - **og**
-    - Det **regner**
-    - Jeg **er syg**
-    - Temperaturen er **max 30 grader**
+    - *Det regner*  
+    **eller**
+    - *Jeg er syg*   
+    **eller**
+    - *Temperaturen er max 30 grader*
 
 ```java
 isWeekend && (isRaining || isSick || temp <= 30)
@@ -236,6 +279,7 @@ isWeekend && (isRaining || isSick || temp <= 30)
 
 --
 
+<!-- .slide: class="large" -->
 ```java
 ...
 if (isWeekend && (isRaining || isSick || temp <= 30)) {
@@ -252,6 +296,7 @@ else if (isWeekend && temp > 30) {
 
 --
 
+<!-- .slide: class="large" -->
 Nogle gange skal man bare vende logikken om
 
 ```java
@@ -269,15 +314,20 @@ if (!isWeekend) {
 ```
 
 --
+<!-- .slide: class="x-large" -->
 
-Om et års tid har du glemt, hvorfor `isSick || isRaining || temp < 30` betyder "se Netflix"
+Om et års tid har du glemt, hvorfor 
+```java
+isSick || isRaining || temp < 30
+```
+betyder "se Netflix"
 
 --
 
+<!-- .slide: class="large" -->
 Navngivning gør det nemmere at forstå
 
 ```java
-...
 ...
 boolean isBeachWeather = temp > 30 && !isRaining;
 
@@ -301,6 +351,7 @@ Notes:
 
 --
 
+<!-- .slide: class="large" -->
 Vi kan også lave en metode, der tjekker om det er strandvejr
 
 ```java
@@ -326,6 +377,7 @@ Notes:
 
 --
 
+<!-- .slide: class="large" -->
 Vi *kunne* også bruge `if` og `else` i metoden
 
 ```java
@@ -346,6 +398,7 @@ public static boolean isBeachWeather(int temp, boolean isRaining) {
 ```
 --
 
+<!-- .slide: class="large" -->
 men det er i virkeligheden nemmere "springe ud af funktionen"
 
 ```java
@@ -364,11 +417,16 @@ public static boolean isBeachWeather(int temp, boolean isRaining) {
 
 --
 
-En endnu mere læsbare måde er at anvende **guards**, her undgår vi helt indlejrede if/else
+En endnu mere læsbare måde er at anvende **guards**, 
+
+her undgår vi helt indlejrede if/else
 
 ---
 
 # Guards
+
+--
+<!-- .slide: class="large" -->
 
 ```java
 public isBeachWeather(int temp, boolean isRaining) {
@@ -396,6 +454,10 @@ Notes:
 ---
 
 # Switch
+
+--
+
+<!-- .slide: class="x-small" -->
 ```java
 public static boolean isWeekend(dayOfWeek) {
     boolean isWeekend;
@@ -492,9 +554,11 @@ public static boolean isWeekend(dayOfWeek) {
             break;
     }
     return isWeekend;
+}
 ```
 
 --
+<!-- .slide: class="large" -->
 
 Ligesom i `if`-sætninger kan vi i en metode returnere en værdi direkte
 
@@ -513,7 +577,7 @@ public static boolean isWeekend(String dayOfWeek) {
 
 --
 
-I nyere versioner af Java kan vi også bruge `switch`-udtryk
+I nyere Java, `switch` expressions 
 
 ```java
 public static boolean isWeekend(String dayOfWeek) {
@@ -535,6 +599,8 @@ Notes:
 
 # Ternary operator
 
+--
+<!-- .slide: class="large" -->
 
 ```java
 boolean beachWeather = temp > 30 && !isRaining ? true : false;
@@ -545,8 +611,7 @@ Notes:
 Det vi har på højresiden er en **ternary operator**, som er en kortere måde at skrive en betingelse på.
 
 --
-
-`temp > 30 && !isRaining ? true : false`, dvs.
+dvs.
 
 **betingelse** ? **værdi hvis sand** : **værdi hvis falsk**
 
@@ -558,6 +623,7 @@ Notes:
 
 --
 
+<!-- .slide: class="large" -->
 ```java
 boolean goToBeach = isWeekend ? isBeachWeather(temp, isRaining) : false;
 ```

@@ -8,7 +8,7 @@
 1. Fortsæt i din `BMICalculator` klasse.
 2. I `main` metoden tilføj:
     ```java
-    System.out.println("Undervægt: " + isUnderNormalWeight(bmi));
+    System.out.println("Under normalvægt: " + isUnderNormalWeight(bmi));
     System.out.println("Normalvægt: " + isNormalWeight(bmi));
     System.out.println("Overvægt: " + isOverweight(bmi));
     ```

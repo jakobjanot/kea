@@ -10,7 +10,7 @@ title: 04 - Input og Scanner
 
 ## Program
 
-- Metoder
+- Casting, Input og Scanner
 - Øvelser
 - Opsamling  
 

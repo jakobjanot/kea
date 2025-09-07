@@ -1,7 +1,7 @@
 set positional-arguments
 
 default:
-    @echo "Available recipes: serve, clean, build, pdf"
+    @echo "Available recipes: slides-serve, slides-html, slides-pdf, tutorials-html, tutorials-pdf"
 
 install:
     uv run playwright install chromium

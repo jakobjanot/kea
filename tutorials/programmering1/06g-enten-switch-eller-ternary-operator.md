@@ -1,10 +1,20 @@
-# Enten eller... med ternary operator og switch
+# Enten eller... med ternary operator, switch og guard
 
-1. Lad os genbesøge opgaverne i `either-or` projektet og implementere dem med enten en `switch` eller en **ternary operator** (`? :`).
+1. Lad os genbesøge opgaverne i `either-or` projektet og implementere dem med enten en `switch`, en guard eller en **ternary operator**.
+- Eksempel på brug af en guard:
+   ```java
+   public static boolean canDrive(int age, boolean hasLicense) {
+        if (age < 18) return false;
+
+        return hasLicense;
+   }
+   ```
 - Eksempel på brug af ternary operator:
    ```java
-   public static double applyDiscount(double price, boolean isMember) {
-       return isMember ? price * 0.8 : price; // 20% discount for members
+   public static double applyDiscount(double price, 
+                                      boolean isMember, 
+                                      double couponDiscount) {
+       return isMember ? price * 0.8 - couponDiscount : price - couponDiscount;
    }
    ```
 - Eksempel på brug af switch:
@@ -24,4 +34,4 @@
        }
    }
    ```
-- Prøv at udvælge nogle af opgaverne fra `either-or` projektet og implementere dem med enten en `switch` eller en **ternary operator** (`? :`) ligesom ovenfor.
+- Prøv at udvælge nogle af opgaverne fra `either-or` projektet og implementere dem med enten en `switch` eller en **ternary operator** ligesom ovenfor.

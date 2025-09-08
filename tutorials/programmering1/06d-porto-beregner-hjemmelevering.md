@@ -1,4 +1,4 @@
-# Portoberegner - med hjemmelevering
+# Portoberegner - hjemmelevering
 
 1. Fortsæt på IntelliJ projektet `shipping-cost`
 2. De tidligere priser gælder for levering til en pakkeshop. Ved hjemmelevering er prisen højere, dvs.
@@ -7,7 +7,7 @@
     - Op til 5 kg: 85 kr
     - Op til 10 kg: 105 kr
     - Op til 20 kg: 175 kr
-6. Udvid `calculateShippingCost` metoden med en ekstra parameter `boolean isHomeDelivery`, der angiver om det er hjemmelevering eller levering til pakkeshop og udvid metoden til at tage højde for dette. Hint:
+6. Udvid `calculateShippingCost` metoden med en ny parameter `isHomeDelivery`, der angiver om det er hjemmelevering - og tag højde for dette. Hint:
     ```java
     if (weight <= 1.0) {
         if (isHomeDelivery) {

@@ -19,56 +19,41 @@
    }
    ```
 
-2. ```java
-   public static boolean bringUmbrella(double precipitation) {
-       // ...
-   }
-   ```
-
 3. ```java
    public static boolean isConsonant(char letter) {
        /// ...
    }
    ```
    
-4. ```java
+3. ```java
    public static String getDayOfWeek(int dayNumber) {
        // ...
    }
    ```
-
-5. ```java
-   public static boolean isEven(int number) {
-       // ...
-   }
-   ```
-
-6. ```java
+4. ```java
    public static String seasonForMonth(int month) {
        // ...
    }
    ```
 
-7. ```java
+5. ```java
    public static boolean canDrive(int age, boolean hasLicense) {
        // ...
    }
    ```
 
-8. ```java
-   public static boolean isBetween(int number, int min, int max) {
+6. ```java
+   public static boolean isBetween(int number, 
+                                   int min, 
+                                   int max) {
        // ...
    }
    ```
 
-9. ```java
-   public static int max(int a, int b) {
-       // ...
-   }
-   ```
-
-10. ```java
-    public static double applyDiscount(double price, boolean isMember) {
+7. ```java
+    public static double applyDiscount(double price, 
+                                       boolean isMember, 
+                                       int couponDiscount) {
         // ...
     }
     ```

@@ -16,7 +16,7 @@
    } else if (weight <= 2.0) {
        shippingCost = 65;
    } // ...
-   System.out.println("Forsendelsesomkostninger: " + shippingCost + " kr");
+   System.out.println("Porto: " + shippingCost + " kr");
    ```
 3. Test metoden med forskellige vægte for at sikre, at den returnerer de korrekte priser
 4. Ekstra: Hvordan kan vi håndtere vægte over 20 kg?

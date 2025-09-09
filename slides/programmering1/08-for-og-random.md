@@ -1,82 +1,3 @@
----
-title: 06 - Løkker og strenge
----
-<!-- .slide: class="ek-academic-fire" -->
-
-# Løkker og strenge
-
----
-<!-- .slide: class="k-sunlit-energy" -->
-
-## Program
-
-- 08:30 Praktisk information  
-- 09:00 Løkker
-- 10:00 Pause  
-- 10:15 Første program  
-- 11:30 Opsamling  
-
----
-
-# Løkker
-
----
-
-# Demo: Hvornår skal i bruge løkker
-
-Notes:
-
-- et eksempel hvor vi har brug for at gentage printning af noget
-- vejrtrækningsøvelsesprogram: 10 repetitioner
-- vis eksempel på at det er kedeligt at skrive det 10 gange
-- vis først uden sleep, så det ikke giver den rigtige effekt
-    ```java
-    public class Main {
-        public static void main(String[] args) {
-            System.out.println("1. Træk vejret langsomt ind");
-            sleep(4000);
-            System.out.println("2. Hold vejret");
-            sleep(4000);
-            System.out.println("3. Pust langsomt ud");
-            sleep(4000);
-            System.out.println("4. Hold vejret");
-            sleep(4000);
-            System.out.println("1. Træk vejret langsomt ind");
-            sleep(4000);
-            System.out.println("2. Hold vejret");
-            sleep(4000);
-            System.out.println("3. Pust langsomt ud");
-            sleep(4000);
-            System.out.println("4. Hold vejret");
-            sleep(4000);
-            System.out.println("5. Træk vejret langsomt ind");
-            // ...
-        }
-    }
-    ```
-- vi har lært at lave metoder, som vi bruger for at undgå gentagelse af kode
-    ```java
-    public class Main {
-        public static void main(String[] args) {
-            breathCycle();
-            breathCycle();
-            // ...
-        }
-        public static void breathCycle() {
-            System.out.println("1. Træk vejret langsomt ind");
-            sleep(4000);
-            System.out.println("2. Hold vejret");
-            sleep(4000);
-            System.out.println("3. Pust langsomt ud");
-            sleep(4000);
-            System.out.println("4. Hold vejret");
-            sleep(4000);
-        }
-    }
-    ```
-- men hvordan gør vi vores program dynamisk, så vi kan ændre antallet af gentagelser?
-
---
 
 ## Iteration over et array
 
@@ -266,35 +187,6 @@ Notes:
     ```
 ---
 
-# Demo: Uendelig løkke
-
-Notes:
-- Lad os fjerne `age++` fra koden, så vi aldrig bliver ældre.
-    ```java
-    int age = 0;
-    while (age < 18) {
-        System.out.println("Ud! Du er kun " + age + " år gammel.");
-    }
-    ```
-- Hvad sker der her?
-- Vi har lavet en uendelig løkke, fordi `age` aldrig bliver større end 18
-- Det betyder at løkken aldrig stopper, og programmet kører i en uendelig løkke
-- Det er en fejl, der kan være svær at finde, da programmet ikke giver nogen fejlmeddelelse
-- Vi kan stoppe programmet ved at trykke på "Stop" knappen i IDE'en eller trykke på Ctrl+C i terminalen
-- En alternativ måde at "bryde" løkken på er at bruge `break` statementet, som vi kan bruge til at afslutte løkken, når vi har fået et gyldigt input
-
-```java
-int age = 0;
-while (true) {
-    if (age >= 18) {
-        break; // Afslut løkken, hvis brugeren er gammel nok
-    }
-    System.out.println("Ud! Du er kun " + age + " år gammel.");
-    age++;
-}
-System.out.println("Velkommen til baren! Du er " + age + " år gammel.");
-```
-
 ---
 
 # Iteration over lister
@@ -345,6 +237,3 @@ for (int i = 0; i < ages.length(); i++) {
 }
 
 System.out.println("Den ældste er " + ageOldest);
----
-<!-- .slide: class="k-sunlit-energy" -->
-Tre ting du tager med fra fra i dag?

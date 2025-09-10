@@ -1,6 +1,6 @@
 # Never ending story
-- Lav et nyt IntelliJ-projekt kaldet `never-ending-story`, hvori du har en klasse og en `main` metode
-- Fix den fejl der gør at programmerne herunder aldrig stopper
+- Lav et nyt IntelliJ-projekt kaldet `never-ending-story`.
+- Fix den fejl der gør at programmerne ikke stopper
 1. ```java
    int retries = 3;
    while (retries > 0) {

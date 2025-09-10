@@ -5,7 +5,7 @@
   String text = "strawberry";
   String part = text.substring(5);
   System.out.println(part);
-```
+  ```
 - Hvad printer den? Hvad gør `substring` metoden?
 - Prøv at ændre `5` til et andet tal. Hvad sker der?
 - Prøv også at bruge `substring` med to parametre, som her:

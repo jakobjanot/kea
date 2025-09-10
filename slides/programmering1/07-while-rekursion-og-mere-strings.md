@@ -22,11 +22,11 @@ title: 06 - Løkker, Strings og rekursion
 
 --
 
-I dag skal vi lære om **løkker** (eng: loops)
+I dag skal vi lære om **løkker**
 
 --
 
-Ikke den slags *Løkke*r
+Ikke den slags *Løkke*
 
 ![Lille-lars fra Græsted](img/lille-lars.png)
 
@@ -148,6 +148,17 @@ while (repetitions > 0) {
 
 --
 
+```java [3,6|4,5]
+int repetitions = 10;
+
+while (repetitions > 0) {
+  breathCycle();
+  repetitions--;
+}
+```
+
+--
+
 #### while-løkkens
 
 ```java [1,3|2]
@@ -258,6 +269,44 @@ En uendelig løkke kan være nyttig, fx
 - i spil, hvor spillet skal køre indtil brugeren lukker det ned
 - i servere, der skal køre og lytte efter beskeder hele tiden
 
+--
+
+Der er andre måder at ende i en uendelig løkke på
+```java
+public static void breathCycle() {
+    System.out.println("1. Træk vejret langsomt ind");
+    System.out.println("2. Hold vejret");
+    System.out.println("3. Pust langsomt ud");
+    System.out.println("4. Hold vejret");
+    
+    breathCycle(); // rekursion
+}
+```
+
+---
+<!-- .slide: class="cover-5" -->
+# Rekusion
+
+> Når en metode kalder sig selv
+
+--
+
+```java
+public static void countDown(int n) {
+    if (n <= 0) {
+        System.out.println("Liftoff!");
+    }
+    
+    System.out.println(n);
+    countDown(n - 1);
+}
+```
+
+som vi kan kalde med
+
+```java
+countDown(10);
+```
 
 ---
 

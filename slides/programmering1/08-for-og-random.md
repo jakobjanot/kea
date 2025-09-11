@@ -26,8 +26,9 @@ Java har to typer af løkker
 - `for`: Gentag et antal gange
 
 --
-
-Sidste gang brugte vi `while` løkker til at gentage noget, så længe en betingelse var sand
+<!-- .slide: class="large" -->
+Sidste gang brugte vi `while` løkker til at gentage noget,  
+så længe en betingelse var sand
 
 ```java
 while (condition) {
@@ -36,7 +37,7 @@ while (condition) {
 ```
 
 --
-
+<!-- .slide: class="large" -->v
 Men fordi kun kendte `while` løkker, brugte vi dem til alt
 
 ```java
@@ -49,6 +50,7 @@ while (count < 10) {
 
 --
 
+<!-- .slide: class="large" -->
 Der er en lettere måde når man ved, hvor mange gange noget skal gentages
 
 ```java
@@ -59,6 +61,7 @@ for (int i = 0; i < 10; i = i + 1) {
 
 --
 
+<!-- .slide: class="large" -->
 ```java
 for (int i = 0; i < 10; i = i + 1)
 ```
@@ -82,6 +85,7 @@ Ikke nødvendigt at bruge et meningsfuldt navn, da det kun bruges internt i løk
 
 --
 
+<!-- .slide: class="large" -->
 Vi kan selvfølgelig også bruge `i++` til at øge `i` med 1
 
 ```java
@@ -92,6 +96,7 @@ for (int i = 0; i < 10; i++) {
 
 --
 
+<!-- .slide: class="large" -->
 Tilsvarende kan vi også tælle nedad med `i--`
 
 ```java
@@ -102,6 +107,7 @@ System.out.println("Lift off!");
 ```
 
 --
+<!-- .slide: class="large" -->
 
 Vi kan også tælle med andre intervaller
 
@@ -114,6 +120,7 @@ for (int i = 0; i < 20; i = i + 2) {
 ... 2-tabellen
 
 --
+<!-- .slide: class="large" -->
 
 Vi kan også iterere hen over `char` værdier
 (husk at 65 er 'A', 66 er 'B', osv.)
@@ -124,11 +131,13 @@ for (char c = 'A'; c <= 'Z'; c++) {
 }
 ```
 
---
+---
+<!-- .slide: class="cover-4" -->
 
 # Indlejrede `for` løkker
 
 --
+<!-- .slide: class="large" -->
 
 Hvor mange 'a'´er, 'b'´er, osv. er der i 
 
@@ -145,6 +154,7 @@ for (char c = 'a'; c <= 'e'; c++) {
 ```
 
 --
+<!-- .slide: class="large" -->
 
 Hvad tror i den her gør?
 
@@ -153,12 +163,6 @@ for (;;;) {
     System.out.println("Jeg kan en sang, der kan drive dig til vanvid!");
 }
 ```
-
---
-
-Noget i den her stil?
-
-<iframe width="750" height="422" src="https://www.youtube.com/watch?v=x_xFS-05XUc" title="Jeg kan en sang der kan drive dig til vanvid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 <!-- .slide: class="cover-3" -->
@@ -183,8 +187,10 @@ Vidste i at jeres computerspil Minecraft bruger tilfældighed til at generere ve
 Så derfor vil vi gerne kunne generere tilfældige tal i Java
 
 -- 
+<!-- .slide: class="large" -->
 
-Det kan vi gøre med `java.util.Random` klassen. Fx et tilfældigt tal mellem 0 og 99:
+Det kan vi gøre med `java.util.Random` klassen.  
+Fx et tilfældigt tal **mellem 0 og 99**:
 
 ```java
 Random random = new Random();
@@ -192,8 +198,9 @@ int randomNumber = random.nextInt(100);
 ```
 
 --
+<!-- .slide: class="large" -->
 
-... men jeg vil ha et tal mellem 1 og 100
+... men jeg vil ha et tal **mellem 1 og 100**
 
 ```java
 Random random = new Random();
@@ -201,8 +208,9 @@ int randomNumber = random.nextInt(100) + 1;
 ```
 
 --
+<!-- .slide: class="large" -->
 
-Hvad så med et komma-tal mellem 0.0 og 1.0?
+Hvad så med et komma-tal **mellem 0.0 og 1.0**?
 
 ```java
 Random random = new Random();
@@ -210,8 +218,9 @@ double randomDouble = random.nextDouble();
 ```
 
 --
+<!-- .slide: class="large" -->
 
-Men jeg vil ha et komma-tal mellem -1.0 og 1.0
+Men jeg vil ha et komma-tal **mellem -1.0 og 1.0**
 
 ```java
 Random random = new Random();
@@ -220,13 +229,22 @@ double randomDouble = random.nextDouble(2.0) - 1.0;
 
 --
 
-Det er irritende at det er tilfældigt hver gang vi kører programmet, jeg kan jo ikke teste det ordentligt!
+Det er irritende at det er tilfældigt hver gang vi kører programmet,  
+jeg kan jo ikke teste det ordentligt!
 
 --
+<!-- .slide: class="large" -->
 
-Vi kan sætte et "seed" (frø) for tilfældighedsgeneratoren, så den altid genererer de samme tal
+**Seed** (frø): Vi kan sætte et startpunkt for tilfældighedsgeneratoren  
+og få **pseudo-tilfældige** tal - der er de **samme hver gang**.  
+
 
 ```java
 Random random = new Random(60); // seed
 int randomNumber = random.nextInt(100) + 1;
 ```
+
+---
+<!-- .slide: class="o-sunlit-energy" -->
+
+Hvilke tre ting tager du med dig fra i dag?

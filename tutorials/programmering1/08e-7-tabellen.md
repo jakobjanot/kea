@@ -18,13 +18,8 @@
   ```
    1 * 7 =  7
    2 * 7 = 14
-   3 * 7 = 21
-   4 * 7 = 28
-   5 * 7 = 35
-   6 * 7 = 42
-   7 * 7 = 49
-   8 * 7 = 56
-   9 * 7 = 63
+   (forkortet)
   10 * 7 = 70
   ```
-- Prøv at rette koden så den printer 6 tabellen
+- Prøv at rette koden så den printer 6 tabellen. Virker det?
+- Prøv at rette koden så brugeren kan indtaste et tal mellem 1 og 9 og få den tilsvarende tabel printet ud. Fx indtaster brugeren 3 og får 3 tabellen. Virker det?

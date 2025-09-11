@@ -10,9 +10,7 @@ title: 06 - Løkker, Strings og rekursion
 
 ## Program
 
-- Mere om Strings
-- Rekursion
-- Løkker
+- Løkker, Rekursion og mere om `String`'s
 - Øvelser
 - Opsamling
 
@@ -71,21 +69,21 @@ Notes:
 public class Main {
     public static void main(String[] args) {
         System.out.println("1. Træk vejret langsomt ind");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("2. Hold vejret");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("3. Pust langsomt ud");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("4. Hold vejret");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("1. Træk vejret langsomt ind");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("2. Hold vejret");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("3. Pust langsomt ud");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("4. Hold vejret");
-        sleep(4000);
+        Thread.sleep(4000);
         // ...
     }
 }
@@ -104,13 +102,13 @@ public class Main {
     }
     public static void breathCycle() {
         System.out.println("1. Træk vejret langsomt ind");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("2. Hold vejret");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("3. Pust langsomt ud");
-        sleep(4000);
+        Thread.sleep(4000);
         System.out.println("4. Hold vejret");
-        sleep(4000);
+        Thread.sleep(4000);
     }
 }
 ```
@@ -157,16 +155,6 @@ while (repetitions > 0) {
 }
 ```
 
---
-
-#### while-løkkens
-
-```java [1,3|2]
-while (_condition_) {
-    // execute as long as condition is true
-}
-```
-
 ---
 <!-- .slide: class="cover-9" -->
 
@@ -193,6 +181,14 @@ while (age < 0 || age > 100) {
 }
 System.out.println("Din alder er: " + age);
 ```
+
+Så længe brugeren indtaster en alder, der er mindre end 0 eller større end 100, bliver der ved med at spørge om en ny alder, dvs.
+
+Indtast din alder: 101
+Indtast din alder: -5
+Indtast din alder: 44
+Din alder er: 44
+
 --
 
 En `String` er en liste af `char`-værdier

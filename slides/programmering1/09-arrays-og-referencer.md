@@ -203,6 +203,31 @@ Notes:
 ---
 
 
+
+Hvorfor starter vi ikke på 1?
+
+
+--
+
+indekset er i virkeligheden en forskydning (offset) fra starten af array'et, 
+så det første element er ved forskydning 0, det andet ved forskydning 1, osv.
+
+```mermaid
+graph TD;
+    A[Array start] --> B[0]
+    A --> C[1]
+    A --> D[2]
+    A --> E[3]
+```
+Notes:
+- Indeksering starter ved 0, fordi det er en forskydning (offset) fra starten af array'et.
+- Det første element er ved forskydning 0, det andet ved forskydning 1, osv.
+- Moderne sprog har nedarvet denne konvention fra ældre sprog som C, hvor det var nødvendigt for effektiv hukommelsesadgang.
+- Der er dog sprog som Fortran og MATLAB, der starter indeksering ved 1, men det er mindre almindeligt - og ofte forbundet med forvirring
+
+
+--
+
 # Om String og char
 
 # Mere String

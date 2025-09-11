@@ -10,4 +10,3 @@
     }
   ```
 - Test programmet og se om det virker
-- Prøv nu at sætte en seed-værdi på din Random generator, fx `new Random(123);`. Kør programmet flere gange, hvad sker der?

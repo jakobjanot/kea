@@ -29,3 +29,5 @@ public class StoneScissorPaper {
         else { System.out.println("Uafgjort!"); }
 }
 ```
+- Test programmet og se om det virker
+- (Valgfrit) Brugen af final variabler til sten, saks og papir gør koden mere læsbar. En mere almindelig måde at gøre det på er med en `enum`. Google `enum` eller få ChatGPT til at forklare brugen af `enum`. Prøv herefter at omskrive koden til at bruge en `enum` i stedet for `final` variabler.

@@ -1,7 +1,7 @@
 ---
 title: 07 - Array og referencer
 ---
-<!-- .slide: class="ek-academic-fire" -->
+<!-- .slide: class="cover-14" -->
 
 # Arrays og referencer
 
@@ -10,11 +10,9 @@ title: 07 - Array og referencer
 
 ## Program
 
-- 08:30 Array og referencer
-- 09:00 Øvelser  
-- 10:00 Pause  
-- 10:15 Vi fortsætter med øvelser  
-- 11:30 Opsamling  
+- Array og referencer
+- Øvelser  
+- Opsamling  
 
 ---
 
@@ -22,7 +20,7 @@ title: 07 - Array og referencer
 
 --
 
-Spørg din sidemakker:
+Diskuter med din sidemakker:
 *Hvorfor bruger vi variable?*
 
 Notes:
@@ -31,6 +29,9 @@ Notes:
 - Det gør vores kode mere læsbar og lettere at vedligeholde.
 
 --
+<!-- .slide: class="large" -->
+
+Indtil nu har vi arbejdet med variable, som gemmer **en enkelt værdi**.
 
 ```java
 int coins;
@@ -38,23 +39,29 @@ coins = 50;
 ```
 
 Notes:
-- Indtil nu har vi arbejdet med variable, som gemmer en enkelt værdi.
 - Vi kan give den et navn og bruge den andre steder i programmet.
 - For eksempel, bruger vi her en `int` variabel `coins` til at gemme antallet af guld-mønter, som vi har i vores skattekiste
 - Men, nogle gange har vi brug for at gemme en række værdier i én variabel, fx en liste af tal eller en tekststreng. I Java kan vi bruge arrays til at gemme flere værdier af samme type.
 
 --
 
+Nogle gange har vi brug for at gemme **en række værdier** i én variabel
+
+--
+
 ![Fire skattekister](img/four-chests.jpg)
 
+--
+<!-- .slide: class="large" -->
 ```java
 int[4] chests;
 ```
 
 --
+<!-- .slide: class="large" -->
 
 ```java
-int[4] chests;
+int[4] chests = new int[4];
 ```
 
 ![Tomme kister](img/chests-empty.svg)
@@ -65,6 +72,8 @@ Notes:
 - Bemærk at vi bruger `[]` for at angive, at det er en array.
 
 --
+<!-- .slide: class="large" -->
+
 
 Piraten gemmer 50 mønter i den **første** kiste.
 
@@ -78,6 +87,7 @@ Notes:
 - Her gemmer vi 50 mønter i den første kiste, som er `chests[0]`.
 
 --
+<!-- .slide: class="large" -->
 
 ![Mønter i første kiste](img/chests-1.svg)
 
@@ -87,17 +97,20 @@ chests[0] = 50;
 ```
 
 --
-
+<!-- .slide: class="large" -->
 Lad os gemme 10 mønter i den sidste kiste. 
 
 ```java
 chests[???] = 10;
-``` 
+```
+
+\- hvad er indekset for den sidste kiste?
 
 Notes:
 - Hvad er indekset for den sidste kiste?
 
 --
+<!-- .slide: class="large" -->
 
 ![Mønter i første og sidste kiste](img/chests-1-4.svg)
 
@@ -108,6 +121,9 @@ chests[3] = 10;
 ```
 
 --
+<!-- .slide: class="large" -->
+
+Vi kan initialisere en array med værdier direkte:
 
 ```java
 int[] chests = {50, 0, 0, 10};
@@ -121,6 +137,8 @@ Notes:
 
 Vi kan tilgå værdierne i array'et ved at bruge indekset.
 
+--
+
 Spørgsmål: *Hvilket indeks har den anden kiste?*
 
 Notes:
@@ -128,6 +146,7 @@ Notes:
 - Husk at indekset starter fra 0, så den anden kiste er `chests[1]`.
 
 --
+<!-- .slide: class="large" -->
 
 ```java
 int[] chests = {50, 0, 0, 10};
@@ -140,6 +159,8 @@ Notes:
 - Vi gemmer værdien i `secondChest`
 
 --
+<!-- .slide: class="large" -->
+
 
 Vi kan fjerne 20 mønter fra den første kiste.
 
@@ -148,6 +169,7 @@ chests[0] = chests[0] - 20; // 30
 ````
 
 --
+<!-- .slide: class="large" -->
 
 Alternativt, med `-=`
 
@@ -156,128 +178,195 @@ chests[0] -= 20; // 30
 ```
 
 ---
+<!-- .slide: class="cover-2" -->
 
-# Primitive datatyper vs. reference datatyper
-
---
-
-```java
-int age = 34;
-String name = "Alice";
-```
-
-Notes: 
-- Vi har tidligere talt om at variable er en måde at gemme data på.
-- Vi har anvendt variable med forskellige datatyper, som fx `int`, `double`, `char` og `String`
-- Vi har brugt `int`, `double`, `char` og `String` som datatyper.
+# Primitive vs. reference
 
 --
 
+Primitive datatyper (fx `int`, `double`, `char`)
+
 ```java
-int age = 34;          // en primitive datatype
-String name = "Alice"; // en reference datatype
+int a = 5;
+int b = a;
+a = 10;
+System.out.println(b); // Hvad bliver der printet?
 ```
 
 Notes:
-
-- Måske har I bemærket at String er anderledes end de andre datatyper?
-- Der er forskellige typer af datatyper i Java:
-  - **Primitive datatyper**: Disse gemmer en enkelt værdi, fx `int`, `double`, `char`.
-  - **Reference datatyper**: Disse gemmer en reference til et objekt, fx `String`, arrays, objekter.
+- Hvad bliver der printet?
+- Det bliver 5, fordi `b` får en kopi af værdien i `a` på det tidspunkt, hvor `b` bliver tildelt.
+- aka. når vi skriver `int b = a;`, så kopierer vi værdien af `a` (som er 5) ind i `b`.
+- Ændringen af `a` påvirker ikke `b`, fordi de er to separate variable, der hver især gemmer deres egen værdi.
 
 --
 
-```mermaid
-graph TD;
-    A[int age = 34] -->|Primitive datatype| B[34]
+Reference datatyper (fx `String`, arrays, objekter)
+
+```java
+int[] arr1 = {1, 2, 3};
+int[] arr2 = arr1;
+arr1[0] = 10;
+System.out.println(arr2[0]); // Hvad bliver der printet?
 ```
 
 Notes:
-- Lad os kigge nærmere på forskellen mellem primitive og reference datatyper.
-- **Primitive datatyper** gemmer selve værdien direkte i variablen.
+- Hvad bliver der printet?
+- Det bliver 10, fordi `arr2` refererer til den samme array som `arr1`.
+- Når vi skriver `int[] arr2 = arr1;`, så kopierer vi referencen (adressen) til array'et, ikke selve værdierne.
+- Ændringen af `arr1` påvirker også `arr2`, fordi de begge refererer til den samme array i hukommelsen.
 
+--
 
-`int temperature = 34;` - **Primitive datatyper** (fx `int`, `double`, `char`)
+Kort sagt:
 
+- reference datatyper **gemmer en reference** til data, mens
+- primitive datatyper gemmer **selve dataen**.
+
+--
+
+# Stack og heap
+
+--
+
+Java bruger to hukommelsesområder til at gemme data: stack og heap.
+
+--
+
+- **Stack**: Her gemmes **primitive datatyper og referencer**. 
+- **Heap**: Her gemmes den data, som referencer peger på. 
+
+--
+
+- **Stack'en** er hurtig at tilgå, men har **begrænset størrelse**
+- **Heap'en** er langsommere at tilgå, men har **større kapacitet**
+
+--
+<!-- .slide: class="large" -->
+```txt
+Stack Frame:                Heap:
++------------------+        +-----------------------+
+| name   = 0x1A2B --------> | 0x1A2B: "Jakob"       |
+| image  = 0x3C4D --------> | 0x3C4D: [0, 1, 255, 3]|
+| height = 179.50  |        +-----------------------+
+| age    = 34      |
++------------------+
+```
+
+0x1A2B og 0x3C4D er referecer (adresser) til data i heap'en.
 
 ---
+<!-- .slide: class="cover-2" -->
 
+# Arrays og indeksering
 
+--
+<!-- .slide: class="large" -->
+
+```java
+String[] names = {"Alice", "Bob", "Charlie", "Diana"};
+```
+
+hvorfor er **Alice** i `names[0]` og ikke i `names[1]`?
+
+--
 
 Hvorfor starter vi ikke på 1?
 
-
 --
 
-indekset er i virkeligheden en forskydning (offset) fra starten af array'et, 
-så det første element er ved forskydning 0, det andet ved forskydning 1, osv.
+Indekset er i virkeligheden en **forskydning** (offset) fra hukommelsesadressen, så   
+\- det første element er ved **forskydning 0**,   
+\- det andet ved **forskydning 1**, osv.
 
-```mermaid
-graph TD;
-    A[Array start] --> B[0]
-    A --> C[1]
-    A --> D[2]
-    A --> E[3]
-```
 Notes:
-- Indeksering starter ved 0, fordi det er en forskydning (offset) fra starten af array'et.
-- Det første element er ved forskydning 0, det andet ved forskydning 1, osv.
 - Moderne sprog har nedarvet denne konvention fra ældre sprog som C, hvor det var nødvendigt for effektiv hukommelsesadgang.
 - Der er dog sprog som Fortran og MATLAB, der starter indeksering ved 1, men det er mindre almindeligt - og ofte forbundet med forvirring
 
+--
+
+# Om call-by-value
 
 --
 
-# Om String og char
-
-# Mere String
-
-# Karaktersæt - ASCII og Unicode
-
-Nogle bud på hvad der bliver udskrevet:
-
-```java
-char c1 = 74;
-char c2 = 65;
-char c3 = 86;
-System.out.println("Jeg elsker " + c1 + c2 + c3 + c2);
-```
+I Java er alle argumenter til metoder **call-by-value**.
 
 --
 
-Derfor kan vi også printe fra `'A'` til `'Z'`:
+Det betyder at:
+- primitive datatyper bliver kopieret (call-by-value)
+- reference datatyper bliver kopieret (call-by-value af referencen)
+
+--
+<!-- .slide: class="large" -->
 
 ```java
-for (char c = 'A'; c <= 'Z'; c++) {
-    System.out.print(c);
+public static void modify(int a) {
+    a = 100;
 }
+
+int x = 5;
+modify(x);
+
+System.out.println(x); // Hvad bliver der printet?
 ```
-
-giver 
-
-"**A**BCDEFGHIJKLMNOPQRSTUVXYABCDEFGHIJKLMNOPQRSTUVWXY**Z**"
-
---
-
-... og fra `'A'` til `'Å'`, men:
-
-```java
-for (char c = 'A'; c <= 'Å'; c++) {
-    System.out.print(c);
-}
-```
-
-giver derimod
-
-"**A**BCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄ**Å**"
-
-# 🤔
-
---
-
-## I gamle dage 
-
-
 
 Notes:
-I gamle var det ikke helt ualmindeligt at få en mail der 
+- Hvad bliver der printet?
+- Det bliver 5, fordi `a` er en kopi af `x`.
+- Ændringen af `a` påvirker ikke `x`, fordi de er to separate variable.
+
+--
+<!-- .slide: class="large" -->
+
+```java
+public static void modify(int[] arr) {
+    arr[0] = 100;
+}
+
+int[] chests = {50, 0, 0, 10};
+modify(chests);
+
+System.out.println(chests[0]); // Hvad bliver der printet?
+```
+
+Notes:
+- Hvad bliver der printet?
+- Det bliver 100, fordi `arr` refererer til den samme array som `myArray`.
+- Ændringen af `arr` påvirker `myArray`, fordi de begge refererer til den samme array i hukommelsen.
+
+---
+<!-- .slide: class="cover-3" -->
+# for og foreach
+
+--
+<!-- .slide: class="large" -->
+Vi kan bruge en `for`-løkke til at iterere over et array:
+
+```java
+int[] chests = {50, 0, 0, 10};
+
+for (int i = 0; i < chests.length; i++) {
+    System.out.println(chests[i]);
+}
+```
+
+--
+
+... men der er en smartere måde:
+
+--
+<!-- .slide: class="large" -->
+
+Vi kan bruge denne `foreach`-løkke til at iterere over et array:
+
+```java
+for (int chest : chests) {
+    System.out.println(chest);
+}
+```
+
+---
+<!-- .slide: class="o-sunlit-energy" -->
+
+Hvilke tre ting tager du med fra i dag?

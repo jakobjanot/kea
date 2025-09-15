@@ -4,7 +4,7 @@ Arrays:
 
 Bund: “tynd”, “tyk”, “fuldkorn”
 
-Fyld: “ost”, “pepperoni”, “ananas”, “champignon”
+Fyld: “ost”, “pepperoni”, “ananas”, “champignon”, “skinke”, “peberfrugt”, “løg”, “oliven”, “kebab”, “
 
 Sovs: “tomat”, “hvidløg”, “BBQ”
 

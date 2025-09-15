@@ -1,6 +1,12 @@
-
-
 # Om String og char
+
+# `Arrays`-klassen
+
+Bruge metoder fra Arrays-klassen (f.eks. Arrays.toString(), Arrays.sort(), Arrays.copyOf()).
+Forstå forskellen mellem at kopiere en reference og at lave en ny kopi af et array.
+Forklare forskellen mellem primitive typer og reference typer i Java.
+Forstå hvordan arrays i Java fungerer som referencer, og hvad det betyder for ændringer af arrayets indhold.
+Forstå hvorfor ændringer i en metode kan påvirke det originale array.
 
 # Mere String
 

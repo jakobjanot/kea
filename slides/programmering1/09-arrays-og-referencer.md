@@ -54,14 +54,14 @@ Nogle gange har vi brug for at gemme **en række værdier** i én variabel
 --
 <!-- .slide: class="large" -->
 ```java
-int[4] chests;
+int[] chests;
 ```
 
 --
 <!-- .slide: class="large" -->
 
 ```java
-int[4] chests = new int[4];
+int[] chests = new int[4];
 ```
 
 ![Tomme kister](img/chests-empty.svg)

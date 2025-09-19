@@ -2,7 +2,7 @@
 
 - Find og ret fejlene i kodeeksemplerne nedenfor
 
-1. `services/ProductService.java`
+1. Hvad er galt med `services/ProductService.java`
    ```java
    package services;
 
@@ -12,7 +12,7 @@
        }
    }
    ```
-   `Main.java`
+   og `Main.java`?
    ```java
 
    public class Main {
@@ -22,7 +22,7 @@
    }
    ```
 
-2. `services/UserService.java`
+2. Hvad er galt med `services/UserService.java`
    ```java
    package users;
 
@@ -32,7 +32,7 @@
        }
    }
    ```
-   `Main.java`
+   og `Main.java`?
    ```java
    import services.UserService;
 
@@ -43,7 +43,7 @@
    }
    ```
 
-3. `utils/Math.java`
+3. Hvad er galt med `utils/Math.java`
    ```java
    package utils;
 
@@ -53,7 +53,7 @@
        }
    }
    ```
-   `app/Main.java`
+   og `app/Main.java`?
    ```java
    package app;
    import utils.MathUtils;
@@ -65,7 +65,7 @@
        }
    }
    ```
-4. `data/Database.java`
+4. Hvad er galt med `data/Database.java`
    ```java
    package data;
 
@@ -75,7 +75,7 @@
        }
    }
    ```
-   `app/Main.java`
+   og `app/Main.java`
    ```java
    package app;
    import data.Database;
@@ -86,7 +86,7 @@
        }
    }
    ```
-5. `tools/Logger.java`
+5. Hvad er galt med `tools/Logger.java`
    ```java
    package tools;
 
@@ -97,10 +97,10 @@
    }
    ```
 
-   `app/Main.java`
+   og `app/Main.java`?
    ```java
    import tools.Logger;
-   
+
    public class Main {
        public static void main(String[] args) {
            Logger.log("Application started");

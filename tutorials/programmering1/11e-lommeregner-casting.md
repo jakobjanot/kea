@@ -1,4 +1,4 @@
-# Lommeregner++
+# Lommeregner og casting
 
 Husker du `casting`? Vi kan caste, altså at konvertere en type til en anden type, fx fra `double` til `int`? Når der castes fra `double` til `int` bliver decimalerne bare skåret væk (dvs. et tab af information), fx:
 ```java

@@ -1,3 +1,7 @@
+---
+title: 10 - Mere om Arrays
+---
+
 # Om String og char
 
 # `Arrays`-klassen

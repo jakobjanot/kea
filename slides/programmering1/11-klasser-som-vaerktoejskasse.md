@@ -2,12 +2,12 @@
 title: 11 - Klasser som værktøjskasser
 ---
 <!-- .slide: class="cover-3" -->
-# Klasser som hjælpeværktøjer
+## Klasser som værktøjskasser
 
 ---
 <!-- .slide: class="o-sunlit-energy" -->
 
-Program:
+## Program:
 
 - Hvad er en hjælpeklasse?
 - Hvordan laver vi en?
@@ -34,8 +34,7 @@ organiserer vi kode i **klasser**
 
 Konventioner: 
 - Én klasse per fil
-- Filnavn = klassenavn 
-- `Math.java` = klassen `Math` 
+- Filnavn (`Math.java`) = klassenavn (`Math`)
 
 Notes:
 - Noget om at Java har en konvention om at hver klasse skal være i sin egen fil
@@ -44,20 +43,23 @@ Notes:
 ---
 <!-- .slide: class="cover-14" -->
 
-# Hjælpeklasser - en værktøjskasse
+## Hjælpeklasser
 
 --
 
 Nogle klasser er **værktøjskasser** med nyttige metoder
 
 --
+<!-- .slide: class="x-large" -->
 
-Eksempel: Hjælpeklassen Math
-  - `Math.sqrt(16)`
-  - `Math.pow(2, 3)`
-  - `Math.random()`
-  - `Math.max(3, 7)`
+Eksempel: Hjælpeklassen `java.lang.Math`
+```java
+import java.lang.Math;
 
+Math.sqrt(16);
+Math.pow(2, 3);
+Math.max(3, 7);
+```
 --
 
 Bemærk: Vi skriver altid `Math.` foran metoderne
@@ -65,9 +67,25 @@ Bemærk: Vi skriver altid `Math.` foran metoderne
 \- det er fordi klassen hedder `Math`
 
 --
+<!-- .slide: class="x-large" -->
 
-Og metoderne er `static`
+Vi kunne også skrive
+```java
+java.lang.Math.sqrt(16);
+java.lang.Math.pow(2, 3);
+java.lang.Math.max(3, 7);
+```
 
+--
+
+Metoderne i `java.lang.Math` er `static`
+
+--
+<!-- .slide: class="o-sunlit-energy" -->
+
+DEMO: Er `Math` klassens metoder `static`?
+Notes:
+- Tjek i Intellij
 --
 
 Spørgsmål: Hvad betyder `static`?
@@ -81,6 +99,16 @@ Svar: Metoden tilhører klassen, ikke et objekt
 Dvs. vi behøver ikke at lave et objekt af klassen Math for at bruge metoderne
 
 --
+<!-- .slide: class="x-large" -->
+
+Med andre ord, vi behøver ikke
+
+```java
+Math math = new Math();
+math.sqrt(16);
+```
+
+--
 
 Derfor har alle vores egne metoder, vi har kaldt fra `main`, også været `static`
 
@@ -90,6 +118,7 @@ Fordi vi har kaldt metoder indenfor samme klasse som `main`,
 har vi ikke skullet skrive klassens navn foran
 
 --
+<!-- .slide: class="large" -->
 
 ```java
 public class Main {
@@ -105,12 +134,14 @@ public class Main {
 
 --
 
+<!-- .slide: class="large" -->
+
 Vi kunne også...
 
 ```java
 public class Main {
     public static void main(String[] args) {
-        Main.sayHello();
+        Main.sayHello(); // Main. foran
     }
 
     public static void sayHello() {
@@ -127,6 +158,7 @@ Men så er der jo også `String` og `Scanner` og `Random`
 Her skulle vi **instantiere et objekt** af klassen først, for at bruge metoderne
 
 --
+<!-- .slide: class="x-large" -->
 
 a.k.a. 
 ```java
@@ -134,7 +166,9 @@ String text = new String("Hello");
 Scanner input = new Scanner(System.in);
 Random random = new Random(342);
 ```
+
 --
+<!-- .slide: class="x-large" -->
 
 og så kalde metoder på objektet:
 ```java
@@ -145,18 +179,21 @@ random.nextInt(10);
 
 --
 
-Men - det er emnet næste gang
+Det vil vi selvfølgelig også kunne med vores egne klasser
+
+--
+
+Men - det er emnet i en senere i kurset
 
 ---
 
 <!-- .slide: class="cover-10" -->
-Packages og import
+# `package` og `import`
 
 --
+<!-- .slide: class="x-large" -->
 
-Vi har brugt `import` til at hente klasser fra Java's standardbibliotek
-
-f.eks.
+Vi har brugt `import` til at hente klasser fra Java's standardbibliotek, fx.
 ```java
 import java.util.Scanner;
 ```
@@ -167,12 +204,13 @@ Hvad gør `import`?
 
 --
 
-`import` gør det muligt at bruge klasser fra andre pakker uden at skulle skrive den fulde sti hver gang.
+`import` gør det muligt at bruge klasser fra andre pakker  
+... uden at skulle skrive den fulde sti hver gang.
 
 --
 <!-- .slide: class="sunlit-energy" -->
 
-Lad os lede efter `Scanner`-klassen i Java's kildekode
+DEMO: Lad os lede efter `Scanner`-klassen i Java's kildekode
 
 Notes:
 - `jenv which`
@@ -182,12 +220,16 @@ Notes:
 
 --
 
+<!-- .slide: class="x-large" -->
+
 I toppen af `Scanner.java` står der:
 ```java
 package java.util;
 ```
 
 --
+
+<!-- .slide: class="x-large" -->
 
 Så `Scanner`-klassen tilhører pakken `java.util`.
 Altså kan vi importere den med:
@@ -197,7 +239,26 @@ import java.util.Scanner;
 
 --
 
-Konvention: Pakke-navne er altid små bogstaver
+Konvention: Pakke-navne er altid små bogstaver, fx
+```java
+package calculator;
+```
+
+--
+
+Konvention: Pakke-navne med flere niveauer adskilles med punktum, fx
+```java
+package dk.kea.calculator;
+```
+
+--
+
+Store apps bruger ofte domænenavne bagfra i pakke-navne, fx
+```java
+package com.google.code.gson;
+package org.springframework.boot;
+```
+
 --
 
 Konvention: Pakke-navne og mappenavne skal matche.  
@@ -226,18 +287,24 @@ Hvad nu hvis Java også havde en klasse der hed `Math`?
 ... hvis ikke det var for `package`s
 
 --
+<!-- .slide: class="large" -->
 
 så vi kunne kalde min klasse `dk.kea.calculator.Math` ved at:
 
-- ligge min `Math.java` i mappen `dk/kea.calculator/`
-- tilføje flg. i toppen af filen:
+.. ligge min `Math.java` i mappen `dk/kea.calculator/`
+
+--
+<!-- .slide: class="x-large" -->
+... tilføje flg. i toppen af filen:
    ```java
    package dk.kea.calculator;
    public class Math {
        // ...
    }
    ```
-- og så importere den i en anden fil med:
+--
+<!-- .slide: class="x-large" -->
+... og så importere den i en anden fil med:
    ```java
    import dk.kea.calculator.Math;
    ```

@@ -23,7 +23,7 @@ Indtil nu har vi brugt primitiv-typer til at gemme data, fx
 ```java
 String givenName = "Victor";
 String familyName = "Lukic";
-String phoneNumber = "20158222";
+String email = "lucky@victory.dk";
 ```
 
 --
@@ -40,7 +40,7 @@ Hvad nu hvis vi vil gemme alle kontaktoplysninger for en person i én variabel?
 ```java
 Contact victor = new Contact(...);
 
-System.out.printf("%s %s, %s", victor.givenName, victor.familyName, victor.phoneNumber);
+System.out.printf("%s %s, %s", victor.givenName, victor.familyName, victor.email);
 ```
 
 --
@@ -59,7 +59,7 @@ Vi laver en ny fil `Contact.java`, en klasse `Contact` med tre felter
 public class Contact {
     String givenName;
     String familyName;
-    String phoneNumber;
+    String email;
 
 }
 ```
@@ -73,12 +73,12 @@ public class Main {
         Contact victor = new Contact();
         victor.givenName = "Victor";
         victor.familyName = "Lukic";
-        victor.phoneNumber = "20158222";
+        victor.email = "lucky@victory.dk";
 
         System.out.printf("%s %s, %s", 
             victor.givenName, 
             victor.familyName, 
-            victor.phoneNumber);
+            victor.email);
     }
 }
 ```
@@ -128,7 +128,7 @@ Hvis vi *ikke* selv skriver en konstruktør, så laver Java en tom en for os
 public class Contact {
     String givenName;
     String familyName;
-    String phoneNumber;
+    String email;
 }
 ```
 
@@ -139,7 +139,7 @@ public class Contact {
 public class Contact {
     String givenName;
     String familyName;
-    String phoneNumber;
+    String email;
 
     public Contact() {
         // tom konstruktør
@@ -154,12 +154,12 @@ Vi kan også selv skrive en konstruktør, fx
 public class Contact {
     String givenName;
     String familyName;
-    String phoneNumber;
+    String email;
 
     public Contact(String gn, String fn, String pn) {
         givenName = gn;
         familyName = fn;
-        phoneNumber = pn;
+        email = pn;
     }
 }
 ```
@@ -168,7 +168,7 @@ public class Contact {
 
 Nu kan vi oprette et `Contact`-objekt med initialværdier
 ```java
-Contact victor = new Contact("Victor", "Lukic", "20158222");
+Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
 ```
 
 ---
@@ -178,11 +178,11 @@ Hvorfor skrev du ikke bare ...
 public class Contact {
     String givenName;
     String familyName;
-    String phoneNumber;
-    public Contact(String givenName, String familyName, String phoneNumber) {
+    String email;
+    public Contact(String givenName, String familyName, String email) {
         givenName = givenName;
         familyName = familyName;
-        phoneNumber = phoneNumber;
+        email = email;
     }
 }
 ```
@@ -200,12 +200,12 @@ Løsning: Brug `this` til at referere til objektets felter
 public class Contact {
     String givenName;
     String familyName;
-    String phoneNumber;
+    String email;
 
-    public Contact(String givenName, String familyName, String phoneNumber) {
+    public Contact(String givenName, String familyName, String email) {
         this.givenName = givenName;
         this.familyName = familyName;
-        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 }
 ```
@@ -220,18 +220,18 @@ Som andre metoder, kan vi **overloade** konstruktører, dvs. lave flere med fors
 public class Contact {
     String givenName;
     String familyName;
-    String phoneNumber;
+    String email;
 
-    public Contact(String givenName, String familyName, String phoneNumber) {
+    public Contact(String givenName, String familyName, String email) {
         this.givenName = givenName;
         this.familyName = familyName;
-        this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 
     public Contact(String givenName, String familyName) {
         this.givenName = givenName;
         this.familyName = familyName;
-        this.phoneNumber = "N/A";
+        this.email = "N/A";
     }
 }
 ```
@@ -246,10 +246,10 @@ Notes:
 
 --
 
-Nu kan vi oprette `Contact`-objekter med eller uden telefonnummer
+Nu kan vi oprette `Contact`-objekter med eller uden email
 
 ```java
-Contact victor = new Contact("Victor", "Lukic", "20158222");
+Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
 Contact thorkild = new Contact("Thorkild", "Hansen");
 Contact unknown = new Contact(); // Fejl!
 ```
@@ -277,7 +277,7 @@ System.out.println(name); // "Thorkild
 men hvad sker der hvis vi prøver at printe et objekt?
 
 ```java
-Contact victor = new Contact("Victor", "Lukic", "20158222");
+Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
 System.out.println(victor); // => "Contact@6bc7c054"
 ```
 
@@ -318,16 +318,204 @@ Løsning: Vi kan selv lave en `toString()`-metode i vores klasse
 @Override
 public String toString() {
     return String.format("%s %s, tlf: %s", 
-        givenName, familyName, phoneNumber);
+        givenName, familyName, email);
 }
 ```
 
 ```java
-Contact victor = new Contact("Victor", "Lukic", "20158222");
-System.out.println(victor); // => "Victor Lukic, tlf: 20158222"
+Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
+System.out.println(victor); // => "Victor Lukic, tlf: lucky@victory.dk"
+```
+
+---
+<!-- .slide: class="cover-11" -->
+## Immutable objects
+
+--
+
+```java
+Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
+
+victor.email = "lol@megalol.com"; // Ændrer victors email
 ```
 
 --
+
+Hvis vi *ikke* vil tillade at felterne i et objekt kan ændres efter oprettelse, kan vi gøre dem `final`
+
+```java
+public class Contact {
+    final String givenName;
+    final String familyName;
+    final String email;
+
+    public Contact(String givenName, String familyName, String email) {
+        this.givenName = givenName;
+        this.familyName = familyName;
+        this.email = email;
+    }
+}
+```
+
+--
+
+Nu kan vi *ikke* ændre felterne efter oprettelse
+
+```java
+Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
+victor.email = "lol@megalol.com"; // Fejl!
+```
+
+--
+
+Objekter med `final` felter kaldes **immutable objects** (uforanderlige objekter)
+
+--
+
+`String`-klassen er et eksempel på en *immutable* klasse
+
+--
+
+```java
+String name = "Thorkild";
+String name2 = name.toUpperCase();
+System.out.println(name);  // => "Thorkild"
+System.out.println(name2); // => "THORKILD"
+```
+
+dvs. `toUpperCase()` ændrer ikke i `name`, men returnerer en ny `String`.
+
+---
+
+<!-- .slide: class="cover-14" -->
+# Værdiobjekter
+
+--
+
+Værdiobjekter (value objects) er objekter, der
+
+- kun indeholder data (felter) - ingen adfærd (metoder)
+- ved sammenligning, sammenlignes deres felter og ikke deres referencer
+- ofte er immutable (felterne er `final`)
+
+--
+
+Hvorfor bruge værdiobjekter?
+- Samler relaterede data i én variabel
+- Gør det nemmere at sende data rundt i programmet (fx som parametre til metoder)
+
+--
+
+Er `Contact` et værdiobjekt?
+
+```java
+Contact victor1 = new Contact("Victor", "Lukic", "lucky@victory.dk");
+Contact victor2 = new Contact("Victor", "Lukic", "lucky@victory.dk");
+
+System.out.println(victor1 == victor2); // => false
+```
+
+Spørgsmål: Burde `victor1 == victor2`?
+
+--
+
+`victor1 == victor2` er for reference-typer det samme som at kalde `victor1.equals(victor2)`
+
+--
+
+Standard for reference-typer: `equals()` sammenligner referencer (adresser), ikke felter.
+
+```java
+Contact victor1 = new Contact("Victor", "Lukic", "lucky@victory.dk");
+Contact victor2 = victor1;
+System.out.println(victor1 == victor2); // => true
+```
+
+--
+
+Så skal `Contact` være et værdiobjekt, skal vi overskrive `equals()`-metoden
+
+```java
+public boolean equals(Object other) {
+    // ...
+}
+```
+
+--
+
+For `Contacts` kunne det (simplificeret) se således ud
+
+```java
+@Override
+public boolean equals(Object other) {
+    Contact contact = (Contact) other;
+    return givenName == contact.givenName &&
+           familyName == contact.familyName &&
+           email == contact.email;
+}
+```
+
+--
+
+```java
+public class Contact {
+    final String givenName;
+    final String familyName;
+    final String email;
+
+    public Contact(String givenName, String familyName, String email) {
+        this.givenName = givenName;
+        this.familyName = familyName;
+        this.email = email;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        Contact contact = (Contact) other;
+        return givenName.equals(contact.givenName) &&
+               familyName.equals(contact.familyName) &&
+               email.equals(contact.email);
+    }
+}
+```
+
+--
+
+Nu sammenlignes felterne i stedet for referencerne
+
+```java
+Contact victor1 = new Contact("Victor", "Lukic", "lucky@victory.dk");
+Contact victor2 = new Contact("Victor", "Lukic", "lucky@victory.dk");
+
+System.out.println(victor1 == victor2); // => true
+```
+
+--
+
+Er der ikke nogen nemmere måde at lave værdiobjekter på?
+
+--
+
+Jo, vi kan bruge **records**
+
+```java
+public record Contact(String givenName, String familyName, String email) {}
+```
+
+```java
+Contact victor1 = new Contact("Victor", "Lukic", "lucky@victory.dk");
+Contact victor2 = new Contact("Victor", "Lukic", "lucky@victory.dk");
+
+System.out.println(victor1 == victor2); // => true
+```
+
+Done!
+
+--
+
+Så værdiobjekter ... records
+
+---
 
 <!-- .slide: class="sunlit-energy" -->
 

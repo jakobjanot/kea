@@ -14,15 +14,15 @@ Dette er en fortsættelse af Intellij-projektet `bulk-email` fra den tidligere o
        }
    }
    ```
-3. Opdater konstruktøren og `toString`-metoden i `Email`-klassen til at bruge `Contact`-objekter, dvs.
+3. Opdater konstruktøren til at tage to `Contact`-type objekter `from` og `to` som parametre i stedet. Det kunne se således ud:
    ```java
-   String.format("""
-        From: %s <%s>
-        To: %s <%s>
-        Subject: %s
-        %s
-        """, from.name, from.email, to.name, to.email, subject, body);
+   public Email(Contact from, 
+                Contact to, 
+                String subject, 
+                String body) {
+       // Du færdiggør selv
    ```
+4. Opdater også `toString`-metoden i `Email`-klassen til at bruge `Contact`-objekterne `from` og `to`.
 4. Oprettelsen af `Email`-objekter i `main` skal også opdateres til at bruge `Contact`-objekter. F.eks:
    ```java
     Email[] emails = new Email[] {
@@ -39,7 +39,7 @@ Dette er en fortsættelse af Intellij-projektet `bulk-email` fra den tidligere o
        // flere emails her
    };
 5. Test dit program igen og se at det stadig virker som forventet.
-6. Du kan også overskrive `toString`-metoden i `Contact`-klassen til at returnere en streng i formatet `Name <email>`, og så kan du forenkle `toString`-metoden i `Email`-klassen til:
+6. Hvis du ikke allerede har gjort det, kan du også overskrive `toString`-metoden i `Contact`-klassen til at returnere en streng i formatet `Name <email>`, og så kan du forenkle `toString`-metoden i `Email`-klassen til:
    ```java
    String.format("""
         From: %s

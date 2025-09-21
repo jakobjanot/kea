@@ -3,7 +3,7 @@
 Husker du den tidligere opgave med email brevfletning? Du er velkommen til at genbruge noget af koden herfra.
 
 1. Opret et Intellij-projekt `bulk-email` med en klasse kaldet `Main` med en `main`-metode.
-2. Opret en klasse `Email` har felterne `toName`, `toEmail`, `fromName`, `fromEmail`, `subject` og `body`. Klassen skal have en konstruktør der tager alle felterne som parametre, det kunne se således ud:
+2. Opret en klasse `Email` har felterne `toName`, `toEmail`, `fromName`, `fromEmail`, `subject` og `body` - og en konstruktør. Eksempel:
 
    ```java
    public class Email {
@@ -14,7 +14,9 @@ Husker du den tidligere opgave med email brevfletning? Du er velkommen til at ge
        String subject;
        String body;
 
-       public Email(String toName, String toEmail, String fromName, String fromEmail, String subject, String body) {
+       public Email(String toName, String toEmail, 
+                    String fromName, String fromEmail, 
+                    String subject, String body) {
            this.toName = toName;
            this.toEmail = toEmail;
            this.fromName = fromName;
@@ -44,7 +46,7 @@ Husker du den tidligere opgave med email brevfletning? Du er velkommen til at ge
    Subject: Long time no see
    Hej Bo, hvad går du og laver?
    ```
-   Du kan overveje at anvende `String.format`, der bruger samme syntax som `printf`, dvs. med `%s` som pladsholder for strenge. F.eks:
+   Du kan overveje at anvende `String.format`, der bruger samme syntax som `printf`, dvs.
    ```java
    String.format("""
         From: %s <%s>

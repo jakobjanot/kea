@@ -513,7 +513,7 @@ Done!
 
 --
 
-Så værdiobjekter ... records
+Så værdiobjekter ... `record`s
 
 ---
 

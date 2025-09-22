@@ -2,7 +2,7 @@
 title: 12 - Klasser som brugerdefinerede typer
 ---
 <!-- .slide: class="cover-3" -->
-## Klasser som brugerdefinerede typer
+#### Klasser som brugerdefinerede typer
 
 ---
 <!-- .slide: class="o-sunlit-energy" -->
@@ -10,14 +10,17 @@ title: 12 - Klasser som brugerdefinerede typer
 ## Program:
 
 - Hvad gør `new`?
-- Hvad er et value object?
 - Hvordan laver vi en brugerdefineret type?
 - Hvad er en konstruktør?
 - Hvordan bruger vi vores nye type?
+- `toString()`
+- `equals()`
+- Hvad er et værdiobjekt?
 - Øvelser
 - Opsummering
 
 ---
+<!-- .slide: class="large" -->
 
 Indtil nu har vi brugt primitiv-typer til at gemme data, fx
 ```java
@@ -27,31 +30,37 @@ String email = "lucky@victory.dk";
 ```
 
 --
+<!-- .slide: class="large" -->
 
-Det kan være *upraktisk* at have tre variable for hver person vi vil gemme kontaktinfo for
+Det kan være *upraktisk* - og næsten *ulæseligt*
 
--- 
-
-Det kan være *mere praktisk* at samle relaterede data i én variabel
-
---
-
-Hvad nu hvis vi vil gemme alle kontaktoplysninger for en person i én variabel?
 ```java
-Contact victor = new Contact(...);
-
-System.out.printf("%s %s, %s", victor.givenName, victor.familyName, victor.email);
+generateEmail(fromGivenName, fromFamilyName, fromEmail,
+              toGivenName, toFamilyName, toEmail,
+              subject, body);
 ```
 
 --
 
-Vi har brug for at lave vores egen type, `Contact`, som kan bære alle informationerne
+Det kan være *mere praktisk* at samle relaterede data i én variabel
+
+--
+<!-- .slide: class="large" -->
+
+Hvad nu hvis vi vil gemme alle kontaktoplysninger for en person i én variabel?
+```java
+Contact victor = new Contact(...);
+Contact thorkild = new Contact(...);
+
+generateEmail(victor, thorkild, subject, body);
+```
 
 --
 
 Vi kan lave vores **egen type** ved at definere en ny klasse
 
 --
+<!-- .slide: class="large" -->
 
 Vi laver en ny fil `Contact.java`, en klasse `Contact` med tre felter
 
@@ -75,10 +84,12 @@ public class Main {
         victor.familyName = "Lukic";
         victor.email = "lucky@victory.dk";
 
-        System.out.printf("%s %s, %s", 
-            victor.givenName, 
-            victor.familyName, 
-            victor.email);
+        Contact thorkild = new Contact();
+        thorkild.givenName = "Thorkild";
+        thorkild.familyName = "Hansen";
+        thorkild.email = "thorkild@hansen.dk";
+
+        generateEmail(victor, thorkild, "Hej", "Hvordan går det?");
     }
 }
 ```
@@ -91,7 +102,7 @@ public class Main {
 - `new` returnerer en reference (adresse) til objektet
 
 --
-
+<!-- .slide: class="large" -->
 Referencen kan vi gemme i en variabel af typen `Contact`, fx
 
 ```java
@@ -102,7 +113,7 @@ dvs.
 - `victor` indeholder en reference til et `Contact`-objekt
 
 --
-
+<!-- .slide: class="large" -->
 Vi kan bruge `victor` til at få adgang til objektets felter, fx
 ```java
 victor.givenName = "Victor";
@@ -122,7 +133,7 @@ En speciel metode, der
 - kaldes automatisk når vi laver et nyt objekt med `new`
 
 --
-
+<!-- .slide: class="large" -->
 Hvis vi *ikke* selv skriver en konstruktør, så laver Java en tom en for os
 ```java
 public class Contact {
@@ -133,7 +144,7 @@ public class Contact {
 ```
 
 --
-
+<!-- .slide: class="large" -->
 ... er det samme som
 ```java
 public class Contact {
@@ -148,7 +159,7 @@ public class Contact {
 ```
 
 --
-
+<!-- .slide: class="large" -->
 Vi kan også selv skrive en konstruktør, fx
 ```java
 public class Contact {
@@ -165,14 +176,14 @@ public class Contact {
 ```
 
 --
-
+<!-- .slide: class="large" -->
 Nu kan vi oprette et `Contact`-objekt med initialværdier
 ```java
 Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
 ```
 
----
-
+--
+<!-- .slide: class="large" -->
 Hvorfor skrev du ikke bare ...
 ```java
 public class Contact {
@@ -188,13 +199,26 @@ public class Contact {
 ```
 
 --
+<!-- .slide: class="large" -->
+```java
+public class Contact {
+    String givenName;
+    String familyName;
+    String email;
+    public Contact(String givenName, String familyName, String email) {
+        givenName = givenName;
+        familyName = familyName;
+        email = email;
+    }
+}
+```
 
-Fordi parameterne (givenName) "skygger" for felterne med samme navn. 
+Fordi parameterne (fx `givenName`) "skygger" for felterne med samme navn.
 
 Java ved ikke om du mener feltet eller parameteren.
 
 --
-
+<!-- .slide: class="large" -->
 Løsning: Brug `this` til at referere til objektets felter
 ```java
 public class Contact {
@@ -214,7 +238,10 @@ public class Contact {
 
 ## Overloading af konstruktører
 
-Som andre metoder, kan vi **overloade** konstruktører, dvs. lave flere med forskellige parametre
+--
+<!-- .slide: class="large" -->
+
+Som andre metoder, kan vi **overloade** konstruktører
 
 ```java
 public class Contact {
@@ -240,26 +267,58 @@ public class Contact {
 
 Spørgsmål: Hvor mange konstruktører har klassen `Contact` nu?
 
+```java
+public class Contact {
+    String givenName;
+    String familyName;
+    String email;
+
+    public Contact(String givenName, String familyName, String email) {
+        this.givenName = givenName;
+        this.familyName = familyName;
+        this.email = email;
+    }
+
+    public Contact(String givenName, String familyName) {
+        this.givenName = givenName;
+        this.familyName = familyName;
+        this.email = "N/A";
+    }
+}
+```
+
 Notes:
-- Tre
+- To, da der ikke er nogen tom konstruktør længere, fordi vi selv har defineret to andre.
 
 
 --
+<!-- .slide: class="large" -->
 
 Nu kan vi oprette `Contact`-objekter med eller uden email
-
 ```java
 Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
 Contact thorkild = new Contact("Thorkild", "Hansen");
-Contact unknown = new Contact(); // Fejl!
 ```
+
+--
+<!-- .slide: class="large" -->
+
+Men ikke uden parametre
+
+```java
+Contact ukendt = new Contact(); // Fejl!
+```
+
+--
+<!-- .slide: class="k-sunlit-energy" -->
+## DEMO: Konstruktører
 
 ---
 <!-- .slide: class="cover-14" -->
 ## `toString()`
 
 --
-
+<!-- .slide: class="large" -->
 Vi er vant til at 
 
 ```java
@@ -267,13 +326,8 @@ int age = 22;
 System.out.println(age); // => "22"
 ```
 
-og
-```java
-String name = "Thorkild";
-System.out.println(name); // "Thorkild
-
 --
-
+<!-- .slide: class="large" -->
 men hvad sker der hvis vi prøver at printe et objekt?
 
 ```java
@@ -283,20 +337,25 @@ System.out.println(victor); // => "Contact@6bc7c054"
 
 --
 
-Hvad sker der egentlig når vi printer et objekt?
+```java
+System.out.println(victor); // => "Contact@6bc7c054"
+```
+
+Når vi printer et objekt, fx med `System.out.println()`,  
+kaldes objektets `toString()`-metode
 
 --
 
-Når vi printer et objekt, fx med `System.out.println()`, kaldes objektets `toString()`-metode
-
---
-
-Hvis vi har lavet en `toString()`-metode i vores klasse, så bliver den kaldt
+Hvis vi *har* lavet en `toString()`-metode i vores klasse, så bliver den kaldt
 
 --
 
 Har vi ikke lavet en `toString()`-metode, får vi en standard `toString()` 
-og den returnerer altså bare `klassenavn + "@" + hashkode`.
+og den returnerer altså bare
+
+```java
+System.out.println(victor); // => "Contact@6bc7c054"
+```
 
 --
 
@@ -311,11 +370,10 @@ Fordi Java ikke ved
 - hvordan skal det formateres?
 
 --
-
+<!-- .slide: class="large" -->
 Løsning: Vi kan selv lave en `toString()`-metode i vores klasse
 
 ```java
-@Override
 public String toString() {
     return String.format("%s %s, tlf: %s", 
         givenName, familyName, email);
@@ -327,12 +385,16 @@ Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
 System.out.println(victor); // => "Victor Lukic, tlf: lucky@victory.dk"
 ```
 
+--
+<!-- .slide: class="k-sunlit-energy" -->
+## DEMO: `toString()`
+
 ---
 <!-- .slide: class="cover-11" -->
 ## Immutable objects
 
 --
-
+<!-- .slide: class="large" -->
 ```java
 Contact victor = new Contact("Victor", "Lukic", "lucky@victory.dk");
 
@@ -358,7 +420,7 @@ public class Contact {
 ```
 
 --
-
+<!-- .slide: class="large" -->
 Nu kan vi *ikke* ændre felterne efter oprettelse
 
 ```java
@@ -375,7 +437,7 @@ Objekter med `final` felter kaldes **immutable objects** (uforanderlige objekter
 `String`-klassen er et eksempel på en *immutable* klasse
 
 --
-
+<!-- .slide: class="large" -->
 ```java
 String name = "Thorkild";
 String name2 = name.toUpperCase();
@@ -385,10 +447,18 @@ System.out.println(name2); // => "THORKILD"
 
 dvs. `toUpperCase()` ændrer ikke i `name`, men returnerer en ny `String`.
 
+--
+<!-- .slide: class="k-sunlit-energy" -->
+## DEMO: `final` felter
+
 ---
 
 <!-- .slide: class="cover-14" -->
 # Værdiobjekter
+
+--
+
+Vi har kredset om begrebet **værdiobjekter** (value objects) uden at definere det præcist
 
 --
 
@@ -406,6 +476,7 @@ Hvorfor bruge værdiobjekter?
 
 --
 
+<!-- .slide: class="large" -->
 Er `Contact` et værdiobjekt?
 
 ```java
@@ -422,7 +493,7 @@ Spørgsmål: Burde `victor1 == victor2`?
 `victor1 == victor2` er for reference-typer det samme som at kalde `victor1.equals(victor2)`
 
 --
-
+<!-- .slide: class="large" -->
 Standard for reference-typer: `equals()` sammenligner referencer (adresser), ikke felter.
 
 ```java
@@ -432,7 +503,7 @@ System.out.println(victor1 == victor2); // => true
 ```
 
 --
-
+<!-- .slide: class="large" -->
 Så skal `Contact` være et værdiobjekt, skal vi overskrive `equals()`-metoden
 
 ```java
@@ -442,11 +513,10 @@ public boolean equals(Object other) {
 ```
 
 --
-
+<!-- .slide: class="large" -->
 For `Contacts` kunne det (simplificeret) se således ud
 
 ```java
-@Override
 public boolean equals(Object other) {
     Contact contact = (Contact) other;
     return givenName == contact.givenName &&
@@ -469,7 +539,7 @@ public class Contact {
         this.email = email;
     }
 
-    @Override
+
     public boolean equals(Object other) {
         Contact contact = (Contact) other;
         return givenName.equals(contact.givenName) &&
@@ -480,7 +550,11 @@ public class Contact {
 ```
 
 --
+<!-- .slide: class="o-sunlit-energy" -->
+## DEMO: `equals()`
 
+--
+<!-- .slide: class="large" -->
 Nu sammenlignes felterne i stedet for referencerne
 
 ```java
@@ -495,7 +569,7 @@ System.out.println(victor1 == victor2); // => true
 Er der ikke nogen nemmere måde at lave værdiobjekter på?
 
 --
-
+<!-- .slide: class="large" -->
 Jo, vi kan bruge **records**
 
 ```java
@@ -514,6 +588,10 @@ Done!
 --
 
 Så værdiobjekter ... `record`s
+
+--
+<!-- .slide: class="o-sunlit-energy" -->
+## DEMO: `record`s
 
 ---
 

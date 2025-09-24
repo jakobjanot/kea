@@ -5,9 +5,9 @@ Her fortsætter vi på IntelliJ-projektet `library-management-system` og det for
 public class Book {
    final String author;
    final String title;
-   final long isbn;
+   final String isbn;
 
-   public Book(String author, String title, long isbn) {
+   public Book(String author, String title, String isbn) {
       this.author = author;
       this.title = title;
       this.isbn = isbn;

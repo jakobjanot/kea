@@ -11,7 +11,8 @@ Biblioteket har svært ved at holde styr på hvem der har lånt hvilke bøger. N
 3. Gør felterne `final`, så et medlems navn og nummer ikke kan ændres efter oprettelse.
 4. Tilføj en `toString`-metode, så vi kan udskrive et medlem på en pæn måde, fx
    ```java
-   System.out.println(member1); // Thorkild Hansen (Lånernummer: 356)
+   System.out.println(member1); 
+      // Thorkild Hansen (Lånernummer: 356)
    ```
 5. Test at du kan oprette `Member`-objekter og udskrive dem i `Main`-klassen.
 6. Ret nu `Book`-klassen, så vi kan holde styr på hvilket `Member`, der har lånt en bog. Tilføj et felt `Member borrowedBy` til `Book`-klassen.
@@ -38,22 +39,38 @@ Biblioteket har svært ved at holde styr på hvem der har lånt hvilke bøger. N
    - Hvis bogen ikke er tilgængelig, skal metoden returnere `false`.
 9. Ret desuden `toString`-metoden, så den også viser hvem der har lånt bogen, fx
    ```java
-   System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - Udlånt til Thorkild Hansen (Lånernummer: 356)
+   System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - Udlånt til 
+      // Thorkild Hansen (Lånernummer: 356)
    ```
    Hint: `Member`-klassen skriver selv pænt ud med sin `toString`-metode
 10. Test at det virker i `Main`-klassen, fx
     ```java
-    System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - På hylden
+    System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - På hylden
     boolean loaned = book1.loanBook(member1);
-    System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - Udlånt til Thorkild Hansen (Lånernummer: 356)
+    System.out.println(book1);   
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - Udlånt til 
+      // Thorkild Hansen (Lånernummer: 356)
     System.out.println(book1.loanBook(member2)); // false
     ```
 11. Ret nu `returnBook`-metoden, så den sætter `borrowedBy` til `null`.
 12. Test at det virker i `Main`-klassen, fx
     ```java
-    System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - Udlånt til Thorkild Hansen (Lånernummer: 356)
+    System.out.println(book1); 
+      // Allan B. Downey: Think Java
+      // (9781492072508) - Udlånt til 
+      // Thorkild Hansen (Lånernummer: 356)
     book1.returnBook();
-    System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - På hylden
+    System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - På hylden
     book1.loanBook(member2);
-    System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - Udlånt til Lise Andersen (Lånernummer: 287)
+    System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - Udlånt til 
+      // Lise Andersen (Lånernummer: 287)
     ```

@@ -24,21 +24,13 @@ Java har en særlig værdi, `null`, som kan tildeles reference-typer for at indi
    - begge
 3. Hvilken fejl får vi ved at køre følgende kode?
    ```java
-   String s = null;
-   System.out.println(s.length());
-   ```
-   - Ingen fejl, programmet kører fint
-   - `NullPointerException`, cannot invoke "String.length()" because "s" is null
-   - variable s might not have been initialized
-4. Hvilken fejl får vi ved at køre følgende kode?
-   ```java
    String s;
    System.out.println(s);
    ```
    - Ingen fejl, programmet kører fint
    - `NullPointerException`, cannot invoke "String.length()" because "s" is null
    - variable s might not have been initialized
-5. Hvilket objekt er ikke længere refereret når vi når til kommentaren `// her` i følgende kode:
+4. Hvilket objekt er ikke længere refereret når vi når til kommentaren `// her` i følgende kode:
    ```java
    BankAccount account = new BankAccount(123456);
    if (someCondition) {
@@ -50,3 +42,11 @@ Java har en særlig værdi, `null`, som kan tildeles reference-typer for at indi
    - `BankAccount` objektet med kontonummer 987654
    - ingen af dem
    - begge
+5. Hvilken fejl får vi ved at køre følgende kode?
+   ```java
+   String s = null;
+   System.out.println(s.length());
+   ```
+   - Ingen fejl, programmet kører fint
+   - `NullPointerException`, cannot invoke "String.length()" because "s" is null
+   - variable s might not have been initialized

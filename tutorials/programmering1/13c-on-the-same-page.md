@@ -25,8 +25,10 @@ public class Book {
 3. Sæt `this.isAvailable = true;` i konstruktøren.
 4. Ret `toString`-metoden, så den også viser om bogen er tilgængelig, fx
    ```java
-   System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - Udlånt
-   System.out.println(book2); // Rachel Cusk: Omrids (9788763851664) - På hylden
+   System.out.println(book1); 
+      // Allan B. Downey: Think Java (9781492072508) - Udlånt
+   System.out.println(book2); 
+      // Rachel Cusk: Omrids (9788763851664) - På hylden
    ```
    Hint: Brug en lokal variabel `status` i din `toString`-metode i stil med:
    ```java
@@ -40,7 +42,11 @@ public class Book {
    - Metoden skal sætte `isAvailable` til `true`.
 7. Test at det virker i `Main`-klassen, fx
    ```java
-   System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - På hylden
+   System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - På hylden
    boolean loaned = book1.loanBook();
-   System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - Udlånt
+   System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - Udlånt
    ```

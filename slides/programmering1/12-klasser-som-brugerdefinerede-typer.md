@@ -403,7 +403,8 @@ victor.email = "lol@megalol.com"; // Ændrer victors email
 
 --
 
-Hvis vi *ikke* vil tillade at felterne i et objekt kan ændres efter oprettelse, kan vi gøre dem `final`
+Hvis vi *ikke* vil tillade at felterne i et objekt kan ændres efter oprettelse,  
+kan vi gøre dem `final`
 
 ```java
 public class Contact {
@@ -458,7 +459,8 @@ dvs. `toUpperCase()` ændrer ikke i `name`, men returnerer en ny `String`.
 
 --
 
-Vi har kredset om begrebet **værdiobjekter** (value objects) uden at definere det præcist
+Vi har kredset om begrebet **værdiobjekter** (value objects)  
+uden at definere det præcist
 
 --
 

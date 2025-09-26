@@ -22,7 +22,7 @@ title: 12 - Klasser som brugerdefinerede typer
 ---
 <!-- .slide: class="large" -->
 
-Indtil nu har vi brugt primitiv-typer til at gemme data, fx
+Indtil nu har vi brugt gemme data i Javas indbyggede typer, fx `String`
 ```java
 String givenName = "Victor";
 String familyName = "Lukic";

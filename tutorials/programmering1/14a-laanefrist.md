@@ -1,4 +1,4 @@
-# Rykker
+# Lånefrist
 
 Her fortsætter vi på IntelliJ-projektet `library-management-system` og det forudsættes nu, at du har en 
 - `Main`-klasse, 
@@ -24,10 +24,10 @@ Her fortsætter vi på IntelliJ-projektet `library-management-system` og det for
   public class Book {
      final String author;
      final String title;
-     final long isbn;
+     final String isbn;
      Member borrowedBy;
   
-     public Book(String author, String title, long isbn) {
+     public Book(String author, String title, String isbn) {
         this.author = author;
         this.title = title;
         this.isbn = isbn;
@@ -53,8 +53,10 @@ Her fortsætter vi på IntelliJ-projektet `library-management-system` og det for
 
      @Override
      public String toString() {
-        String status = isAvailable() ? "På hylden" : "Udlånt til " + borrowedBy;
-        return author + ": " + title + " (" + isbn + ") - " + status;
+        String status = isAvailable() ? "På hylden" : 
+            "Udlånt til " + borrowedBy;
+        return author + ": " + title + 
+               " (" + isbn + ") - " + status;
      }
    }
    ```
@@ -66,14 +68,28 @@ Biblioteket kan holde styr på hvem der har lånt hvilke bøger, men ved ikke hv
 5. Tilføj en metode `public LocalDate getDueDate()`, der returnerer afleveringsdatoen, som er 14 dage efter `borrowedDate`. Hvis bogen ikke er udlånt (dvs. `borrowedDate == null`), skal metoden returnere `null`. Du kan lægge dage til en dato med `borrowedDate.plusDays(14)`.
 6. Ret `toString`-metoden, så den også viser fristen for aflevering, hvis bogen er udlånt, fx
    ```java
-   System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - Udlånt til Thorkild Hansen (Lånernummer: 356), afleveringsfrist 2024-06-01
+   System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - Udlånt 
+      // til Thorkild Hansen 
+      // (Lånernummer: 356), 
+      // afleveringsfrist 2024-06-01
    ```
    Hint: Du kan bruge `getDueDate()` direkte i strengen, da `LocalDate` har en `toString`-metode, der skriver datoen i formatet `YYYY-MM-DD`.
 7. Test at det virker i `Main`-klassen, fx
    ```java
-   System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - På hylden
+   System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - På hylden
    boolean loaned = book1.loanBook(member1);
-   System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - Udlånt til Thorkild Hansen (Lånernummer: 356) , afleveringsfrist 2024-06-01
+   System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - Udlånt 
+      // til Thorkild Hansen 
+      // (Lånernummer: 356), 
+      // afleveringsfrist 2024-06-01
    book1.returnBook();
-   System.out.println(book1); // Allan B. Downey: Think Java (9781492072508) - På hylden
+   System.out.println(book1); 
+      // Allan B. Downey: Think Java 
+      // (9781492072508) - På hylden
    ```

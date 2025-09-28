@@ -1,231 +1,447 @@
 ---
-title: 14 - Komposition
+title: 15 - Indkapsling
 ---
 <!-- .slide: class="cover-10" -->
-#### Komposition
+#### Indkapsling
 
 ---
 <!-- .slide: class="o-sunlit-energy" -->
 
 ## Program:
 
-- Lidt repetition
-- Komposition
+- Acccess modifiers
+- Indkapsling
+- Getter og Setter metoder
+- Application Programming Interface (API)
 - Øvelser
 - Opsummering
 
 ---
 
 <!-- .slide: class="cover-4" -->
-# Arrays af objekter
+# Access Modifiers
 
 --
-Vi kan lave arrays af objekter, fx `BankAccount`-objekter
 
+So far, har vi brugt `public` til alt
+
+- klasser:
 ```java
-BankAccount[] accounts = new BankAccount[3];
-accounts[0] = new BankAccount(337898);
-accounts[1] = new BankAccount(337899);
-accounts[2] = new BankAccount(337900);
+public class BankAccount { // public class
+    public double balance; // public field
 
-accounts[0].deposit(100);
-System.out.println(accounts[0].balance); // 100.0
-```
---
+    public BankAccount(int accountNumber) { // public constructor
+        this.accountNumber = accountNumber;
+        this.balance = 0.0;
+    }
 
-og vi kan iterere over dem med en for-each løkke
-
-```java
-for (BankAccount account : accounts) {
-    System.out.println("Saldo på konto " + account.accountNumber + ": " + account.balance);
-}
-```
-
----
-
-<!-- .slide: class="cover-4" -->
-# Hvordan var det nu med `null`
-
---
-
-Objekter er reference-typer
-
---
-
-En variabel indeholder en reference eller pegepil (eng: pointer) til et objekt i hukommelsen
-
---
-
-`null` er en speciel reference-værdi, `null` pointer, der ikke peger (eng: points) på noget objekt
-
---
-
-Derfor er det tilladt at initialisere en `BankAccount`-variabel med `null`
-```java
-BankAccount account = null;
-```
-
---
-
-og det er tilladt at have `null` i et array af objekter
-```java
-BankAccount[] accounts = new BankAccount[3];
-accounts[0] = new BankAccount(337898);
-accounts[1] = null; // ingen konto
-accounts[2] = new BankAccount(337900);
-```
-
---
-
-Faktisk er alle elementer i et array af objekter `null`, indtil vi sætter dem til noget andet
-
-```java
-BankAccount[] accounts = new BankAccount[3];
-System.out.println(accounts[0]); // null
-System.out.println(accounts[1]); // null
-System.out.println(accounts[2]); // null
-```
----
-
-Vi skal derfor huske at tjekke for `null`, før vi bruger en variabel, der peger på et objekt, fx
-
-```java
-BankAccount[] accounts = new BankAccount[3];
-accounts[0] = new BankAccount(337898);
-accounts[1] = null; // ingen konto
-accounts[2] = new BankAccount(337900);
-
-for (BankAccount account : accounts) {
-    if (account != null) {
-        System.out.println("Saldo " + account.balance);
+    public void deposit(double amount) { // public method
+        this.balance += amount;
     }
 }
 ```
 
 --
 
-`NullPointerException` (NPE) er en meget almindelig fejl i Java-programmering.
-Det sker når vi prøver at bruge en variabel, der er `null`, som om den pegede på et objekt, fx
-
-```java
-String name = null;
-System.out.println(name.length()); // NullPointerException
-```
-
-A.k.a. vi troede name var en `String`, som har en `length()` - men det havde den jo ikke, da den var `null`.
+`public` er en access modifier (dan: adgangsmodifikator)
 
 --
 
-Alligevel er det meget udbredt at bruge `null` til at indikere "ingen værdi", fx i en metode, der skal returnere et objekt
+Java har fire access modifiers:
 
-```java
-public static BankAccount findAccount(int accountNumber) {
-    if ( /* account not found */ ) {
-        return null; // ingen konto fundet
-    }
-    return new BankAccount(accountNumber); // konto fundet
-}
-```
-
----
-<!-- .slide: class="cover-4" -->
-
-# Relationer mellem klasser
+- `public` betyder at alle kan se og bruge det
+- `private` betyder at kun klassen selv kan se og bruge det
+- `protected` betyder at kun klassen selv og dens subklasser kan se og bruge det
+- (default) betyder at kun klassen selv og klasser *i samme pakke* kan se og bruge det
 
 --
 
-Vi havde en `BankAccount`-klasse
-
-```java
-public class BankAccount {
-    int accountNumber;
-    double balance;
-}
-```
---
-
-Lad os give kontoen en ejer
-
-Hvordan kunne en `Owner`-klasse se ud?
+Måske har du set `private` før - ved et uheld
 
 --
-<!-- .slide=class="o-sunlit-energy" -->
 
-DEMO Vi giver `BankAccount` en ejer `Owner`
+DEMO - Extract method og toString snippet
 
 Notes:
-```java
-public class Owner {
-    String name;
-    String email;
+- Bruger man Extract method, så bliver den nye metode `private` som default
+- Bruger man toString, så skal man huske at den også bliver `private` som default
+- Det er fordi det er en god idi at gøre metoder `private` som default, og så gøre dem `public` hvis det er nødvendigt
 
-    public Owner(String name, String email) {
-        this.name = name;
-        this.email = email;
+---
+<!-- .slide: class="cover-4" -->
+
+# Hvorfor indkapsling?
+
+--
+
+Kan i huske bankkonto eksemplet?
+
+```java
+public class BankAccount {
+    public int accountNumber;
+    public double balance;
+}
+```
+
+--
+
+Vi kan oprette en bankkonto og ændre dens saldo direkte
+
+```java
+BankAccount account = new BankAccount(337898);
+account.balance = -1000.0; // uh oh, negativ saldo!
+```
+
+--
+
+Vi lavede en `deposit` og `withdraw` metode for at undgå det
+
+```java
+public class BankAccount {
+    public int accountNumber;
+    public double balance;
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            this.balance += amount;
+        }
+    }
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= this.balance) {
+            this.balance -= amount;
+        }
     }
 }
 ```
 
+--
+
+De metoder sikrer at saldoen ikke kan blive negativ
+
+```java
+BankAccount account = new BankAccount(337898);
+account.deposit(1000.0);
+account.withdraw(500.0); // OK
+account.withdraw(600.0); // ikke OK, saldoen er kun 500.0
+
+account.deposit(-200.0); // ikke OK, kan ikke indsætte negative beløb
+```
+
+--
+
+MEN - vi kan stadig ændre saldoen direkte
+
+```java
+BankAccount account = new BankAccount(337898);
+account.balance = -1000.0; // uh oh, negativ saldo!
+```
+
+--
+
+Det er her indkapsling kommer ind i billedet
+
 ```java
 public class BankAccount {
-    int accountNumber;
-    double balance;
-    Owner owner;
+    private int accountNumber;
+    private double balance;
 
     public BankAccount(int accountNumber) {
         this.accountNumber = accountNumber;
         this.balance = 0.0;
-        this.owner = null;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            this.balance += amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= this.balance) {
+            this.balance -= amount;
+        }
     }
 }
 ```
 
-Og nu kan vi lave en konto med en ejer
+--
+
+Nu kan vi ikke længere ændre `balance` direkte
 
 ```java
-Owner owner = new Owner("Hanne Hansen", "hanne@example.com");
 BankAccount account = new BankAccount(337898);
-account.owner = owner;
-System.out.println(account.owner.name); // Hanne Hansen
+account.balance = -1000.0; // fejl! balance er private
+account.deposit(500.0); // OK
 ```
 
+---
+<!-- .slide: class="cover-4" -->
+# Getter og Setter metoder
+
 --
 
-Det er svært at forestille sig en bankkonto uden en ejer. En konto kan faktisk ikke eksistere uden en ejer.
+Hvordan får vi adgang til `balance` og `accountNumber` nu?
 
---
+```java
+BankAccount account = new BankAccount(337898);
+System.out.println(account.balance); // fejl! balance er private
+```
 
-Lad os gøre det obligatorisk at angive en ejer, når vi laver en konto
+---
+
+Løsningen er at lave getter og setter metoder
 
 --
 <!-- .slide: class="o-sunlit-energy" -->
-DEMO: Gør `Owner` obligatorisk for `BankAccount`
 
-Notes:
-Tilføj en `Owner`-parameter til konstruktøren
+DEMO - Getters og Setters
+
+--
+
 ```java
-public BankAccount(int accountNumber, Owner owner) {
-    this.accountNumber = accountNumber;
-    this.balance = 0.0;
-    this.owner = owner; // krævet
+public class BankAccount {
+    private int accountNumber;
+    private double balance;
+
+    // ... konstruktør, deposit, withdraw ...
+
+    public int getAccountNumber() {
+        return this.accountNumber;
+    }
+
+    public double getBalance() {
+        return this.balance;
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public void setBalance(double balance) {
+        if (balance >= 0) {
+            this.balance = balance;
+        }
+    }
 }
 ```
 
-Gør `owner`-feltet `final`, så det ikke kan ændres efterfølgende
+--
+
+Nu kan vi få adgang til `balance` og `accountNumber` via getters
+
+```java
+BankAccount account = new BankAccount(337898);
+System.out.println(account.getBalance()); // 0.0
+account.deposit(500.0);
+System.out.println(account.getBalance()); // 500.0
+System.out.println(account.getAccountNumber()); // 337898
+```
 
 --
 
-Der er flere måder, hvorpå klasser har relationer til hinanden. 
+Men vi kan også ændre dem via setters
+
+```java
+BankAccount account = new BankAccount(337898);
+
+account.setBalance(1000.0); // OK
+account.setAccountNumber(123456); //
+```
+
+Argh...
 
 --
 
-Komposition er når et objekt "har et" (**has-a**) andet objekt som en del af sin tilstand (state).
+Det har vi set før
+
+Spørgsmål: Hvordan gør vi accountNumber skrivebeskyttet (read-only)?
+
+Notes:
+- Vi kan fjerne setAccountNumber metoden og gøre accountNumber til en konstant (final)
+```java
+public class BankAccount {
+    private final int accountNumber;
+    private double balance;
+
+    public BankAccount(int accountNumber) {
+        this.accountNumber = accountNumber;
+        this.balance = 0.0;
+    }
+
+    public int getAccountNumber() {
+        return this.accountNumber;
+    }
+
+    // ... resten af klassen ...
+}
 
 --
 
-En konto kan **ikke eksistere uden** en ejer.
+Spørgsmål: Skal vi gøre balance til en konstant (final)?
 
-Vi kalder det et "stærkt ejerskab" (strong ownership) - et kendetegn ved komposition.
+Notes:
+- Nej, fordi saldoen skal kunne ændres når vi indsætter eller hæver penge
+
+--
+
+Trick: Vi gør `setBalance` metoden `private`
+
+```java
+public class BankAccount {
+    private int accountNumber;
+    private double balance;
+
+    public BankAccount(int accountNumber) {
+        this.accountNumber = accountNumber;
+        this.balance = 0.0;
+    }
+
+    public int getAccountNumber() {
+        return this.accountNumber;
+    }
+
+    public double getBalance() {
+        return this.balance;
+    }
+
+    private void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    // ... deposit og withdraw ...
+}
+```
+
+--
+
+Nu kan vi kun ændre `balance` via `deposit` og `withdraw`
+
+```java
+BankAccount account = new BankAccount(337898);
+account.setBalance(1000.0); // fejl! setBalance er private
+account.deposit(500.0); // OK
+account.withdraw(200.0); // OK
+```
+
+--
+
+Hvad skal vi så med en `setBalance` metode?
+
+--
+
+```java
+public void deposit(double amount) {
+    if (amount > 0) {
+        setBalance(this.balance + amount);
+    }
+}
+
+public void withdraw(double amount) {
+    if (amount > 0 && amount <= this.balance) {
+        setBalance(this.balance - amount);
+    }
+}
+
+private void setBalance(double balance) {
+    this.balance = balance;
+}
+```
+
+--
+
+kan vi forenkle `deposit` og `withdraw` ved at flytte valideringen til `setBalance`?
+
+--
+
+```java
+public void deposit(double amount) {
+    setBalance(this.balance + amount);
+}
+
+public void withdraw(double amount) {
+    setBalance(this.balance - amount);
+}
+
+private void setBalance(double balance) {
+    if (balance >= 0) {
+        this.balance = balance;
+    }
+}
+```
+
+Ja, det kan vi. Snedigt - ik?
+
+---
+<!-- .slide: class="cover-4" -->
+# Application Programming Interface (API)
+
+--
+
+Spørgsmål: Har nogen af jer hørt om **API** før?
+
+--
+
+API står for **A**pplication **P**rogramming **I**nterface
+
+--
+
+Et API er en samling af klasser, metoder og felter, som en udvikler kan bruge til at løse et problem
+
+--
+
+`public` klasser, metoder og felter er API'et, som andre udviklere kan bruge
+
+--
+
+`private` klasser, metoder og felter er **implementation detaljer**, som kun klassen selv bruger
+
+--
+
+I vores `BankAccount` eksempel er flg. en del af vores API:
+- klassen `BankAccount` (da den er `public`)
+- konstruktøren `BankAccount(int accountNumber)` (da den er `public`)
+- metoderne 
+  - `getAccountNumber()`, 
+  - `getBalance()`, 
+  - `deposit(double amount)` og 
+  - `withdraw(double amount)` (da de er `public`)
+
+--
+
+Spørgsmål: Kan vi ikke bare gøre alt `public` og så lade brugeren om at bruge det rigtigt?
+
+--
+
+**Nej!**
+
+- Det er svært at forstå/bruge et API korrekt, hvis alt er `public`
+- Det er svært at ændre et API, hvis alt er `public`
+- Vi kan utilsigtet bryde kode, der bruger vores API, hvis alt er `public`
+- Vi er nødt til at lægge alt kode i den metode, der bruger det, hvis alt er `public`
+
+--
+
+```java
+private void setBalance(double balance) {
+    if (balance >= 0) {
+        this.balance = balance;
+    }
+}
+```
+
+... hvis `setBalance(...)` var `public`, hvorfor bruge `deposit(...)` og `withdraw(...)`?
+
+--
+
+Vi kan ændre reglerne for hvordan `balance` opdateres, uden at bryde kode, der bruger vores API, fx
+
+```java
+private void setBalance(double balance) {
+    if (balance >= 0 && balance <= 1_000_000) { // max saldo 1 million
+        this.balance = balance;
+    }
+}
+```
 
 ---
 

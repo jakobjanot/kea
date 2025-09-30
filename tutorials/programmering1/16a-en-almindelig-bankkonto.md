@@ -25,30 +25,17 @@ Lad os starte med at lave en almindelig bankkonto, der kan sætte penge ind og h
          }
     }
     ```
-7. Tilføj en `toString`-metode, der returnerer en tekstbeskrivelse af kontoen, fx `"Konto 12345678: 1000.0 kr."`.
+7. Tilføj en `toString`-metode, der returnerer en tekstbeskrivelse af kontoen, fx `"Konto 3267: 1000.0 kr."`.
 8. Prøv at teste `BankAccount`-klassen i en `Main`-klasse med en `main`-metode, fx
     ```java
     public class Main {
         public static void main(String[] args) {
-            BankAccount ba = new BankAccount(12345678);
-            System.out.println(ba); // Konto 12345678: 0.0 kr.
+            BankAccount ba = new BankAccount(3267);
+            System.out.println(ba); // Konto 3267: 0.0 kr.
             ba.deposit(500);
-            System.out.println(ba); // Konto 12345678: 500.0 kr.
+            System.out.println(ba); // Konto 3267: 500.0 kr.
             ba.withdraw(700);
-            System.out.println(ba); // Konto 12345678: -200.0 kr.
+            System.out.println(ba); // Konto 3267: -200.0 kr.
         }
     }
     ```
-9. Ret nu i `main`-metoden, så du i stedet tester en `SavingsAccount`, dvs. en opsparingskonto
-   ```java
-   public class Main {
-       public static void main(String[] args) {
-           SavingsAccount sa = new SavingsAccount(1000, "12345678", 0.05);
-           System.out.println(sa); // Konto 12345678: 1000.0 kr.
-           sa.addInterest();
-           System.out.println(sa); // Konto 12345678: 1050.0 kr.
-           sa.withdraw(200);
-           System.out.println(sa); // Konto 12345678: 850.0 kr.
-       }
-   }
-   ```

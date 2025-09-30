@@ -11,32 +11,31 @@ Man kan også lave en børneopsparing, der er en speciel type opsparingskonto, h
     ```java
     public class Main {
         public static void main(String[] args) {
-            ChildrensSavingsAccount csa = 
+            ChildrensSavingsAccount kid = 
                 new ChildrensSavingsAccount(
-                    "12345678", 
+                    12345678, 
                     0.05, 
                     LocalDate.of(2015, 1, 1));
-            System.out.println(csa);
-            csa.deposit(1000);
-            System.out.println(csa);
-            csa.addInterest();
-            System.out.println(csa);
-            csa.withdraw(200); // virker ikke
-            System.out.println(csa);
+            System.out.println(kid);
+            kid.deposit(1000);
+            System.out.println(kid);
+            kid.applyInterest();
+            System.out.println(kid);
+            kid.withdraw(200);
+            System.out.println(kid);
 
-            // prøv at lave en ChildrensSavingsAccount med en voksen ejer
-            ChildrensSavingsAccount csa2 = 
+            ChildrensSavingsAccount adult = 
                 new ChildrensSavingsAccount(
-                    "87654321", 
+                    87654321, 
                     0.05, 
                     LocalDate.of(2000, 1, 1));
-            System.out.println(csa2);
-            csa2.deposit(1000);
-            System.out.println(csa2);
-            csa2.addInterest();
-            System.out.println(csa2);
-            csa2.withdraw(200); // virker
-            System.out.println(csa2);
+            System.out.println(adult);
+            adult.deposit(1000);
+            System.out.println(adult);
+            adult.applyInterest();
+            System.out.println(adult);
+            adult.withdraw(200); // virker
+            System.out.println(adult);
         }
     }
     ```

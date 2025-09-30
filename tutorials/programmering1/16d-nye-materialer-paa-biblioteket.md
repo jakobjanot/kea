@@ -13,13 +13,25 @@ Vi har lavet klasser til at repræsentere bøger, medlemmer og lån på et bibli
    }
    ```
 3. Lav en konstruktør, der initialiserer felterne.
-4. Lav getter-metoder til felterne.
+4. Lav getter- og setter-metoder til felterne.
 5. Lav nu en `Book`-klasse, der arver fra `Resource`. Giv den en konstruktør, der initialiserer `identifier`, `title` og `creator` vha. `super(...)` som henholdsvis `isbn`, `title` og `author`.
-6. Lav getter-metoder til `isbn`, `title` og `author` i `Book`-klassen, der kalder superklassens getter-metoder.
+6. Lav getter-metoder `getIsbn()`, `getTitle()` og `getAuthor()` i `Book`, der returnerer henholdsvis `identifier`, `title` og `creator` vha. superklassens getter-metoder `getIdentifier()`, `getTitle()` og `getCreator()`.
 7. Lav tilsvarende en `Movie` og en `VideoGame`-klasse, der arver fra `Resource`. Vi bruger 
    - `ean` (stregkoden på bagsiden af filmen/spillet) som `identifier` i `Movie` og `VideoGame`.
    - `studio` som `creator` i `Movie` og `VideoGame`.
    - `director` som et ekstra felt i `Movie`.
-    - `platform` (fx "PC", "PS5", "Xbox") som et ekstra felt i `VideoGame`. Du kan overveje at lave en `enum` til platform.
+   - `platform` (fx "PC", "PS5", "Xbox") som et ekstra felt i `VideoGame`. Du kan overveje at lave en `enum` til platform.
 8. Lav en `toString`-metode i `Resource`, der returnerer noget i stil med `"creator - title (identifier)"`, fx `"J.K. Rowling - Harry Potter og de vises sten (978-87-02-11260-5)"`.
-9. Lav en `Main`-klasse med en `main`-metode, hvor du tester at det virker
+9. Lav en `Main`-klasse med en `main`-metode, hvor du tester at det virker.
+10. Overskriv `toString`-metoden i `Movie` og `VideoGame`, så de returnerer noget i stil med `"creator - title (identifier), directed by director"` for `Movie` og `"creator - title (identifier), platform: platform"` for `VideoGame`, fx "`"Pixar - Toy Story (1234567890123), directed by John Lasseter"` og `"Nintendo - The Legend of Zelda: Breath of the Wild (9876543210987), platform: Playstation 5"`.
+11. Nu har du mulighed for at lave en liste af `Resource`-objekter, der kan indeholde både bøger, film og spil. Prøv flg. i din `main`-metode:
+    ```java
+    Resource[] resources = new Resource[3];
+    resources[0] = new Book("978-87-02-11260-5", "Harry Potter og de vises sten", "J.K. Rowling");
+    resources[1] = new Movie("1234567890123", "Toy Story", "Pixar", "John Lasseter");
+    resources[2] = new VideoGame("9876543210987", "The Legend of Zelda: Breath of the Wild", "Nintendo", Platform.PLAYSTATION_5);
+    for (Resource r : resources) {
+        System.out.println(r);
+    }
+    ```
+    Det virker fordi både `Book`, `Movie` og `VideoGame` er en `Resource` (is-a relationen).

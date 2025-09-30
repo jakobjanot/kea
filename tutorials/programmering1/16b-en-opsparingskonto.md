@@ -7,11 +7,9 @@ Arv er en måde, hvorpå man kan genbruge kode i klasser. En subklasse (underkla
 9. En `SavingsAccount` skal have et ekstra felt `interestRate` (rentesatsen i procent, fx 0.05 for 5%).
 10. Lav en konstruktør, der initialiserer alle felterne (inkl. dem fra `BankAccount`, fx
     ```java
-    public SavingsAccount(double initialBalance, 
-                          String accountNumber, 
+    public SavingsAccount(int accountNumber, 
                           double interestRate) {
          this.accountNumber = accountNumber;
-         this.balance = initialBalance;
          this.interestRate = interestRate;
     }
     ```
@@ -19,17 +17,16 @@ Arv er en måde, hvorpå man kan genbruge kode i klasser. En subklasse (underkla
 12. Virker det nu?
 13. Vi kunne have valgt en anden tilgang. Prøv at ændre access modifieren på felterne i `BankAccount` tilbage til `private`. Vi kan istedet kalde superklassens `BankAccount`s konstruktør vha. `super(...)` fra `SavingsAccount`s konstruktør, fx
     ```java
-    public SavingsAccount(double initialBalance, 
-                          String accountNumber, 
+    public SavingsAccount(int accountNumber, 
                           double interestRate) {
-         super(initialBalance, accountNumber);
+         super(accountNumber);
          this.interestRate = interestRate;
     }
     ```
     Virker det nu?
-13. Nu skal vi tilføje den metode, der gør opsparingskontoen særlig, idet den kan tilføje renter til kontoen. Lav en `addInterest`-metode, der tilføjer renter til kontoen, fx
+13. Nu skal vi tilføje den metode, der gør opsparingskontoen særlig, idet den kan tilføje renter til kontoen. Lav en `applyInterest`-metode, der tilføjer renter til kontoen, fx
     ```java
-    public void addInterest() {
+    public void applyInterest() {
          double interest = getBalance() * interestRate;
          deposit(interest);
     }
@@ -38,14 +35,15 @@ Arv er en måde, hvorpå man kan genbruge kode i klasser. En subklasse (underkla
     ```java
     public class Main {
         public static void main(String[] args) {
-            SavingsAccount sa = new SavingsAccount("12345678", 0.05);
+            SavingsAccount sa = new SavingsAccount(12345678, 0.05);
             System.out.println(sa);
             sa.deposit(1000);
             System.out.println(sa);
-            sa.addInterest();
+            sa.applyInterest();
             System.out.println(sa);
             sa.withdraw(200);
             System.out.println(sa);
         }
     }
     ```
+    

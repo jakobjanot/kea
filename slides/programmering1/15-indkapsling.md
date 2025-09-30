@@ -1,7 +1,7 @@
 ---
 title: 15 - Indkapsling
 ---
-<!-- .slide: class="cover-10" -->
+<!-- .slide: class="cover-12" -->
 #### Indkapsling
 
 ---
@@ -18,11 +18,11 @@ title: 15 - Indkapsling
 
 ---
 
-<!-- .slide: class="cover-4" -->
+<!-- .slide: class="cover-3" -->
 # Access Modifiers
 
 --
-
+<!-- .slide: class="large" -->
 So far, har vi brugt `public` til alt
 
 - klasser:
@@ -59,21 +59,21 @@ Java har fire access modifiers:
 Måske har du set `private` før - ved et uheld
 
 --
-
-DEMO - Extract method og toString snippet
+<!-- .slide: class="o-sunlit-energy" -->
+## DEMO - Extract method i IntelliJ
 
 Notes:
 - Bruger man Extract method, så bliver den nye metode `private` som default
-- Bruger man toString, så skal man huske at den også bliver `private` som default
-- Det er fordi det er en god idi at gøre metoder `private` som default, og så gøre dem `public` hvis det er nødvendigt
+- Det er fordi det er en god ide at gøre metoder `private` som default, og så gøre dem `public` hvis det er nødvendigt
 
 ---
-<!-- .slide: class="cover-4" -->
+<!-- .slide: class="cover-7" -->
 
 # Hvorfor indkapsling?
 
 --
 
+<!-- .slide: class="x-large" -->
 Kan i huske bankkonto eksemplet?
 
 ```java
@@ -85,6 +85,7 @@ public class BankAccount {
 
 --
 
+<!-- .slide: class="x-large" -->
 Vi kan oprette en bankkonto og ændre dens saldo direkte
 
 ```java
@@ -93,8 +94,9 @@ account.balance = -1000.0; // uh oh, negativ saldo!
 ```
 
 --
+<!-- .slide: class="large" -->
 
-Vi lavede en `deposit` og `withdraw` metode for at undgå det
+Så lavede vi en `deposit` og `withdraw` metode for at undgå det
 
 ```java
 public class BankAccount {
@@ -116,6 +118,8 @@ public class BankAccount {
 
 --
 
+<!-- .slide: class="large" -->
+
 De metoder sikrer at saldoen ikke kan blive negativ
 
 ```java
@@ -129,6 +133,7 @@ account.deposit(-200.0); // ikke OK, kan ikke indsætte negative beløb
 
 --
 
+<!-- .slide: class="x-large" -->
 MEN - vi kan stadig ændre saldoen direkte
 
 ```java
@@ -139,6 +144,33 @@ account.balance = -1000.0; // uh oh, negativ saldo!
 --
 
 Det er her indkapsling kommer ind i billedet
+
+--
+
+I al fremtid: Gør felter `private`
+
+--
+
+<!-- .slide: class="large" -->
+
+**Før:**
+```java
+public class BankAccount {
+    public int accountNumber;
+    public double balance;
+}
+```
+**Nu:**
+```java
+public class BankAccount {
+    private int accountNumber;
+    private double balance;
+}
+```
+
+--
+
+Ellers ligner resten af klassen sig selv
 
 ```java
 public class BankAccount {
@@ -165,36 +197,43 @@ public class BankAccount {
 ```
 
 --
+<!-- .slide: class="large" -->
 
 Nu kan vi ikke længere ændre `balance` direkte
 
 ```java
 BankAccount account = new BankAccount(337898);
-account.balance = -1000.0; // fejl! balance er private
+account.balance = -1000.0; // fejl! balance er utilgængelig
+```
+men vi kan stadig ændre den via `deposit` og `withdraw`
+
+```java
 account.deposit(500.0); // OK
+account.withdraw(200.0); // OK
 ```
 
 ---
-<!-- .slide: class="cover-4" -->
+<!-- .slide: class="cover-9" -->
 # Getter og Setter metoder
 
 --
 
+<!-- .slide: class="x-large" -->
 Hvordan får vi adgang til `balance` og `accountNumber` nu?
 
 ```java
 BankAccount account = new BankAccount(337898);
-System.out.println(account.balance); // fejl! balance er private
+System.out.println(account.balance); // fejl! balance er utilgængelig
 ```
 
----
+--
 
 Løsningen er at lave getter og setter metoder
 
 --
 <!-- .slide: class="o-sunlit-energy" -->
 
-DEMO - Getters og Setters
+## DEMO - getters og setters
 
 --
 
@@ -209,12 +248,12 @@ public class BankAccount {
         return this.accountNumber;
     }
 
-    public double getBalance() {
-        return this.balance;
-    }
-
     public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
+    }
+
+    public double getBalance() {
+        return this.balance;
     }
 
     public void setBalance(double balance) {
@@ -226,6 +265,8 @@ public class BankAccount {
 ```
 
 --
+
+<!-- .slide: class="large" -->
 
 Nu kan vi få adgang til `balance` og `accountNumber` via getters
 
@@ -239,13 +280,14 @@ System.out.println(account.getAccountNumber()); // 337898
 
 --
 
+<!-- .slide: class="x-large" -->
 Men vi kan også ændre dem via setters
 
 ```java
 BankAccount account = new BankAccount(337898);
 
 account.setBalance(1000.0); // OK
-account.setAccountNumber(123456); //
+account.setAccountNumber(123456); // OK
 ```
 
 Argh...
@@ -314,6 +356,7 @@ public class BankAccount {
 
 --
 
+<!-- .slide: class="large" -->
 Nu kan vi kun ændre `balance` via `deposit` og `withdraw`
 
 ```java
@@ -329,6 +372,7 @@ Hvad skal vi så med en `setBalance` metode?
 
 --
 
+<!-- .slide: class="large" -->
 ```java
 public void deposit(double amount) {
     if (amount > 0) {
@@ -353,6 +397,7 @@ kan vi forenkle `deposit` og `withdraw` ved at flytte valideringen til `setBalan
 
 --
 
+<!-- .slide: class="large" -->
 ```java
 public void deposit(double amount) {
     setBalance(this.balance + amount);
@@ -372,8 +417,12 @@ private void setBalance(double balance) {
 Ja, det kan vi. Snedigt - ik?
 
 ---
-<!-- .slide: class="cover-4" -->
-# Application Programming Interface (API)
+
+Følgende er ikke eksamensrelevant - men blot til reflektion
+
+--
+<!-- .slide: class="cover-1" -->
+# API
 
 --
 
@@ -385,15 +434,17 @@ API står for **A**pplication **P**rogramming **I**nterface
 
 --
 
-Et API er en samling af klasser, metoder og felter, som en udvikler kan bruge til at løse et problem
+Et API er en samling af klasser, metoder og felter, **som udstilles for andre udviklere**, så de kan bruge dem i deres programmer
 
 --
 
-`public` klasser, metoder og felter er API'et, som andre udviklere kan bruge
+`public` klasser, metoder og felter er API'et,  
+**som udviklere der bruger klassen** kan se og bruge
 
 --
 
-`private` klasser, metoder og felter er **implementation detaljer**, som kun klassen selv bruger
+`private` klasser, metoder og felter er   
+**implementation detaljer**, som kun klassen selv bruger
 
 --
 
@@ -404,15 +455,20 @@ I vores `BankAccount` eksempel er flg. en del af vores API:
   - `getAccountNumber()`, 
   - `getBalance()`, 
   - `deposit(double amount)` og 
-  - `withdraw(double amount)` (da de er `public`)
+  - `withdraw(double amount)` ... da de er `public`
 
 --
 
-Spørgsmål: Kan vi ikke bare gøre alt `public` og så lade brugeren om at bruge det rigtigt?
+Spørgsmål: Kan vi ikke bare gøre alt `public`   
+og så lade brugeren om at bruge det *rigtigt*?
 
 --
 
-**Nej!**
+# Nej!
+
+--
+
+**Nej**, fordi:
 
 - Det er svært at forstå/bruge et API korrekt, hvis alt er `public`
 - Det er svært at ændre et API, hvis alt er `public`
@@ -421,6 +477,7 @@ Spørgsmål: Kan vi ikke bare gøre alt `public` og så lade brugeren om at brug
 
 --
 
+<!-- .slide: class="large" -->
 ```java
 private void setBalance(double balance) {
     if (balance >= 0) {
@@ -429,11 +486,13 @@ private void setBalance(double balance) {
 }
 ```
 
-... hvis `setBalance(...)` var `public`, hvorfor bruge `deposit(...)` og `withdraw(...)`?
+... hvis `setBalance(...)` var `public`,  
+hvorfor bruge `deposit(...)` og `withdraw(...)`?
 
 --
 
-Vi kan ændre reglerne for hvordan `balance` opdateres, uden at bryde kode, der bruger vores API, fx
+<!-- .slide: class="large" -->
+Vi kan ændre reglerne for hvordan `balance` opdateres, *uden* at bryde kode, der bruger vores API, fx
 
 ```java
 private void setBalance(double balance) {
@@ -442,6 +501,42 @@ private void setBalance(double balance) {
     }
 }
 ```
+
+---
+<!-- .slide: class="cover-11" -->
+
+# Versionering af API'er
+
+--
+
+Når vi ændrer et API, skal vi overveje om ændringen er **bagud kompatibel** eller ej
+
+--
+
+- En **bagud kompatibel** ændring betyder at kode, der bruger API'et, stadig virker uden ændringer
+- En **ikke bagud kompatibel** ændring betyder at kode, der bruger API'et, skal ændres for at virke med den nye version af API'et
+
+--
+
+I software udvikling, er det almindeligt at vise om en ny version af et API er bagud kompatibel eller ej ved hjælp af versionsnumre
+
+--
+
+Semver (semantisk versionering) bruger tre tal:
+- version 1.0.0
+- version 1.1.0 (bagud kompatibel ændring af version 1.0.0)
+- version 1.1.1 (bagud kompatibel **fejlrettelse** af version 1.1.0)
+- version 2.0 (*ikke* bagud kompatibel ændring af version 1.1)
+
+--
+
+- -> 2.0.1 (fejlrettelser, bagud kompatibel)
+- -> 2.1.0 (ny feature, bagud kompatibel)
+- -> 2.0.0 (breaking change)
+
+--
+
+Så ja, rigtige udviklere tænker over hvilke dele af deres kode, der skal være `public` og hvilke der skal være `private`
 
 ---
 

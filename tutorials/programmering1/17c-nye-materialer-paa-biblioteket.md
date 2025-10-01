@@ -20,7 +20,7 @@ Vi har lavet klasser til at repræsentere bøger, medlemmer og lån på et bibli
    - `ean` (stregkoden på bagsiden af filmen/spillet) som `identifier` i `Movie` og `VideoGame`.
    - `studio` som `creator` i `Movie` og `VideoGame`.
    - `director` som et ekstra felt i `Movie`.
-   - `platform` (fx "PC", "PS5", "Xbox") som et ekstra felt i `VideoGame`. Du kan overveje at lave en `enum` til platform.
+   - `platform` (fx "PC", "PS5", "XBOX", "NINTENDO_SWITCH") som et ekstra felt i `VideoGame`. Du kan overveje at lave en `enum` til platform.
 8. Lav en `toString`-metode i `Resource`, der returnerer noget i stil med `"creator - title (identifier)"`, fx `"J.K. Rowling - Harry Potter og de vises sten (978-87-02-11260-5)"`.
 9. Lav en `Main`-klasse med en `main`-metode, hvor du tester at det virker.
 10. Overskriv `toString`-metoden i `Movie` og `VideoGame`, så de returnerer noget i stil med `"creator - title (identifier), directed by director"` for `Movie` og `"creator - title (identifier), platform: platform"` for `VideoGame`, fx "`"Pixar - Toy Story (1234567890123), directed by John Lasseter"` og `"Nintendo - The Legend of Zelda: Breath of the Wild (9876543210987), platform: Playstation 5"`.

@@ -5,6 +5,8 @@ _*/
 
 pdf/
 
+book/*.pdf
+
 # Ignore Python virtual environments
 .venv/
 uv.lock

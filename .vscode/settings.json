@@ -1,5 +1,6 @@
 {
     "markdown.styles": [
         "style.css"
-    ]
+    ],
+    "tinymist.rootPath": "${workspaceFolder}/book"
 }

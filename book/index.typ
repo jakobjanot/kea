@@ -1,9 +1,9 @@
 #import "style.typ": *
 
 #show: book.with(
-  title: "Java Programmering for Begyndere",
+  title: "Programmering 1 med Java",
   subtitle: "En praktisk introduktion til programmering på 1. semester",
-  author: "Datamatiker Uddannelsen",
+  author: "Jakob Kofoed Janot",
   date: datetime.today(),
 )
 

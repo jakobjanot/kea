@@ -566,12 +566,12 @@ public class MemoryExample {
 
 I dette kapitel har vi lært:
 
-- **String manipulation**: Konvertering mellem strings og char arrays, tekstanalyse
-- **Arrays-klassen**: toString(), sort(), copyOf(), binarySearch()
-- **Reference vs værdi**: Forskellen mellem shallow og deep copy
-- **Algoritmer**: Søgning (lineær, binær), statistik, rotation, merge
-- **ASCII/Unicode**: Karaktermanipulation og internationale karakterer
-- **Performance**: Memory overvejelser og access patterns
+/ String manipulation: Konvertering mellem strings og char arrays, tekstanalyse
+/ Arrays-klassen: toString(), sort(), copyOf(), binarySearch()
+/ Reference vs værdi: Forskellen mellem shallow og deep copy
+/ Algoritmer: Søgning (lineær, binær), statistik, rotation, merge
+/ ASCII/Unicode: Karaktermanipulation og internationale karakterer
+/ Performance: Memory overvejelser og access patterns
 
 Arrays er fundamentale datastrukturer der danner grundlag for mere avancerede collections som ArrayList, som vi møder senere. Forståelse af references og kopiering er særligt vigtig for objektorienteret programmering.
 

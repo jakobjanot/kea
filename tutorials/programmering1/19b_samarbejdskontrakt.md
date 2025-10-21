@@ -1,7 +1,7 @@
 # Samarbejdskontrakt 
 Formål: At sikre et godt samarbejde, klare aftaler og fælles læring.
 
-## Underskrifter
+Underskrifter
 
 Vi har læst og udfyldt kontrakten sammen, og vi accepterer de fælles aftaler.
 
@@ -83,7 +83,7 @@ Vores aftale:
 
 # 7. Læring og refleksion
 - Alle skal kunne forklare fælles kode.
-- Brug GitHub til review og feedback.
+- Brug review og feedback.
 
 Vores aftale:
 - Hvordan sikrer vi, at alle forstår hele koden?

@@ -703,7 +703,7 @@ Tests skal køre hurtigt så vi kan køre dem ofte:
   - Indeholde mindst ét stort bogstav
   - Indeholde mindst ét lille bogstav
   - Indeholde mindst ét tal
-  - Indeholde mindst ét specialtegn (!@#$%^&*)
+  - Indeholde mindst ét specialtegn (!@\#$%\^&*)
   
   Skriv en test for hver regel, og implementér derefter.
 ]

@@ -27,3 +27,5 @@ Hvert kapitel er bygget op omkring et specifikt emne og indeholder både forklar
 #include "chapters/12-komposition.typ"
 #include "chapters/13-indkapsling.typ"
 #include "chapters/14-arv.typ"
+#include "chapters/15-collections.typ"
+#include "chapters/16-test.typ"

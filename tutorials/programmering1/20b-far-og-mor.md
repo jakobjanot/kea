@@ -44,4 +44,4 @@ public Person(String name, Gender gender, Person[] parents) {
 }
 ```
 
-2. Opdater din kode, der opretter stamtræet for dig selv og din familie, så den passer til den nye struktur.
+2. Opdater din kode, der opretter stamtræet for din familie, så den passer til den nye struktur.

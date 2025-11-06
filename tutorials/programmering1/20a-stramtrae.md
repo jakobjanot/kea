@@ -11,4 +11,4 @@ Træstrukturer er meget almindelige i programmering, og de bruges til at repræs
 2. Lav en konstruktør, der initialiserer **name** og sætter **father** og **mother** til null.
 3. Tilføj getter og setter metoder for alle felterne, så du kan tilføje forældre til en Person efter at den er oprettet.
 4. Tilføj en metode `toString()`, der returnerer fx "Beate ♀" eller "Allan ♂".
-5. Prøv at lave et simpelt stamtræ for dig selv og din familie ved at oprette Person-objekter og forbinde dem via parents-feltet. Hvis vi ikke kender en forælder, kan vi lade pladsen i arrayet være null.
+5. Prøv at lave et simpelt stamtræ for dig selv og din familie (eller det danske kongehus) ved at oprette Person-objekter og forbinde dem via parents-feltet. Hvis vi ikke kender en forælder, kan vi lade pladsen i arrayet være null.

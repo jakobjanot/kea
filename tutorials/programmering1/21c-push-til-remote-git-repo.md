@@ -5,9 +5,9 @@ Vi har i de tidligere tutorials lavet et lokalt git-repo og et remote git-repo p
 ```java
 public class Main {
     public static void main(String[] args) {
-        double heightInMeters = 1.75;
-        double weightInKg = 70.0;
-        double bmi = weightInKg / (heightInMeters * heightInMeters);
+        double height = 1.75;
+        double weight = 70.0;
+        double bmi = weight / (height * height);
         System.out.println("Your BMI is: " + bmi);
     }
 }
@@ -16,7 +16,7 @@ public class Main {
 2. Vælg nu "Commit and Push..." knappen nederst i venstre hjørne af IntelliJ vinduet
 3. Åbn Github i din browser og gå til dit repository
 4. Er der nye ændringer i dit repository? Du skulle bl.a. gerne kunne se den `Main.java`
-5. Lav endnu en ændring i koden, fx tilføj en `BMI` klasse med en metode `calculateBmi(double heightInMeters, double weightInKg)`. Opdater `main` metoden til at kalde denne nye metode
+5. Lav endnu en ændring i koden, fx tilføj en `BMI` klasse med en metode `calculateBmi(double height, double weight)`. Opdater `main` metoden til at kalde denne nye metode
 6. Lav et commit med beskeden "Flyttet BMI beregning til BMI klassen"
 7. Vælg nu "Commit and Push..." knappen nederst i venstre hjørne af IntelliJ vinduet
 8.  Åbn Github i din browser og gå til dit repository

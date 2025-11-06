@@ -1,7 +1,7 @@
 # Git samarbejde
 Fortsæt med det git-repo "bmi-calculator" du netop har klonet ned til din computer fra GitHub.
 1. Spørg en makker om at klone det samme repository ned til sin computer.
-2. Din makker laver en ændring i koden, retter værdien af `weightInKg` og `heightInMeters` i `Main` klassen til noget andet
+2. Din makker laver en ændring i koden, retter værdien af `weight` og `height` i `Main` klassen til noget andet
 3. Din makker laver et commit med beskeden "Ændret height og weight værdier i Main"
 4. Din makker commiter/pusher ændringen til GitHub
 5. Tjek på GitHub at din makkers ændringer er derinde

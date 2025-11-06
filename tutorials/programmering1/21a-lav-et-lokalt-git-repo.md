@@ -5,9 +5,9 @@
 ```java
 public class Main {
     public static void main(String[] args) {
-        double heightInMeters = 1.75;
-        double weightInKg = 70.0;
-        double bmi = weightInKg / (heightInMeters * heightInMeters);
+        double height = 1.75;
+        double weight = 70.0;
+        double bmi = BMI.calculateBmi(height, weight);
         System.out.println("Your BMI is: " + bmi);
     }
 }
@@ -17,7 +17,7 @@ public class Main {
 3. Skriv en commit besked i boksen, hvor der står "Commit message", fx "Oprettet IntelliJ projekt med en Main klasse med BMI beregning".
 4. Tryk "Commit" knappen nederst.
 5. Du har nu lavet dit første commit i dit lokale Git repository!
-6. Tilføj en klasse mere kaldet "BMI" og flyt BMI beregningen derover i en metode `calculateBmi(double heightInMeters, double weightInKg)`. Opdater `main` metoden til at kalde denne nye metode
+6. Tilføj en klasse mere kaldet "BMI" og flyt BMI beregningen derover i en metode `calculateBmi(double height, double weight)`. Opdater `main` metoden til at kalde denne nye metode
 7. Gentag trin 3-6 for at lave et nyt commit med beskeden "Flyttet BMI beregning til BMI klassen".
 8.  Klik på den nederste knap i venstre side, der ligner en forgrening med ringe på hver gren.
 9.  Her kan du se git loggen - historikken over dine commits. Klik på de forskellige commits for at se, hvilke filer der er ændret i hvert commit.

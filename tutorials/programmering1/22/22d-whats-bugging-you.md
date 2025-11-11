@@ -40,8 +40,9 @@ I denne tutorial skal vi finde logiske fejl i simple programmer og bruge tre tek
    public class BmiCalculatorTest {
        @Test
        public void testCalculateBmi() {
-           double bmi = BmiCalculator.calculateBmi(80, 1.8);
-           assertEquals(24.69, bmi, 0.01);
+           // Arrange
+           // Act
+           // Assert
        }
     }
     ```

@@ -1,5 +1,5 @@
 ---
-title: 21 - Fejl og undtagelser
+title: 22 - Fejl og undtagelser
 ---
 
 <!-- .slide: class="cover-8" -->
@@ -22,8 +22,8 @@ title: 21 - Fejl og undtagelser
 - Syntaksfejl - når koden ikke overholder sprogets regler
 - Eksempel:
   ```java
-  public double calculateBmi(weight, height) {
-    return weight / (height * height; // Manglende parentes
+  public double calculateBmi(int weight, int height) {
+    return weight / (height * height);
   }
   ```
   
@@ -35,7 +35,7 @@ title: 21 - Fejl og undtagelser
 - Opstår mens programmet kører
 - Eksempel (division med nul):
   ```java
-  public calculateBmi(weight, height) {
+  public double calculateBmi(int weight, int height) {
     return weight / (height * height);
   }
 
@@ -57,7 +57,7 @@ title: 21 - Fejl og undtagelser
 - Svære at opdage, da der ikke er nogen fejlmeddelelser
 - Eksempel:
   ```java
-  public double calculateBmi(weight, height) {
+  public double calculateBmi(int weight, int height) {
     return weight / height; // Forkert formel
   }
   ```
@@ -75,10 +75,12 @@ title: 21 - Fejl og undtagelser
 <!-- .slide: class="cover-8" -->
 ## Undtagelser (Exceptions)
 
-Når et program støder på en fejl under kørsel, kan den ikke fortsætte normalt, eksempel:
+--
+
+Når et program støder på en fejl under kørsel (runtime), kan den ikke fortsætte normalt, eksempel:
 
 ```java
-public double calculateBmi(double weight, double height) {
+public double calculateBmi(int weight, int height) {
   return weight / (height * height);
 }
 
@@ -107,6 +109,8 @@ Ok, men hvad så med:
    int weight = scanner.nextInt();
    System.out.println("BMI: " + calculateBmi(weight, height)); // Fejler her
 ```
+
+Her har vi ingen kontrol over brugerens input
 
 --
 
@@ -143,7 +147,7 @@ public String classifyBmi(double bmi) {
   else return "Obesity";
 }
 
-public double calculateBmi(double weight, double height) {
+public double calculateBmi(int weight, int height) {
   return weight / (height * height);
 }
 ```
@@ -185,7 +189,7 @@ try {
 Hvor skal try/catch blokken placeres?
 
 ```java
-public double calculateBmi(double weight, double height) {
+public double calculateBmi(int weight, int height) {
     try {
         return weight / (height * height);
     } catch (ArithmeticException e) {
@@ -212,7 +216,7 @@ Fordi `calculateBmi()`
 --
 
 ```java
-public double calculateBmi(double weight, double height) {
+public double calculateBmi(int weight, int height) {
     return weight / (height * height);
 }
 
@@ -237,7 +241,7 @@ MEN ...hvad nu hvis brugeren af calculateBmi() glemmer at håndtere undtagelsen?
 --
 
 ```java
-public double calculateBmi(double weight, double height) throws ArithmeticException {
+public double calculateBmi(int weight, int height) throws ArithmeticException {
     return weight / (height * height);
 }
 ```
@@ -272,7 +276,7 @@ Alt vi har brug for at vide er, at højden ikke må være nul - dvs. **argumente
 --
 
 ```java
-public double calculateBmi(double weight, double height) throws IllegalArgumentException {
+public double calculateBmi(int weight, int height) throws IllegalArgumentException {
     if (height == 0) {
         throw new IllegalArgumentException("Højde kan ikke være 0 m.");
     }
@@ -356,7 +360,7 @@ public class InvalidHeightException extends IllegalArgumentException {
 ```
 
 ```java
-public double calculateBmi(double weight, double height) throws InvalidHeightException {
+public double calculateBmi(int weight, int height) throws InvalidHeightException {
     if (height <= 0) {
         throw new InvalidHeightException("Højde skal være større end 0 m.");
     }
@@ -377,7 +381,7 @@ public class InvalidHeightException extends IllegalArgumentException {
 ```
 
 ```java
-public double calculateBmi(double weight, double height) throws InvalidHeightException {
+public double calculateBmi(int weight, int height) throws InvalidHeightException {
     if (height <= 0) {
         throw new InvalidHeightException();
     }
@@ -393,6 +397,26 @@ public double calculateBmi(double weight, double height) throws InvalidHeightExc
 
 *Regel*: Brug undtagelser til at håndtere **usædvanlige** situationer, *ikke* almindelig kontrolflow (brug if-else i stedet)
 
+
+--
+
+Eksempel: null-pointer exception
+
+```java
+public boolean hasBirthdayToday(Person person) {
+    return person.getBirthday() == LocalDate.now();
+}
+```
+
+```java
+public boolean hasBirthdayToday(Person person) {
+    if (person == null) {
+        return false;
+    }
+    return person.getBirthday() == LocalDate.now();
+}
+```
+ 
 --
 
 Eksempel på forkert brug af undtagelser:
@@ -436,7 +460,7 @@ public static void main(String[] args) {
 ### Printdebugging
 
 ```java
-public double calculateBmi(double weight, double height) {
+public double calculateBmi(int weight, int height) {
     System.out.println("Debug: weight = " + weight + ", height = " + height);
     return weight / (height * height);
 }

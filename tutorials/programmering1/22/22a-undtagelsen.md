@@ -22,9 +22,9 @@ public class BankAccount {
         return balance;
     }
 
-    private void setBalance(double amount) {
-        if (amount > 0) {
-            balance = amount;
+    private void setBalance(double balance) {
+        if (balance > 0) {
+            this.balance = balance;
         }
     }
 }
@@ -39,13 +39,14 @@ public class BankAccount {
    account.withdraw(-500);
    ```
    Svar: Ikke noget. Og programmøren der bruger klassen får ingen advarsel om, at noget gik galt.
-6. Ændr `setBalance`-metoden, så den kaster en `IllegalArgumentException`, hvis `amount` er negativ:
+6. Ændr `setBalance`-metoden, så den kaster en `IllegalArgumentException`, hvis `balance` er negativ:
    ```java
-   private void setBalance(double amount) {
-       if (amount < 0) {
-           throw new IllegalArgumentException("Balance cannot be negative");
+   private void setBalance(double balance) {
+       if (balance < 0) {
+           throw new IllegalArgumentException(
+                "Balance cannot be negative");
        }
-       balance = amount;
+       this.balance = balance;
    }
    ```
 7. Test igen med samme kode i `main`-metoden. Hvad sker der nu?

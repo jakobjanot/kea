@@ -36,7 +36,7 @@ jobs:
         run: for tutorial in $(ls -d tutorials/*); do uv run python render.py pdf $tutorial; done
       - name: Generate index
         run: cd site && for thing in $(ls -d */*); do echo "<a href=\"$thing/index.html\">$thing</a><br>" >> ./index.html; done
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: ./site
       - id: deployment

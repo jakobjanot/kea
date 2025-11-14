@@ -33,9 +33,9 @@
 | 07. nov. | Unit Tests                           | 06. nov. | Versionsstyring med git og GitHub            |
 | 10. nov. | Filer                                | 10. nov. | Fejl og undtagelser                          |
 | 12. nov. | Filer Fortsat                        | 12. nov. | Debugging og repetion af unit tests          |
-| 14. nov. | Errorhandling og Exceptions          | 14. nov. | Fil- og datastrømme                          |
-| 17. nov. | Sortering                            | 17. nov. | Arv med interfaces og polymorfi              |
-| 19. nov. | Interface                            | 19. nov. | List, Serialize og Sortering                 |
+| 14. nov. | Errorhandling og Exceptions          | 14. nov. | Filer                          |
+| 17. nov. | Sortering                            | 17. nov. | Arv med interfaces                           |
+| 19. nov. | Interface                            | 19. nov. | Sortering og Comparable interfacet           |
 | 21. nov. | Opsamling                            | 20. nov. | Repetion af exceptions, interfaces og strømme|
 | 24. nov. | Intro projekt                        | 24. nov. | Introduktion til projekt                     |
 | 26. nov. | Vejledning projekt                   | 25. nov. | Vejledning til projekt                       |

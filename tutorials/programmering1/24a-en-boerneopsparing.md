@@ -28,13 +28,17 @@ public abstract class BankAccount {
         this.balance = balance;
     }
 }
+```
 
+```java
 public class CheckingAccount extends BankAccount {
     public CheckingAccount(double balance) {
         super(balance);
     }
 }
+```
 
+```java
 public class SavingsAccount extends BankAccount {
     private double interestRate;
 
@@ -43,11 +47,12 @@ public class SavingsAccount extends BankAccount {
         this.interestRate = interestRate;
     }
 
-    void applyInterest() {
+    public void applyInterest() {
         setBalance(balance + balance * interestRate);
     }
 }
 
+```java
 public class ChildrensAccount extends SavingsAccount {
     public ChildrensAccount(double balance) {
         super(balance, 0.01); // 1% rente
@@ -59,6 +64,6 @@ public class ChildrensAccount extends SavingsAccount {
 2. Opret de tre klasser `BankAccount`, `SavingsAccount` og `ChildrensAccount` som vist ovenfor.
 3. Lav et commit og push til GitHub.
 4. Lav en `Main`-klasse med en `main`-metode, hvor du opretter to `SavingsAccount`-objekter og et `ChildrensAccount`-objekt.
-5. Lav nu en metode `transfer(BankAccount from, BankAccount to, double amount)`, som hæver `amount` fra `from`-kontoen og indsætter det på `to`-kontoen.
-6. Prøv at overføre penge fra en `SavingsAccount` til en `ChildrensAccount` ved at kalde `transfer`-metoden. Det virker fint. Men det burde jo ikke være muligt at hæve penge fra en børneopsparing!
+5. Lav nu en ny metode i `Main`-klassen som `transfer(BankAccount from, BankAccount to, double amount)`, som hæver `amount` fra `from`-kontoen og indsætter det på `to`-kontoen.
+6. Prøv at overføre penge fra en `ChildrensAccount` til fx en `SavingsAccount` ved at kalde `transfer`-metoden. Det virker desværre fint - men det burde jo ikke være muligt at hæve penge fra en børneopsparing!
 7. Forklar, hvorfor det er muligt at hæve penge fra en `ChildrensAccount`, selvom vi ikke ønsker det.

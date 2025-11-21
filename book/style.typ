@@ -5,11 +5,11 @@
   subtitle: none,
   author: none,
   date: none,
-  body
+  body,
 ) = {
   // Set document properties
   set document(title: title, author: author)
-  
+
   // Set page properties
   set page(
     paper: "a4",
@@ -17,20 +17,20 @@
     numbering: "1",
     number-align: center,
   )
-  
+
   // Set text properties
   set text(
-    font: ("New Computer Modern", "Times New Roman"),
+    font: ("Libertinus Serif", "New Computer Modern", "Times New Roman"),
     size: 11pt,
     lang: "da",
   )
-  
+
   // Set paragraph properties
   set par(
     justify: true,
     leading: 0.65em,
   )
-  
+
   // Configure headings
   set heading(numbering: "1.1")
   show heading.where(level: 1): it => {
@@ -39,19 +39,19 @@
     text(size: 24pt, weight: "bold")[#it]
     v(1cm)
   }
-  
+
   show heading.where(level: 2): it => {
     v(1.5em)
     text(size: 18pt, weight: "bold")[#it]
     v(0.8em)
   }
-  
+
   show heading.where(level: 3): it => {
     v(1.2em)
     text(size: 14pt, weight: "bold")[#it]
     v(0.6em)
   }
-  
+
   // Configure code blocks
   show raw.where(block: true): it => {
     block(
@@ -65,7 +65,7 @@
       #it
     ]
   }
-  
+
   // Configure inline code
   show raw.where(block: false): it => {
     box(
@@ -78,11 +78,11 @@
       #it
     ]
   }
-  
+
   // Configure lists
   set list(marker: [•])
   set enum(numbering: "1.")
-  
+
   // Title page
   page(numbering: none)[
     #align(center)[
@@ -101,15 +101,15 @@
       #v(1fr)
     ]
   ]
-  
+
   // Table of contents
   page(numbering: none)[
-    #outline(depth: 3, indent: 1em)
+    #outline(depth: 2, indent: 1em)
   ]
-  
+
   // Reset page numbering for main content
   counter(page).update(1)
-  
+
   // Main content
   body
 }

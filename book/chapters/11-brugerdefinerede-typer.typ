@@ -80,9 +80,9 @@ public class ContactDemo {
 
 Når vi skriver `new Contact()` sker der tre ting:
 
-1. **Hukommelse allokeres**: Plads til objektet reserveres i heap
-2. **Felter initialiseres**: Alle felter får default værdier
-3. **Reference returneres**: Vi får en "adresse" til objektet
+1. *Hukommelse allokeres*: Plads til objektet reserveres i heap
+2. *Felter initialiseres*: Alle felter får default værdier
+3. *Reference returneres*: Vi får en "adresse" til objektet
 
 ```java
 Contact victor = new Contact();  // victor peger på objektet
@@ -711,14 +711,14 @@ public class ContactFactory {
 
 I dette kapitel har vi lært:
 
-- **Brugerdefinerede typer**: Skabe egne klasser for at strukturere data
-- **Konstruktører**: Initialisering af objekter med forskellige parametre
-- **`this` keyword**: Reference til det aktuelle objekt
-- **toString()**: Pæn udskrivning af objekter
-- **Immutable objects**: Sikkerhed gennem final felter
-- **Records**: Moderne syntaks for værdiobjekter
-- **equals() og hashCode()**: Sammenligning baseret på værdier
-- **Arrays af objekter**: Håndtering af samlinger af brugerdefinerede typer
+- *Brugerdefinerede typer*: Skabe egne klasser for at strukturere data
+- *Konstruktører*: Initialisering af objekter med forskellige parametre
+- *`this` keyword*: Reference til det aktuelle objekt
+- *toString()*: Pæn udskrivning af objekter
+- *Immutable objects*: Sikkerhed gennem final felter
+- *Records*: Moderne syntaks for værdiobjekter
+- *equals() og hashCode()*: Sammenligning baseret på værdier
+- *Arrays af objekter*: Håndtering af samlinger af brugerdefinerede typer
 
 Brugerdefinerede typer er fundamentet for objektorienteret programmering. De gør det muligt at modellere virkeligheden i kode og skaber mere læselig og vedligeholdelig software.
 

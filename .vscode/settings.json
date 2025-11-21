@@ -2,5 +2,49 @@
     "markdown.styles": [
         "style.css"
     ],
-    "tinymist.rootPath": "${workspaceFolder}/book"
+    
+    // Tinymist Language Server Configuration
+    "tinymist.rootPath": "${workspaceFolder}/book",
+    "tinymist.exportPdf": "never",
+    "tinymist.outputPath": "$root/$dir/$name",
+    "tinymist.compileStatus": "enable",
+    "tinymist.systemFonts": true,
+    
+    // Editor settings for Typst files
+    "[typst]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        }
+    },
+    
+    // File associations
+    "files.associations": {
+        "*.typ": "typst"
+    },
+    
+    // Exclude build artifacts from file explorer
+    "files.exclude": {
+        "**/*.pdf": false,
+        "**/.typst-cache": true
+    },
+    
+    // Search configuration
+    "search.exclude": {
+        "**/.typst-cache": true,
+        "**/node_modules": true
+    },
+    
+    // Tinymist preview settings
+    "tinymist.preview.refresh": "onType",
+    "tinymist.preview.partialRendering": true,
+    // Formatting
+    "tinymist.formatterMode": "typstyle",
+    
+    // Diagnostics
+    "tinymist.diagnosticsMode": "syntax"
 }

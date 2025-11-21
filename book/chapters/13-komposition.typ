@@ -116,7 +116,7 @@ if (account != null) {
 
 == Hvad er komposition?
 
-Komposition er når et objekt indeholder andre objekter som en del af sin tilstand (state). Vi siger, at objektet "har en" (**has-a**) relation til det andet objekt.
+Komposition er når et objekt indeholder andre objekter som en del af sin tilstand (state). Vi siger, at objektet "har en" (*has-a*) relation til det andet objekt.
 
 Lad os se på et eksempel med vores `BankAccount`-klasse:
 
@@ -334,9 +334,9 @@ Loan loan1 = new Loan(member1,
 === Has-a relationer
 
 `Loan`-klassen har flere "has-a" relationer:
-- Et lån **har et** medlem
-- Et lån **har en** bog
-- Et lån **har en** udlånsdato
+- Et lån *har et* medlem
+- Et lån *har en* bog
+- Et lån *har en* udlånsdato
 
 Alle tre relationer er obligatoriske - et lån kan ikke eksistere uden alle tre dele.
 
@@ -467,15 +467,15 @@ System.out.println(account.owner.address.city);
 
 Komposition giver os flere fordele:
 
-**1. Bedre organisation:** Relateret data grupperes sammen i meningsfulde enheder.
+*1. Bedre organisation:* Relateret data grupperes sammen i meningsfulde enheder.
 
-**2. Genbrugelighed:** En `Address`-klasse kan bruges af mange andre klasser (`Person`, `Company`, `Store`, osv.).
+*2. Genbrugelighed:* En `Address`-klasse kan bruges af mange andre klasser (`Person`, `Company`, `Store`, osv.).
 
-**3. Vedligeholdelse:** Hvis vi skal ændre hvordan en adresse repræsenteres, skal vi kun ændre ét sted.
+*3. Vedligeholdelse:* Hvis vi skal ændre hvordan en adresse repræsenteres, skal vi kun ændre ét sted.
 
-**4. Indkapsling:** Vi kan skjule kompleksitet inde i objekter.
+*4. Indkapsling:* Vi kan skjule kompleksitet inde i objekter.
 
-**5. Typsikkerhed:** Kompilatoren hjælper os med at bruge objekterne korrekt.
+*5. Typsikkerhed:* Kompilatoren hjælper os med at bruge objekterne korrekt.
 
 == Øvelser
 
@@ -513,11 +513,11 @@ I dette kapitel har vi lært:
 
 - Arrays kan indeholde objekter, og nye arrays har `null` som standardværdi
 - Vi skal altid tjekke for `null`, før vi bruger objektreferences
-- **Komposition** betyder at et objekt indeholder andre objekter
+- *Komposition* betyder at et objekt indeholder andre objekter
 - Vi bruger "has-a" til at beskrive kompositionsrelationer
 - Obligatoriske relationer kan håndhæves gennem konstruktørparametre
 - `final` kan bruges til at gøre relationer permanente
-- **Stærkt ejerskab** betyder at et objekt ikke kan eksistere uden et andet
+- *Stærkt ejerskab* betyder at et objekt ikke kan eksistere uden et andet
 - Komposition giver bedre organisation, genbrugelighed og typsikkerhed
 - Objekter kan indeholde objekter i flere niveauer
 

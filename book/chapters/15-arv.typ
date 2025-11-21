@@ -6,9 +6,9 @@ Arv (eng: inheritance) er en fundamental mekanisme i objektorienteret programmer
 
 Forestil dig at en bank har brug for forskellige typer konti med forskellige regler:
 
-- **Almindelig konto:** Kan indsætte og hæve penge
-- **Opsparingskonto:** Som almindelig konto, men kan ikke overskride saldoen og får renter
-- **Kreditkonto:** Kan overskride saldoen op til en grænse, men betaler rente på gæld
+- *Almindelig konto:* Kan indsætte og hæve penge
+- *Opsparingskonto:* Som almindelig konto, men kan ikke overskride saldoen og får renter
+- *Kreditkonto:* Kan overskride saldoen op til en grænse, men betaler rente på gæld
 
 Hvad har de tilfælles?
 - Alle har et kontonummer
@@ -16,7 +16,7 @@ Hvad har de tilfælles?
 - Alle kan indsætte penge
 - Alle kan hæve penge (med forskellige regler)
 
-I stedet for at skrive den samme kode tre gange, kan vi bruge **arv**.
+I stedet for at skrive den samme kode tre gange, kan vi bruge *arv*.
 
 == Grundlæggende arv
 
@@ -58,7 +58,7 @@ public class BankAccount {
 }
 ```
 
-Nu kan vi lave en `SavingsAccount` (opsparingskonto), der **arver** fra `BankAccount`:
+Nu kan vi lave en `SavingsAccount` (opsparingskonto), der *arver* fra `BankAccount`:
 
 ```java
 public class SavingsAccount extends BankAccount {
@@ -78,24 +78,24 @@ public class SavingsAccount extends BankAccount {
 ```
 
 Nøgleordene her er:
-- **`extends`** betyder at `SavingsAccount` arver fra `BankAccount`
-- **`super(...)`** kalder konstruktøren i superklassen
+- *`extends`* betyder at `SavingsAccount` arver fra `BankAccount`
+- *`super(...)`* kalder konstruktøren i superklassen
 
 == Terminologi
 
 Når en klasse arver fra en anden, bruger vi denne terminologi:
 
-- **Superklasse** (også kaldet baseklasse eller parent class): Den klasse, der bliver arvet fra. I vores eksempel er `BankAccount` superklassen.
+- *Superklasse* (også kaldet baseklasse eller parent class): Den klasse, der bliver arvet fra. I vores eksempel er `BankAccount` superklassen.
 
-- **Subklasse** (også kaldet afledt klasse eller child class): Den klasse, der arver. I vores eksempel er `SavingsAccount` subklassen.
+- *Subklasse* (også kaldet afledt klasse eller child class): Den klasse, der arver. I vores eksempel er `SavingsAccount` subklassen.
 
-Vi siger at `SavingsAccount` **arver fra** `BankAccount`, eller at `SavingsAccount` **udvider** (extends) `BankAccount`.
+Vi siger at `SavingsAccount` *arver fra* `BankAccount`, eller at `SavingsAccount` *udvider* (extends) `BankAccount`.
 
 == Hvad arver subklassen?
 
 Når `SavingsAccount` arver fra `BankAccount`, får den adgang til:
 
-**1. Alle `public` og `protected` metoder:**
+*1. Alle `public` og `protected` metoder:*
 ```java
 SavingsAccount account = new SavingsAccount(123456, 0.05);
 account.deposit(1000);      // Fra BankAccount
@@ -104,15 +104,15 @@ System.out.println(account.getBalance()); // Fra BankAccount
 account.applyInterest();    // NY! Fra SavingsAccount
 ```
 
-**2. Alle `protected` felter** (hvis de var `protected` i stedet for `private`)
+*2. Alle `protected` felter* (hvis de var `protected` i stedet for `private`)
 
-**3. IKKE `private` felter eller metoder** - disse er kun tilgængelige i selve klassen.
+*3. IKKE `private` felter eller metoder* - disse er kun tilgængelige i selve klassen.
 
 == Super-nøgleordet
 
 `super` bruges til to ting:
 
-**1. Kalde superklassens konstruktør:**
+*1. Kalde superklassens konstruktør:*
 ```java
 public SavingsAccount(int accountNumber, 
                      double interestRate) {
@@ -123,7 +123,7 @@ public SavingsAccount(int accountNumber,
 
 Første linje i en subklasse-konstruktør skal normalt være et kald til `super(...)`. Hvis du ikke skriver det eksplicit, indsætter Java automatisk `super()` (uden parametre).
 
-**2. Kalde superklassens metoder:**
+*2. Kalde superklassens metoder:*
 ```java
 @Override
 protected void setBalance(double balance) {
@@ -135,7 +135,7 @@ protected void setBalance(double balance) {
 
 == Overriding af metoder
 
-En subklasse kan **overskrive** (eng: override) metoder fra superklassen for at ændre deres opførsel.
+En subklasse kan *overskrive* (eng: override) metoder fra superklassen for at ændre deres opførsel.
 
 Lad os sige at en opsparingskonto ikke må have negativ saldo. Vi kan overskrive `setBalance()`:
 
@@ -164,7 +164,7 @@ public class SavingsAccount extends BankAccount {
 }
 ```
 
-**`@Override` annotationen** er valgfri, men anbefales. Den fortæller kompilatoren, at du mener at overskrive en metode, og giver en fejl, hvis metoden ikke findes i superklassen.
+*`@Override` annotationen* er valgfri, men anbefales. Den fortæller kompilatoren, at du mener at overskrive en metode, og giver en fejl, hvis metoden ikke findes i superklassen.
 
 Nu kan vi teste:
 
@@ -181,9 +181,9 @@ System.out.println(account.getBalance()); // Stadig 1000.0!
 
 Vi har nu brugt alle tre vigtigste access modifiers:
 
-**1. `private`** - kun synlig i klassen selv
-**2. `public`** - synlig overalt  
-**3. `protected`** - synlig i klassen selv OG i subklasser
+*1. `private`* - kun synlig i klassen selv
+*2. `public`* - synlig overalt  
+*3. `protected`* - synlig i klassen selv OG i subklasser
 
 I vores eksempel gjorde vi `setBalance()` `protected` så den kan kaldes fra `SavingsAccount`:
 
@@ -279,7 +279,7 @@ Der findes forskellige typer transaktioner:
 
 Men en generel "transaktion" uden type giver ikke mening.
 
-Vi kan gøre klassen **abstrakt**:
+Vi kan gøre klassen *abstrakt*:
 
 ```java
 import java.util.Date;
@@ -310,7 +310,7 @@ public abstract class Transaction {
 Nøglepunkter:
 - Klassen er markeret med `abstract`
 - Metoden `execute()` er abstrakt - ingen implementation
-- Abstrakte klasser kan **ikke** instantieres direkte
+- Abstrakte klasser kan *ikke* instantieres direkte
 
 Nu kan vi lave konkrete transaktionstyper:
 
@@ -390,12 +390,12 @@ t3.execute();
 
 === Regler for abstrakte klasser
 
-**1. En abstrakt klasse kan ikke instantieres:**
+*1. En abstrakt klasse kan ikke instantieres:*
 ```java
 Transaction t = new Transaction(100, "Test"); // FEJL!
 ```
 
-**2. En abstrakt metode skal overskrives i subklasser:**
+*2. En abstrakt metode skal overskrives i subklasser:*
 ```java
 public class MyTransaction extends Transaction {
     // SKAL implementere execute()
@@ -406,7 +406,7 @@ public class MyTransaction extends Transaction {
 }
 ```
 
-**3. En abstrakt klasse kan have både abstrakte og konkrete metoder:**
+*3. En abstrakt klasse kan have både abstrakte og konkrete metoder:*
 ```java
 public abstract class Transaction {
     // Abstrakt - skal implementeres i subklasse
@@ -419,7 +419,7 @@ public abstract class Transaction {
 }
 ```
 
-**4. En abstrakt metode kan kun være i en abstrakt klasse:**
+*4. En abstrakt metode kan kun være i en abstrakt klasse:*
 ```java
 public class MyClass { // FEJL - ikke abstrakt
     public abstract void myMethod(); // Men har abstrakt metode
@@ -430,14 +430,14 @@ public class MyClass { // FEJL - ikke abstrakt
 
 Vi har nu set to måder at relatere klasser på:
 
-**Has-a (Komposition):** En klasse indeholder en anden som et felt.
+*Has-a (Komposition):* En klasse indeholder en anden som et felt.
 ```java
 public class Car {
     private Engine engine; // Car HAS-A Engine
 }
 ```
 
-**Is-a (Arv):** En klasse er en specialisering af en anden.
+*Is-a (Arv):* En klasse er en specialisering af en anden.
 ```java
 public class Car extends Vehicle {
     // Car IS-A Vehicle
@@ -448,12 +448,12 @@ public class Car extends Vehicle {
 
 Spørg dig selv: "Er X en type af Y?" eller "Har X en Y?"
 
-**Eksempler på is-a:**
+*Eksempler på is-a:*
 - En hund er et dyr → `Dog extends Animal`
 - En opsparingskonto er en bankkonto → `SavingsAccount extends BankAccount`
 - En cirkel er en form → `Circle extends Shape`
 
-**Eksempler på has-a:**
+*Eksempler på has-a:*
 - En bil har en motor → `Car` har et `Engine` felt
 - En person har en adresse → `Person` har et `Address` felt
 - En bog har en forfatter → `Book` har et `Author` felt
@@ -462,23 +462,23 @@ Spørg dig selv: "Er X en type af Y?" eller "Har X en Y?"
 
 === Fordele
 
-**1. Genbrugelighed:** Fælles kode skrives kun én gang i superklassen.
+*1. Genbrugelighed:* Fælles kode skrives kun én gang i superklassen.
 
-**2. Udvidelse:** Nye typer kan tilføjes uden at ændre eksisterende kode.
+*2. Udvidelse:* Nye typer kan tilføjes uden at ændre eksisterende kode.
 
-**3. Polymorfi:** Vi kan behandle objekter af forskellige typer ens (mere om dette senere).
+*3. Polymorfi:* Vi kan behandle objekter af forskellige typer ens (mere om dette senere).
 
-**4. Organisation:** Hierarkier gør kodestrukturen klar.
+*4. Organisation:* Hierarkier gør kodestrukturen klar.
 
 === Ulemper og advarsler
 
-**1. Tæt kobling:** Subklasser er tæt koblet til superklassen - ændringer i superklassen påvirker alle subklasser.
+*1. Tæt kobling:* Subklasser er tæt koblet til superklassen - ændringer i superklassen påvirker alle subklasser.
 
-**2. Kompleksitet:** Dybe arvehierarkier kan blive svære at forstå.
+*2. Kompleksitet:* Dybe arvehierarkier kan blive svære at forstå.
 
-**3. Fragmentering:** Funktionalitet spredes over flere klasser.
+*3. Fragmentering:* Funktionalitet spredes over flere klasser.
 
-**Vigtig regel:** Foretræk komposition frem for arv når begge giver mening. Arv skaber stærkere binding mellem klasser.
+*Vigtig regel:* Foretræk komposition frem for arv når begge giver mening. Arv skaber stærkere binding mellem klasser.
 
 == Constructor chaining
 
@@ -519,7 +519,7 @@ SavingsAccount konstruktør
 ChildrensSavingsAccount konstruktør
 ```
 
-Superklassens konstruktør kaldes **altid først**.
+Superklassens konstruktør kaldes *altid først*.
 
 == Hvornår skal man bruge arv?
 
@@ -582,17 +582,17 @@ Lav en `Account`-klasse (lignende `BankAccount`) der:
 
 I dette kapitel har vi lært:
 
-- **Arv** lader en klasse genbruge kode fra en anden klasse
-- **`extends`** nøgleordet bruges til at lave en subklasse
-- **Superklasse** er den klasse, der arves fra
-- **Subklasse** er den klasse, der arver
-- **`super(...)`** kalder superklassens konstruktør
-- **`super.method()`** kalder superklassens metode
-- **`@Override`** markerer at en metode overskriver en metode fra superklassen
-- **`protected`** gør felter/metoder tilgængelige for subklasser
-- **Abstrakte klasser** kan ikke instantieres og kan have abstrakte metoder
-- **Abstrakte metoder** skal implementeres i subklasser
-- **Is-a** relation indikerer arv, **has-a** indikerer komposition
+- *Arv* lader en klasse genbruge kode fra en anden klasse
+- *`extends`* nøgleordet bruges til at lave en subklasse
+- *Superklasse* er den klasse, der arves fra
+- *Subklasse* er den klasse, der arver
+- *`super(...)`* kalder superklassens konstruktør
+- *`super.method()`* kalder superklassens metode
+- *`@Override`* markerer at en metode overskriver en metode fra superklassen
+- *`protected`* gør felter/metoder tilgængelige for subklasser
+- *Abstrakte klasser* kan ikke instantieres og kan have abstrakte metoder
+- *Abstrakte metoder* skal implementeres i subklasser
+- *Is-a* relation indikerer arv, *has-a* indikerer komposition
 - Konstruktører kaldes i kæde fra superklasse til subklasse
 - Foretræk komposition frem for arv når begge er mulige
 

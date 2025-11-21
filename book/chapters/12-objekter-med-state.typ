@@ -723,12 +723,12 @@ public class CommonIssues {
 
 I dette kapitel har vi lært:
 
-- **State og Behavior**: Objekter der både gemmer data og kan udføre handlinger
-- **Instance metoder**: Metoder der virker på specifikke objekter (ikke static)
-- **Mutable objekter**: Objekter hvis tilstand kan ændres over tid
-- **Object lifecycle**: Oprettelse, brug og garbage collection
-- **Null håndtering**: Sikker arbejde med references der måske er null
-- **Praktiske eksempler**: BankAccount og Library systemer
+- *State og Behavior*: Objekter der både gemmer data og kan udføre handlinger
+- *Instance metoder*: Metoder der virker på specifikke objekter (ikke static)
+- *Mutable objekter*: Objekter hvis tilstand kan ændres over tid
+- *Object lifecycle*: Oprettelse, brug og garbage collection
+- *Null håndtering*: Sikker arbejde med references der måske er null
+- *Praktiske eksempler*: BankAccount og Library systemer
 
 Objekter med state og adfærd er kraftfulde værktøjer til at modellere komplekse systemer. De gør det muligt at kapsle både data og logik sammen på en naturlig måde.
 

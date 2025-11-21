@@ -266,7 +266,7 @@ src/
 
 === Package Declaration og Import
 
-**Calculator.java:**
+*Calculator.java:*
 ```java
 package dk.kea.calculator;
 
@@ -281,7 +281,7 @@ public class Calculator {
 }
 ```
 
-**Main.java:**
+*Main.java:*
 ```java
 package app;
 
@@ -714,11 +714,11 @@ public class ArrayUtils {
 
 === Design Principper
 
-1. **Single Responsibility**: Hver klasse skal have ét ansvar
-2. **Static Metoder**: Alle metoder bør være static
-3. **Immutable**: Påvirk ikke input parametre
-4. **Null Safety**: Håndter null input gracefully
-5. **Documentation**: Skriv JavaDoc kommentarer
+1. *Single Responsibility*: Hver klasse skal have ét ansvar
+2. *Static Metoder*: Alle metoder bør være static
+3. *Immutable*: Påvirk ikke input parametre
+4. *Null Safety*: Håndter null input gracefully
+5. *Documentation*: Skriv JavaDoc kommentarer
 
 === Eksempel på God Design
 
@@ -835,12 +835,12 @@ public class SafeCalculator {
 
 I dette kapitel har vi lært:
 
-- **Hjælpeklasser**: Klasser med static metoder der fungerer som værktøjskasser
-- **Static vs Instance**: Forskellen mellem metoder der tilhører klassen vs objekter
-- **Packages**: Organisering af kode i navnerum for at undgå konflikter  
-- **Import statements**: Hvordan man bruger klasser fra andre pakker
-- **Best practices**: Design principper for gode hjælpeklasser
-- **Praktiske eksempler**: Calculator, DistanceConverter, StringUtils, ArrayUtils
+- *Hjælpeklasser*: Klasser med static metoder der fungerer som værktøjskasser
+- *Static vs Instance*: Forskellen mellem metoder der tilhører klassen vs objekter
+- *Packages*: Organisering af kode i navnerum for at undgå konflikter  
+- *Import statements*: Hvordan man bruger klasser fra andre pakker
+- *Best practices*: Design principper for gode hjælpeklasser
+- *Praktiske eksempler*: Calculator, DistanceConverter, StringUtils, ArrayUtils
 
 Hjælpeklasser er fundamentale for at organisere kode på en ren og genbrugelig måde. De danner grundlag for at bygge større og mere komplekse systemer.
 

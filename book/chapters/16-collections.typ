@@ -63,9 +63,9 @@ makes.add("Mazda"); // Virker fint!
 ```
 
 ArrayList:
-- **Vokser automatisk** når vi tilføjer elementer
-- **Holder selv styr** på antal elementer
-- Giver os **nyttige metoder** til at arbejde med listen
+- *Vokser automatisk* når vi tilføjer elementer
+- *Holder selv styr* på antal elementer
+- Giver os *nyttige metoder* til at arbejde med listen
 
 == Generiske typer
 
@@ -366,7 +366,7 @@ for (Book book : orwellBooks) {
 
 Når vi arbejder med ArrayList af objekter (ikke primitive typer), skal vi huske at:
 
-1. **Hvert element er en reference**
+1. *Hvert element er en reference*
 
 ```java
 ArrayList<BankAccount> accounts = new ArrayList<>();
@@ -377,7 +377,7 @@ acc1.deposit(100);
 System.out.println(accounts.get(0).getBalance()); // 100
 ```
 
-2. **Elementer kan være null**
+2. *Elementer kan være null*
 
 ```java
 ArrayList<String> names = new ArrayList<>();
@@ -392,7 +392,7 @@ for (String name : names) {
 }
 ```
 
-3. **Objekter deles ikke automatisk**
+3. *Objekter deles ikke automatisk*
 
 ```java
 ArrayList<Integer> numbers1 = new ArrayList<>();
@@ -542,12 +542,12 @@ Autoboxing og unboxing sker automatisk, men det har en lille performance-omkostn
 
 I dette kapitel har vi lært:
 
-- **ArrayList** løser mange af de begrænsninger arrays har
-- ArrayList vokser **automatisk** når vi tilføjer elementer
-- Vi bruger **generiske typer** med vinkelparenteser: `ArrayList<Type>`
-- ArrayList har mange **nyttige metoder**: `add()`, `get()`, `remove()`, `size()`, osv.
-- ArrayList bruger internt et **array** der bliver større efter behov
-- Vi skal bruge **wrapper-klasser** for primitive typer: `Integer`, `Double`, osv.
+- *ArrayList* løser mange af de begrænsninger arrays har
+- ArrayList vokser *automatisk* når vi tilføjer elementer
+- Vi bruger *generiske typer* med vinkelparenteser: `ArrayList<Type>`
+- ArrayList har mange *nyttige metoder*: `add()`, `get()`, `remove()`, `size()`, osv.
+- ArrayList bruger internt et *array* der bliver større efter behov
+- Vi skal bruge *wrapper-klasser* for primitive typer: `Integer`, `Double`, osv.
 - ArrayList kan indeholde `null`-værdier, så vi skal være forsigtige
 
 ArrayList er en af de mest brugte datastrukturer i Java og et vigtigt værktøj i enhver Java-programmørs værktøjskasse.

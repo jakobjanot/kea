@@ -15,7 +15,7 @@ slides-html dir:
 
 slides-pdf dir:
     just slides-html {{dir}} && \
-    for slide in $(find site -name "*.html"); do \
+    for slide in $(find ./site -name "*.html" -maxdepth 1 | sort -rn); do \
         [ ! -f "site/$(basename "$slide" .html).pdf" ] && decktape reveal "$slide" "site/$(basename "$slide" .html).pdf"; \
     done
 

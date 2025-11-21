@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Book",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "compile",
+        "${workspaceFolder}/book/index.typ"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Compile Current File",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "compile",
+        "${file}"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Watch Book",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "watch",
+        "${workspaceFolder}/book/index.typ"
+      ],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

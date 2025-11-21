@@ -1,0 +1,5 @@
+[package]
+name = "kea-programmering-1"
+version = "1.0.0"
+entrypoint = "index.typ"
+authors = ["Jakob Kofoed Janot"]

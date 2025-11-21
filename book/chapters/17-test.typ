@@ -19,10 +19,10 @@ public static void main(String[] args) {
 ```
 
 Problemet med denne tilgang:
-- **Manuelt arbejde** - vi skal visuelt tjekke output hver gang
-- **Ikke reproducerbar** - vi skal huske hvad output skulle være
-- **Tidskrævende** - især når projektet vokser
-- **Fejltilbøjelig** - let at overse fejl
+- *Manuelt arbejde* - vi skal visuelt tjekke output hver gang
+- *Ikke reproducerbar* - vi skal huske hvad output skulle være
+- *Tidskrævende* - især når projektet vokser
+- *Fejltilbøjelig* - let at overse fejl
 
 Hvad hvis vi kunne automatisere testene?
 
@@ -51,27 +51,27 @@ assert account.getBalance() == 9999999;
 === Aktivere assertions
 
 #note[
-Assertions er som standard _deaktiveret_ i Java!
+  Assertions er som standard _deaktiveret_ i Java!
 
-Vi skal køre programmet med `-ea` flaget (enable assertions):
+  Vi skal køre programmet med `-ea` flaget (enable assertions):
 
-```bash
-java -ea BankAccount
-```
+  ```bash
+  java -ea BankAccount
+  ```
 
-I IntelliJ:
-1. Gå til `Run` → `Edit Configurations...`
-2. Find `Modify options`
-3. Enable `Add VM options`
-4. Tilføj `-ea` i feltet "VM options"
+  I IntelliJ:
+  1. Gå til `Run` → `Edit Configurations...`
+  2. Find `Modify options`
+  3. Enable `Add VM options`
+  4. Tilføj `-ea` i feltet "VM options"
 ]
 
 === Hvornår bruge assert?
 
 `assert` bruges typisk til at tjekke:
-- **Invarianter** - ting der altid skal være sande
-- **Pre-conditions** - krav før en metode køres
-- **Post-conditions** - garantier efter en metode er kørt
+- *Invarianter* - ting der altid skal være sande
+- *Pre-conditions* - krav før en metode køres
+- *Post-conditions* - garantier efter en metode er kørt
 
 Eksempel:
 
@@ -79,21 +79,21 @@ Eksempel:
 public void withdraw(double amount) {
     assert amount > 0 : "Beløb skal være positivt";
     assert balance >= amount : "Ikke nok penge på kontoen";
-    
+
     balance -= amount;
-    
+
     assert balance >= 0 : "Balance må ikke være negativ";
 }
 ```
 
 === Fordele og begrænsninger ved assert
 
-**Fordele:**
+*Fordele:*
 - Simpel syntaks
 - Kan bruges overalt i koden
 - Kan slås til/fra med `-ea` flag
 
-**Begrænsninger:**
+*Begrænsninger:*
 - Skal manuelt aktiveres
 - Ikke en komplet test-løsning
 - Ingen organisering af tests
@@ -104,10 +104,10 @@ For systematisk testning bruger vi i stedet JUnit.
 == JUnit - professionel testning
 
 JUnit er Java's mest populære test framework. Det giver os:
-- **Organiserede tests** i testklasser
-- **Automatisk kørsel** af alle tests
-- **Detaljeret rapportering** af resultater
-- **Integration** med udviklingsværktøjer
+- *Organiserede tests* i testklasser
+- *Automatisk kørsel* af alle tests
+- *Detaljeret rapportering* af resultater
+- *Integration* med udviklingsværktøjer
 
 === Oprettelse af en testklasse
 
@@ -126,27 +126,27 @@ public class BankAccountTest {
 ```
 
 Konventioner:
-- **Testklasse**: Navn på klassen + "Test", fx `BankAccountTest`
-- **Testmetoder**: Beskrivende navne der forklarer hvad der testes
-- **`@Test` annotation**: Markerer at metoden er en test
+- *Testklasse*: Navn på klassen + "Test", fx `BankAccountTest`
+- *Testmetoder*: Beskrivende navne der forklarer hvad der testes
+- *`@Test` annotation*: Markerer at metoden er en test
 
 === AAA-mønsteret
 
 En god test følger AAA-mønsteret:
 
-- **Arrange** - forbered de objekter og data vi skal bruge
-- **Act** - udfør den handling vi vil teste
-- **Assert** - verificer at resultatet er som forventet
+- *Arrange* - forbered de objekter og data vi skal bruge
+- *Act* - udfør den handling vi vil teste
+- *Assert* - verificer at resultatet er som forventet
 
 ```java
 @Test
 public void depositChangesBalance() {
     // Arrange - opsætning
     BankAccount account = new BankAccount("12345");
-    
+
     // Act - udfør handling
     account.deposit(100);
-    
+
     // Assert - verificer resultat
     assertEquals(100, account.getBalance());
 }
@@ -165,25 +165,25 @@ import static org.junit.jupiter.api.Assertions.*;
 public void testAssertions() {
     // Lige med
     assertEquals(100, account.getBalance());
-    
+
     // Ikke lige med
     assertNotEquals(0, account.getBalance());
-    
+
     // Sand
     assertTrue(account.getBalance() > 0);
-    
+
     // Falsk
     assertFalse(account.getBalance() < 0);
-    
+
     // Null
     assertNull(account.getOwner());
-    
+
     // Ikke null
     assertNotNull(account);
-    
+
     // Samme objekt (reference)
     assertSame(account1, account2);
-    
+
     // Forskellige objekter
     assertNotSame(account1, account2);
 }
@@ -199,7 +199,7 @@ public void withdrawMoreThanBalanceThrowsException() {
     // Arrange
     BankAccount account = new BankAccount("12345");
     account.deposit(100);
-    
+
     // Act & Assert
     assertThrows(IllegalArgumentException.class, () -> {
         account.withdraw(200);
@@ -292,9 +292,9 @@ Test-Driven Development er en udviklingsmetode hvor vi skriver tests _før_ vi s
 
 TDD følger denne cyklus:
 
-1. **Red** - Skriv en test der fejler (rød)
-2. **Green** - Skriv lige præcis nok kode til at testen virker (grøn)
-3. **Refactor** - Forbedre koden uden at ændre funktionalitet
+1. *Red* - Skriv en test der fejler (rød)
+2. *Green* - Skriv lige præcis nok kode til at testen virker (grøn)
+3. *Refactor* - Forbedre koden uden at ændre funktionalitet
 
 #figure(
   [
@@ -322,14 +322,14 @@ TDD følger denne cyklus:
                                     Gentag cyklussen
     ```
   ],
-  caption: [TDD Red-Green-Refactor cyklus]
+  caption: [TDD Red-Green-Refactor cyklus],
 )
 
 === TDD i praksis
 
 Lad os bygge en `Calculator` klasse med TDD:
 
-**Step 1: Skriv en test (Red)**
+*Step 1: Skriv en test (Red)*
 
 ```java
 public class CalculatorTest {
@@ -344,7 +344,7 @@ public class CalculatorTest {
 
 Denne test kompilerer ikke engang - `Calculator` eksisterer ikke! Det er ok, det er en del af processen.
 
-**Step 2: Skriv minimal kode (Green)**
+*Step 2: Skriv minimal kode (Green)*
 
 ```java
 public class Calculator {
@@ -356,11 +356,11 @@ public class Calculator {
 
 Nu virker testen! Vi skrev lige præcis nok kode.
 
-**Step 3: Refactor (hvis nødvendigt)**
+*Step 3: Refactor (hvis nødvendigt)*
 
 I dette simple tilfælde er der ikke noget at refaktorere. Lad os tilføje mere funktionalitet.
 
-**Næste iteration - Subtraktion (Red)**
+*Næste iteration - Subtraktion (Red)*
 
 ```java
 @Test
@@ -371,7 +371,7 @@ public void subtractTwoNumbers() {
 }
 ```
 
-**Green:**
+*Green:*
 
 ```java
 public int subtract(int a, int b) {
@@ -379,7 +379,7 @@ public int subtract(int a, int b) {
 }
 ```
 
-**Refactor:**
+*Refactor:*
 
 Vi ser at vi opretter en ny Calculator i hver test. Lad os refaktorere:
 
@@ -406,23 +406,23 @@ public class CalculatorTest {
 
 === Fordele ved TDD
 
-**1. Bedre design**
+*1. Bedre design*
 - Vi tænker på hvordan koden skal bruges før vi skriver den
 - Vi bygger kun det der er nødvendigt
 
-**2. Færre bugs**
+*2. Færre bugs*
 - Bugs opdages tidligt
 - Vi tester løbende
 
-**3. Dokumentation**
+*3. Dokumentation*
 - Tests viser hvordan koden skal bruges
 - Eksempler på brug
 
-**4. Tillid til at ændre koden**
+*4. Tillid til at ændre koden*
 - Tests bekræfter at alt stadig virker
 - Trygt at refaktorere
 
-**5. Fokus**
+*5. Fokus*
 - Ét problem ad gangen
 - Klar definition af "færdig" (testen virker)
 
@@ -430,7 +430,7 @@ public class CalculatorTest {
 
 Lad os bygge en forenklet `StringBuilder` med TDD:
 
-**Test 1: Opret tom builder**
+*Test 1: Opret tom builder*
 
 ```java
 @Test
@@ -440,12 +440,12 @@ public void createEmptyBuilder() {
 }
 ```
 
-**Kode:**
+*Kode:*
 
 ```java
 public class MyStringBuilder {
     private String text = "";
-    
+
     @Override
     public String toString() {
         return text;
@@ -453,7 +453,7 @@ public class MyStringBuilder {
 }
 ```
 
-**Test 2: Append tekst**
+*Test 2: Append tekst*
 
 ```java
 @Test
@@ -464,7 +464,7 @@ public void appendText() {
 }
 ```
 
-**Kode:**
+*Kode:*
 
 ```java
 public void append(String str) {
@@ -472,7 +472,7 @@ public void append(String str) {
 }
 ```
 
-**Test 3: Append flere gange**
+*Test 3: Append flere gange*
 
 ```java
 @Test
@@ -487,7 +487,7 @@ public void appendMultipleTimes() {
 
 Koden virker allerede! Testen bekræfter vores implementation.
 
-**Test 4: Method chaining**
+*Test 4: Method chaining*
 
 ```java
 @Test
@@ -501,7 +501,7 @@ public void methodChaining() {
 }
 ```
 
-**Kode:**
+*Kode:*
 
 ```java
 public MyStringBuilder append(String str) {
@@ -549,13 +549,13 @@ Nu har vi 100% testdækning af `divide()` metoden.
 
 === 1. Gode testnavne
 
-**Dårligt:**
+*Dårligt:*
 ```java
 @Test
 public void test1() { ... }
 ```
 
-**Godt:**
+*Godt:*
 ```java
 @Test
 public void depositIncreasesBalance() { ... }
@@ -566,7 +566,7 @@ public void withdrawWithInsufficientFundsThrowsException() { ... }
 
 === 2. En assertion per test (når muligt)
 
-**Mindre godt:**
+*Mindre godt:*
 ```java
 @Test
 public void testAccount() {
@@ -579,7 +579,7 @@ public void testAccount() {
 }
 ```
 
-**Bedre:**
+*Bedre:*
 ```java
 @Test
 public void newAccountHasCorrectAccountNumber() {
@@ -606,10 +606,10 @@ public void withdrawDecreasesBalance() {
 === 3. Test edge cases
 
 Test ikke kun "den glade sti", men også:
-- **Grænseværdier**: 0, negative tal, maksimumværdier
-- **Tomme inputs**: tomme strings, tomme lister
-- **Null-værdier**: hvad sker der med null?
-- **Fejltilfælde**: ugyldige inputs, exceptions
+- *Grænseværdier*: 0, negative tal, maksimumværdier
+- *Tomme inputs*: tomme strings, tomme lister
+- *Null-værdier*: hvad sker der med null?
+- *Fejltilfælde*: ugyldige inputs, exceptions
 
 ```java
 @Test
@@ -630,7 +630,7 @@ public void depositNegativeAmountThrowsException() {
 
 Hver test skal kunne køres alene og i vilkårlig rækkefølge:
 
-**Dårligt:**
+*Dårligt:*
 ```java
 private BankAccount account = new BankAccount("123");
 
@@ -646,7 +646,7 @@ public void test2() {
 }
 ```
 
-**Godt:**
+*Godt:*
 ```java
 @BeforeEach
 public void setUp() {
@@ -677,49 +677,49 @@ Tests skal køre hurtigt så vi kan køre dem ofte:
 
 #exercise[
   === Opgave 1: Simpel lommeregner med TDD
-  
+
   Brug TDD til at bygge en `Calculator` klasse:
-  
+
   1. Start med test for `add(int a, int b)`
   2. Tilføj test og implementation for `subtract(int a, int b)`
   3. Tilføj test og implementation for `multiply(int a, int b)`
   4. Tilføj test og implementation for `divide(int a, int b)`
-     - Husk at teste division med 0
+    - Husk at teste division med 0
   5. Tilføj test og implementation for `power(int base, int exponent)`
-  
+
   Følg Red-Green-Refactor cyklussen for hver metode!
 ]
 
 #exercise[
   === Opgave 2: Password validator
-  
+
   Brug TDD til at bygge en `PasswordValidator` klasse med metoden:
   ```java
   public boolean isValid(String password)
   ```
-  
+
   En valid password skal:
   - Være mindst 8 tegn lang
   - Indeholde mindst ét stort bogstav
   - Indeholde mindst ét lille bogstav
   - Indeholde mindst ét tal
-  - Indeholde mindst ét specialtegn (!@#$%^&*)
-  
+    - Indeholde mindst ét specialtegn (`!@#$%^&*`)
+
   Skriv en test for hver regel, og implementér derefter.
 ]
 
 #exercise[
   === Opgave 3: Test eksisterende kode
-  
+
   Du har fået denne `StringUtils` klasse:
-  
+
   ```java
   public class StringUtils {
       public static boolean isPalindrome(String str) {
           String cleaned = str.toLowerCase().replaceAll("[^a-z]", "");
           return cleaned.equals(new StringBuilder(cleaned).reverse().toString());
       }
-      
+
       public static int countVowels(String str) {
           int count = 0;
           for (char c : str.toLowerCase().toCharArray()) {
@@ -731,7 +731,7 @@ Tests skal køre hurtigt så vi kan køre dem ofte:
       }
   }
   ```
-  
+
   Skriv omfattende tests for begge metoder. Test:
   - Normal brug
   - Edge cases (tom string, null, specialtegn)
@@ -740,38 +740,38 @@ Tests skal køre hurtigt så vi kan køre dem ofte:
 
 #exercise[
   === Opgave 4: Shopping cart med TDD
-  
+
   Brug TDD til at bygge:
-  
+
   1. En `Product` klasse med: name, price
   2. En `ShoppingCart` klasse med:
-     - `addProduct(Product p)` - tilføj produkt
-     - `removeProduct(Product p)` - fjern produkt
-     - `getTotalPrice()` - beregn total pris
-     - `getProductCount()` - antal produkter
-     - `clear()` - tøm kurv
-     - `applyDiscount(double percentage)` - giv rabat
-  
+    - `addProduct(Product p)` - tilføj produkt
+    - `removeProduct(Product p)` - fjern produkt
+    - `getTotalPrice()` - beregn total pris
+    - `getProductCount()` - antal produkter
+    - `clear()` - tøm kurv
+    - `applyDiscount(double percentage)` - giv rabat
+
   Skriv tests først for hver funktion!
 ]
 
 #exercise[
   === Opgave 5: TDD Kata - FizzBuzz
-  
+
   FizzBuzz er et klassisk programmeringseksempel, perfekt til TDD:
-  
+
   Skriv en metode `String fizzBuzz(int n)` der:
   - Returnerer "Fizz" hvis n er deleligt med 3
   - Returnerer "Buzz" hvis n er deleligt med 5
   - Returnerer "FizzBuzz" hvis n er deleligt med både 3 og 5
   - Returnerer tallet som string ellers
-  
+
   Skriv tests i denne rækkefølge:
   1. Test for tal der ikke er deleligt med 3 eller 5 (fx 1, 2, 4)
   2. Test for tal deleligt med 3 (fx 3, 6, 9)
   3. Test for tal deleligt med 5 (fx 5, 10, 20)
   4. Test for tal deleligt med både 3 og 5 (fx 15, 30)
-  
+
   Implementér kode efter hver test!
 ]
 
@@ -779,23 +779,23 @@ Tests skal køre hurtigt så vi kan køre dem ofte:
 
 I dette kapitel har vi lært:
 
-- **Manuelle tests** er tidskrævende og fejltilbøjelige
-- **Assert** giver simple automatiske tests, men er begrænset
-- **JUnit** er et komplet test framework med organiserede tests
-- **AAA-mønsteret**: Arrange, Act, Assert giver struktur til tests
-- **TDD** (Test-Driven Development) betyder at skrive tests først
-- **Red-Green-Refactor** er TDD's grundlæggende cyklus
-- **Testdækning** måler hvor meget kode der testes
-- **Best practices**: gode navne, uafhængige tests, test edge cases
+- *Manuelle tests* er tidskrævende og fejltilbøjelige
+- *Assert* giver simple automatiske tests, men er begrænset
+- *JUnit* er et komplet test framework med organiserede tests
+- *AAA-mønsteret*: Arrange, Act, Assert giver struktur til tests
+- *TDD* (Test-Driven Development) betyder at skrive tests først
+- *Red-Green-Refactor* er TDD's grundlæggende cyklus
+- *Testdækning* måler hvor meget kode der testes
+- *Best practices*: gode navne, uafhængige tests, test edge cases
 
 Testning er en fundamental færdighed i moderne softwareudvikling. Med TDD bygger vi bedre kode med færre bugs, og vi kan ændre koden med tillid.
 
 #note[
-  **Ny arbejdsgang:**
-  
+  *Ny arbejdsgang:*
+
   Fra nu af:
-  - **DO**: Skriv tests for al ny kode
-  - **DON'T**: Stol på manuel testning i main-metoden
-  
+  - *DO*: Skriv tests for al ny kode
+  - *DON'T*: Stol på manuel testning i main-metoden
+
   Tests er ikke ekstra arbejde - de _er_ arbejdet!
 ]

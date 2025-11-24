@@ -31,7 +31,7 @@ jobs:
       - name: Install Playwright browsers
         run: uv run playwright install chromium
       - name: Build slides
-        run: for slide in $(ls -d slides/*); do uv run mkslides build $slide --config-file $slide/mkslides.yml --site-dir ./site/slides/$slide; done
+        run: for slide in $(ls -d slides/*); do uv run mkslides build $slide --config-file $slide/mkslides.yml --site-dir ./site/$slide; done
       - name: Build tutorials
         run: for tutorial in $(ls -d tutorials/*); do uv run python render.py pdf $tutorial; done
       - name: Generate index

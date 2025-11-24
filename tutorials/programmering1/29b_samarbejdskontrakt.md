@@ -1,11 +1,9 @@
 # Samarbejdskontrakt 
 Formål: At sikre et godt samarbejde, klare aftaler og fælles læring.
 
-Underskrifter
+*Underskrifter*
 
 Vi har læst og udfyldt kontrakten sammen, og vi accepterer de fælles aftaler.
-
-Dato/underskrift:
 
 Dato/underskrift:
 
@@ -34,7 +32,7 @@ Vores aftale:
 - Skal roller rotere eller være faste?
 
 👉 Skriv her:
- 
+
 # 2. Arbejdsform
 
 Vores aftale:
@@ -43,8 +41,7 @@ Vores aftale:
 - Skal vi aftale, hvem der arbejder hvornår?
 - Skal alle pull requests godkendes af mindst én anden?
 
-👉 Skriv her: 
-
+👉 Skriv her:
 
 # 3. Kommunikation og fremmøde
 - Kommunikation via Teams/Slack/Facebook gruppe/email

@@ -26,13 +26,13 @@ Disse features beskrives herefter som user stories i formatet:
 
 For de user stories, I får implementeret, er det vigtigt at:
 - der er beskrevet acceptkriterier ("how to demo")
-- de følger **INVEST**-princippet:
-   - **I**ndependent <small>(of all others)</small>
-   - **N**egotiable <small>(not a specific contract for features)</small>
-   - **V**aluable
-   - **E**stimable <small>(to a good approximation)</small>
-   - **S**mall <small>(so as to fit within an iteration)</small>
-   - **T**estable <small>(in principle, even if there isn’t a test for it yet)</small>
+- de følger *INVEST*-princippet:
+   - *I*ndependent <small>(of all others)</small>
+   - *N*egotiable <small>(not a specific contract for features)</small>
+   - *V*aluable
+   - *E*stimable <small>(to a good approximation)</small>
+   - *S*mall <small>(so as to fit within an iteration)</small>
+   - *T*estable <small>(in principle, even if there isn’t a test for it yet)</small>
 
 Følgende skal med i projekt rapporten:
 -	Produkt vision

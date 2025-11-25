@@ -15,28 +15,28 @@
 - Taha Umar Afzal
 
 # Gruppe 3
-- Adan Uz Zaman
 - Alexander Frydenlund Friis
 - Chervin Bruun
-- Kasper Jonathan Christensen
 - Nadya Abbas Osman
 - Oliver Joost Persson
+- Emil Danø Mourier
+- Jacob Collemorten Lauritsen
 
 # Gruppe 4
 - Abbas Reda Hamad
 - Adele Gonzalez
 - Chibuike Bobby Ofodike
-- Emil Danø Mourier
 - Haifa Mohamoud Osman Ali
 - Tor Roland Andersen
+- Kasper Jonathan Christensen
 
 # Gruppe 5
 - Gustav Sander Jantzen
-- Jacob Collemorten Lauritsen
 - Joakim Christian Birkebæk Eskildsen
 - Niels Magnus Heise
 - Simon Bech Christensen
 - Timothy Bernal Casilagan
+- Adan Uz Zaman
 
 # Gruppe 6
 - Daniel Nørgaard Andreasen

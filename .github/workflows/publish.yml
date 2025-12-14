@@ -33,9 +33,9 @@ jobs:
       - name: Build slides
         run: for slide in $(ls -d slides/*); do uv run mkslides build $slide --config-file $slide/mkslides.yml --site-dir ./site/$slide; done
       - name: Build tutorials
-        run: for tutorial in $(ls -d tutorials/*); do uv run python render.py pdf $tutorial; done
+        run: for tutorial in $(ls -d tutorials/**/*); do uv run python render.py pdf $tutorial; done
       - name: Generate index
-        run: cd site && for thing in $(ls -d */*); do echo "<a href=\"$thing/index.html\">$thing</a><br>" >> ./index.html; done
+        run: cd site && for thing in $(ls -d **/*.html); do echo "<a href=\"$thing/index.html\">$thing</a><br>" >> ./index.html; done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./site

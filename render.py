@@ -52,7 +52,14 @@ def render_pdf(html_dir: str):
             if os.path.exists(pdf_path):
                 continue
         
-            page.goto(filepath, wait_until="networkidle")
+            page.goto(filepath, wait_until="load")
+
+            # Wait for MathJax to finish typesetting (set in template.html).
+            try:
+                page.wait_for_function("window.__mathjaxDone === true", timeout=30_000)
+            except Exception:
+                # If MathJax fails to load, still produce a PDF.
+                pass
 
             print(f"Rendering {os.path.basename(pdf_path)}...")
 

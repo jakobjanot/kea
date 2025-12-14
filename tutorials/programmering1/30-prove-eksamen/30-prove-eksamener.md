@@ -1,4 +1,4 @@
-# Interfaces:
+*# Interfaces:
 
 ## Printable
 
@@ -250,9 +250,9 @@
 
 ---
 
-# Blandede øvelser
+# Blandede
 
-### MovieFan
+## MovieFan
 
 1. Lav en klasse `MovieFan` med attributterne `name` og `favoriteGenre`.
 2. Tilføj en metode `likesGenre` der returnerer `true`, hvis det er samme genre som `favoriteGenre` (ignorer store/små bogstaver).
@@ -260,7 +260,7 @@
 
 ---
 
-### ElectricCar
+## ElectricCar
 
 1. Lav en klasse `Car` med attributterne `make` (mærke) og `topSpeed`.
 2. Lav en subklasse `ElectricCar`, der også har attributten `batteryCapacity`.
@@ -268,7 +268,7 @@
 
 ---
 
-### Watering
+## Watering
 
 1. Lav en klasse `Plant` med attributterne `type` og `daysSinceWatered`.
 2. Lav en metode `needsWater()` der returnerer `true`, hvis planten ikke er vandet i mere end 3 dage.
@@ -277,7 +277,7 @@
 
 ---
 
-### MovieTicket
+## MovieTicket
 
 1. Lav en klasse `MovieTicket` med `movieTitle`, `seatNumber` og `isScanned`.
 2. Lav en metode `scanTicket()` der sætter `isScanned = true`. Hvis den allerede er scannet, skal den kaste en exception.
@@ -285,7 +285,7 @@
 
 ---
 
-### DiceGame
+## DiceGame
 
 1. Lav en klasse `DiceGame` med en attribut `targetNumber`, der genereres tilfældigt mellem 1 og 6.
 2. Lav en metode `guess`, der modtager et gæt og returnerer om det er rigtigt, for lavt eller for højt.
@@ -293,8 +293,8 @@
 
 ---
 
-### MusicTrack
+## MusicTrack
 
 1. Lav en klasse `MusicTrack` med attributterne `title` og `durationInSeconds`.
 2. Lav en metode `isLongTrack()` der returnerer `true`, hvis en sang varer mere end 300 sekunder.
-3. Lav funktionalitet der beregner den **gennemsnitlige længde** af en liste af `MusicTrack` objekter.
+3. Lav funktionalitet der beregner den **gennemsnitlige længde** af en liste af `MusicTrack` objekter.*

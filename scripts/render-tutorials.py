@@ -99,8 +99,7 @@ def build_index(html_dir: Path) -> None:
         entries.setdefault(group, []).append((rel, pdf_path if pdf_path.exists() else None))
 
     lines: list[str] = []
-    lines.append(f"<h1>Tutorials Index ({html_dir.relative_to(REPO_ROOT)})</h1>")
-
+    
     for group in sorted(entries.keys()):
         items = entries[group]
         # Root items without a subgroup

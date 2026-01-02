@@ -26,15 +26,16 @@ jobs:
           python-version-file: "pyproject.toml"
       - name: Install uv
         uses: astral-sh/setup-uv@v6
+      - name: Install just
+        uses: extractions/setup-just@v3
       - name: Install the project
         run: uv sync --locked
       - name: Install Playwright browsers
         run: uv run playwright install chromium
       - name: Build slides
-        run: for course in $(ls -d slides/*); do uv run mkslides build $course --config-file $course/mkslides.yml --site-dir ./site/$course; done && \
-             for course in $(ls -d slides/*); do uv run python scripts/render-slides.py ./site/$course; done
+        run: just build-all-slides
       - name: Build tutorials
-        run: for tutorial in $(ls -d tutorials/**/*); do uv run python render.py pdf $tutorial; done
+        run: just build-all-tutorials
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./site

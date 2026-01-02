@@ -119,8 +119,8 @@ def build_index(html_dir: Path) -> None:
         for rel, pdf in items:
             html_href = rel.as_posix()
             label = rel.with_suffix("").name
-            pdf_link = f" <small><a href='{pdf.relative_to(html_dir).as_posix()}'>pdf</a></small>" if pdf else ""
-            lines.append(f"<li><a href='{html_href}'>{label}</a>{pdf_link}</li>")
+            pdf_link = f"| <a href='{pdf.relative_to(html_dir).as_posix()}'>PDF</a>" if pdf else ""
+            lines.append(f"<li>{label} <a href='{html_href}'>HTML</a>{pdf_link}</li>")
         lines.append("</ul>")
         lines.append("</details>")
 
@@ -128,7 +128,7 @@ def build_index(html_dir: Path) -> None:
     if index_tpl:
         out_html = (
             index_tpl.replace("{{ title }}", "Tutorials Index")
-                     .replace("{{ heading }}", f"Tutorials Index ({html_dir.relative_to(REPO_ROOT)})")
+                     .replace("{{ heading }}", f"Index")
                      .replace("{{ content }}", content_html)
         )
     else:

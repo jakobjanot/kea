@@ -20,26 +20,48 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### Build HTML slides from Markdown
 
-To build slides in a folder (e.g. `courses/prog1-slides`):
+To build slides for e.g. programming 1 course:
 
 ```bash
-just build courses/prog1-slides
+just build-slides slides/programmering1
 ```
 
-### Live preview
+### Serve / live preview slides
 
 To serve slides in a folder:
 
 ```bash
-just serve courses/prog1-slides
+just serve-slides slides/programmering1
 ```
 
 will serve the slides on [http://localhost:8000](http://localhost:8000)
 
+### Build PDFs
+
+To build PDF slides for e.g. programming 1 course:
+
+```bash
+just pdf-slides slides/programmering1
+```
+
+### Tutorials
+
+Use:
+
+```bash
+just build-tutorials tutorials/programmering1
+```
+
+and pdfs:
+
+```bash
+just pdf-tutorials tutorials/programmering1
+```
+
 ## Make your own slides
 - Fork this project
-- Copy `courses/prog1-slides` to `courses/<your-slides-folder>`
-- Modify `courses/<your-slides-folder>` to include your own content
+- Copy `slides/programmering1` to `slides/<your-slides-folder>`
+- Modify `slides/<your-slides-folder>` to include your own content
 - (Optional) Publish your slides on Github Pages - see `.github/workflows/publish.yml`
 
 ## Help

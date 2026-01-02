@@ -40,7 +40,6 @@
 
 # Gruppe 6
 - Daniel Nørgaard Andreasen
-- Malthe Thomas Rud
 - Markus Skipper Bach Larsen
 - Mubarak Abdirisak Mohamed
 - Mustafa Kerim Gülhan

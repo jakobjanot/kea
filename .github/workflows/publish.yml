@@ -36,6 +36,8 @@ jobs:
         run: just build-all-slides
       - name: Build tutorials
         run: just build-all-tutorials
+      - name: Build index in site
+        run: just build-index
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./site

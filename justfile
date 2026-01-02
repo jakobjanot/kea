@@ -41,3 +41,6 @@ pdf-all-tutorials:
     for course in $(ls -d tutorials/*/); do \
         just pdf-tutorials "${course%/}"; \
     done
+
+build-index:
+    uv run python scripts/generate-index.py

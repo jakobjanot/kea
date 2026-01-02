@@ -1,89 +1,162 @@
-import os, sys
+from __future__ import annotations
+
+import shutil
+import sys
+from pathlib import Path
+
 from markdown_it import MarkdownIt
 from playwright.sync_api import sync_playwright
-import os, sys
 
 md = MarkdownIt()
 
-root_dir = os.path.dirname(__file__)
 
-def render_html(md_dir: str):
-    html_dir = os.path.join(root_dir, "site", os.path.relpath(md_dir, start=root_dir))
-    
-    os.makedirs(html_dir, exist_ok=True)
-    os.system(f"cp -r {md_dir}/* {html_dir}/")
+REPO_ROOT = Path(__file__).resolve().parent.parent
+SCRIPT_ROOT = Path(__file__).resolve().parent
+TEMPLATE_PATH = SCRIPT_ROOT / "template.html"
+CSS_PATH = SCRIPT_ROOT / "style.css"
+INDEX_TEMPLATE_PATH = SCRIPT_ROOT / "index-template.html"
 
-    files = [f for f in os.listdir(html_dir) if f.endswith(".md")]
-    for file in files:
-        outputfile = f"{os.path.abspath(os.path.join(html_dir, file.replace('.md', '.html')))}"
-        if os.path.exists(outputfile):
-            continue
-        print(f"Rendering {file}...")
-        title = os.path.splitext(file)[0]
-        
-        with open(os.path.join(html_dir, file), "r", encoding="utf-8") as f:
-            content = md.render(f.read())
 
-        with open("style.css", "r", encoding="utf-8") as f:
-            css = f.read()
+def render_html(md_dir: Path) -> Path:
+    md_dir = md_dir.resolve()
+    rel = md_dir.relative_to(REPO_ROOT)
+    html_dir = REPO_ROOT / "site" / rel
 
-        with open("template.html", "r", encoding="utf-8") as f:
-            template = f.read()
+    # Copy entire directory tree to the site/ mirror.
+    if html_dir.exists():
+        shutil.rmtree(html_dir)
+    shutil.copytree(md_dir, html_dir, dirs_exist_ok=True)
 
-        output = template.replace("{{ content }}", content) \
-                         .replace("{{ css }}", css) \
-                         .replace("{{ title }}", title)
-        with open(outputfile, "w", encoding="utf-8") as f:
-            f.write(output)
+    css = CSS_PATH.read_text(encoding="utf-8")
+    template = TEMPLATE_PATH.read_text(encoding="utf-8")
 
-    os.system(f"rm {os.path.join(html_dir, '*.md')}")
+    for md_file in sorted(html_dir.rglob("*.md")):
+        title = md_file.stem
+        content = md.render(md_file.read_text(encoding="utf-8"))
+
+        outputfile = md_file.with_suffix(".html")
+        output = (
+            template.replace("{{ content }}", content)
+            .replace("{{ css }}", css)
+            .replace("{{ title }}", title)
+        )
+        print(f"Rendering {md_file.relative_to(REPO_ROOT)} -> {outputfile.relative_to(REPO_ROOT)}...")
+        outputfile.write_text(output, encoding="utf-8")
+        md_file.unlink()  # remove source md from site copy
+
     return html_dir
 
-def render_pdf(html_dir: str):
+
+def render_pdf(html_dir: Path) -> Path:
+    html_dir = html_dir.resolve()
+    html_files = sorted(html_dir.rglob("*.html"))
+
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
 
-        html_files = [f for f in os.listdir(html_dir) if f.endswith(".html")]
         for html_file in html_files:
-            filepath = f"file://{os.path.abspath(os.path.join(html_dir, html_file))}"
-
-            pdf_path = os.path.join(html_dir, html_file.replace(".html", ".pdf"))
-            if os.path.exists(pdf_path):
+            filepath = html_file.resolve().as_uri()
+            pdf_path = html_file.with_suffix(".pdf")
+            if pdf_path.exists():
                 continue
-        
+
             page.goto(filepath, wait_until="load")
 
             # Wait for MathJax to finish typesetting (set in template.html).
             try:
                 page.wait_for_function("window.__mathjaxDone === true", timeout=30_000)
             except Exception:
-                # If MathJax fails to load, still produce a PDF.
-                pass
+                pass  # still produce a PDF
 
-            print(f"Rendering {os.path.basename(pdf_path)}...")
+            print(
+                f"Rendering {html_file.relative_to(REPO_ROOT)} -> {pdf_path.relative_to(REPO_ROOT)}..."
+            )
 
             page.pdf(
-                path=pdf_path,
+                path=str(pdf_path),
                 print_background=True,
-                prefer_css_page_size=True
-                # margin={"top": "0mm", "right": "0mm", "bottom": "0mm", "left": "0mm"}
+                prefer_css_page_size=True,
             )
 
         browser.close()
-    
+
     return html_dir
 
-if __name__ == "__main__":
+
+def build_index(html_dir: Path) -> None:
+    html_dir = html_dir.resolve()
+    entries: dict[str, list[tuple[Path, Path | None]]] = {}
+
+    index_tpl = INDEX_TEMPLATE_PATH.read_text(encoding="utf-8") if INDEX_TEMPLATE_PATH.exists() else ""
+
+    for html_file in sorted(html_dir.rglob("*.html")):
+        if html_file.name == "index.html":
+            continue
+        rel = html_file.relative_to(html_dir)
+        group = rel.parts[0] if len(rel.parts) > 1 else "_root"
+        pdf_path = html_file.with_suffix(".pdf")
+        entries.setdefault(group, []).append((rel, pdf_path if pdf_path.exists() else None))
+
+    lines: list[str] = []
+    lines.append(f"<h1>Tutorials Index ({html_dir.relative_to(REPO_ROOT)})</h1>")
+
+    for group in sorted(entries.keys()):
+        items = entries[group]
+        # Root items without a subgroup
+        if group == "_root":
+            lines.append("<ul>")
+            for rel, pdf in items:
+                html_href = rel.as_posix()
+                label = rel.name
+                pdf_link = f" <small><a href='{pdf.relative_to(html_dir).as_posix()}'>pdf</a></small>" if pdf else ""
+                lines.append(f"<li><a href='{html_href}'>{label}</a>{pdf_link}</li>")
+            lines.append("</ul>")
+            continue
+
+        lines.append("<details>")
+        lines.append(f"<summary>{group}</summary>")
+        lines.append("<ul>")
+        for rel, pdf in items:
+            html_href = rel.as_posix()
+            label = rel.with_suffix("").name
+            pdf_link = f" <small><a href='{pdf.relative_to(html_dir).as_posix()}'>pdf</a></small>" if pdf else ""
+            lines.append(f"<li><a href='{html_href}'>{label}</a>{pdf_link}</li>")
+        lines.append("</ul>")
+        lines.append("</details>")
+
+    content_html = "\n".join(lines)
+    if index_tpl:
+        out_html = (
+            index_tpl.replace("{{ title }}", "Tutorials Index")
+                     .replace("{{ heading }}", f"Tutorials Index ({html_dir.relative_to(REPO_ROOT)})")
+                     .replace("{{ content }}", content_html)
+        )
+    else:
+        out_html = content_html
+
+    (html_dir / "index.html").write_text(out_html, encoding="utf-8")
+
+
+def main() -> None:
     if len(sys.argv) < 3:
-        print("Usage: python render.py <md_dir>")
+        print("Usage: python render-tutorials.py <html|pdf> <path/to/tutorials/...>", file=sys.stderr)
         sys.exit(1)
 
     render_to = sys.argv[1]
-    md_dir = os.path.abspath(sys.argv[2])
+    md_dir = Path(sys.argv[2]).resolve()
 
     if render_to == "html":
         html_dir = render_html(md_dir)
+        build_index(html_dir)
     elif render_to == "pdf":
         html_dir = render_html(md_dir)
         render_pdf(html_dir)
+        build_index(html_dir)
+    else:
+        print("render_to must be 'html' or 'pdf'", file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

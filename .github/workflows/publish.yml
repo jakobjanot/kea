@@ -31,13 +31,10 @@ jobs:
       - name: Install Playwright browsers
         run: uv run playwright install chromium
       - name: Build slides
-        run: for course in $(ls -d slides/*); do uv run mkslides build $course --config-file $course/mkslides.yml --site-dir ./site/$course; done
-      - name: Print slide PDFs
-        run: for course in $(ls -d slides/*); do uv run python scripts/render-slides.py ./site/$course; done
+        run: for course in $(ls -d slides/*); do uv run mkslides build $course --config-file $course/mkslides.yml --site-dir ./site/$course; done && \
+             for course in $(ls -d slides/*); do uv run python scripts/render-slides.py ./site/$course; done
       - name: Build tutorials
         run: for tutorial in $(ls -d tutorials/**/*); do uv run python render.py pdf $tutorial; done
-      - name: Generate index
-        run: cd site && for thing in $(ls -d **/*.html); do echo "<a href=\"$thing/index.html\">$thing</a><br>" >> ./index.html; done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./site

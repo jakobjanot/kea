@@ -33,9 +33,9 @@ jobs:
       - name: Install Playwright browsers
         run: uv run playwright install chromium
       - name: Build slides
-        run: just build-all-slides
+        run: just pdf-all-slides
       - name: Build tutorials
-        run: just build-all-tutorials
+        run: just pdf-all-tutorials
       - name: Build index in site
         run: just build-index
       - uses: actions/upload-pages-artifact@v3

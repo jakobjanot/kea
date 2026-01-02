@@ -53,6 +53,7 @@ slides:
     # of the reveal.js themes such as `black`, `white`, `league`, `solarized`,
     # `dracula`, ... (see https://revealjs.com/themes/)
     theme: https://jakob.janot.dk/revealjs-themes/theme/ek.css
+    #theme: http://localhost:9000/theme/ek.css
 
     #scripts:
     #    - https://jakob.janot.dk/revealjs-themes...
@@ -63,16 +64,16 @@ revealjs:
     # The "normal" size of the presentation, aspect ratio will
     # be preserved when the presentation is scaled to fit different
     # resolutions. Can be specified using percentage units.
-    #width: 960
-    #height: 700
+    #width: 1280
+    #height: 720
 
     # Factor of the display size that should remain empty around
     # the content
     margin: 0.01
 
     # Bounds for smallest/largest possible scale to apply to content
-    minScale: 0.2
-    maxScale: 2.0
+    #minScale: 0.2
+    #maxScale: 2.0
 
     # Display presentation control arrows
     #controls: true
@@ -86,7 +87,7 @@ revealjs:
 
     # Visibility rule for backwards navigation arrows; "faded", "hidden"
     # or "visible"
-    controlsBackArrows: 'hidden'
+    #controlsBackArrows: 'hidden'
 
     # Display a presentation progress bar
     progress: false

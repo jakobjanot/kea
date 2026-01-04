@@ -100,6 +100,7 @@ Spørgsmål til hjælpemidler?
 
 #### Selve eksaminationen
 
+- Tiden starter når du trækker opgaven
 - Du trækker en tilfældig opgave
 - Læs opgaven grundigt igennem
 - Stil spørgsmål, hvis du ikke forstår opgaven
@@ -298,7 +299,6 @@ int tal = random.nextInt(10); // tilfældigt tal mellem 0 og 9
 --
 
 #### ArrayList fortsat
-s
 - Læsning og tildeling af værdier i en `ArrayList`
   ```java
   names.get(0); // læs første element
@@ -335,7 +335,6 @@ s
   - `instanceof`
   
 --
-
 #### Arv
 
   - Casting fx

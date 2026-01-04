@@ -160,6 +160,10 @@ Du må selvfølgelig gerne have test-udskrifter undervejs i din kode — bare hu
 
 --
 
+En ikke-udtømmende liste over emner I skal kunne til eksamen:
+
+--
+
 #### Variabler og datatyper
 
 - Primitive datatyper, fx `int`, `double`, `boolean`, `char`
@@ -201,15 +205,15 @@ Du må selvfølgelig gerne have test-udskrifter undervejs i din kode — bare hu
 --
 
 #### Matematiske og logiske operatorer
-  - `%`, `+`, `-`, `*`, `/`
-  - `++`, `--`, `+=`, `-=`
-  - `||`, `&&`, `!`, `==`, `!=`
+- `%`, `+`, `-`, `*`, `/`
+- `++`, `--`, `+=`, `-=`
+- `||`, `&&`, `!`, `==`, `!=`
 
 --
 
 #### Betingelser
-    - `if`, `else if`, `else`
-    - `switch`
+- `if`, `else if`, `else`
+- `switch`
 --
 
 #### Input og Output
@@ -217,7 +221,7 @@ Du må selvfølgelig gerne have test-udskrifter undervejs i din kode — bare hu
 - Input
   - Læsning fra `Scanner`
 - Output
-  - Sammenkædning, fx `System.out.println("Tallet er: " + tal);`
+  - Sammenkædning, fx `System.out.println("Alder: " + age);`
   - Formatere output med `System.out.printf()`, fx
     ```java
     System.out.printf("Tallet er: %.2f", tal); // to decimaler
@@ -311,43 +315,43 @@ int tal = random.nextInt(10); // tilfældigt tal mellem 0 og 9
 --
 
 #### Objekt orienteret programmering
-  - Klasser og objekter
-  - Felter (instansvariabler)
-  - Konstruktører
-  - `get`ter og `set`ter metoder
-  - `toString()` metode
-  - access modifiers: `private`, `public`, `protected`
-  - Indkapsling, med private felter og public metoder
+- Klasser og objekter
+- Felter (instansvariabler)
+- Konstruktører
+- `get`ter og `set`ter metoder
+- `toString()` metode
+- access modifiers: `private`, `public`, `protected`
+- Indkapsling, med private felter og public metoder
 
 --
 
-  - Metoder i klasser
-  - Overloading af metoder
-  - Objekt referencer
-  - `this`
+- Metoder i klasser
+- Overloading af metoder
+- Objekt referencer
+- `this`
 
 --
 #### Arv
-  - Lav og brug en nedarvet klasse
-  - `extends`, `super`, `this`
-  - Overriding af metoder
-  - `protected` vs `private`
-  - `instanceof`
+- Lav og brug en nedarvet klasse
+- `extends`, `super`, `this`
+- Overriding af metoder
+- `protected` vs `private`
+- `instanceof`
   
 --
 #### Arv
 
-  - Casting fx
+- Casting (upcasting og downcasting), fx
   ```java
   Animal animal = new Dog(); // upcasting
   Dog dog = (Dog) animal; // downcasting
   ```
-  - Abstrakte klasser
+- Abstrakte klasser
 
 --
 
 #### Polymorfi
-  - Forstå og anvende polymorfi med arv og interfaces, fx
+- Forstå og anvende polymorfi med arv og interfaces, fx
   ```java
   class Animal {
       public void makeSound() {
@@ -367,8 +371,8 @@ int tal = random.nextInt(10); // tilfældigt tal mellem 0 og 9
 --
 
 #### Filer
-  - Skrive til en tekstfil vha PrintStream
-  - Læse fra en tekstfil vha. Scanner
+- Skrive til en tekstfil vha PrintStream
+- Læse fra en tekstfil vha. Scanner
 
 --
 
@@ -386,23 +390,36 @@ int tal = random.nextInt(10); // tilfældigt tal mellem 0 og 9
 --
 
 #### Sortering
-  - Implementere Comparable
-  - Oprette en Comparator klasse
-  - Forstå elementers naturlige orden
-  - Sortere et array eller en ArrayList
+- Implementere Comparable
+- Oprette en Comparator klasse
+- Forstå elementers naturlige orden
+- Sortere et array eller en ArrayList
 
+---
 
-Emner der ikke kommer til denne eksamen
-1. semesters eksamen er kun i Programmering, så de emner der handler mere om Systemudvikling eller It-
-og forretningsudvikling er ikke en del af eksamen. I bliver heller ikke eksamineret i værktøjer som Git,
-Github, etc. men det forventes at I kan bruge udviklingsværktøjet (IntelliJ) til 1. semester eksamen.
-Følgende emner, kommer derfor ikke til 1. semestereksamen:
+<!-- .slide: class="cover-8" -->
+#### Emner der *ikke* kommer til eksamen
+
+--
+
+1\. semesters eksamen er kun i Programmering, så de emner der handler mere om Systemudvikling eller It- og forretningsudvikling er ikke en del af eksamen. 
+
+--
+
+I bliver *ikke* eksamineret i værktøjer som Git, Github, etc. men det forventes at I kan bruge udviklingsværktøjet (IntelliJ) til 1. semester eksamen.
+
+--
+
+Følgende emner er derfor *ikke* en del af eksamen:
 - Git + GitHub
 - Designprincipper som f.eks. Single Responsibility, Controller, Userinterface
 - Scrum
 - Unittest
 
+---
 
+<!-- .slide: class="cover-2" -->
+# Held og lykke til eksamen!
 
 
 

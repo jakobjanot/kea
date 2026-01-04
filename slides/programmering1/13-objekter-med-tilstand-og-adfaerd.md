@@ -1,8 +1,8 @@
 ---
-title: 12 - Objekter med state og adfærd
+title: 12 - Objekter med tilstand og adfærd
 ---
 <!-- .slide: class="cover-9" -->
-#### Objekter med state *og* adfærd
+#### Objekter med tilstand *og* adfærd
 
 ---
 <!-- .slide: class="o-sunlit-energy" -->

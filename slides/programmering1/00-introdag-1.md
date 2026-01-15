@@ -32,7 +32,7 @@ Notes:
 
 Underviser i *Systemudvikling*
 
-![Cay](img/cay.png)
+![Cay](img/cay-circle.png)
 ## *Cay*
 
 [CAHL@ek.dk](mailto:CAHL@ek.dk)
@@ -41,7 +41,7 @@ Underviser i *Systemudvikling*
 
 Underviser i *IT- og Forretningsudvikling*
 
-![Oskar](img/oskar.jpg) 
+![Oskar](img/oskar-circle.png) 
 ## *Oskar*
 
 [OSTU@ek.dk](mailto:OSTU@ek.dk)
@@ -50,7 +50,7 @@ Underviser i *IT- og Forretningsudvikling*
 
 Underviser i *Programmering*
 
-![Jakob](img/jakob.jpg)
+![Jakob](img/jakob-circle.png)
 ## *Jakob*
 
 [JANO@ek.dk](mailto:JANO@ek.dk)
@@ -71,7 +71,7 @@ Underviser i *Programmering*
 Uddannelseschef på *Datamatiker* (og min chef)
 
 
-![Erik](img/erik.jpg)
+![Erik](img/erik-circle.png)
 # *Erik Christian Hansen*
 
 ... kommer forbi og siger hej i morgen
@@ -80,7 +80,7 @@ Uddannelseschef på *Datamatiker* (og min chef)
 
 Leder på EK Digital (og min chefs chef)
 
-![Frederikke](img/frederikke.jpg)
+![Frederikke](img/frederikke-circle.png)
 # *Frederikke*
 
 --

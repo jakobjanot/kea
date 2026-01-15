@@ -23,7 +23,6 @@ Notes:
 - Rollen som studerende
 - Hack dit studieliv
 
-
 ---
 
 <!-- .slide: class="cover-7" -->
@@ -33,20 +32,19 @@ Notes:
 
 Underviser i *Systemudvikling*
 
+![Cay](img/cay.png)
+## *Cay*
 
-![Lasse](img/lasse.jpg) 
-## *Lasse*
-
-[LAVO@ek.dk](mailto:LAVO@ek.dk)
+[CAHL@ek.dk](mailto:CAHL@ek.dk)
 
 --
 
-Underviser i *Virksomhed*
+Underviser i *IT- og Forretningsudvikling*
 
-![Stig](img/stig.jpg) 
-## *Stig*
+![Oskar](img/oskar.jpg) 
+## *Oskar*
 
-[STSS@ek.dk](mailto:STSS@ek.dk)
+[OSTU@ek.dk](mailto:OSTU@ek.dk)
 
 --
 
@@ -54,6 +52,7 @@ Underviser i *Programmering*
 
 ![Jakob](img/jakob.jpg)
 ## *Jakob*
+
 [JANO@ek.dk](mailto:JANO@ek.dk)
 
 --
@@ -125,11 +124,13 @@ table.education th, table.education td {
 	color: white;
 }
 table.education th {
-	background-color: #333;
+	background-color: #0038A8;
 	height: 50px;
+	color: #d9ddff;
 }
-table.education td {
-	background-color: #fe4c61;
+table.education td  {
+	background-color: #d9ddff;
+	color: #0038A8;
 }
 </style>
 <table class="education">
@@ -145,7 +146,7 @@ table.education td {
 	<td rowspan="3">PROGRAMMERING 1<br>(15 ECTS)</td>
 	<td rowspan="2">PROGRAMMERING 2<br>(10 ECTS)</td>
 	<td rowspan="2">VALGFAG 1<br>(10 ECTS)</td>
-	<td style="background-color: red;" rowspan="3">PRAKTIK<br>(15 ECTS)</td>
+	<td style="background-color: #f8edca;" rowspan="3">PRAKTIK<br>(15 ECTS)</td>
 </tr>
 <tr>
 </tr>
@@ -157,7 +158,7 @@ table.education td {
 <tr>
 	<td rowspan="2">SYSTEMUDVIKLING<br>(10 ECTS)</td>
 	<td>SYSTEMUDVIKLING<br>(5 ECTS)</td>
-	<td rowspan="3" style="background-color: red;">AFGANGSPROJEKT<br>(15 ECTS)</td>
+	<td rowspan="3" style="background-color: #f8edca;">AFGANGSPROJEKT<br>(15 ECTS)</td>
 </tr>
 <tr>
 	<td>TEKNOLOGI 1<br>(5 ECTS)</td>
@@ -230,15 +231,15 @@ og betaler os for at lave dem"
 
 --
 <style>
-table.education {
+table.week {
 	border-collapse: collapse;
 	width: 100%;
 	table-layout: fixed;
 }
-table.education tr {
+table.week tr {
 	height: 50px;
 }
-table.education th, table.education td {
+table.week th, table.week td {
 	font-size: 14px;
 	border: 2px solid white;
 	text-align: center;
@@ -247,15 +248,17 @@ table.education th, table.education td {
 	font-weight: bold;
 	color: white;
 }
-table.education th {
-	background-color: #333;
+table.week th {
+	background-color: #0038A8;
 	height: 50px;
+	color: #d9ddff;
 }
-table.education td  {
-	background-color: #fe4c61;
+table.week td  {
+	background-color: #d9ddff;
+	color: #0038A8;
 }
 </style>
-<table class="education">
+<table class="week">
 	<tr>
 		<th></th>
 		<th>MANDAG</th>
@@ -337,12 +340,11 @@ Har I fået lavet studiekort?
 
 #### Lokaler
 
-**GBG.E236** betyder:
+**GBG.E336** betyder:
 - Campus GBG, Guldbergsgade
 - Bygning E
-- 2\. sal
-- Lokale 236
-
+- 3\. sal
+- Lokale 336
 --
 ### Rygepolitik
 
@@ -364,7 +366,7 @@ Notes:
 
 #### Beredskabsplan
 
-[https://mit.kea.dk/images/studiehaandbog/Beredskabsplaner/Beredskabsplan-maj-2022-studerende.pdf](https://mit.kea.dk/images/studiehaandbog/Beredskabsplaner/Beredskabsplan-maj-2022-studerende.pdf)
+[https://mit.ek.dk/media/tdpdp1ub/beredskabsplan-ek-guldbergsgade.pdf](https://mit.ek.dk/media/tdpdp1ub/beredskabsplan-ek-guldbergsgade.pdf)
 
 --
 

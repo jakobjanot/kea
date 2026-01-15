@@ -19,10 +19,36 @@ Notes:
 - Studiegrupper
 - Hack dit studieliv
 - AI og læring
-- Erik kommer forbi
 - Rundt i studiehåndbogen
 
 ---
+<!-- .slide: class="cover-15" -->
+# Studiegrupper
+
+--
+
+#### Hvad er en studiegruppe?
+
+- Vi sidder sammen i grupper under undervisningen
+- Vi lærer hinanden at kende
+- Vi hjælper hinanden med at forstå opgaver
+
+--
+
+- Del telefonnummer med dine gruppekammerater
+- Meld afbud til din studiegruppe, hvis du er fraværende
+
+--
+
+- Underviser inddeler jer i studiegrupper
+- Vi får nye studiegrupper hver måned
+
+--
+<!-- .slide: class="k-spongebob" -->
+### Lad os danne studiegrupper!
+
+---
+
 <!-- .slide: class="cover-12" -->
 
 # Hack dit studieliv
@@ -74,9 +100,11 @@ Notes:
 --
 
 Vi ser, at
-- AI *kan* være et nyttigt værktøj i læringsprocessen,  
+- AI *kan* være et nyttigt værktøj i læringsprocessen,
 
-men vi ser også at 
+--
+
+...men vi ser også at 
 - studerende får **dårligere færdigheder** og 
 - har sværere ved at få udbytte af studiet - og gennemføre det
 
@@ -183,9 +211,9 @@ Ja eller nej
 
 --
 
-- Vi skal have adgang til mail, wifi, ItsLearning, etc.
-- Vi bruger Studiehåndbogen til at finde informationer og guides
-- På din computer: [https://mit.kea.dk/studiehaandbog](https://mit.kea.dk/studiehaandbog)
+- Vi skal have adgang til mail, wifi, ItsLearning, UMS, etc.
+- Vi bruger EKs Studiehåndbog til at finde informationer og guides
+- På din computer: [https://mit.ek.dk/studiehaandbog](https://mit.ek.dk/studiehaandbog)
 
 --
 <!-- .slide: class="o-squidward" -->
@@ -195,45 +223,59 @@ Ja eller nej
 - Følg instruktionerne for at få adgang til wifi
 
 --
-<!-- .slide: class="o-spongebob" -->
-#### Studiemail og login
+<!-- .slide: class="o-business-blue" -->
+#### UMS - brugernavn, adgangskode og profil
 
-- Søg på studiehåndbogen 
-	- "KEA login"
-	- "KEA mail"
-- Følg instruktionerne
+- Søg på studiehåndbogen efter "EK-login"
+- Følg instruktionerne for hvordan du i UMS:
+  - ændrer din adgangskode
+  - opdaterer dine kontaktoplysninger (vigtigt)
+  - tilføjer et profilbillede (vigtigt)
+
+--
+
+<!-- .slide: class="o-poolside-study" -->
+#### UMS - dit skema
+- Søg på studiehåndbogen efter "skema"
+- Log ind med dit EK-login
+- Se dit skema for de kommende uger
+
+--
+
+<!-- .slide: class="o-spongebob" -->
+#### Studiemail
+
+- Søg på studiehåndbogen efter "EK-mail"
+- Følg instruktionerne for at se din studiemail
 
 --
 <!-- .slide: class="o-focus-blue" -->
-#### ItsLearning
-- også kendt som *Fronter*
-- Søg på studiehåndbogen efter "ItsLearning"
-- Log ind med dit KEA login
+#### ItsLearning (Learning Management System - LMS)
+- Søg på studiehåndbogen efter "LMS"
+- Log ind med dit EK-login
 - Find dit klasse*rum* og undervisningsplaner
 
 --
 <!-- .slide: class="o-daylight" -->
 #### Servicedesk og Serviceportalen
-- Søg på studiehåndbogen efter "Servicedesk"
+- Søg på studiehåndbogen efter "service desk"
 - [servicedesk@ek.dk](mailto:servicedesk@ek.dk)
 - Frontdesk i bygning A ved receptionen
-
---
-<!-- .slide: class="o-poolside-study" -->
-#### UMS
-- Søg på studiehåndbogen efter "UMS"
-- Log ind med dit KEA login
-- Se dit skema for semesteret
 
 --
 <!-- .slide: class="o-pencil-grey" -->
 #### Office 365
 - Søg på studiehåndbogen efter "Office 365"
-- Log ind med dit KEA login
+- Log ind med dit EK-login
 - Find Office 365 apps som Word, Excel, PowerPoint, OneDrive og Teams
 
 --
+<!-- .slide: class="o-patrick-star" -->
+#### Printer
+- Søg på studiehåndbogen efter "print"
+- Læs hvordan du installerer kan installere Mobility Print på din computer (valgfrit)
 
+--
 <!-- .slide: class="o-tinky-winky" -->
 #### Teams
 
@@ -246,6 +288,6 @@ Ja eller nej
 
 - LinkedIn Learning kan bruges som forberedelse til undervisningen
 - Opret en konto i LinkedIn, hvis du ikke har en
-- Tilknyt din KEA-mail til LinkedIn Learning 
+- Tilknyt din EK-mail til LinkedIn Learning 
 	- vha. [https://www.linkedin.com/learning/activate](https://www.linkedin.com/learning/activate)
 - Find kurset **Learning Java 17** af **Kathryn Hodge**

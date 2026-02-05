@@ -265,3 +265,41 @@ if (pill.equals("blue")) {
     System.out.println("Come on, Neo, choose a pill!");
 }
 ```
+
+---
+
+<!-- .slide: class="cover-8" -->
+
+# Refaktorisering af kode
+
+---
+
+# De to faser i kodning
+
+1. **Løs problemet** - få noget kode til at virke - **slamkode**
+2. **Ryd op** - gør den mere læsbar og vedligeholdelsesvenlig - **refaktorisering**
+
+--
+
+**Slamkode**
+
+Notes:
+- Når man koder, handler det ofte om at komme hurtigt ud af startblokken og få noget kode til at virke.
+- Det handler nemlig ofte om at få testet nogle ideer eller hypoteser af.
+- Måske viser det sig, at ideen ikke virker som forventet, og så er det ærgeligt at have brugt for lang tid på at gøre koden pæn.
+- I værste fald, har vi svært ved at skille os af med en dårlig løsning, fordi vi har brugt så lang tid på at gøre den pæn.
+- I har sikkert hørt om "kill your darlings" - det gælder også for kode.
+
+--
+
+Refaktorisering - **Don't Repeat Yourself - DRY**
+
+Notes:
+- Men når koden virker og løser problemet - skal man minde sig selv om, at man kun er halvt færdig
+- Nu er opgaven, at rydde op og gøre koden mere læsbar
+- En af de mest basale måder at rydde op i sin kode er, at 
+- Don't Repeat Yourself - DRY er en af de fundamentale principper i programmering
+- Kode der gentager sig selv, er et oplagt sted at forbedre koden.
+- Er der dele af koden, der gentages, og som kan flyttes til en metode?
+- Koder der gentager sig selv, er sværere at vedligeholde.
+- Der er flere steder som du skal vedligeholde, hvis du skal ændre noget og det kan føre til fejl, hvis du glemmer at ændre et sted.

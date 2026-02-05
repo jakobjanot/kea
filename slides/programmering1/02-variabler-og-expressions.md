@@ -14,12 +14,11 @@ title: 02 - Variable og expressions
 - Igang med øvelser
 - Pause
 - Øvelser fortsat
-- Besøg af studieliv
 - Opsamling
 
 ---
 
-Et program er en **opskrift**
+Lad os tænke på et program som en **opskrift**
 
 --
 
@@ -148,11 +147,6 @@ Notes:
 ```java
 public class Main {
     public static void main(String[] args) {
-        // Ingredienser til omelet til 1 person
-        System.out.println("Ingredienser:");
-        System.out.println("æg (stk): 2");
-        System.out.println("mælk");
-        System.out.println("salt");
         // Opskrift på omelet til 1 person
         System.out.println("2 æg slås ud i en skål");
         System.out.println("2 æg piskes sammen");
@@ -163,7 +157,6 @@ public class Main {
 }
 ```
 
-- Lad os lave en ingrediensliste til omeletten
 - Til en omelet til 1 person skal vi bruge 2 æg, mælk og 0.5 teskefuld salt
 - Skal jeg gentage det for at 2 personer? 3 personer? 4 personer?
 - Det er kedeligt at skrive det igen og igen
@@ -173,12 +166,7 @@ public class Main {
 ```java
 public class Main {
     public static void main(String[] args) {
-        // Ingredienser til omelet til 1 person
         int eggs = 2;
-        System.out.println("Ingredienser:");
-        System.out.println("æg (stk): " + eggs);
-        System.out.println("mælk");
-        System.out.println("salt");
         // Opskrift på omelet til 1 person
         System.out.println(eggs + " æg slås ud i en skål");
         System.out.println(eggs + " æg piskes sammen");
@@ -317,17 +305,49 @@ Så vores program kan se sådan ud:
 ```java
 public class Main {
     public static void main(String[] args) {
-        // Ingredienser til omelet til 1 person
         int eggs = 2;
-        System.out.println("Ingredienser:");
-        System.out.println("æg (stk): " + eggs);
-        System.out.println("mælk");
-        System.out.println("salt");
         // Opskrift på omelet til 1 person
         System.out.println(eggs + " æg slås ud i en skål");
         System.out.println(eggs + " æg piskes sammen");
         System.out.println("Mælk tilsættes");
         System.out.println("Salt tilsættes");
+        System.out.println("Steg omeletten på panden");
+    }
+}
+```
+
+--
+
+Vi kunne også basere opskriften på et antal personer
+
+```java
+int persons = 4;
+int eggs = 2 * persons;
+```
+
+--
+
+... og det samme med mælk og salt
+
+```java
+int milkInMl = 50 * persons; // 50 ml mælk per person
+int saltInTsp = 1 * persons; // 1 teskefuld salt per person
+```
+
+--
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int persons = 4;
+        int eggs = 2 * persons;
+        int milkInMl = persons * 50; // 50 ml mælk per person
+        int saltInTsp = persons * 1; // 1 teskefuld salt per person
+        // Opskrift på omelet til 4 personer
+        System.out.println(eggs + " æg slås ud i en skål");
+        System.out.println(eggs + " æg piskes sammen");
+        System.out.println(milkInMl + " ml mælk tilsættes");
+        System.out.println(saltInTsp + " teskefuld salt tilsættes");
         System.out.println("Steg omeletten på panden");
     }
 }
@@ -440,22 +460,9 @@ int sum = a + b; // 8
 Men `+` bruges også til at **sammenkæde** tekst, fx
 
 ```java
-String firstName = "Beate";
-System.out.println("Mit navn er " + firstName); // Mit navn er Beate
+String name = "Beate";
+System.out.println("Mit navn er " + name); // Mit navn er Beate
 ```
-
---
-
-Vi kunne også skrive
-
-```java
-String firstName = "Beate's alder er ";
-int age = 55;
-String text = firstName + age;
-System.out.println(text); // Beate's alder er 55
-```
-
-Det virker selvom `age` er et heltal
 
 --
 
@@ -533,9 +540,23 @@ Notes:
 - `!` bruges til at tjekke om betingelsen er falsk
 
 --
+
+## Demo: Logiske operatorer - skal jeg købe ind?
+
 ```java
 ...
 boolean groceryStoreOpen = true;
+boolean enoughEggs = true;
+boolean shopEggs = ???;
+System.out.println("Skal jeg købe ind? " + shopEggs);
+```
+
+Notes:
+
+```java
+...
+boolean groceryStoreOpen = true;
+boolean enoughEggs = true;
 boolean shopEggs = groceryStoreOpen && !enoughEggs;
 System.out.println("Skal jeg købe ind? " + shopEggs);
 ```

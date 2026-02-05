@@ -10,8 +10,9 @@ title: "01 - Java fra scratch"
 
 ## Program
 
-- 08:30 Hvad er Java  
-- 09:00 Installering af Java og IntelliJ  
+- 08:30 Lidt om læring, AI og fremtiden som programmør
+- 09:00 Hvad er Java  
+- 09:30 Installering af Java og IntelliJ  
 - 10:00 Pause  
 - 10:15 Første program  
 - 11:15 Opsamling  

@@ -64,26 +64,17 @@ System.out.println("x er nu: " + x);
 ---
 8.
 ```java
-boolean isBroken = true;
-boolean isSlow = false;
-boolean isFast = !(isSlow || isBroken);
-System.out.println("Er den hurtig?: " + isFast);
+boolean isSunny = true;
+boolean isHot = false;
+boolean goToBeach = isSunny && isHot;
+System.out.println("Skal jeg tage på stranden? " + goToBeach);
 ```
 
 9.
 ```java
-boolean isBroken = true;
-boolean isSlow = true;
-boolean isFast = !isSlow && !isBroken;
-System.out.println("Er den hurtig?: " + isFast);
-```
-
-10.
-```java
-boolean isBroken = false;
-boolean isSlow = false;
-boolean isFast = true;
-isFast &= !isBroken;
-isFast &= !isSlow;
-System.out.println("Er den hurtig?: " + isFast);
+boolean isSunny = true;
+boolean isHot = false;
+boolean goToBeach = isSunny;
+goToBeach &= isHot;
+System.out.println("Skal jeg tage på stranden? " + goToBeach);
 ```

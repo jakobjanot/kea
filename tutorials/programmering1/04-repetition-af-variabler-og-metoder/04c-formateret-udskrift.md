@@ -1,4 +1,4 @@
-# Udskrivning vha. printf
+# Formateret udskrift med printf
 
 Indtil nu har vi næsten kun brugt `System.out.println` til at udskrive tekst. Nogle gange ønsker vi dog at formatere vores udskrift mere præcist. Her kommer `System.out.printf` ind i billedet. Først nogle eksempler på hvordan du kan bruge `printf`.
 

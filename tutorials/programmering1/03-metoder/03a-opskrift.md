@@ -19,7 +19,7 @@ Vi skal lave et program, der udskriver en brød-opskrift.
     ```
 5. Skriv opskriften i `main` metoden, så den udskriver fremgangsmåden for at lave cookies. Brug `System.out.println` til at udskrive hver linje af opskriften.
     ```txt
-    Tilsæt 300 ml. vand til skålen
+    Tilsæt 500 g. vand til skålen
     Tilsæt 10 g. gær til skålen
     Tilsæt 500 g. hvedemel til skålen
     Ælt dejen i 5 minutter
@@ -36,5 +36,13 @@ Vi skal lave et program, der udskriver en brød-opskrift.
     ```
 7. Kør programmet og se resultatet i konsollen.
 8. Prøv nu at ændre æltetiden til 7 minutter og hævetiden til 1,5 time. Kør programmet igen.
-9. Er der nogle dele af opskriften, der gentager sig selv? Hvis ja, så overvej at lave en metode, for hver del af opskriften, der gentager sig selv.
-10. Virker det stadig? Så prøv at ændre æltetiden til 8 minutter og hævetiden til 2 timer. Var det lettere at ændre opskriften nu?
+9. At ændre mange steder i koden virker omstændig og med mulighed for fejl. Lad os prøve at gøre det bedre ved at bruge metoder.
+10. Opret en metode kaldet `kneadDough`, der kunne se sådan ud:
+    ```java
+    public static void kneadDough() {
+        System.out.println("Ælt dejen i 7 minutter");
+    }
+    ```
+11. Erstat alle steder i `main`-metoden, hvor der står "Ælt dejen i 7 minutter" med `kneadDough()`, dvs. kald af din `kneadDough`-metode. Kør programmet igen. Virker det stadig?
+12. Er der andre dele af opskriften, der gentager sig selv? Hvis ja, så overvej at lave en metode, for hver del af opskriften, der gentager sig selv.
+13. Virker det stadig? Så prøv at ændre æltetiden til 8 minutter og hævetiden til 2 timer. Var det lettere at ændre opskriften nu?

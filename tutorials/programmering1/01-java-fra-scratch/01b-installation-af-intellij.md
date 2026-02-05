@@ -3,10 +3,10 @@
 For at få hjælp til at skrive Java-kode, skal vi installere et udviklingsmiljø, der hedder **IntelliJ IDEA**. Det er et program, der hjælper os med at skrive, organisere og køre vores Java-kode.
 
 - Gå til [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/)
-- Download **ikke** IntelliJ IDEA **Ultimate**
-- **Scroll** ned til IntelliJ IDEA **Community Edition**
-    ![Download IntelliJ](img/download-intellij.png)
-- Klik "Download"
+- Klik på knappen **Download**
+  - Mac: Hedder din Mac noget med M, dvs. M1, M2 osv? 
+    Vælg da **.dmg (Apple Silicon)** - ellers vælg **.dmg (Intel)**.
+  - Windows: Står der Snapdragon eller ARM på din Windows computer? Vælg da **.exe (Windows ARM)** - ellers vælg **.exe (Windows)**.
 
 ## Installér
 

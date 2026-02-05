@@ -3,7 +3,7 @@
 1. Lav et nyt Java-projekt i IntelliJ, som du navngiver `return-type`.
 2. Lav en Java-klasse `ReturnType`, der ser sådan ud:
     ```java
-    blic class ReturnType {
+    public class ReturnType {
       public static void main(String[] args) {
           ??? result = add(5, 10);
           System.out.println("Resultatet er: " + result);
@@ -59,8 +59,7 @@
   }
   ```
 - ```java
-  public static ??? substring(String text, 
-                              int start, int end) {
-      return text.substring(start, end);
+  public static ??? firstThreeCharacters(String text) {
+      return text.substring(0, 3);
   }
   ```

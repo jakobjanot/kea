@@ -8,11 +8,11 @@
 | 4. feb.   | 08:30-11:45 | GBG.E336    | Repetion af variabler og metoder            |
 | 6. feb.   | 08:30-11:45 | GBG.E336    | Input og Scanner                            |
 | 10. feb.  | 12:30-15:45 | GBG.E336    | Betingelser                                 |
-| 11. feb.  | 08:30-11:45 | Online      | Repetition af Input, Scanner og betingelser |
-| 13. feb.  | 08:30-11:45 | GBG.E336    | Løkker, rekursion og mere String            |
-| 17. feb.  | 12:30-15:45 | GBG.E336    | Løkker og gener. af tilf. tal               |
-| 18. feb.  | 08:30-11:45 | GBG.E336    | Array                                       |
-| 20. feb.  | 08:30-11:45 | GBG.E336    | Array og Arrays hjælpeklassen               |
+| 11. feb.  | 08:30-11:45 | Online      | Løkker, rekursion og mere String            |
+| 13. feb.  | 08:30-11:45 | GBG.E336    | Mere om løkker og gener. af tilf. tal       |
+| 17. feb.  | 12:30-15:45 | GBG.E336    | Array                                       |
+| 18. feb.  | 08:30-11:45 | GBG.E336    | Array og Arrays hjælpeklassen               |
+| 20. feb.  | 08:30-11:45 | GBG.E336    | Mikroprojekt: Kryds og bolle (med aflev.)   |
 | 23. feb.  | 08:30-11:45 | GBG.E336    | Klasser som "værktøjskasser"                |
 | 24. feb.  | 12:30-15:45 | GBG.E336    | Klasser som brugerdefinerede datatyper      |
 | 27. feb.  | 08:30-11:45 | GBG.E336    | Objekter med tilstand og adfærd             |

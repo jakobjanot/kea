@@ -19,5 +19,3 @@
    System.out.println("Porto: " + shippingCost + " kr");
    ```
 3. Test metoden med forskellige vægte for at sikre, at den returnerer de korrekte priser
-4. Ekstra: Hvordan kan vi håndtere vægte over 20 kg?
-5. Udvid dit program, så du kan indtaste vægten via tastaturet, dvs. brug `System.in` og `Scanner` ligesom i tidligere opgaver.

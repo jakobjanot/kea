@@ -30,30 +30,17 @@
        // ...
    }
    ```
-4. ```java
-   public static String seasonForMonth(int month) {
-       // ...
-   }
-   ```
 
-5. ```java
+4. ```java
    public static boolean canDrive(int age, boolean hasLicense) {
        // ...
    }
    ```
 
-6. ```java
+5. ```java
    public static boolean isBetween(int number, 
                                    int min, 
                                    int max) {
        // ...
    }
    ```
-
-7. ```java
-    public static double applyDiscount(double price, 
-                                       boolean isMember, 
-                                       int couponDiscount) {
-        // ...
-    }
-    ```

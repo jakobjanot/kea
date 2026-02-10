@@ -10,7 +10,10 @@ title: 04 - Input og Scanner
 
 ## Program
 
-- Casting, Input og Scanner
+- Casting
+- Parsing
+- Scanner
+- System.out og System.in
 - Øvelser
 - Opsamling  
 
@@ -74,9 +77,9 @@ at fortolke en tekststreng (eller data)
 ```java
 String x = "4";
 int y = Integer.parseInt(s); // går godt, x er nu 4
+```
 
 --
-
 
 ```java
 int x     = Integer.parseInt("4");
@@ -240,31 +243,73 @@ Notes:
 # Demo af `Scanner` og `System.in`
 
 ---
-<!-- .slide: class="cover-2" -->
-# Sneak-peak: `if` og `else`
-Notes:
-- Næste gang skal vi se på betingelser i Java
+<!-- .slide: class="cover-3" -->
+# `Scanner`s `hasNext`-metoder
 
 --
-![Blue pill or red pill](img/blue-pill-red-pill.png)
 
-Notes:
-- I filmen "The Matrix" præsenteres hovedpersonen, Neo, for et valg mellem to piller: den blå og den røde.
-- Vælger han den blå pille, forbliver han i sin trygge, men falske virkelighed. Vælger han den røde pille, konfronteres han med sandheden om sin verden.
+Vi kan ikke forvente at brugeren altid indtaster det rigtige.
+Hvordan undgår vi fejl, når vi bruger `Scanner`?
 
 --
+<!-- .slide: class="o-sunlit-energy" -->
+
+# Demo - fejlindtastning
+
+--
+
+En måde er at bruge `hasNext`-metoderne:
 
 ```java
-String pill = "blue";
-
-if (pill.equals("blue")) {
-    System.out.println("Stay in the Matrix");
-} else if (pill.equals("red")) {
-    System.out.println("Confront the truth");
+Scanner scanner = new Scanner(System.in);
+int x = 0;
+if (scanner.hasNextInt()) {
+    x = scanner.nextInt();
+    System.out.println("Du indtastede: " + x);
 } else {
-    System.out.println("Come on, Neo, choose a pill!");
+    System.out.println("Fejl: Det indtastede er ikke et tal.");
 }
 ```
+
+--
+
+Er der flere tal i inputtet?
+
+```java
+Scanner scanner = new Scanner(System.in);
+while (scanner.hasNextInt()) {
+    int x = scanner.nextInt();
+    System.out.println("Du indtastede: " + x);
+}
+```
+
+--
+
+Er der flere ord i inputtet?
+
+```java
+Scanner scanner = new Scanner(System.in);
+while (scanner.hasNext()) {
+    String word = scanner.next();
+    System.out.println("Du indtastede: " + word);
+}
+```
+
+--
+
+Er der flere linjer i inputtet?
+
+```java
+Scanner scanner = new Scanner(System.in);
+while (scanner.hasNextLine()) {
+    String line = scanner.nextLine();
+    System.out.println("Du indtastede: " + line);
+}
+```
+
+---
+<!-- .slide: class="o-sunlit-energy" -->
+# Demo - `hasNext`...
 
 ---
 

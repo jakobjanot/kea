@@ -67,7 +67,8 @@ int y = s; // fejl
 Notes:
 - Fejl. Selvom "4" er et tal står tallet i en tekststreng, og Java kan ikke implicit konvertere en tekststreng til et tal.
 
---
+---
+<!-- .slide: class="cover-2" -->
 
 Nyt ord: **Parsing**.  
 at fortolke en tekststreng (eller data)
@@ -92,9 +93,12 @@ boolean z = Boolean.parseBoolean("true");
 ```java
 int x = Integer.parseInt("4 121 33 14"); // fejl
 ```
-Notes:
-- Når vi forsøger at parse en streng med flere tal adskilt af mellemrum, vil det fejle, fordi `Integer.parseInt` kun kan håndtere én enkelt værdi ad gangen.
-- Vi kan dog bruge `Scanner` klassen til at læse flere værdier fra en streng.
+
+... `parseInt` kan kun håndtere én enkelt værdi ad gangen.
+
+--
+
+Løsning: Brug `Scanner` klassen!
 
 ```java
 String s = "4 121 33 14";
@@ -107,13 +111,10 @@ int z = scanner.nextInt(); // læser 33
 int w = scanner.nextInt(); // læser 14
 ```
 
---
-<!-- .slide: class="o-sunlit-energy" -->
+---
+<!-- .slide: class="cover-9" -->
 
-# Demo: Klassen `Scanner`
-
-Notes:
-- Vis hvordan next, nextLine, nextInt, nextDouble osv. fungerer.
+`Scanner`
 
 --
 
@@ -134,6 +135,15 @@ public class Scanner {
     }
 }
 ```
+
+--
+
+<!-- .slide: class="o-sunlit-energy" -->
+
+# Demo: Klassen `Scanner`
+
+Notes:
+- Vis hvordan next, nextLine, nextInt, nextDouble osv. fungerer.
 
 ---
 <!-- .slide: class="cover-3" -->

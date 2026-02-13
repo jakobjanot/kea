@@ -1,6 +1,6 @@
 {
     "markdown.styles": [
-        "style.css"
+        "scripts/style.css"
     ],
     
     // Tinymist Language Server Configuration

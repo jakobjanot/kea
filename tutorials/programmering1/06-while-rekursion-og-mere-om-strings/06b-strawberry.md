@@ -6,4 +6,3 @@
 2. Brug en `while`-løkke til at gå gennem hvert bogstav i en `String` og læg 1 til en tæller hver gang du støder på et *r*.
 3. Hint: Længden af en String kan findes med `length()` metoden, og et bogstav på en bestemt position kan findes med `charAt(index)` metoden.
 4. Test programmet og se om det virker.
-5. (Valgfrit) Prøv at gøre programmet mere generelt, så den kan tælle antallet af *r*'er i en hvilken som helst String, som brugeren indtaster. Hint: Brug `Scanner` klassens `nextLine()` metode til at læse en hel linje tekst fra brugeren.

@@ -37,7 +37,7 @@ while (condition) {
 ```
 
 --
-<!-- .slide: class="large" -->v
+<!-- .slide: class="large" -->
 Men fordi kun kendte `while` løkker, brugte vi dem til alt
 
 ```java

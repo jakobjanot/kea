@@ -182,12 +182,7 @@ while (age < 0 || age > 100) {
 System.out.println("Din alder er: " + age);
 ```
 
-Så længe brugeren indtaster en alder, der er mindre end 0 eller større end 100, bliver der ved med at spørge om en ny alder, dvs.
-
-Indtast din alder: 101
-Indtast din alder: -5
-Indtast din alder: 44
-Din alder er: 44
+Det skal vi lære mere om i næste gang.
 
 --
 

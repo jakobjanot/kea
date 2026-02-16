@@ -159,7 +159,7 @@ for (char c = 'a'; c <= 'e'; c++) {
 Hvad tror i den her gør?
 
 ```java
-for (;;;) {
+for (;;) {
     System.out.println("Jeg kan en sang, der kan drive dig til vanvid!");
 }
 ```

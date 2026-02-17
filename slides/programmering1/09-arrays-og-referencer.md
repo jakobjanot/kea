@@ -41,11 +41,11 @@ coins = 50;
 Notes:
 - Vi kan give den et navn og bruge den andre steder i programmet.
 - For eksempel, bruger vi her en `int` variabel `coins` til at gemme antallet af guld-mønter, som vi har i vores skattekiste
-- Men, nogle gange har vi brug for at gemme en række værdier i én variabel, fx en liste af tal eller en tekststreng. I Java kan vi bruge arrays til at gemme flere værdier af samme type.
+- Men, nogle gange har vi brug for at gemme flere værdier i én variabel, fx en liste af tal eller en tekststreng. I Java kan vi bruge arrays til at gemme flere værdier af samme type.
 
 --
 
-Nogle gange har vi brug for at gemme **en række værdier** i én variabel
+Nogle gange har vi brug for at gemme **flere værdier** i én variabel
 
 --
 
@@ -283,9 +283,10 @@ Notes:
 - Moderne sprog har nedarvet denne konvention fra ældre sprog som C, hvor det var nødvendigt for effektiv hukommelsesadgang.
 - Der er dog sprog som Fortran og MATLAB, der starter indeksering ved 1, men det er mindre almindeligt - og ofte forbundet med forvirring
 
---
+---
+<!-- .slide: class="cover-3" -->
 
-# Om call-by-value
+# call-by-value
 
 --
 
@@ -336,7 +337,7 @@ Notes:
 - Ændringen af `arr` påvirker `myArray`, fordi de begge refererer til den samme array i hukommelsen.
 
 ---
-<!-- .slide: class="cover-3" -->
+<!-- .slide: class="cover-4" -->
 # for og foreach
 
 --

@@ -12,9 +12,16 @@
   songs[1] = "Imagine";
   // osv.
   ```
-- Udskriv hele din playliste ved at iterere over array'et med en `foreach`-løkke, f.eks.
+- Udskriv hele playlisten ved at iterere over array'et med en `for`-løkke, så den skriver "1. Bohemian Rhapsody", "2. Imagine", osv.
   ```java
-  for (String song : songs) {
+  for (int i = 0; i < songs.length; i++) {
+      // Forsæt koden her
+  }
+  ```
+- Prøv nu at ændre i løkken, så den afspiller sangene i omvendt rækkefølge, altså starter med sang sidste sang i playlisten og slutter med den første
+- Prøv nu istedet at bruge en `foreach`-løkke, og udfyld `???` i koden herunder - der spiller sangene i den normale rækkefølge:
+  ```java
+  for (???) {
       System.out.println("Spiller nu: " + song);
   }
   ```

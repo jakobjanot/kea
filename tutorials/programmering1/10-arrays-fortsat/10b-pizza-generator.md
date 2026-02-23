@@ -9,7 +9,7 @@
            "mozzarella", "jalapenos", "chorizo"
    - Sovs: "tomat", "creme fraiche", "pesto", "mascarpone"
 3. Brug `Random`-klassen til at vælge et tilfældigt element fra hvert array.
-4. Udskriv den tilfældigt genererede pizza, fx: 
+4. Udskriv den tilfældigt genererede pizza, for eksempel:
    ```txt
    Din pizza har 
    - tynd bund

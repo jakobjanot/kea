@@ -1,8 +1,19 @@
 ---
 title: 10 - Mere om Arrays
 ---
-
+<!-- .slide: class="cover-3" -->
 # Om String og char
+
+---
+<!-- .slide: class="k-sunlit-energy" -->
+
+## Program
+
+- `Arrays`-klassen
+- Øvelser  
+- Opsamling  
+
+--
 
 # `Arrays`-klassen
 

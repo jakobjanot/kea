@@ -31,9 +31,3 @@
    - *eller* en `foreach`-løkke over et `char` array lavet med `toCharArray()`.
 3. Prøv at lave en metode `public static int countChar(String text, char c)`, der tæller hvor mange gange et bogstav `c` optræder i `text`, og returnerer det som et `int`.
 4. Test din metode ved at kalde den fra `main` med forskellige bogstaver, fx `countChar(eventyr, 'h')`
-5. Prøv nu at lave en `for`-løkke, der løber gennem alle bogstaverne i alfabetet. Hint:
-   ```java
-   char[] alphabet = "abcdefghijklmnopqrstuvwxyzæøå".toCharArray();
-   ```
-   og brug din `countChar`-metode til at tælle hvor mange gange hvert bogstav optræder i eventyret.
-6. Test dit program. Hvilke bogstaver optræder oftest? Hvilke bogstaver optræder slet ikke?

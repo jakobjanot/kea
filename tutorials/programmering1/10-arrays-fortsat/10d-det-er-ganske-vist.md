@@ -4,6 +4,12 @@
 - Vi lærte i projektet `fairytale` at tælle hvor mange gange et bogstav optræder i et eventyr.
 - Vi vil gerne undgå at skulle gennemgå hele teksten for hvert bogstav vi vil tælle. Det er tidskrævende, hvis eventyret er langt.
 - I denne implementering vil vi bruge et array `int[] counts` til at tælle forekomster af hvert bogstav. Der er 29 bogstaver i det danske alfabet, så vi laver et array med 29 pladser.
+1. Prøv nu at lave en `for`-løkke, der løber gennem alle bogstaverne i alfabetet. Hint:
+   ```java
+   char[] alphabet = "abcdefghijklmnopqrstuvwxyzæøå".toCharArray();
+   ```
+   og brug din `countChar`-metode til at tælle hvor mange gange hvert bogstav optræder i eventyret.
+2. Test dit program. Hvilke bogstaver optræder oftest? Hvilke bogstaver optræder slet ikke?
 Du kan tage udgangspunkt i flg:
   ```java
   char[] alphabet = "abcdefghijklmnopqrstuvwxyzæøå".toCharArray();    

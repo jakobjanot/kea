@@ -86,6 +86,11 @@ Metoderne i `java.lang.Math` er `static`
 DEMO: Er `Math` klassens metoder `static`?
 Notes:
 - Tjek i Intellij
+---
+
+<!-- .slide: class="cover-12" -->
+## `static` metoder
+
 --
 
 Spørgsmål: Hvad betyder `static`?
@@ -101,11 +106,17 @@ Dvs. vi behøver ikke at lave et objekt af klassen Math for at bruge metoderne
 --
 <!-- .slide: class="x-large" -->
 
-Med andre ord, vi behøver ikke
+Med andre ord, vi behøver **ikke**
 
 ```java
 Math math = new Math();
 math.sqrt(16);
+```
+
+... vi kan bare skrive
+
+```java
+Math.sqrt(16);
 ```
 
 --

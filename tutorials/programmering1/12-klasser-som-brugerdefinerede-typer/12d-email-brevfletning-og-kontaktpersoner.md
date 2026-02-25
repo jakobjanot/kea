@@ -25,18 +25,13 @@ Dette er en fortsættelse af Intellij-projektet `bulk-email` fra den tidligere o
 4. Opdater også `toString`-metoden i `Email`-klassen til at bruge `Contact`-objekterne `from` og `to`.
 4. Oprettelsen af `Email`-objekter i `main` skal også opdateres til at bruge `Contact`-objekter. F.eks:
    ```java
-    Email[] emails = new Email[] {
-        new Email(
-            new Contact("Alice", "alice@example.com"),
-            new Contact("Bo", "bo@example.com"),
-            "Long time no see",
-            "Hej Bo, hvad går du og laver?"),
-        new Email(
-            new Contact("Christina", "chrisser@example.com"),
-            new Contact("David", "david@example.com"),
-            "Møde", 
-            "Hej David, kaffe i morgen?"),
-       // flere emails her
+   Contact alice = new Contact("Alice", "alice@example.com");
+   Contact bo = new Contact("Bo", "bo@example.com");
+   Email email = new Email(
+        alice,
+        bo,
+        "Long time no see",
+        "Hej Bo, hvad går du og laver?");
    };
 5. Test dit program igen og se at det stadig virker som forventet.
 6. Hvis du ikke allerede har gjort det, kan du også overskrive `toString`-metoden i `Contact`-klassen til at returnere en streng i formatet `Name <email>`, og så kan du forenkle `toString`-metoden i `Email`-klassen til:
@@ -48,3 +43,12 @@ Dette er en fortsættelse af Intellij-projektet `bulk-email` fra den tidligere o
         %s
         """, from, to, subject, body);
    ```
+7. Vi skal egentlig ikke bruge `alice` og `bo`-objekterne til andet end at oprette `email`-objektet, så du kan også overveje at oprette `Contact`-objekterne inline i konstruktøren til `Email`, f.eks:
+   ```java
+   Email email = new Email(
+        new Contact("Alice", "alice@example.com"),
+        new Contact("Bo", "bo@example.com"),
+        "Long time no see",
+        "Hej Bo, hvad går du og laver?");
+   ```
+   Prøv at oprette flere `Email`-objekter på denne måde, og se at det stadig virker som forventet.

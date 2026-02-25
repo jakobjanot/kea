@@ -69,6 +69,9 @@ Notes:
 
 ---
 <!-- .slide: class="cover-2" -->
+# Parsing
+
+--
 
 Nyt ord: **Parsing**.  
 at fortolke en tekststreng (eller data)

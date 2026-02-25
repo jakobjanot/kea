@@ -1,7 +1,7 @@
 ---
 title: 12 - Klasser som brugerdefinerede typer
 ---
-<!-- .slide: class="cover-3" -->
+<!-- .slide: class="cover-11" -->
 #### Klasser som brugerdefinerede typer
 
 ---
@@ -22,7 +22,7 @@ title: 12 - Klasser som brugerdefinerede typer
 ---
 <!-- .slide: class="large" -->
 
-Indtil nu har vi brugt gemme data i Javas indbyggede typer, fx `String`
+Vi har brugt Javas indbyggede typer, fx `String` til at data, fx
 ```java
 String givenName = "Victor";
 String familyName = "Lukic";
@@ -69,29 +69,28 @@ public class Contact {
     String givenName;
     String familyName;
     String email;
-
 }
 ```
 
 --
 
-Nu kan vi oprette en instans af `Contact` med `new`-nøgleordet
+`Contact`-klassen er en slags **skabelon** for hvordan et `Contact`-objekt ser ud, dvs. *fornavn* (`givenName`), *efternavn* (`familyName`) og *email-adresse* (`email`)
+
+--
+<!-- .slide: class="large" -->
+Nu kan vi oprette instanser af `Contact` med `new`-nøgleordet
 ```java
-public class Main {
-    public static void main(String[] args) {
-        Contact victor = new Contact();
-        victor.givenName = "Victor";
-        victor.familyName = "Lukic";
-        victor.email = "lucky@victory.dk";
+Contact victor = new Contact();
+victor.givenName = "Victor";
+victor.familyName = "Lukic";
+victor.email = "lucky@victory.dk";
 
-        Contact thorkild = new Contact();
-        thorkild.givenName = "Thorkild";
-        thorkild.familyName = "Hansen";
-        thorkild.email = "thorkild@hansen.dk";
+Contact thorkild = new Contact();
+thorkild.givenName = "Thorkild";
+thorkild.familyName = "Hansen";
+thorkild.email = "thorkild@hansen.dk";
 
-        generateEmail(victor, thorkild, "Hej", "Hvordan går det?");
-    }
-}
+generateEmail(victor, thorkild, "Hej", "Hvordan går det?");
 ```
 
 --
@@ -239,6 +238,11 @@ public class Contact {
 ## Overloading af konstruktører
 
 --
+
+Kan i huske, da vi talte om **overloading** af metoder?
+En konstruktør er *bare* en metode, så ...
+
+--
 <!-- .slide: class="large" -->
 
 Som andre metoder, kan vi **overloade** konstruktører
@@ -289,7 +293,6 @@ public class Contact {
 
 Notes:
 - To, da der ikke er nogen tom konstruktør længere, fordi vi selv har defineret to andre.
-
 
 --
 <!-- .slide: class="large" -->

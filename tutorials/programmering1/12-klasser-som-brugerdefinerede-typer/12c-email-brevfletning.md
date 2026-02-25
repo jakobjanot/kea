@@ -26,19 +26,14 @@ Husker du den tidligere opgave med email brevfletning? Du er velkommen til at ge
        }
    }
    ```
-3. I `main` skal du oprette et array med mindst 5 `Email`-objekter med forskellige værdier, f.eks:
+3. I `main` skal du oprette mindst 5 `Email`-objekter med forskellige værdier, f.eks:
 
    ```java
-   Email[] emails = new Email[] {
-       new Email("Alice", "alice@example.com", 
-                 "Bo", "bo@example.com", 
-                 "Long time no see",
-                 "Hej Bo, hvad går du og laver?"),
-       new Email("Christina", "chrisser@example.com", 
-                 "David", "david@example.com", 
-                 "Møde", "Hej David, kaffe i morgen?"),
-       // flere emails her
-   };
+   Email email1 = new Email("Alice", "alice@example.com", 
+                           "Bo", "bo@example.com", 
+                           "Long time no see",
+                           "Hej Bo, hvad går du og laver?");
+   ```
 4. Skriv en `toString`-metode i `Email`-klassen der returnerer en streng med emailens indhold i et pænt format, f.eks:
    ```txt
    From: Alice <alice@example.com>

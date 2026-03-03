@@ -154,7 +154,7 @@ BankAccount.deposit(100); // fejl
 
 ---
 <!-- .slide: class="cover-5" -->
-# Objekter som argumenter og returværdier
+##### Objekter som argumenter og returværdier
 
 --
 
@@ -303,7 +303,8 @@ if (account != null) {
 
 Så i Java skal man ofte holde styr på om en variabel er `null` eller peger på et objekt 
 
---
+---
+<!-- .slide: class="cover-11" -->
 
 ## Garbage collector (GC)
 
@@ -340,7 +341,9 @@ else {
 
 --
 
-For reference-typer (objekter) er det anderledes.  Referencen (addressen) til et objekt ligger i stack'en og slettes når den går ud af scope
+For reference-typer (objekter) er det anderledes.  
+
+Referencen til et objekt ligger i stack'en og slettes når den går ud af scope
 
 ```java
 public static void foo() {
@@ -350,7 +353,7 @@ public static void foo() {
 // account-referencen eksisterer ikke her
 ```
 
-... MEN objektet ligger stadig i heap'en og fylder plads, selvom vi ikke kan komme til det længere.
+... MEN objektet ligger stadig i heap'en og fylder, selvom vi ikke kan komme til den.
 
 --
 
@@ -372,13 +375,13 @@ account = new BankAccount(123456);
 // nu peger account-referencen på et andet BankAccount-objekt
 ```
 
-Nu kan vi ikke længere komme til det første `BankAccount`-objekt med kontonummer 987654.
+Nu kan vi ikke længere komme til `BankAccount`en 987654.
 
 --
 
 Fylder vi så heap'en op med ubrugte objekter? (Tænk: rumskrot)
 
-Nej, heldigvis har Java en flittig rengøringshjælp, der hedder garbage collector'en (GC).
+Nej, heldigvis har Java en flittig rengøringshjælp, der hedder **garbage collector**en.
 
 --
 
@@ -391,6 +394,9 @@ Nej, heldigvis har Java en flittig rengøringshjælp, der hedder garbage collect
 --
 
 Har alle programmeringssprog en garbage collector?
+
+--
+
 Nej, fx C og C++ har ikke en garbage collector. I de sprog er det programmørens ansvar at frigøre hukommelse, når den ikke længere er nødvendig.
 
 ---

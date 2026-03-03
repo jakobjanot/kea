@@ -3,9 +3,6 @@
 - Skriv et program, der spiller sten, saks, papir mod brugeren. Start med flg. skabelon
 
 ```java
-import java.util.Random;
-import java.util.Scanner;
-
 public class StoneScissorPaper {
     public static void main(String[] args) {
         final int STONE = 0;
@@ -15,7 +12,10 @@ public class StoneScissorPaper {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        System.out.printf("Hvad fik du - sten (%s), saks (%s) eller papir (%s)?", STONE, SCISSOR, PAPER);
+        System.out.printf("Hvad fik du - sten (%s), " + 
+            "saks (%s) eller papir (%s)?", 
+            STONE, SCISSOR, PAPER);
+        
         int me = scanner.nextInt();
         int ai = random.nextInt(3);
 

@@ -44,7 +44,7 @@ for (BankAccount account : accounts) {
 ---
 
 <!-- .slide: class="cover-4" -->
-# Hvordan var det nu med `null`
+# `null`?
 
 --
 
@@ -130,27 +130,70 @@ public static BankAccount findAccount(int accountNumber) {
 ---
 <!-- .slide: class="cover-4" -->
 
-# Relationer mellem klasser
+### Associationer mellem klasser
+
+---
+
+### Kardinalitet
 
 --
 
-Vi havde en `BankAccount`-klasse
+## 1-1 association (1-1)
+
+- *Et* kursus har *en* underviser, dvs.
+- *Et* `Course`-objekt har *en* `Teacher`-objekt
+
+--
 
 ```java
-public class BankAccount {
-    int accountNumber;
-    double balance;
+public class Course {
+    Teacher teacher;
+}
+
+public class Teacher {
 }
 ```
---
-
-Lad os give kontoen en ejer
-
-Hvordan kunne en `Owner`-klasse se ud?
 
 --
-<!-- .slide=class="o-sunlit-energy" -->
 
+## 1-many association (1-*)
+
+- *Et* akademi har *mange* studerende, dvs.
+- *Et* `Academy`-objekt har *mange* `Course`-objekter
+
+--
+
+```java
+public class Academy {
+    Course[] courses;
+}
+
+public class Course {
+}
+```
+
+--
+
+## many-many association (*-*)
+
+- *Mange* studerende kan være tilmeldt *mange* kurser, dvs.
+- *En* `Student` kan være tilmeldt mange `Course`-objekter, **og** *et* `Course` kan have mange `Student`-objekter
+
+--
+
+```java
+public class Student {
+    Course[] courses;
+}
+
+public class Course {
+    Student[] students;
+}
+```
+
+---
+
+<!-- .slide: class="o-sunlit-energy" -->
 DEMO Vi giver `BankAccount` en ejer `Owner`
 
 Notes:
@@ -164,9 +207,7 @@ public class Owner {
         this.email = email;
     }
 }
-```
 
-```java
 public class BankAccount {
     int accountNumber;
     double balance;
@@ -178,20 +219,15 @@ public class BankAccount {
         this.owner = null;
     }
 }
-```
 
-Og nu kan vi lave en konto med en ejer
-
-```java
 Owner owner = new Owner("Hanne Hansen", "hanne@example.com");
 BankAccount account = new BankAccount(337898);
 account.owner = owner;
 System.out.println(account.owner.name); // Hanne Hansen
 ```
 
---
-
-Det er svært at forestille sig en bankkonto uden en ejer. En konto kan faktisk ikke eksistere uden en ejer.
+Det er svært at forestille sig en bankkonto uden en ejer.  
+En konto kan faktisk ikke eksistere uden en ejer.
 
 --
 
@@ -215,19 +251,38 @@ Gør `owner`-feltet `final`, så det ikke kan ændres efterfølgende
 
 --
 
-Der er flere måder, hvorpå klasser har relationer til hinanden. 
+Hvad kalder vi det?
 
 --
 
-Komposition er når et objekt "har et" (**has-a**) andet objekt som en del af sin tilstand (state).
+#### Komposition
+når et objekt "har et" (**has-a**) andet objekt (stærkt ejerskab)
 
 --
+
+#### Komposition - stærkt ejerskab
 
 En konto kan **ikke eksistere uden** en ejer.
 
-Vi kalder det et "stærkt ejerskab" (strong ownership) - et kendetegn ved komposition.
+--
+
+Derimod vil en `Student` eksistere fint uden `Course`-objekter
+
+--
+
+#### Aggregation
+når et objekt "har et" (**has-a**) andet objekt (svagt ejerskab)
+
+--
+
+... men vi kan nøjes med at kalde det en **has-a** relation
 
 ---
+
+
+
+---
+
 
 <!-- .slide: class="sunlit-energy" -->
 

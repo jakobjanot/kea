@@ -25,7 +25,6 @@ title: 15 - Indkapsling
 <!-- .slide: class="large" -->
 So far, har vi brugt `public` til alt
 
-- klasser:
 ```java
 public class BankAccount { // public class
     public double balance; // public field
@@ -47,24 +46,12 @@ public class BankAccount { // public class
 
 --
 
-Java har fire access modifiers:
+Java har **fire** access modifiers:
 
-- `public` betyder at alle kan se og bruge det
-- `private` betyder at kun klassen selv kan se og bruge det
-- `protected` betyder at kun klassen selv og dens subklasser kan se og bruge det
-- (default) betyder at kun klassen selv og klasser *i samme pakke* kan se og bruge det
-
---
-
-Måske har du set `private` før - ved et uheld
-
---
-<!-- .slide: class="o-sunlit-energy" -->
-## DEMO - Extract method i IntelliJ
-
-Notes:
-- Bruger man Extract method, så bliver den nye metode `private` som default
-- Det er fordi det er en god ide at gøre metoder `private` som default, og så gøre dem `public` hvis det er nødvendigt
+- `public`: **alle** kan se og bruge det
+- `private`: kun **klassen selv** kan se og bruge det
+- `protected`: kun **klassen selv** og **dens subklasser** kan se og bruge det
+- (default): kun **klassen selv** og klasser *i samme pakke* kan se og bruge det
 
 ---
 <!-- .slide: class="cover-7" -->

@@ -103,6 +103,15 @@ String[] makes = new String[3];
 
 --
 
+
+--
+<!-- .slide: class="ek-patrick-star" -->
+Prøv selv: 
+
+Lav en playlist. Brug en ArrayList af String og tilføj sange til den.
+
+--
+
 Hvorfor nu en ny slags paranteser `<>` i
 
 ```java
@@ -123,7 +132,13 @@ ArrayList<int> nums = new ArrayList<>(); // FEJL
 
 --
 
-Vi kunne lave en selv, `T` er denne type parameter
+Nyt ord: *Generics*
+
+Betyder at klassen kan bruges på mange forskellige typer, fx `String`, `BankAccount` og `Integer`
+
+--
+
+Vi kunne lave sådan en klasse selv, `T` er en type-parameter
 
 ```java
 class Pair<T> {
@@ -158,8 +173,9 @@ BankAccount first = p.getFirst();
 ```
 
 ---
+<!-- .slide: class="cover-5" -->
 
-Hvad kan vi gøre med en ArrayList?
+#### Hvad kan en ArrayList?
 
 --
 
@@ -221,15 +237,28 @@ makes.isEmpty(); // true
 ```
 
 --
+<!-- .slide: class="ek-patrick-star" -->
+Prøv selv: 
 
-Hvad tror i data gemmes i en ArrayList?
+
+`.get(...)` - print den tredje sang.  
+`.contains(...)` - tjek om en sang er  
+`.remove(...)` - fjern en sang  
+`.size()` - tjek hvor mange sange der er  
+`.isEmpty()` - tjek om playlisten er tom  
+`.clear()` - tøm playlisten  
+`for (...)` - Iterer over playlisten
+
+--
+
+Hvordan mon `ArrayList` er implementeret?
 
 --
 
 ...en array - sådan lidt a la
 
 ```java
-class ArrayList<E> {
+class ArrayList<T> {
     private Object[] elements;
     private int size;
 
@@ -238,7 +267,7 @@ class ArrayList<E> {
         size = 0;
     }
 
-    public void add(E element) {
+    public void add(T element) {
         if (size == elements.length) {
             // resize array
             elements = Arrays.copyOf(elements, elements.length * 2);
@@ -315,9 +344,6 @@ public static void main(String[] args) {
 ```
 
 --
-
-
-
 
 Hvis en assert fejler, fx
 ```java
@@ -419,13 +445,13 @@ public class BankAccountTest { // Test klasse der tester BankAccount
 
 --
 
-**** Test*klasser* = organisering af tests
+#### Test*klasser* = organisering af tests
 
 Testklassen `BankAccountTest` *tester* `BankAccount`
 
 --
 
-**** Test*metoder* = tester hver især én ting
+#### Test*metoder* = tester hver især én ting
 
 Testmetoden `depositChangesBalance()` *tester* `deposit(...)` i `BankAccount`
 
@@ -439,7 +465,7 @@ Nu skal I høre om AAA - ikke **A**nonyme **A**lkolikere
 
 --
 
-AAA står for **A**ct, **A**rrange, **A**ssert
+AAA står for **A**rrange, **A**ct, **A**ssert
 
 --
 

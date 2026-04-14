@@ -372,204 +372,203 @@ public class SavingsAccount extends BankAccount {
 
 --
 
-Spørgsmål: Har i hørt om transaktioner?
+Spørgsmål: Findes der overhovedet en "basis" bankkonto?
 
 --
 
-- Det at ændre saldo på en konto er en transaktion.
-- Banker har brug for historik over transaktioner.
-- Og mulighed for at kunne genkøre/annullere dem.
-
---
-
-Transaktioner:
-- hæve penge, `deposit(...)`
-- indsætte penge, `withdraw(...)`
-- tilskrive rente, `addInterest()`
-- overføre penge, `transfer(...)`
-
---
-
-Lad os lave en `Transaction` klasse.
-Den skal kunne overføre penge mellem to konti.
-
-```java
-public class Transaction {
-    private Date date;
-
-    private double amount;
-    private String description;
-    private BankAccount fromAccount;
-    private BankAccount toAccount;
-
-    public Transaction(double amount, String description,
-                       BankAccount fromAccount, BankAccount toAccount) {
-        this.date = new Date();
-        this.amount = amount;
-        this.description = description;
-        this.fromAccount = fromAccount;
-        this.toAccount = toAccount;
-    }
-    public void execute() {
-        fromAccount.withdraw(amount);
-        toAccount.deposit(amount);
-    }
-}
-```
-
---
-
-Men hvordan håndterer vi en hæve-transaktion, hvor der kun er een konto?
-
-Lad os extende `Transaction` til `WithdrawTransaction` og `DepositTransaction`
-
-```java
-public class WithdrawTransaction extends Transaction {
-    public WithdrawTransaction(double amount, String description,
-                               BankAccount fromAccount) {
-        super(amount, description, fromAccount, null);
-    }
-}
-```
-
---
-
-Men hov... `execute()` metoden i `Transaction` virker jo ikke for `WithdrawTransaction` og `DepositTransaction`
-
---
-
-Vi kan tjekke `toAccount` i `execute()` metoden på `Transaction` klassen
-
-```java
-public void execute() {
-    fromAccount.withdraw(amount);
-    if (toAccount != null) {
-        toAccount.deposit(amount);
-    }
-}
-```
-
---
-
-Men nu blander vi logik for `WithdrawTransaction` og `DepositTransaction` ind i `Transaction` klassen.
-
---
-
-Det er bedre at override `execute()` i subklasserne
-
-```java
-public class WithdrawTransaction extends Transaction {
-    public WithdrawTransaction(double amount, String description,
-                               BankAccount fromAccount) {
-        super(amount, description, fromAccount, null);
-    }
-    @Override
-    public void execute() {
-        fromAccount.withdraw(amount);
-    }
-}
-```
-
---
-
-```java
-public class DepositTransaction extends Transaction {
-    public DepositTransaction(double amount, String description,
-                              BankAccount toAccount) {
-        super(amount, description, null, toAccount);
-    }
-    @Override
-    public void execute() {
-        toAccount.deposit(amount);
-    }
-}
-```
-
---
-
-Måske vi skulle have en abstrakt `Transaction` klasse, for `Transaction` giver ikke mening i sig selv.
+Måske skulle vi gøre `BankAccount` abstrakt.
 
 `abstract` er et keyword i Java:
 
 ```java
-public abstract class Transaction { // abstract klasse
-    private Date date;
-    private double amount;
-    private String description;
-    public Transaction(double amount, String description) {
-        this.date = new Date();
-        this.amount = amount;
-        this.description = description;
+public abstract class BankAccount { // abstract klasse
+    private int accountNumber;
+    private double balance;
+
+    public BankAccount(int accountNumber) {
+        this.accountNumber = accountNumber;
+        this.balance = 0.0;
     }
-    public abstract void execute(); // abstract metode
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0) {
+            balance -= amount;
+        }
+    }
+
+    protected void setBalance(double balance) {
+        this.balance = balance;
+    }
 }
 ```
 
 --
 
 ```java
-public class WithdrawTransaction extends Transaction {
+public class SavingsAccount extends BankAccount {
+    private double interestRate;
+
+    public SavingsAccount(int accountNumber, double interestRate) {
+        super(accountNumber);
+        this.interestRate = interestRate;
+    }
+
+    public void addInterest() {
+        double interest = getBalance() * interestRate;
+        deposit(interest);
+    }
+
+    @Override
+    protected void setBalance(double balance) {
+        if (balance >= 0) {
+            super.setBalance(balance);
+        }
+    }
+}
+```
+
+--
+
+Hvad er nyt? En abstrakt klasse kan ikke instantieres
+
+```java
+BankAccount account = new BankAccount(123456); // FEJL: Kan ikke instantieres
+SavingsAccount savingsAccount = new SavingsAccount(123456, 0.05); // OK
+```
+
+---
+
+<!-- .slide: class="cover-2" -->
+
+## Polymorfisme
+
+--
+
+Vi kan have en variabel af typen `BankAccount`, som refererer til et `SavingsAccount` objekt.
+
+```java
+BankAccount account = new SavingsAccount(123456, 0.05);
+account.deposit(1000);
+account.addInterest(); // FEJL: addInterest() er ikke i BankAccount
+```
+
+--
+
+Hvornår er polymorfisme nyttigt?
+
+--
+
+```java
+BankAccount[] accounts = new BankAccount[3];
+accounts[0] = new SavingsAccount(123456, 0.05);
+accounts[1] = new CheckinAccount(234567, 0.01);
+accounts[2] = new SavingsAccount(345678, 0.03);
+```
+
+--
+
+```java
+BankAccount[] accounts = new BankAccount[3];
+accounts[0] = new SavingsAccount(123456, 0.05);
+accounts[1] = new CheckinAccount(234567, 0.01);
+accounts[2] = new SavingsAccount(345678, 0.03);
+
+for (BankAccount account : accounts) {
+    account.deposit(1000);
+}
+```
+
+--
+
+Men...
+
+```java
+BankAccount[] accounts = new BankAccount[3];
+accounts[0] = new SavingsAccount(123456, 0.05);
+accounts[1] = new CheckinAccount(234567, 0.01);
+accounts[2] = new SavingsAccount(345678, 0.03);
+
+for (BankAccount account : accounts) {
+    account.addInterest(); // FEJL: addInterest() er ikke i BankAccount
+}
+```
+--
+
+Vi kan ikke kalde `addInterest()` på en `BankAccount` reference, selvom det faktisk er et `SavingsAccount` objekt.
+
+---
+
+<!-- .slide: class="cover-6" -->
+
+## `instanceof` operatoren
+
+--
+
+Vi kan bruge `instanceof` operatoren til at tjekke, om et objekt er en instans af en bestemt klasse.
+
+--
+
+```java
+BankAccount[] accounts = new BankAccount[3];
+accounts[0] = new SavingsAccount(123456, 0.05);
+accounts[1] = new CheckinAccount(234567, 0.01);
+accounts[2] = new SavingsAccount(345678, 0.03);
+
+for (BankAccount account : accounts) {
+    if (account instanceof SavingsAccount) {
+        SavingsAccount savingsAccount = (SavingsAccount) account; // typecasting
+        savingsAccount.addInterest();
+    }
+}
+```
+
+---
+
+<!-- .slide: class="cover-3" -->
+
+## Abstrakte metoder
+
+--
+
+En abstrakt klasse kan have både abstrakte og konkrete metoder
+
+--
+
+En abstrakt metode er en metode, som ikke har en implementation, og som skal implementeres i subklasser.
+
+```java
+public abstract class BankAccount {
+    // ...
+    public abstract void addInterest(); // abstrakt metode
+}
+
+public class SavingsAccount extends BankAccount {
     // ...
     @Override
-    public void execute() {
-        fromAccount.withdraw(amount);
+    public void addInterest() {
+        double interest = getBalance() * interestRate;
+        deposit(interest);
     }
-}
+}   
 ```
 
 --
 
-\- En abstrakt klasse kan ikke instantieres
-
-```java
-Transaction t = new Transaction(100, "test"); // FEJL!
-```
-
---
-
-\- En abstrakt metode skal overrides i subklasser
-
-```java
-public abstract class Transaction {
-    // ...
-    public abstract void execute();
-}
-```
-
-```java
-public class WithdrawTransaction extends Transaction {
-    // ...
-    @Override
-    public void execute() {
-        fromAccount.withdraw(amount);
-    }
-}
-```
-
---
-
-\- En abstrakt klasse kan have både abstrakte og konkrete metoder
-
-```java
-public abstract class Transaction {
-    private Date date;
-    private double amount;
-    private String description;
-    public Transaction(double amount, String description) {
-        this.date = new Date();
-        this.amount = amount;
-        this.description = description;
-    }
-    public abstract void execute(); // abstrakt
-    public String getDescription() { // konkret
-        return description;
-    }
-}
-```
-
---
-
-\- En abstrakt metode kan kun være i en abstrakt klasse
+En abstrakt metode kan kun være i en abstrakt klasse
 
 --
 
@@ -581,7 +580,7 @@ Var det lige lidt for `abstract`?
 
 --
 
-Kan i huske at vi talte om en "has-a" relation, da vi havde om komposition?
+Kan i huske at vi talte om en "has-a" association, da vi havde om komposition?
 
 --
 

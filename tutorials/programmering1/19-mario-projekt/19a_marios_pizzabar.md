@@ -25,12 +25,13 @@ Nice to have: registrering af faste kunder, som man kunne tilbyde rabatter ud fr
 Underviser påtager sig rollerne som Mario og Alfonso, så I kan få uddybet, hvis der mangler afgørende information.
 
 ## Krav til IT- og Forretningsforståelse
-Lav en ”PROJEKT- SWOT ANALYSE” der beskriver projektets interne styrker (Strengths), projektets svagheder (Weakness), projektets muligheder (Opportunites) samt projektets (Threats). Find inspiration i Figur 4.18 i bogen ”Projektledelse”.  PowerPoint-præsentation med risikoanalyse og risikoplan over projektet.
+Lav en ”PROJEKT- SWOT ANALYSE”, der beskriver projektets interne styrker (Strengths), projektets svagheder (Weakness), projektets muligheder (Opportunites) samt projektets (Threats). Find inspiration i Figur 4.18 i bogen ”Projektledelse”.  PowerPoint-præsentation med risikoanalyse og risikoplan over projektet.
 
 Lav dernæst en ”PROJEKT RISIKO OVERSIGT” med udgangspunkt i de identificerede ”Weaknesess” og ”Threats” taget fra projekt-SWOT analysen”.  Foretag en vægtning 1-5 i oversigten, hvor ”5” udtrykker størst sandsynlighed samt størst Konsekvens”.
 Find inspiration i Figur 4.19 i bogen Projketledelse.
 
 Afslutningsvist; udform en ”RISIKOANALYSE” grafisk, hvor de identificerede faktorer plottes ind og beskriv hvilke faktorer, der ligger så højt, at omkostmingsreducerende tiltag bør iværksættes.
+
 Find inspiration i Figur 4.20 i bogen “Projektledelse”.
 
 ### Aflevering til IT- og Forretningsforståelse
@@ -58,12 +59,13 @@ Projektrapport - Alle artefakter samles og afleveres i en PDF-fil.
 ### Aflevering til Programmering
 Al kode, dvs. hele IntelliJ projektet pakkes i en zip-fil.
 
-## Afleveringsfrist
-På ItsLearning senest fredag den 31. oktober kl 16.00:
-
-## Afleveringsformat
+## Aflevering på ItsLearning
+I skal oprette en mappe med jeres navne på ItsLearning / Projekt / Første tværfaglige projekt med følgende indhold:
 - Projektrapport i PDF format
 - zip-fil med kode-projekt
+
+## Afleveringsfrist
+Fredag den 27. marts kl 16.00
 
 ## Præsentation
 Gruppen præsenterer sit projekt for undervisere og 10 minutters fremlæggelse. Præsentationen skal indeholde:

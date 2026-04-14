@@ -32,7 +32,7 @@
    }
    ```
 3. En faktura består af en række linjer (`InvoiceLine`). Lav en klasse `Invoice` med et felt:
-   - ArrayList<InvoiceLine> lines
+   - `ArrayList<InvoiceLine> lines`
 4. Lav en constructor og en metode `addLine(InvoiceLine line)` der tilføjer en linje til fakturaen.
 5. Lav en metode `getTotal()` der returnere den samlede pris for alle linjer i fakturaen.
 6. Lav en `toString()` metode der returnere en tekst som fx:

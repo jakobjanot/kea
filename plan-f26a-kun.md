@@ -20,25 +20,25 @@
 | 4. mar.   | 08:30-11:45 | GBG.E336    | Indkapsling                                 |
 | 6. mar.   | 08:30-11:45 | GBG.E336    | Arv                                         |
 | 10. mar.  | 12:30-15:45 | GBG.E336    | ArrayList                                   |
-| 11. mar.  | 08:30-11:45 | Online      | Repetition af klasser og objekter           |
-| 13. mar.  | 08:30-11:45 | GBG.E336    | ArrayList og Collections metoder            |
-| 17. mar.  | 12:30-15:45 | GBG.E336    | Introduktion til projekt                    |
+| 11. mar.  | 08:30-11:45 | Online      | ArrayList og test.                          |
+| 13. mar.  | 08:30-11:45 | GBG.E336    | Vejledning til projekt                      |
+| 17. mar.  | 12:30-15:45 | GBG.E336    | Vejledning til projekt                      |
 | 18. mar.  | 08:30-11:45 | GBG.E336    | Vejledning til projekt                      |
 | 20. mar.  | 08:30-11:45 | GBG.E336    | Vejledning til projekt                      |
 | 25. mar.  | 08:30-11:45 | Online      | Vejledning til projekt                      |
 | 26. mar.  | 12:30-15:45 | GBG.E336    | Vejledning til projekt                      |
 | 27. mar.  | 08:30-11:45 | GBG.E336    | Aflevering af projekt                       |
 | 7. apr.   | 12:30-15:45 | GBG.E336    | Fremlægning af projekt                      |
-| 8. apr.   | 08:30-11:45 | Online      | Egne datastrukturer                         |
-| 10. apr.  | 08:30-11:45 | GBG.E336    | Debugging og assert                         |
-| 14. apr.  | 12:30-15:45 | GBG.E336    | Test med JUnit                              |
-| 15. apr.  | 08:30-11:45 | GBG.E336    | Fejl og undtagelser                         |
-| 17. apr.  | 08:30-11:45 | GBG.E336    | Filer                                       |
-| 21. apr.  | 12:30-15:45 | GBG.E336    | Strømme                                     |
-| 22. apr.  | 08:30-11:45 | Online      | Repetition af test, filer og undtagelser    |
-| 24. apr.  | 08:30-11:45 | GBG.E336    | Arv med interfaces                          |
-| 27. apr.  | 08:30-11:45 | GBG.E336    | Sortering og Comparable/Comparator          |
-| 28. apr.  | 12:30-15:45 | GBG.E336    | Versionstyring med git og Github            |
+| 8. apr.   | 08:30-11:45 | Online      | Advancerede datastrukturer                  |
+| 10. apr.  | 08:30-11:45 | GBG.E336    | Versionstyring med git og Github            |
+| 14. apr.  | 12:30-15:45 | GBG.E336    | Fejl og undtagelser                         |
+| 15. apr.  | 08:30-11:45 | GBG.E336    | Filer                                       |
+| 17. apr.  | 08:30-11:45 | GBG.E336    | Repetition af test, filer og undtagelser    |
+| 21. apr.  | 12:30-15:45 | GBG.E336    | Arv med interfaces                          |
+| 22. apr.  | 08:30-11:45 | Online      | Repetition af interfaces.                   |
+| 24. apr.  | 08:30-11:45 | GBG.E336    | Sortering og Comparable/Comparator          |
+| 27. apr.  | 08:30-11:45 | GBG.E336    | Branches, pull requests og code review      |
+| 28. apr.  | 12:30-15:45 | GBG.E336    | Branches, pull requests og code review      |
 | 1. maj    | 08:30-11:45 | GBG.E336    | Branches, pull requests og code review      |
 | 5. maj    | 12:30-15:45 | GBG.E336    | Vejledning til projekt                      |
 | 6. maj    | 08:30-11:45 | Online      | Vejledning til projekt                      |
@@ -50,3 +50,9 @@
 | 22. maj   | 12:30-15:45 | GBG.E336    | Aflevering af projekt                       |
 | 26. maj   | 08:30-11:45 | Online      | Fremlægning af projekt                      |
 | 27. maj   | 08:30-11:45 | GBG.E336    | Prøveeksamen                                |
+
+
+
+
+1.  marts - Vejledning til projekt
+2.  marts - Aflevering af projekt

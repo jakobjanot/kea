@@ -6,20 +6,15 @@ title: 21 - Versionsstyring med git og GitHub
 
 #### Versionsstyring med git og GitHub
 
-
 --
 
-# Versionsstyring
+### Hvorfor bruge versionsstyring?
 
 --
+<!-- .slide: class="o-patrick-star" -->
+#### Spørgsmål: 
 
-Spørgsmål: I projektet, hvordan holdte I styr på ændringer i jeres filer?
-
---
-
-### Demo: Software projekt uden versionsstyring
-
---
+I projektet, hvordan holdte I styr på ændringer i jeres filer?
 
 Notes:
 Brugte i filnavne til at holde styr på versioner?
@@ -56,31 +51,58 @@ Problemet med gammel kode:
 --
 
 Den værste er **tvivlen**:
-- Mister vi noget viden, hvis vi sletter gammel kode i kommentaren/.old-filer?
+- Mister vi noget viden, hvis vi sletter gammel kode i kommentarer/.old-filer?
 
---
+---
+<!-- .slide: class="cover-2" -->
 
 # Hvad er versionsstyring?
 
 --
 
-- En historik over ændringer i filer i et projekt
-- Hvem lavede ændringen
-- Hvornår blev ændringen lavet
-- Hvorfor blev ændringen lavet (ofte via en kommentar)
-- Mulighed for at gendanne tidligere versioner af filer
-- Mulighed for at arbejde sammen med andre på samme projekt uden at overskrive hinandens ændringer
+#### Historik
 
 --
 
-### Demo: Software projekt med git
+- En historik over ændringer i filer i et projekt
 
-- Lav et nyt git repository på GitHub
-- Clone det ned lokalt
-- Lav et IntelliJ projekt i mappen
-- Tilføj en fil, commit og push
-- Lav en ændring, commit og push
-- Vis historik med git log
+--
+
+- Hvem lavede ændringen
+
+--
+
+- Hvornår blev ændringen lavet
+
+--
+
+- Hvorfor blev ændringen lavet (ofte via en kommentar)
+
+--
+
+#### Sikkerhed
+
+--
+
+- Mulighed for at gendanne tidligere versioner af filer
+
+--
+
+#### Samarbejde
+
+- Mulighed for at arbejde sammen med andre på samme projekt uden at overskrive hinandens ændringer
+
+--
+<!-- .slide: class="o-patrick-star" -->
+
+### Prøv: Software projekt med git
+
+- Lav et nyt projekt i IntelliJ (sæt flueben i "Create git repository")
+- Bemærk .git mappen i projektmappen
+- Tilføj en ændring i en fil
+- Commit ændringen med en kommentar
+- Kig i historik i git loggen
+- (Repeter for at lave flere commits)
 
 ---
 <!-- .slide: class="cover-15" -->
@@ -108,17 +130,7 @@ Den værste er **tvivlen**:
 
 --
 
-### Demo: Opret et nyt git repository lokalt
-- se .git mappen
-
---
-
-#### Demo: Nyt git repository på GitHub
-
-- Gå til GitHub
-- Opret nyt repository
-- Clone det ned lokalt
-- Se .git mappen
+### Prøv: Opret en bruger på GitHub
 
 --
 
@@ -141,8 +153,9 @@ Måske vil du ikke committe alle ændringer i dine filer - hvad så?
 - Et **midlertidigt område** hvor ændringer til filer bliver samlet inden de bliver committed
 
 --
+<!-- .slide: class="o-patrick-star" -->
 
-### Demo: Lav et commit
+### Prøv: Lav et commit
 
 - Lav en ændring i flere filer
 - Brug git add til at tilføje ændringen i en fil til staging area
@@ -158,8 +171,9 @@ Måske vil du ikke committe alle ændringer i dine filer - hvad så?
 - Sender dine commits fra din lokale computer til en server (f.eks. GitHub)
 
 --
+<!-- .slide: class="o-patrick-star" -->
 
-### Demo: Push et commit til GitHub
+### Prøv: Push et commit til GitHub
 
 - Lav en ændring i en fil
 - Commit ændringen
@@ -172,8 +186,9 @@ Måske vil du ikke committe alle ændringer i dine filer - hvad så?
 - Henter de nyeste commits fra en server (f.eks. GitHub) til din lokale computer
 
 --
+<!-- .slide: class="o-patrick-star" -->
 
-### Demo: Pull ændringer fra GitHub
+### Prøv: Pull ændringer fra GitHub
 
 - Lav en ændring direkte på GitHub (rediger en fil)
 - Pull ændringen ned til din lokale computer
@@ -192,8 +207,8 @@ Måske vil du ikke committe alle ændringer i dine filer - hvad så?
 - En pegepin (et alias) til det **seneste commit** i dit nuværende branch
 
 --
-
-### Demo: Commits og HEAD
+<!-- .slide: class="o-patrick-star" -->
+### Prøv: Commits og HEAD
 
 - Lav et par commits
 - Se git log i IntelliJ
@@ -208,8 +223,9 @@ Måske vil du ikke committe alle ændringer i dine filer - hvad så?
 - Hvilken ændring skal beholdes?
 
 --
+<!-- .slide: class="o-patrick-star" -->
 
-### Demo: Merge conflict
+### Prøv: Merge conflict
 - To git repositories (to mapper)
 - Begge laver ændring i samme linje i en fil
 - Push den ene til GitHub
@@ -231,8 +247,9 @@ Måske vil du ikke committe alle ændringer i dine filer - hvad så?
 - Lav en kopi af et repository på GitHub til din egen konto
 
 --
+<!-- .slide: class="o-patrick-star" -->
 
-### Demo: Fork et repository på GitHub
+### Prøv: Fork et repository på GitHub
 
 - eks: https://github.com/OpenTTD/OpenTTD
 - fix sprogfilen i src/lang/danish.txt

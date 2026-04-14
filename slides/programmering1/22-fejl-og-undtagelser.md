@@ -2,7 +2,7 @@
 title: 22 - Fejl og undtagelser
 ---
 
-<!-- .slide: class="cover-8" -->
+<!-- .slide: class="cover-7" -->
 
 #### Fejl og undtagelser
 
@@ -22,14 +22,14 @@ title: 22 - Fejl og undtagelser
 - Syntaksfejl - når koden ikke overholder sprogets regler
 - Eksempel:
   ```java
-  public double calculateBmi(int weight, int height) {
+  public calculateBmi(double weight, double height) {
     return weight / (height * height);
   }
   ```
   
 --
 
-### Fejl under kørsel
+### Fejl under kørsel - undtagelser
 
 - Eng.: **runtime errors**
 - Opstår mens programmet kører
@@ -40,7 +40,8 @@ title: 22 - Fejl og undtagelser
   }
 
   public static void main(String[] args) {
-    System.out.println("Carsten's BMI: " + calculateBmi(80, 0)); // ArithmeticException
+    System.out.println("Carsten's BMI: " + 
+      calculateBmi(80, 0)); // ArithmeticException
   }
   ```
 - Eksempel (array out of bounds):
@@ -77,7 +78,8 @@ title: 22 - Fejl og undtagelser
 
 --
 
-Når et program støder på en fejl under kørsel (runtime), kan den ikke fortsætte normalt, eksempel:
+- Når et program støder på en fejl under kørsel (runtime), 
+kan den ikke fortsætte normalt, eksempel:
 
 ```java
 public double calculateBmi(int weight, int height) {
@@ -114,10 +116,9 @@ Her har vi ingen kontrol over brugerens input
 
 --
 
-## En undtagelse er...
-- en hændelse, der forstyrrer den normale udførelse af et program, fx:
+- Undtagelser - eksempler
   - division med nul (`ArithmeticException`)
-  - adgang til en ugyldig array-indeks (`ArrayIndexOutOfBoundsException`)
+  - ugyldig array-indeks (`ArrayIndexOutOfBoundsException`)
   - forsøg på at åbne en fil, der ikke findes (`FileNotFoundException`)
   - scanner input fejl (`InputMismatchException`)
   - netværksforbindelsesfejl (`SocketException`)
@@ -129,7 +130,7 @@ Her har vi ingen kontrol over brugerens input
 
 --
 
-Når en undtagelse opstår, "kastes" den videre op gennem kaldestakken, indtil den "fanges" af en catch-blok
+Når en undtagelse opstår, "kastes" den op gennem kaldestakken, indtil den "fanges"
 
 --
 
@@ -180,7 +181,7 @@ Eksempel:
 try {
   System.out.println("Carsten's BMI: " + calculateBmi(80, 0));
 } catch (ArithmeticException e) {
-  System.out.println("Du har indtastet en højde på 0 m, hvilket ikke er tilladt.");
+  System.out.println("Højde skal være større end 0 m.");
 }
 ```
 
@@ -188,12 +189,15 @@ try {
 
 Hvor skal try/catch blokken placeres?
 
+--
+
+Her?
+
 ```java
 public double calculateBmi(int weight, int height) {
     try {
         return weight / (height * height);
     } catch (ArithmeticException e) {
-        System.out.println("Højde kan ikke være 0 m.");
         return -1.0;
     }
 }
@@ -210,8 +214,8 @@ Fordi `calculateBmi()`
 
 --
 
-*Regel*: Skjul ikke undtagelser for den, der kalder metoden.
-*Regel*: Håndter undtagelser så tæt på brugeren af metoden som muligt (fx i main-metoden).
+- *Regel*: Skjul ikke undtagelser for den, der kalder metoden
+- *Regel*: Håndter undtagelser så tæt på brugeren af metoden som muligt
 
 --
 
@@ -232,71 +236,119 @@ public static void main(String[] args) {
 }
 ```
 
-MEN ...hvad nu hvis brugeren af calculateBmi() glemmer at håndtere undtagelsen? Programmet vil så crashe alligevel.
+MEN ...hvad nu hvis brugeren af calculateBmi() glemmer at håndtere undtagelsen? Programmet vil så crashe...
 
 --
+<!-- .slide: class="ek-patrick-star" -->
+Prøv: `try/catch` med `calculateBmi`
 
-**Regel** : Hvis en metode *kan* kaste en undtagelse, som **skal** håndteres af den, der kalder metoden, så skal metoden deklarere dette med `throws ExceptionType`.
-
---
-
-```java
-public double calculateBmi(int weight, int height) throws ArithmeticException {
-    return weight / (height * height);
-}
-```
-
-a.k.a `calculateBmi()` *kan* kaste en `ArithmeticException`
-
---
-
-Demo: calculateBmi med throws
-
-Notes:
-- lav calculateBmi
-- kald den i main
-- fremprovoker en ArithmeticException ved at kalde med højde 0
-- giv metoden throws
-- håndter undtagelsen i main med try/catch
-
---
-
-```java
-calculateBmi(80, 0);
-```
-
-... giver artihmetic exception: `/ by zero`? Hvorfor?
-
-Vi kender ikke formlen for BMI, så vi kan ikke se, at der sker en division med nul.
-
---
-
-Alt vi har brug for at vide er, at højden ikke må være nul - dvs. **argumentet height er invalid** - `IllegalArgumentException`
-
---
-
-```java
-public double calculateBmi(int weight, int height) throws IllegalArgumentException {
-    if (height == 0) {
-        throw new IllegalArgumentException("Højde kan ikke være 0 m.");
-    }
-    return weight / (height * height);
-}
-```
-
---
-
-Demo: calculateBmi med IllegalArgumentException
+- lav `calculateBmi`
+- kald den i `main`
+- fremprovoker en `ArithmeticException` ved at kalde med højde 0
+- håndter undtagelsen i main med `try/catch`
+- prøv evt at lave en classifyBmi metode også, og kald `classifyBmi(calculateBmi(...))` i main
 
 ---
 
+<!-- .slide: class="cover-14" -->
+### checked vs unchecked exceptions
+
+--
+
+- **Checked exceptions**: skal håndteres eller deklarere
+- **Unchecked exceptions**: skal **ikke** håndteres eller deklareres
+
+--
+
+#### Unchecked exceptions
+- Valgfrit at håndtere
+- Er ofte programmeringsfejl, som bør rettes i koden
+
+--
+
+#### Unchecked - håndtering med try/catch
+
+```java
+Scanner scanner = new Scanner(System.in);
+System.out.print("Indtast højde i m: ");
+double height = scanner.nextDouble();
+try {
+    System.out.println("Carsten er " + classifyBmi(calculateBmi(weight, height)));
+} catch (ArithmeticException e) {
+    System.out.println("Højde skal være større end 0 m.");
+}
+```
+
+Hmmm...
+
+--
+
+#### Unchecked - håndtering med if-else
+
+```java
+  Scanner scanner = new Scanner(System.in);
+  System.out.print("Indtast højde i m: ");
+  int height = scanner.nextInt();
+  if (height <= 0) {
+    System.out.println("Højde skal være større end 0 m.");
+  } else {
+    System.out.println("Carsten er " + classifyBmi(calculateBmi(weight, height)));
+  }
+```
+
+Nice!
+
+--
+
+#### Checked - deklaration
+- Skal håndteres med `try/catch` eller deklareres med `throws`
+
+--
+
+#### Checked - deklaration
+```java
+public String readFile(String filename) throws IOException {
+    BufferedReader reader = new BufferedReader(new FileReader(filename));
+    String line = reader.readLine();
+    reader.close();
+    return line;
+}
+```
+
+Bemærk `throws IOException`
+
+--
+
+#### Checked - håndtering
+
+```java
+try {
+    String content = readFile("data.txt");
+    System.out.println("File content: " + content);
+} catch (IOException e) {
+    System.out.println("Fejl ved læsning af fil: " + e.getMessage());
+}
+```
+
+Bemærk `try/catch` for at håndtere `IOException`
+
+--
+
 <!-- .slide: class="cover-12" -->
-#### Standard undtagelsesklasser - hierakiet
+#### Standard undtagelsesklasser
+
+--
+
+Java's exception klasse-hierarki:
 
 ```txt
 - Exception
   (...) 
-  - Runtime­Exception
+  - IOException 
+    - FileNotFoundException
+    (...)                          
+  - Runtime­Exception                      <-- unchecked
+    (...)
     - Arithmetic­Exception
     - Class­Cast­Exception
     - Illegal­Argument­Exception
@@ -305,21 +357,19 @@ Demo: calculateBmi med IllegalArgumentException
     - Index­Out­Of­Bounds­Exception
       - Array­Index­Out­Of­Bounds­Exception
       - String­Index­Out­Of­Bounds­Exception
-    - Null­Pointer­Exceptio
+    - Null­Pointer­Exception
     (...)
 - Error
+  (...)
   - Assertion­Error
   - Linkage­Error
     (...)    
-  - Virtual­Machine­Error
-    - Out­Of­Memory­Error
-    - Stack­Overflow­Error
-    (...)
+  (...)
 ```
 
 --
 
-Nogen der har mødt en `ArrayIndexOutOfBoundsException` før? Hvornår og hvorfor?
+Nogen der har mødt en `ArrayIndexOutOfBoundsException` før?
 
 --
 
@@ -343,10 +393,86 @@ Nogen der har mødt en `ArrayIndexOutOfBoundsException` før? Hvornår og hvorfo
 
 --
 
+```txt
+- Exception
+  (...)
+  - IOException
+    - FileNotFoundException <-- arver fra IOException
+    (...)                          
+  - Runtime­Exception
+```
+
+--
+
+```java
+public String readFile(String filename) {
+  try {
+    BufferedReader reader = new BufferedReader(new FileReader(filename));
+    String line = reader.readLine();
+    reader.close();
+    return line;
+  } catch (IOException e) {
+    System.out.println("Fejl ved læsning af fil: " + e.getMessage());
+    return null;
+  } catch (FileNotFoundException e) {
+    System.out.println("Filen " + filename + " blev ikke fundet.");
+    return null;
+  }
+}
+```
+
+fejler, fordi `FileNotFoundException` er en subklasse af `IOException`, og vil derfor aldrig blive nået, da `IOException` catch-blokken allerede fanger den.
+
+--
+
+```java
+public String readFile(String filename) {
+  try {
+    BufferedReader reader = new BufferedReader(new FileReader(filename));
+    String line = reader.readLine();
+    reader.close();
+    return line;
+  } catch (FileNotFoundException e) {
+    System.out.println("Filen " + filename + " blev ikke fundet.");
+    return null;
+  } catch (IOException e) {
+    System.out.println("Fejl ved læsning af fil: " + e.getMessage());
+    return null;
+  }
+}
+```
+... bedre
+
+--
+
+... eller måske bare
+
+```java
+public String readFile(String filename) {
+  try {
+    BufferedReader reader = new BufferedReader(new FileReader(filename));
+    String line = reader.readLine();
+    reader.close();
+    return line;
+  } catch (IOException e) {
+    System.out.println("Fejl ved læsning af fil: " + e.getMessage());
+    return null;
+  }
+}
+```
+
+---
+
+<!-- .slide: class="cover-11" -->
+
 ## Egen undtagelsesklasser
 
+--
+
 - Nogle gange er det nødvendigt at lave sine egne undtagelsesklasser
-- Skal **arve** fra `Exception` eller en af dens subklasser (ofte `RuntimeException`)
+- Skal **arve** fra (eller en subklasse af)
+  - `Exception` --> checked exceptions
+  - `RuntimeException` --> unchecked exceptions
 
 --
 
@@ -452,7 +578,7 @@ public static void main(String[] args) {
 
 ---
 
-<!-- .slide: class="cover-19" -->
+<!-- .slide: class="cover-1" -->
 #### Logiske fejl og debugging
 
 --

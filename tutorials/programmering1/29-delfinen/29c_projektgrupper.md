@@ -1,46 +1,65 @@
-# Gruppe 1
-- Anny Daniella Ebba Norgren
-- August Skipper
-- Jona Berisha
-- Lucas Aagaard Pedersen
-- Mustafe Faysal Farah
-- Sharifa Stanekzai
+## Gruppe 1
+- Amelia Nunes
+- Rasmus Holby Volf Gøtze
+- Victor Klemens Nørrekaas
+- Christian Nis Frydendal
 
-# Gruppe 2
-- Andreas Lysholm Jensen
-- Emil Elholm Frydendal Andersen
-- Mads Svanholm Hansen
-- Mahad Abdinasser Ahmed Hassan
-- Rasmus Svane
-- Taha Umar Afzal
-
-# Gruppe 3
-- Alexander Frydenlund Friis
-- Chervin Bruun
-- Nadya Abbas Osman
-- Oliver Joost Persson
-- Emil Danø Mourier
-- Jacob Collemorten Lauritsen
-
-# Gruppe 4
-- Abbas Reda Hamad
-- Adele Gonzalez
-- Chibuike Bobby Ofodike
-- Haifa Mohamoud Osman Ali
-- Tor Roland Andersen
-- Kasper Jonathan Christensen
-
-# Gruppe 5
-- Gustav Sander Jantzen
-- Joakim Christian Birkebæk Eskildsen
-- Niels Magnus Heise
-- Simon Bech Christensen
-- Timothy Bernal Casilagan
-- Adan Uz Zaman
-
-# Gruppe 6
-- Daniel Nørgaard Andreasen
-- Markus Skipper Bach Larsen
-- Mubarak Abdirisak Mohamed
-- Mustafa Kerim Gülhan
-- Salahudin Abdullahi Ileye
+## Gruppe 2
+- Aliza Akhter
+- Emma Malte Nielsen Saul
+- Mattie Høgsted
+ 
+## Gruppe 3
+- Johan Kjær-Jensen
+- Mikkel Sielemann Tengstedt
+- Salim Naim Mustafa
+ 
+## Gruppe 4
+- Cemil Mustafa Erdem
+- Nadine Haithem Horani
+- Owen Travis Dirisu
+ 
+## Gruppe 5
+- Carl Emil Zeidler
+- Nicklas Lærke Lyager
+- Sulaman Shah
+ 
+## Gruppe 6
+- Gustav Hervig Clement
+- Julius Aleni Agami
+- Mike Ivan Jønsson
+ 
+## Gruppe 7
+- Mateusz Andrzej Filipowski
+- Patrick Reynolds Bloch Rasmussen
+- Philip Lumbye Mather
+ 
+## Gruppe 8
+- Nico Skaarup
+- Rahim Hussain
+- Valdemar Hegelund Duedam
+ 
+## Gruppe 9
+- William Mikal Kjærbo
+- Mads Bunch Johansen
+- Oscar Sebastian Jensen
+ 
+## Gruppe 10
+- Jesper Larsen
+- Marcus Løntoft Baun
+- Tor Jørgensen Schønbech
+ 
+## Gruppe 11
+- Liiban Mahamud Ahmad
+- Omar Wissam Osman
+- Simon Krogshave Kristiansen
+ 
+## Gruppe 12
+- Andreas Kessler Marinussen
+- Helgi Johannesen
+- Nihada Adilovic
+ 
+## Gruppe 13
+- Anders Bourbouh Rønning Pedersen
+- Dave Singh Dhanda
+- Sabina Nikita Dalro

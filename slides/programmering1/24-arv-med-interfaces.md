@@ -12,19 +12,39 @@ Først en lille opsummering...
 
 --
 
-Komposition - **has-a**
+Komposition - **has-a** ... *en bankkonto "har en" ejer*
 
 ```java
 class BankAccount {
-    Owner owner;
-    double balance;
+    private Owner owner;
+    // ...
 
     public BankAccount(double balance) {
         this.owner = owner;
-        this.balance = balance;
+        // ...
     }
     
-    public void deposit(double amount) {
+    public Owner getOwner() {
+        return owner;
+    }
+
+    // ...
+}
+```
+
+--
+
+Arv - **is-a** ... *en opsparingskonto "er en" bankkonto*
+
+```java
+class BankAccount {
+    private double balance;
+
+    public BankAccount(double balance) {
+        this.balance = balance;
+    }
+
+    public void deposit(double amount) { 
         // ...
     }
 
@@ -32,26 +52,13 @@ class BankAccount {
         // ...
     }
 
-    public Owner getOwner() {
-        return owner;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
     // ...
 }
 ```
-... en bankkonto "har en" ejer
-
---
-
-Arv - **is-a**
 
 ```java
 class SavingsAccount extends BankAccount {
-    double interestRate;
+    private double interestRate;
 
     public SavingsAccount(double balance, double interestRate) {
         super(balance);
@@ -65,8 +72,6 @@ class SavingsAccount extends BankAccount {
     // ...
 }
 ```
-
-... en opsparingskonto "er en" bankkonto
 
 --
 
@@ -87,9 +92,9 @@ Så må vi lave en klasse for børnekontoer:
 
 ```java
 class ChildrensAccount {
-    Owner owner;
-    double balance;
-    double interestRate = 0.01; // 1% rente
+    private Owner owner;
+    private double balance;
+    private double interestRate = 0.01; // 1% rente
 
     public ChildrensAccount(double balance) {
         this.owner = owner;
@@ -192,7 +197,7 @@ can-do - `class SavingsAccount implements InterestBearing`
 --
 
 ```java
-interface InterestBearing {
+public interface InterestBearing {
     void applyInterest();
 }
 ```
@@ -203,11 +208,11 @@ interface InterestBearing {
 --
 
 ```java
-interface Depositable {
+public interface Depositable {
     void deposit(double amount);
 }
 
-interface Withdrawable {
+public interface Withdrawable {
     void withdraw(double amount);
 }
 ```
@@ -268,7 +273,8 @@ class CheckingAccount extends BankAccount implements Depositable, Withdrawable
 
 ```java
 class SavingsAccount extends BankAccount implements InterestBearing, Depositable, Withdrawable {
-    double interestRate;
+    private double interestRate;
+    
     public SavingsAccount(double balance, double interestRate) {
         super(balance);
         this.interestRate = interestRate;
@@ -293,7 +299,7 @@ class SavingsAccount extends BankAccount implements InterestBearing, Depositable
 
 ```java
 class BankAccount {
-    double balance;
+    private double balance;
 
     public BankAccount(double balance) {
         this.balance = balance;
@@ -342,8 +348,6 @@ Hvad har de tilfælles?
 
 `-able`-endelsen indikerer, at det er noget en klasse *kan gøre* - ikke noget den *er*.
 
-Ofte er interfaces navngivet med et adjektiv + `-able`.
-
 ---
 <!-- .slide: class="cover-15" -->
 
@@ -372,11 +376,11 @@ Mest nej, fordi `BankAccount` har
 
 <!-- .slide: class="cover-16" -->
 
-#### Adskillelse af inteface og implementering
+#### Adskillelse af interface og implementering
 
 --
 
-Interfaces adskiller **hvad** en klasse kan gøre fra **hvordan** den gør det.
+Interfaces adskiller **hvad** en klasse **kan gøre** fra **hvordan** den gør det.
 
 --
 
@@ -389,7 +393,7 @@ public void transfer(Withdrawable from, Depositable to, double amount) {
 
 ... behøver ikke at kende til de konkrete klasser, blot at de implementerer de rette interfaces.
 
-Det kan være `CheckingAccount`, `SavingsAccount`, `ChildrensAccount` eller noget helt andet vi ikke kender til endnu!
+Det kan være `CheckingAccount`, `SavingsAccount`, `ChildrensAccount` eller noget helt andet vi **ikke kender til endnu**!
 
 
 --
@@ -405,11 +409,13 @@ Så længe de implementerer de rette interfaces, så virker det!
 
 --
 
+## Løs kobling
+
 Løs kobling mellem komponenter i vores system = mere fleksibelt design!
 
 --
 
-og de kloge folk over i Java SDK er enige:
+og de kloge folk der lavede Java SDK bruger samme trick:
 
 ```java
 public interface List<E> {

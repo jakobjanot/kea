@@ -38,8 +38,8 @@
 | 22. apr.  | 08:30-11:45 | Online      | Repetition af interfaces.                   |
 | 24. apr.  | 08:30-11:45 | GBG.E336    | Sortering og Comparable/Comparator          |
 | 27. apr.  | 08:30-11:45 | GBG.E336    | Branches, pull requests og code review      |
-| 28. apr.  | 12:30-15:45 | GBG.E336    | Branches, pull requests og code review      |
-| 1. maj    | 08:30-11:45 | GBG.E336    | Branches, pull requests og code review      |
+| 28. apr.  | 12:30-15:45 | GBG.E336    | Introduktion til projekt                    |
+| 1. maj    | 08:30-11:45 | GBG.E336    | Vejledning til projekt.                     |
 | 5. maj    | 12:30-15:45 | GBG.E336    | Vejledning til projekt                      |
 | 6. maj    | 08:30-11:45 | Online      | Vejledning til projekt                      |
 | 8. maj    | 08:30-11:45 | GBG.E336    | Vejledning til projekt                      |

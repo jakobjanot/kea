@@ -8,7 +8,28 @@ title: 25 - Sortering
 
 --
 
-Vi har arbejdet med arrays og lister i nogen tid efterhånden, og vi har set hvordan vi kan tilføje, fjerne og finde elementer i dem. En anden vigtig operation på datastrukturer er sortering.
+Vi har arbejdet med arrays og lister - ofte har vi brug for at sortere
+
+--
+
+Til at sortere arrays bruger vi `Arrays.sort`
+
+```java
+int[] numbers = {5, 2, 9, 1, 5, 6};
+Arrays.sort(numbers);
+// numbers er nu 1, 2, 5, 5, 6, 9
+```
+
+--
+
+Til at sortere `ArrayList` osv. bruger vi `Collections.sort`
+
+```java
+ArrayList<Integer> numbers = new ArrayList<>();
+numbers.add(5);
+numbers.add(2); // then 9, 1, 5, 6
+Collections.sort(numbers);
+// numbers er nu 1, 2, 5, 6, 9
 
 --
 
@@ -17,7 +38,7 @@ Den simpleste sortering er den naturlige orden for den datatype vi arbejder med,
 ```java
 int[] numbers = {5, 2, 9, 1, 5, 6};
 Arrays.sort(numbers);
-// numbers er nu {1, 2, 5, 5, 6, 9}
+// numbers er nu 1, 2, 5, 5, 6, 9
 ```
 
 --
@@ -31,6 +52,13 @@ Arrays.sort(letters);
 ```
 
 --
+<!-- .slide: class="o-patrck-star" -->
+## Prøv selv
+
+- Sorter et array af int, char
+- Sorter en ArrayList af Integer
+
+--
 
 For `String` objekter er den naturlige orden alfabetisk:
 
@@ -41,6 +69,7 @@ Arrays.sort(names);
 ```
 
 Åge før Øyvind? Det var ikke det vi forventede!
+
 
 --
 <!-- .slide: class="cover-16" -->
@@ -198,7 +227,7 @@ public class MyClass implements Comparable<MyClass> {
 --
 
 ```java
-public class Student implements Comparable<Integer> {
+public class Student implements Comparable<Student> {
     private ArrayList<Integer> grades;
     String firstName;
     String lastName;

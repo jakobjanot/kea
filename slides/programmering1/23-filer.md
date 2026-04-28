@@ -42,8 +42,8 @@ Hvad kan man bruge filer til?
 - Absolut sti: `C:\Users\Jakob\Documents\kontakter.txt`
 - Relativ sti: `Documents/kontakter.txt` (i forhold til `C:\Users\Jakob\`)
 
---
-
+---
+<!-- .slide: class="cover-2" -->
 # Læsning fra filer
 
 --
@@ -211,9 +211,12 @@ public static void readLines() throws FileNotFoundException {
 }
 ```
 
---
+---
+<!-- .slide: class="cover-4" -->
 
 # Skrivning til filer
+
+--
 
 Vi har brug for:
 
@@ -242,11 +245,6 @@ try {
     e.printStackTrace();
 }
 ```
-
---
-
-Du bemærker måske at vi bruger `IOException` i catch-blokken denne gang.
-Det er fordi `FileWriter` kan kaste flere forskellige undtagelser relateret til input/output, og `IOException` er en generel undtagelse for sådanne fejl, så vi kan fange dem alle med én catch-blok.
 
 --
 
@@ -279,29 +277,62 @@ try {
 }
 ```
 
+---
+<!-- .slide: class="cover-2" -->
+
+# Filformater
 
 --
 
-# To slags tekstfiler
-} catch (IOException e) {
-    System.out.println("Der opstod en fejl under skrivning til filen.");
-    e.printStackTrace();
-}
-```
+### To slags filer
 
-
---
-
-# To slags tekstfiler
-
-- Tekstfiler - filer du kan åbne og læse i en teksteditor (f.eks. .txt, .csv, .json, .xml)
-- Binære filer - fx billeder, Word-dokumenter, lydfiler (f.eks. .jpg, .docx, .mp3)
+- **Tekstfiler** - filer der kan læses i en teksteditor (f.eks. .txt, .csv, .json, .xml)
+- **Binære filer** - fx billeder, Word-dokumenter, lydfiler (f.eks. .jpg, .docx, .mp3)
 
 ... i dag fokuserer vi på tekstfiler.
 
 --
 
-Eksempel på ustruktureret tekstfil (`faktura.txt`):
+### Hvad fortæller filnavnet os?
+
+- `{name}.{extension}`
+- `kontakter.csv`
+- kontakter (jeg har gemt mine kontakter i denne fil)
+- csv (jeg har gemt mine kontakter i CSV-format, dvs. adskilt af kommaer)
+
+--
+
+# Tekstformater
+
+`tekst.csv` - en tekstfil hvor data adskilles af kommaer (Comma-Separated Values)
+--
+`tekst.tsv` - en tekstfil hvor data adskilles af tabulatorer (Tab-Separated Values)
+--
+`tekst.json` - en tekstfil hvor data er struktureret i JSON-format
+--
+`tekst.xml` - en tekstfil hvor data er struktureret i XML-format, eksempelvis:
+--
+`billede.jpg` - en binær fil der indeholder et billede i JPEG-format
+--
+`dokument.docx` - en binær fil der indeholder et Word-dokument
+--
+`musik.mp3` - en binær fil der indeholder en lydoptagelse i MP3-format
+--
+`video.mp4` - en binær fil der indeholder en videooptagelse i MP4-format
+--
+`arkiv.zip` - en binær fil der indeholder et komprimeret arkiv af filer i ZIP-format
+--
+`program.exe` - en binær fil der indeholder et eksekverbart program i Windows-format
+--
+`app.java` - en tekstfil der indeholder kildekoden til et Java-program
+
+--
+
+#### Struktureret vs. ustruktureret data
+
+--
+
+**Ustruktureret** tekstfil - `faktura.txt`:
 
 ```
 Faktura #12345
@@ -321,7 +352,7 @@ Total:                                                 1057.50
 
 --
 
-Struktureret tekstfil - CSV (`kontakter.csv`):
+**Struktureret** tekstfil - `kontakter.csv`:
 
 ```txt
 Navn,Telefon,E-mail
@@ -332,7 +363,7 @@ Lars Larsen,98765432,lars@larsen-international.dk
 
 --
 
-Men `kontakter.tsv` er det samme, bare med tabulatorer (`\t`) som separator:
+**Struktureret** tekstfil - `kontakter.tsv`:
 
 ```txt
 Navn  Telefon	E-mail

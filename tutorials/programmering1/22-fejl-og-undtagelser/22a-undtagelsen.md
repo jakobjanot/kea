@@ -36,7 +36,7 @@ public class BankAccount {
 5. Test `BankAccount`-klassen med følgende kode i din `main`-metode. Hvad sker der?
    ```java
    BankAccount account = new BankAccount(1000);
-   account.withdraw(-500);
+   account.deposit(-1500);
    ```
    Svar: Ikke noget. Og programmøren der bruger klassen får ingen advarsel om, at noget gik galt.
 6. Ændr `setBalance`-metoden, så den kaster en `IllegalArgumentException`, hvis `balance` er negativ:
@@ -56,7 +56,7 @@ public class BankAccount {
    public static void main(String[] args) {
        BankAccount account = new BankAccount(1000);
        try {
-           account.withdraw(-500);
+           account.deposit(-1500);
        } catch (IllegalArgumentException e) {
            System.out.println("Fejl: " + e.getMessage());
        }

@@ -38,7 +38,7 @@ jobs:
         run: just pdf-all-tutorials
       - name: Build index in site
         run: just build-index
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: ./site
       - id: deployment

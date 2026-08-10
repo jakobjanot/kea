@@ -51,8 +51,3 @@
 | 26. maj   | 08:30-11:45 | Online      | Fremlægning af projekt                      |
 | 27. maj   | 08:30-11:45 | GBG.E336    | Prøveeksamen                                |
 
-
-
-
-1.  marts - Vejledning til projekt
-2.  marts - Aflevering af projekt

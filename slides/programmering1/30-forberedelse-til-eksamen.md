@@ -121,6 +121,10 @@ Hvis opgaven beder dig om at lave en klasse, så lav også konstruktør og attri
 
 --
 
+Du bør løbende demonstrere at din kode (fx klasser og metoder) fungerer. Brug en `main` metode til at afprøver om din kode virker. Fx lav nogle objekter, kald metoder på disse og udskriv resultaterne. Gør det gerne løbende, det kan hjælpe dig med at opdage mangler og fejl i din kode.
+
+--
+
 Brug *ikke* tid på ting som ikke står i opgaven, fx user interface eller filhåndtering, medmindre det står i opgaven
 
 --
@@ -151,7 +155,7 @@ public void sum(int a, int b) {
 
 --
 
-Du må selvfølgelig gerne have test-udskrifter undervejs i din kode — bare husk at sige at du gør det for at afprøve om den virker. Og hvis du er fiks, tester du koden, og udkommenterer så test-udskriften straks bagefter.
+Du må selvfølgelig gerne have `System.out.println`-udskrifter undervejs i din kode — bare husk at sige at du gør det for at afprøve om den virker. Og hvis du er fiks, afprøver du koden, og udkommenterer så `System.out.println`-udskriften bagefter.
 
 ---
 

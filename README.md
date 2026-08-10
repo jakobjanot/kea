@@ -10,6 +10,7 @@
 #### macOS
 ```bash
 brew install just python3
+brew install just
 ```
 
 ```bash

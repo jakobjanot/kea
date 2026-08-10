@@ -10,3 +10,4 @@ book/**/*.pdf
 # Ignore Python virtual environments
 .venv/
 uv.lock
+.typst-output.txt
